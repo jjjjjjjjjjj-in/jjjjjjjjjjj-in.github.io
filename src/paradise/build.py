@@ -502,7 +502,7 @@ def page_articles():
 def page_article(a):
     def table(rows):
         head, *rest = rows
-        return ('<div class="table-wrap"><table><thead><tr>' + "".join(f"<th>{e(c)}</th>" for c in head) + "</tr></thead><tbody>"
+        return ('<div class="table-wrap fit"><table><thead><tr>' + "".join(f"<th>{e(c)}</th>" for c in head) + "</tr></thead><tbody>"
                 + "".join("<tr>" + "".join(f"<td>{e(c)}</td>" for c in r) + "</tr>" for r in rest) + "</tbody></table></div>")
     sections = "".join(f"<section><h2>{e(b[0])}</h2><p>{e(b[1])}</p>{table(b[2]) if len(b) > 2 else ''}</section>" for b in a["body"])
     pics = {"hotel": photos(), "cafe9": photos(D.CAFE9_PHOTOS, wide=True)}.get(a.get("photos"), "")

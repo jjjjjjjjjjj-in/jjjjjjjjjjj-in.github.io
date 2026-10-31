@@ -183,3 +183,4 @@ tr.is-past td, tr.is-past th { color: var(--past); }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
 .photos.wide img { aspect-ratio: 4 / 3; }
 .hero img { object-position: center 30%; }
+.table-wrap.fit table { min-width: 0; width: 100%; } .table-wrap.fit th, .table-wrap.fit td { padding: 10px 8px; font-size: 13px; }
