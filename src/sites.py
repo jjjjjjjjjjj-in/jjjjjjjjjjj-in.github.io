@@ -11,4 +11,11 @@ SITES = [
         sitemap="doomsday-guide/sitemap.xml",
         updated="2026-10-31",
     ),
+    dict(
+        path="paradise-city/",
+        name="パラダイスシティ カジノガイド",
+        desc="韓国・仁川のパラダイスシティのカジノを日本人向けに解説。宿泊プラン、食事券、入場ルール、予算の目安。",
+        sitemap="paradise-city/sitemap.xml",
+        updated="2026-10-31",
+    ),
 ]
