@@ -1,6 +1,6 @@
 # jjjjjjjjjjj-in.github.io（全サイトの入口）
 
-運営者の全サイトの入口ページ。GitHub Pages で https://jjjjjjjjjjj-in.github.io/ に公開される。
+運営者の全サイトの入口ページ（サイト名「ジャンル別おすすめガイド集」。映画に限らず旅行・本・自分の有料noteなど色々なテーマを扱う予定）。GitHub Pages で https://jjjjjjjjjjj-in.github.io/ に公開される。
 運営者は日本語で、技術に詳しくない。返答は日本語で、短く、専門用語を避ける。コミット作成者は Claude <noreply@anthropic.com>。
 
 ## このリポジトリの役割
@@ -21,6 +21,7 @@
 4. そのサイトの `sitemap.xml` を作り、`src/sites.py` に1件追加して `python3 src/build.py` を実行し、push する。これで入口ページと Google への通知（サイトマップインデックス）が自動で更新される。
 5. Amazon・もしも・A8 には `https://jjjjjjjjjjj-in.github.io/` を登録してもらう（運営者の作業、1回だけ）。済んだらこの行を更新する。
 6. 公式予告編などのリンクは、確認できた公式のものだけ使う。推測した URL は使わない。
+7. オンラインカジノの宣伝は日本では違法で、ASP でも禁止。カジノを扱うときはリゾートの旅行ガイドとして書く。
 
 ## Google Search Console
 - `https://jjjjjjjjjjj-in.github.io/`（URLプレフィックス）の確認コードは `src/build.py` の `GOOGLE_SITE_VERIFICATION` に設定済み（2026-10-31）。

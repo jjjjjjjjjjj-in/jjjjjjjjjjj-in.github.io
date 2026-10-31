@@ -37,8 +37,8 @@ def index_html():
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>映画・エンタメの予習ガイド集</title>
-<meta name="description" content="映画やドラマをもっと楽しむための予習ガイドをまとめています。">
+<title>ジャンル別おすすめガイド集</title>
+<meta name="description" content="映画、旅行、本などのテーマごとに、知っておくと役立つ情報や楽しみ方をまとめたガイドサイトです。">
 <link rel="canonical" href="{BASE_URL}">{verify}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -64,8 +64,8 @@ footer {{ font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--li
 <body>
 <div class="wrap">
   <header>
-    <h1>映画・エンタメの予習ガイド集</h1>
-    <p>観る前に知っておくと、もっと楽しくなるガイドをまとめています。</p>
+    <h1>ジャンル別おすすめガイド集</h1>
+    <p>映画、旅行、本などのテーマごとに、知っておくと役立つ情報や楽しみ方をまとめています。</p>
   </header>
   <ul>{cards}
   </ul>
