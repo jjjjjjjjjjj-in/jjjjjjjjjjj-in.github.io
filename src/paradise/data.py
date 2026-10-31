@@ -302,12 +302,26 @@ UPDATES = [
 # 出す場所: トップ・宿泊・会員登録/予約・記事（チップの記事を除く）。カジノのルールやお金のページには出さない
 AMAZON_TAG = "doomsdayguide-22"
 MOSHIMO_A_ID = "5875908"
-TRAVEL_GOODS = [
-    ("韓国旅行のガイドブック", "韓国 ガイドブック"),
-    ("韓国で使えるSIM・eSIM", "韓国 SIM"),
-    ("韓国用の変換プラグ", "変換プラグ 韓国"),
-    ("モバイルバッテリー", "モバイルバッテリー 機内持ち込み"),
-    ("パスポートケース", "パスポートケース"),
-    ("機内持ち込みスーツケース", "スーツケース 機内持ち込み"),
-]
-AD_PAGES = ["index.html", "stay.html", "howto.html", "article-cafe9.html", "article-hyatt-regency-incheon.html", "article-operator-8-visits.html"]
+TRAVEL_GOODS = {
+    "guide": ("韓国旅行のガイドブック", "韓国 ガイドブック"),
+    "sim": ("韓国で使えるSIM・eSIM", "韓国 SIM"),
+    "plug": ("韓国用の変換プラグ", "変換プラグ 韓国"),
+    "battery": ("モバイルバッテリー", "モバイルバッテリー 機内持ち込み"),
+    "passport": ("パスポートケース", "パスポートケース"),
+    "suitcase": ("機内持ち込みスーツケース", "スーツケース 機内持ち込み"),
+    "translator": ("翻訳機（タクシーで行き先を伝えるのに）", "ポケトーク 翻訳機"),
+    "phrase": ("韓国語の旅行会話の本", "韓国語 旅行会話"),
+    "pillow": ("ネックピロー（機内で眠る）", "ネックピロー"),
+    "pouch": ("衣類の圧縮袋・トラベルポーチ", "トラベルポーチ 圧縮"),
+    "wallet": ("小銭も入る旅行用の財布", "トラベル財布 スキミング防止"),
+    "korean_food": ("家で作れる韓国料理の本", "韓国料理 レシピ本"),
+}
+# ページごとに出す商品（キーは上の TRAVEL_GOODS）
+AD_PAGES = {
+    "index.html": ["guide", "sim", "plug", "translator", "battery", "suitcase"],
+    "stay.html": ["suitcase", "pouch", "pillow", "plug", "battery", "guide"],
+    "howto.html": ["passport", "wallet", "sim", "phrase", "guide", "plug"],
+    "article-cafe9.html": ["korean_food", "guide", "phrase", "sim"],
+    "article-hyatt-regency-incheon.html": ["suitcase", "pouch", "pillow", "plug"],
+    "article-operator-8-visits.html": ["translator", "phrase", "sim", "battery", "wallet", "guide"],
+}
