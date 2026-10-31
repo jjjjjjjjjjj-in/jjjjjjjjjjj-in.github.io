@@ -25,7 +25,7 @@ e = html.escape
 
 NAV = [
     ("index.html", "トップ"), ("stay.html", "宿泊プラン"), ("campaigns.html", "キャンペーン"),
-    ("perks.html", "食事券・特典"), ("guide.html", "初心者ガイド"), ("budget.html", "予算"),
+    ("perks.html", "お得情報"), ("guide.html", "初心者ガイド"), ("budget.html", "予算"),
     ("howto.html", "会員登録・予約"), ("faq.html", "よくある質問"), ("articles.html", "体験談・記事"),
 ]
 
@@ -199,30 +199,37 @@ def rule_cards(rules, with_meta=True):
     return '<div class="rules">' + "".join(out) + "</div>"
 
 
-def photos():
-    return '<div class="photos">' + "".join(
-        f'<figure><img src="{p}" alt="{e(alt)}" loading="lazy" width="1000" height="1333"><figcaption>{e(cap)}（運営者撮影）</figcaption></figure>'
-        for p, alt, cap in D.HOTEL["photos"]) + "</div>"
+def photos(items=None, wide=False):
+    items = D.HOTEL["photos"] if items is None else items
+    w, h = ("1200", "900") if wide else ("1000", "1333")
+    return f'<div class="photos{" wide" if wide else ""}">' + "".join(
+        f'<figure><img src="{p}" alt="{e(alt)}" loading="lazy" width="{w}" height="{h}"><figcaption>{e(cap)}（運営者撮影）</figcaption></figure>'
+        for p, alt, cap in items) + "</div>"
+
+
+def deal_cards(items):
+    return '<div class="cards">' + "".join(info_card(d["title"], d["text"], d["status"], d["src"], d["checked"]) for d in items) + "</div>"
 
 
 # ---------- pages ----------
 
 def page_index():
     tiles = [
-        ("campaigns.html", "キャンペーン", "今のプランと過去の事例"), ("stay.html", "宿泊プラン", "ハイアットと比較表"),
-        ("guide.html", "初心者ガイド", "入場とテーブルのルール"), ("perks.html", "食事券・特典", "枚数とリセット時間"),
+        ("perks.html", "お得情報", "会員特典・食事券・ポイント"), ("campaigns.html", "キャンペーン", "今のプランと過去の事例"),
+        ("article-cafe9.html", "Cafe 9", "カジノの中のご飯"), ("stay.html", "宿泊プラン", "ホテルと比較表"),
+        ("guide.html", "初心者ガイド", "入場とテーブルのルール"),
         ("budget.html", "予算", "最低ベットとシミュレーター"), ("howto.html", "会員登録・予約", "予約前の確認ポイント"),
         ("faq.html", "よくある質問", "パスポート・日本円など"), ("articles.html", "体験談・記事", "8回通った運営者のメモ"),
     ]
     tile_html = '<nav class="tiles" aria-label="主なページ">' + "".join(
         f'<a class="tile" href="{u}"><strong>{e(t)}</strong><span>{e(s)}</span></a>' for u, t, s in tiles) + "</nav>"
     head = f"""<header class="hero gutter">
-  <img src="img/hyatt-lobby.jpg" alt="" width="1000" height="1333">
+  <img src="img/pegasus.jpg" alt="" width="1050" height="1400">
   <div class="inner">
     <p class="eyebrow">PARADISE CITY · INCHEON</p>
-    <h1><span class="nb">知らないと損する、</span><span class="nb">知っていると</span><span class="nb">お得に楽しめる</span><br><span class="nb">パラダイスシティ</span></h1>
-    <p class="lead">韓国・仁川のパラダイスシティのカジノを、初めての日本人にも分かりやすく。宿泊プラン、食事券、入場ルール、予算の目安を、公式情報と体験談を分けて紹介します。</p>
-    <p class="photo-credit">写真：ハイアット リージェンシー 仁川（運営者撮影）・最終更新 {D.UPDATED}</p>
+    <h1><span class="nb">日本人向け</span><span class="nb">パラダイスシティ</span><br><span class="nb">カジノの</span><span class="nb">お得情報まとめ</span></h1>
+    <p class="lead">韓国・仁川のパラダイスシティのカジノで使える、新規会員のクーポン、ポイント、食事券、宿泊プランなどのお得情報を、公式情報と体験談を分けて紹介します。</p>
+    <p class="photo-credit">写真：パラダイスシティのホテルのロビーにある金色のペガサス像（運営者撮影）・最終更新 {D.UPDATED}</p>
   </div>
 </header>"""
     current = "".join(campaign_card(c) for c in D.CAMPAIGNS["current"])
@@ -231,6 +238,16 @@ def page_index():
     body = f"""
 {tile_html}
 {LEGEND}
+<section aria-labelledby="h-deals"><h2 id="h-deals">お得情報まとめ</h2>
+  <p class="notice">「公式情報」はパラダイスシティの公式サイトで確認した内容です。条件は変わることがあるので、使う前に現地のデスクで確認してください。</p>
+  {deal_cards(D.DEALS[:6])}
+  <p><a class="btn primary" href="perks.html">お得情報をすべて見る</a></p>
+</section>
+<section aria-labelledby="h-cafe9"><h2 id="h-cafe9">最初のご飯は、カジノの「Cafe 9」</h2>
+  <p><span class="badge b-exp">体験談</span> パラダイスシティに着いて最初に食べたのは、カジノの中のレストラン「Cafe 9」のご飯でした。丼もののセットがあり、日本人にも食べやすい味です。</p>
+  {photos(D.CAFE9_PHOTOS, wide=True)}
+  <p><a class="btn" href="article-cafe9.html">Cafe 9 の記事を読む</a></p>
+</section>
 <section aria-labelledby="h-camp"><h2 id="h-camp">最新のキャンペーン</h2>
   <p class="notice alert"><strong>今のところ、内容と期間まで公式に確認できた「開催中」のキャンペーンはありません。</strong>公式予約ページに掲載されているプランを、確認できた範囲で載せています。</p>
   <div class="cards">{current}</div>
@@ -239,7 +256,7 @@ def page_index():
 <section aria-labelledby="h-stay"><h2 id="h-stay">おすすめの宿泊</h2>
   <div class="cards">
     <div class="card"><div class="badge-row">{badge('exp')}</div><h3>{D.HOTEL['name']}（{D.HOTEL['name_en']}）</h3>
-      <p>運営者が泊まったホテルです。過去にはカジノ会員向けに、平日最大4泊・朝食券つきのプランがありました（過去の情報）。</p>
+      <p>運営者が泊まったホテルの1つです。過去にはカジノ会員向けに、平日最大4泊・朝食券つきのプランがありました（過去の情報）。</p>
       <p><a class="btn primary" href="stay.html">宿泊プランを比べる</a></p></div>
     <figure class="card" style="padding:0;overflow:hidden;margin:0"><img src="img/hyatt-room.jpg" alt="ハイアット リージェンシー 仁川の客室" loading="lazy" width="1000" height="1333" style="aspect-ratio:4/3;object-fit:cover"></figure>
   </div>
@@ -247,10 +264,6 @@ def page_index():
 <section aria-labelledby="h-guide"><h2 id="h-guide">カジノ初心者ガイド</h2>
   {rule_cards(D.ENTRY_RULES[:2] + D.TABLE_RULES[:2], with_meta=False)}
   <p><a class="btn" href="guide.html">ルールをすべて見る</a></p>
-</section>
-<section aria-labelledby="h-perks"><h2 id="h-perks">食事券・ドリンク券などの特典</h2>
-  <div class="cards">{''.join(info_card(p['title'], p['text'], p['status'], p['src'], p['checked']) for p in D.PERKS[:2])}</div>
-  <p><a class="btn" href="perks.html">特典の情報をすべて見る</a></p>
 </section>
 <section aria-labelledby="h-basic"><h2 id="h-basic">カジノの基本ルール</h2>
   {basics_cards(['hours', 'who', 'dress', 'yen'])}
@@ -263,9 +276,11 @@ def page_index():
   <h3>記事</h3><ul class="updates">{latest}</ul>
   <h3>更新情報</h3><ul class="updates">{updates}</ul>
 </section>"""
-    index_search("トップ", "index.html", "パラダイスシティ カジノガイド", "パラダイスシティ カジノ 宿泊 食事券 初心者 ルール 予算 キャンペーン")
-    return layout("index.html", "パラダイスシティカジノ完全ガイド｜宿泊・食事券・初心者ルール【2026年版】",
-                  "韓国・仁川のパラダイスシティのカジノを日本人向けに解説。宿泊プラン、食事券、入場ルール、最低ベットと予算の目安を、公式情報と体験談を区別して紹介します。", body, head)
+    index_search("トップ", "index.html", "パラダイスシティ カジノガイド", "パラダイスシティ カジノ お得 宿泊 食事券 初心者 ルール 予算 キャンペーン")
+    for d in D.DEALS:
+        index_search("お得情報", "perks.html#h-deals", d["title"], d["text"])
+    return layout("index.html", "パラダイスシティ カジノのお得情報まとめ｜日本人向け 会員特典・食事券・宿泊【2026年版】",
+                  "韓国・仁川のパラダイスシティのカジノのお得情報を日本人向けにまとめました。新規会員のクーポン、ポイント、Cafe 9 の食事券、宿泊プランを、公式情報と体験談を区別して紹介します。", body, head)
 
 
 def page_stay():
@@ -279,6 +294,10 @@ def page_stay():
   <p>パラダイスシティのカジノに行くときに、運営者が泊まったホテルです。写真はすべて運営者が撮影しました。</p>
   {photos()}
   <div class="cards">{facts}</div>
+</section>
+<section aria-labelledby="h-fac"><h2 id="h-fac">パラダイスシティのホテルと施設（公式）</h2>
+  {deal_cards(D.FACILITIES)}
+  <p><a class="btn" href="{D.SOURCES['official_map'][1]}" target="_blank" rel="noopener">公式のフロアマップを見る</a></p>
 </section>
 <section aria-labelledby="h-compare"><h2 id="h-compare">宿泊プラン比較表</h2>
   {compare_table()}
@@ -302,6 +321,8 @@ def page_stay():
         index_search("宿泊プラン", "stay.html#h-compare", c["name"], c["perks"] + " " + c["conditions"] + " " + c["note"])
     for f in D.HOTEL["facts"]:
         index_search("宿泊プラン", "stay.html#h-hotel", D.HOTEL["name"], f["text"])
+    for f in D.FACILITIES:
+        index_search("宿泊プラン", "stay.html#h-fac", f["title"], f["text"])
     index_search("宿泊プラン", "stay.html#h-notes", "予約するときの注意点", " ".join(D.BOOKING_CHECKS))
     return layout("stay.html", "パラダイスシティ 宿泊プラン｜ハイアットの特典と無料宿泊キャンペーンの過去事例",
                   "パラダイスシティのカジノに行くときの宿泊プランを比較。ハイアット リージェンシー 仁川の写真、朝食券・ドリンク券つきプラン、ゲーム条件付き宿泊キャンペーンの過去事例をまとめました。",
@@ -333,7 +354,14 @@ def page_perks():
     slots = "".join(f'<div class="card"><div class="badge-row">{badge("check")}</div><h3>{e(s)}</h3><p class="muted">情報を集めています。分かり次第ここに載せます。</p></div>' for s in D.PERK_SLOTS)
     body = f"""
 {LEGEND}
-<section aria-labelledby="h-p"><h2 id="h-p">分かっている特典の情報</h2>
+<section aria-labelledby="h-deals"><h2 id="h-deals">お得情報まとめ</h2>
+  {deal_cards(D.DEALS)}
+</section>
+<section aria-labelledby="h-cafe9"><h2 id="h-cafe9">Cafe 9 のご飯</h2>
+  {photos(D.CAFE9_PHOTOS, wide=True)}
+  <p><a class="btn" href="article-cafe9.html">Cafe 9 の記事を読む</a></p>
+</section>
+<section aria-labelledby="h-p"><h2 id="h-p">食事券・ドリンク券・会員カード</h2>
   <p class="notice">特典の条件は、会員ランクや時期によって変わる可能性があります。使う前にカジノのカウンターで確認してください。</p>
   <div class="cards">{cards}</div>
 </section>
@@ -345,9 +373,9 @@ def page_perks():
 </section>"""
     for p in D.PERKS:
         index_search("食事券・特典", "perks.html", p["title"], p["text"])
-    return layout("perks.html", "パラダイスシティ カジノの食事券・特典｜1日の枚数とリセット時間",
-                  "パラダイスシティのカジノでもらえる食事券・ドリンク券・会員特典の情報。1日に使える枚数やリセット時間を、ユーザー提供情報と公式情報に分けて紹介します。",
-                  body, page_head("食事券・ドリンク券・特典", "カジノの食事券や会員特典の情報をまとめています。"))
+    return layout("perks.html", "パラダイスシティ カジノのお得情報｜新規会員クーポン・ポイント・食事券",
+                  "パラダイスシティのカジノのお得情報。新規会員のクーポン、ポイントの使い道、会員ランク、Cafe 9 の食事券、無料シャトルを、公式情報とユーザー提供情報に分けて紹介します。",
+                  body, page_head("お得情報・特典", "新規会員のクーポン、ポイント、食事券など、日本人の旅行者に役立つお得情報をまとめています。"))
 
 
 def page_guide():
@@ -473,7 +501,7 @@ def page_articles():
 
 def page_article(a):
     sections = "".join(f"<section><h2>{e(h)}</h2><p>{e(t)}</p></section>" for h, t in a["body"])
-    pics = photos() if a.get("photos") else ""
+    pics = {"hotel": photos(), "cafe9": photos(D.CAFE9_PHOTOS, wide=True)}.get(a.get("photos"), "")
     body = f"""
 <div class="article-body">
   <div class="badge-row">{badge(a['status'])}<span class="muted">{e(a['category'])} ・ {a['date']}</span></div>

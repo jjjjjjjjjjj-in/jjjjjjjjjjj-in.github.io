@@ -181,3 +181,5 @@ tr.is-past td, tr.is-past th { color: var(--past); }
   .hero .inner { padding-block: 84px 64px; }
 }
 @media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+.photos.wide img { aspect-ratio: 4 / 3; }
+.hero img { object-position: center 30%; }

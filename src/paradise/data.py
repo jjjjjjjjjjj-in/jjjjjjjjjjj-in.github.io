@@ -19,6 +19,14 @@ SOURCES = {
     "official_x": ("パラダイスシティ公式X（日本語・過去の投稿）", "https://x.com/Paradisecity_J/status/1613465332714471425"),
     "official_welcome": ("公式予約ページ：PARADISE CASINO NEW MEMBERSHIP WELCOME OFFER", "https://www.p-city.com/front/reservation/reservationStep1To2?RP_SEQ=7905"),
     "official_thrill": ("公式予約ページ：Experience the thrill of Paradise Casino", "https://www.p-city.com/front/reservation/reservationStep1To2?RP_SEQ=13067"),
+    "official_membership": ("パラダイスシティ公式：カジノメンバーシップ案内", "https://www.p-city.com/front/memnotice/membership?Type=CASINO"),
+    "official_tier": ("パラダイスシティ公式：カジノ会員ランク（Red）", "https://www.p-city.com/front/memnotice/membershipView?M_TYPE=CasinoRed"),
+    "official_match": ("パラダイスシティ公式：カジノ会員ランクのマッチング", "https://www.p-city.com/front/memnotice/casinoMatch"),
+    "official_members_day": ("公式予約ページ：パラダイス・メンバーズデー", "https://www.p-city.com/front/reservation/reservationStep1To2?RP_SEQ=12380"),
+    "official_casino_pkg": ("公式予約ページ：カジノ会員つき宿泊パッケージ", "https://www.p-city.com/front/reservation/reservationStep1To2?RP_SEQ=4366"),
+    "official_overview": ("パラダイスシティ公式：カジノ紹介", "https://www.p-city.com/front/casino/overview"),
+    "official_cimer": ("パラダイスシティ公式：スパ「シメール」", "https://www.p-city.com/front/cimer/facility"),
+    "official_map": ("パラダイスシティ公式：フロアマップ", "https://www.p-city.com/front/contents/pcity/location?Type=FLOOR"),
     "rakuten": ("楽天トラベル（パラダイスシティ周辺の宿泊プラン）", "https://hotel.travel.rakuten.co.jp/overseas/grmPlanList.do?f_no=139096"),
     "ota": ("海外ホテル予約サイトの掲載情報", ""),
     "articles": ("複数の旅行・攻略ブログ（公式ではない）", ""),
@@ -67,15 +75,44 @@ BUDGET = dict(
     status="exp", src="operator", checked="2026-10-31",
 )
 
+# お得情報まとめ（トップページのいちばん上に出す。日本人の旅行者向け）
+DEALS = [
+    dict(title="新規会員になると、もらえるクーポン", text="カジノの会員に新しく登録すると、30,000ウォン分の「ラッキーベッティングクーポン」と20,000ウォン分の「マシンチケット」がもらえると公式に案内されています。1人1回だけです。現金ではなく、ゲームに使う券です。", status="official", src="official_membership", checked="2026-10-31"),
+    dict(title="会員登録は無料・パスポートだけ", text="カジノ入口のメンバーシップデスクで、パスポートを見せて登録します。対象は満19歳以上の外国人と、海外永住権を持つ人です。", status="official", src="official_membership", checked="2026-10-31"),
+    dict(title="貯まったポイントは食事や買い物にも", text="遊ぶと貯まる「カジノポイント」は、カジノやパラダイスシティの施設で現金のように使えると公式に案内されています（使えない場所や条件があります）。", status="official", src="official_membership", checked="2026-10-31"),
+    dict(title="Cafe 9 のご飯は食事券で", text="カジノの中のレストラン「Cafe 9」は、会員でなくても使えるカジノのメイン食堂と紹介されています。食事券は Cafe 9 の右側にある発券機で出せ、無料の券は24時間で使えなくなるという情報があります。", status="check", src="articles", checked="2026-10-31"),
+    dict(title="ランクが上がると割引やラウンジ", text="会員ランクは過去24か月のポイントをもとに、3か月ごとに見直されます。上のランクになると、レストランやスパの割引、ラウンジ、リムジンの送迎などが使えると公式に案内されています。", status="official", src="official_tier", checked="2026-10-31"),
+    dict(title="他のカジノの会員ランクを持ち込める", text="ほかのカジノの会員ランクを持っている人向けに、ランクを合わせてもらえる制度（カジノ・マッチ）が公式ページに掲載されています。対象のカジノや条件は公式ページで確認してください。", status="check", src="official_match", checked="2026-10-31"),
+    dict(title="空港からの無料シャトルバス", text="仁川空港の第1・第2ターミナルとパラダイスシティの間に、予約なしで乗れる無料シャトルがあると紹介されています。車で5分ほどです。運行の間隔は紹介によって20〜60分と違うので、現地で確認してください。", status="check", src="articles", checked="2026-10-31"),
+    dict(title="ポイントの注意", text="ポイントは他の人に譲れず、有効期限があります。もらったクーポンやポイントの使い道は、使う前にデスクで確認しましょう。", status="official", src="official_membership", checked="2026-10-31"),
+]
+
+# Cafe 9（カジノの中のレストラン）の写真。運営者撮影。
+CAFE9_PHOTOS = [
+    ("img/cafe9-butadon.jpg", "Cafe 9 の豚丼セット。炒飯、スープ、キムチつき", "豚丼セット"),
+    ("img/cafe9-gyudon.jpg", "Cafe 9 の牛丼セット。スープ、漬物、アイスティーつき", "牛丼セット"),
+]
+
+# パラダイスシティの施設（公式）
+FACILITIES = [
+    dict(title="パラダイスホテル＆リゾート", text="カジノと同じ建物にある、パラダイスシティのメインホテルです。電話 +82-32-729-2000。", status="official", src="official_top", checked="2026-10-31"),
+    dict(title="アート・パラディソ", text="58室すべてがスイートの、大人向けのブティックホテルです。電話 +82-1833-8880。", status="official", src="official_top", checked="2026-10-31"),
+    dict(title="ハイアット リージェンシー 仁川 パラダイスシティ", text="空港側にあるハイアットのホテルです。電話 +82-1577-2010。", status="official", src="official_top", checked="2026-10-31"),
+    dict(title="スパ「シメール」", text="韓国のチムジルバンをテーマにしたスパです。ふだんは10:00〜21:00ですが、季節によって休みや時間の変更があります。", status="official", src="official_cimer", checked="2026-10-31"),
+    dict(title="ワンダーボックス", text="屋内のファミリー向けテーマパークです。家族で行くときに。", status="official", src="official_top", checked="2026-10-31"),
+    dict(title="カジノ", text="韓国でいちばん大きい外国人専用カジノと公式に紹介されています。24時間営業です。", status="official", src="official_overview", checked="2026-10-31"),
+]
+
 # 特典（食事券・ドリンク券など）
 PERKS = [
     dict(title="食事券は1日最大2枚まで", text="食事券は1日に2枚まで使えるという情報があります。会員ランクや条件で変わる可能性があります。", status="user", src="users", checked="2026-10-31"),
     dict(title="食事券の回数は午前6時にリセット", text="食事券を使える回数は、毎日午前6時にリセットされるという情報があります。", status="user", src="users", checked="2026-10-31"),
-    dict(title="会員カード（メンバーシップ）", text="パスポートがあれば作れ、最初はいちばん下のランクから始まると紹介されています。ランクの名前や条件は公式で確認できていません。", status="check", src="articles", checked="2026-10-31"),
+    dict(title="会員カード（メンバーシップ）", text="パスポートがあれば作れます。ランクは過去24か月のポイントで、3か月ごとに見直されます。", status="official", src="official_membership", checked="2026-10-31"),
+    dict(title="ポイントで食事券・ドリンク券", text="貯まったポイントで食事券やドリンク券に交換できるという情報があります（例：1,000ポイントごと）。交換のレートは時期で変わる可能性があります。", status="check", src="articles", checked="2026-10-31"),
     dict(title="新規会員向けの特典", text="公式予約ページに「PARADISE CASINO NEW MEMBERSHIP WELCOME OFFER」というプランが掲載されています。内容・期間・条件は公式ページで確認してください。", status="check", src="official_welcome", checked="2026-10-31"),
 ]
 # これから情報を集める特典の枠（分かったら PERKS に移す）
-PERK_SLOTS = ["食事券を使えるレストラン", "ドリンク券の利用条件", "会員ランクごとの特典", "宿泊特典", "期間限定キャンペーン"]
+PERK_SLOTS = ["ドリンク券の利用条件", "会員ランクごとの特典", "宿泊特典", "期間限定キャンペーン"]
 
 # 宿泊・キャンペーン。current は公式に確認できた「今のもの」だけ。終わったものや過去の情報は archive。
 CAMPAIGNS = dict(
@@ -93,6 +130,20 @@ CAMPAIGNS = dict(
             book_from="", book_to="", stay_from="", stay_to="",
             note="2026-10-31 に公式予約ページへの掲載を確認しました。内容と期間はまだ確認できていません。",
             status="check", src="official_thrill", checked="2026-10-31", url="https://www.p-city.com/front/reservation/reservationStep1To2?RP_SEQ=13067",
+        ),
+        dict(
+            name="パラダイス・メンバーズデー", kind="会員向けの期間限定プラン（7日間限定と掲載）",
+            nights="要確認", days="要確認", perks="要確認（公式ページで確認）", conditions="要確認",
+            book_from="", book_to="", stay_from="", stay_to="",
+            note="2026-10-31 に公式予約ページへの掲載を確認しました。「7日間限定」と書かれていますが、日付はまだ確認できていません。",
+            status="check", src="official_members_day", checked="2026-10-31", url="https://www.p-city.com/front/reservation/reservationStep1To2?RP_SEQ=12380",
+        ),
+        dict(
+            name="カジノ会員つき宿泊パッケージ", kind="宿泊＋カジノ会員のパッケージ",
+            nights="要確認", days="要確認", perks="要確認（公式ページで確認）", conditions="要確認",
+            book_from="", book_to="", stay_from="", stay_to="",
+            note="2026-10-31 に公式予約ページへの掲載を確認しました。内容と期間はまだ確認できていません。",
+            status="check", src="official_casino_pkg", checked="2026-10-31", url="https://www.p-city.com/front/reservation/reservationStep1To2?RP_SEQ=4366",
         ),
     ],
     archive=[
@@ -149,6 +200,8 @@ BOOKING_CHECKS = [
 
 # よくある質問
 FAQ = [
+    ("新規会員になると何がもらえる？", "30,000ウォン分のラッキーベッティングクーポンと、20,000ウォン分のマシンチケットがもらえると公式に案内されています。1人1回だけです。", "official", "official_membership"),
+    ("カジノの中で食事はできる？", "カジノの中のレストラン「Cafe 9」で食べられます。食事券は Cafe 9 の右側の発券機で出せるという情報があります（要確認）。", "check", "articles"),
     ("カジノに入場するために必要なものは？", "パスポートが必要です。満19歳以上の外国人が対象です。", "official", "official_notice"),
     ("パスポートは必要？", "必要です。国籍の確認に使うので、原本を持って行きましょう。", "official", "official_casino"),
     ("カジノ内で写真撮影はできる？", "原則禁止とされています。スマホでの撮影も避けてください。公式ページでの明記は確認できていないため、現地の案内に従ってください。", "user", "users"),
@@ -185,7 +238,19 @@ ARTICLES = [
             ("客室", "木目の壁と大きなベッドの落ち着いた部屋です。窓際には一人掛けのソファとオットマンがあり、夜は窓から空港周辺の明かりが見えました。"),
             ("バスルーム", "バスタブとシャワーがあり、洗面台との間はガラスで仕切られています。アメニティはボトルタイプでした。"),
         ],
-        photos=True,
+        photos="hotel",
+        status="exp",
+    ),
+    dict(
+        slug="cafe9", title="最初のご飯はカジノの「Cafe 9」", category="グルメ", date="2026-10-31",
+        lead="パラダイスシティに着いて最初に食べたのは、カジノの中のレストラン「Cafe 9」のご飯でした。写真は運営者が撮影しました。",
+        body=[
+            ("Cafe 9 ってどこ？", "カジノのフロアの中にあるレストランです。カジノのメインの食堂と紹介されていて、会員でなくても使えるという情報があります（要確認）。"),
+            ("食べたもの", "豚丼のセット（炒飯・スープ・キムチつき）と、牛丼のセット（スープ・漬物つき）。韓国にいながら、日本人にもなじみのある丼ものが食べられます。"),
+            ("食事券の出し方", "食事券は Cafe 9 の右側にある発券機で出せ、無料の券は24時間で使えなくなるという情報があります。1日に使える枚数やリセットの時間は、食事券のページにまとめています（要確認）。"),
+            ("注意", "カジノの中は撮影が原則禁止とされています。写真を撮る前に、スタッフに確認してください。"),
+        ],
+        photos="cafe9",
         status="exp",
     ),
     dict(
@@ -202,5 +267,6 @@ ARTICLES = [
 
 # 更新情報（新しい順）
 UPDATES = [
+    ("2026-10-31", "トップを「お得情報まとめ」中心に変更。公式の会員特典・ポイント・施設の情報と、Cafe 9 の記事（写真つき）を追加しました。"),
     ("2026-10-31", "サイトを公開しました。公式情報・ユーザー提供情報・体験談を区別して掲載しています。"),
 ]
