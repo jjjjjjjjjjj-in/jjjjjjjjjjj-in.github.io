@@ -184,3 +184,10 @@ tr.is-past td, tr.is-past th { color: var(--past); }
 .photos.wide img { aspect-ratio: 4 / 3; }
 .hero img { object-position: center 30%; }
 .table-wrap.fit table { min-width: 0; width: 100%; } .table-wrap.fit th, .table-wrap.fit td { padding: 10px 8px; font-size: 13px; }
+.ads { margin-block: 40px 8px; padding: 18px; border: 1px solid var(--line); border-radius: 12px; background: var(--paper); }
+.ads h2 { display: flex; align-items: center; gap: 8px; margin-top: 0; }
+.ads .pr { font-family: var(--body, sans-serif); font-size: 11px; font-weight: 700; letter-spacing: .08em; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; }
+.ad-list { list-style: none; margin: 10px 0; padding: 0; display: grid; gap: 0; }
+.ad-list li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; padding: 10px 0; border-top: 1px solid var(--line); }
+.ad-links { display: flex; gap: 8px; }
+.ad-links a { font-size: 13px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; color: inherit; }

@@ -67,7 +67,25 @@ def icon(name):
             f'stroke-linecap="round" stroke-linejoin="round">{ICONS[name]}</svg>')
 
 
+def travel_ads():
+    from urllib.parse import quote
+    rows = []
+    for name, kw in D.TRAVEL_GOODS:
+        amz = f"https://www.amazon.co.jp/s?k={quote(kw)}&tag={D.AMAZON_TAG}"
+        rak = (f"https://af.moshimo.com/af/c/click?a_id={D.MOSHIMO_A_ID}&p_id=54&pc_id=54&pl_id=616&url="
+               + quote(f"https://search.rakuten.co.jp/search/mall/{quote(kw)}/", safe=""))
+        rows.append(f'<li><span>{e(name)}</span><span class="ad-links"><a href="{e(amz)}" target="_blank" rel="sponsored noopener">Amazon</a>'
+                    f'<a href="{e(rak)}" target="_blank" rel="sponsored noopener">楽天市場</a></span></li>')
+    return f"""<aside class="ads" aria-labelledby="h-ads"><h2 id="h-ads"><span class="pr">PR</span>韓国旅行の持ち物</h2>
+  <p class="muted">旅行の準備に役立つ物です。リンク先はAmazonと楽天市場の検索結果です。</p>
+  <ul class="ad-list">{''.join(rows)}</ul>
+  <p class="muted">このコーナーは広告（アフィリエイト）です。Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。</p>
+</aside>"""
+
+
 def layout(file, title, desc, body, head_html, extra_head=""):
+    if file in D.AD_PAGES:
+        body = body + travel_ads()
     nav = "".join(f'<li><a href="{f}"{" aria-current=\"page\"" if f == file else ""}>{e(n)}</a></li>' for f, n in NAV)
     canonical = BASE + ("" if file == "index.html" else file)
     return f"""<!doctype html>
