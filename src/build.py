@@ -15,7 +15,7 @@ from sites import SITES  # noqa: E402
 BASE_URL = "https://jjjjjjjjjjj-in.github.io/"
 
 # Google Search Console（URLプレフィックス https://jjjjjjjjjjj-in.github.io/）の HTMLタグの content の値
-GOOGLE_SITE_VERIFICATION = ""
+GOOGLE_SITE_VERIFICATION = "qCmKqyCaXzHH3V_hEqM1lhQKy9os6X5RIR2zZmw4fZc"
 
 e = html.escape
 

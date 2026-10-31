@@ -23,5 +23,5 @@
 6. 公式予告編などのリンクは、確認できた公式のものだけ使う。推測した URL は使わない。
 
 ## Google Search Console
-- `https://jjjjjjjjjjj-in.github.io/`（URLプレフィックス）の確認コードを `src/build.py` の `GOOGLE_SITE_VERIFICATION` に入れる。未設定（2026-10-31時点）。
+- `https://jjjjjjjjjjj-in.github.io/`（URLプレフィックス）の確認コードは `src/build.py` の `GOOGLE_SITE_VERIFICATION` に設定済み（2026-10-31）。
 - 確認後、サイトマップに `sitemap.xml` を1回登録すれば、以降のサイト追加は自動で伝わる。
