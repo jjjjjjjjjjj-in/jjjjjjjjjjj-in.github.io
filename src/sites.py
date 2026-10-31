@@ -1,0 +1,14 @@
+# 公開中のサイトの一覧。新しいサイトを作ったらここに1件足して `python3 src/build.py` を実行する。
+# path: このドメインの中の場所（末尾 /）。sitemap: そのサイトのサイトマップ（なければ None）
+SITES = [
+    dict(
+        path="doomsday-guide/",
+        name="ドゥームズデイ予習ガイド",
+        name_en="Doomsday Watch Guide",
+        desc="『アベンジャーズ／ドゥームズデイ』の前に観るべきMCU作品を、重要度つきの視聴順チェックリストで整理。",
+        desc_en="What to watch before Avengers: Doomsday, with a story-order checklist and importance ratings.",
+        en_path="doomsday-guide/en/",
+        sitemap="doomsday-guide/sitemap.xml",
+        updated="2026-10-31",
+    ),
+]
