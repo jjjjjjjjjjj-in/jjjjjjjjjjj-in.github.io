@@ -1,6 +1,6 @@
 # jjjjjjjjjjj-in.github.io（全サイトの入口）
 
-運営者の全サイトの入口ページ（サイト名「ジャンル別おすすめガイド集」。映画に限らず旅行・本・自分の有料noteなど色々なテーマを扱う予定）。GitHub Pages で https://jjjjjjjjjjj-in.github.io/ に公開される。
+運営者の全サイトの入口ページ（サイト名「もっちぃま」。デザインはモノトーンで、各サイトのタイルは同じ大きさにそろえる。映画に限らず旅行・本・自分の有料noteなど色々なテーマを扱う予定）。GitHub Pages で https://jjjjjjjjjjj-in.github.io/ に公開される。
 運営者は日本語で、技術に詳しくない。返答は日本語で、短く、専門用語を避ける。コミット作成者は Claude <noreply@anthropic.com>。
 
 ## このリポジトリの役割

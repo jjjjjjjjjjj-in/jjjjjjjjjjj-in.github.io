@@ -29,22 +29,27 @@ def analytics_tag():
             f"<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','{GA_MEASUREMENT_ID}');</script>")
 
 
+SITE_NAME = "もっちぃま"
+
+# モノトーン。黒の帯、白い地、グレーの線。サイトのタイルは全部同じ大きさにそろえる
 STYLE = """<style>
-:root { --bg: #ffffff; --surface: #f5f7fb; --line: #d5deea; --fg: #0b1d36; --muted: #556a88; --green: #0e3b2b; --navy: #0b2546; --gold: #f2c94c; --link: #1d5fb0; }
+:root { --bg: #ffffff; --ink: #111111; --surface: #f4f4f4; --line: #d9d9d9; --muted: #5c5c5c; --on-ink: #ffffff; --soft: #bdbdbd; }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--fg); font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif; line-height: 1.7;
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif; line-height: 1.7;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-.wrap { max-width: 760px; margin: 0 auto; padding-block: 32px 56px; display: grid; gap: 24px; }
-header { background: var(--green); color: #fff; border-radius: 12px; border-left: 6px solid var(--gold); padding: clamp(20px, 5vw, 32px); }
-h1 { margin: 0; font-size: clamp(24px, 6vw, 34px); font-weight: 900; text-wrap: balance; }
-header p { margin: 6px 0 0; color: #d5e6dc; }
-ul.cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
-.card { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; }
-.card h2 { margin: 0 0 4px; font-size: 19px; }
-.card p { margin: 0; color: var(--muted); font-size: 14.5px; }
-.card .en { margin-top: 6px; }
-a { color: var(--link); font-weight: 700; }
-.policy h2 { background: var(--navy); color: #fff; border-radius: 6px; border-left: 4px solid var(--gold); padding: 8px 14px; font-size: 18px; margin: 28px 0 8px; }
+.wrap { max-width: 880px; margin: 0 auto; padding-block: 32px 56px; display: grid; gap: 24px; }
+header { background: var(--ink); color: var(--on-ink); border-radius: 12px; padding: clamp(22px, 5vw, 36px); }
+h1 { margin: 0; font-size: clamp(30px, 8vw, 46px); font-weight: 900; letter-spacing: .04em; line-height: 1.2; }
+header p { margin: 8px 0 0; color: var(--soft); }
+ul.cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); grid-auto-rows: 1fr; }
+.card { display: flex; }
+.card a { flex: 1; display: grid; grid-template-rows: auto auto 1fr; gap: 6px; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; color: var(--ink); text-decoration: none; min-height: 170px; }
+.card a:hover, .card a:focus-visible { border-color: var(--ink); outline: none; }
+.card .lang { font-size: 11.5px; font-weight: 700; letter-spacing: .08em; color: var(--muted); border: 1px solid var(--line); border-radius: 99px; padding: 0 8px; width: fit-content; }
+.card h2 { margin: 0; font-size: 18px; font-weight: 900; line-height: 1.4; }
+.card p { margin: 0; color: var(--muted); font-size: 14px; font-weight: 400; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+a { color: var(--ink); font-weight: 700; }
+.policy h2 { background: var(--ink); color: var(--on-ink); border-radius: 6px; padding: 8px 14px; font-size: 18px; margin: 28px 0 8px; }
 .policy h3 { font-size: 16px; margin: 16px 0 4px; }
 .policy p, .policy li { margin: 6px 0; }
 footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; }
@@ -54,23 +59,21 @@ e = html.escape
 
 
 def index_html():
+    tiles = []
+    for site in SITES:
+        tiles.append((site["path"], site["name"], site["desc"], "日本語", "ja"))
+        if site.get("en_path"):
+            tiles.append((site["en_path"], site["name_en"], site["desc_en"], "English", "en"))
     cards = "".join(f"""
-    <li class="card">
-      <h2><a href="{e(s["path"])}">{e(s["name"])}</a></h2>
-      <p>{e(s["desc"])}</p>
-      <p class="en"><a href="{e(s["en_path"])}" lang="en">{e(s["name_en"])}</a> — <span lang="en">{e(s["desc_en"])}</span></p>
-    </li>""" if s.get("en_path") else f"""
-    <li class="card">
-      <h2><a href="{e(s["path"])}">{e(s["name"])}</a></h2>
-      <p>{e(s["desc"])}</p>
-    </li>""" for s in SITES)
+    <li class="card"><a href="{e(path)}" lang="{lang}"><span class="lang">{label}</span><h2>{e(name)}</h2><p>{e(desc)}</p></a></li>"""
+                    for path, name, desc, label, lang in tiles)
     verify = f'\n<meta name="google-site-verification" content="{e(GOOGLE_SITE_VERIFICATION)}">' if GOOGLE_SITE_VERIFICATION else ""
     return f"""<!doctype html>
 <html lang="ja">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">{analytics_tag()}
-<title>ジャンル別おすすめガイド集</title>
+<title>{SITE_NAME}</title>
 <meta name="description" content="映画、旅行、本などのテーマごとに、知っておくと役立つ情報や楽しみ方をまとめたガイドサイトです。">
 <link rel="canonical" href="{BASE_URL}">{verify}
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -81,7 +84,7 @@ def index_html():
 <body>
 <div class="wrap">
   <header>
-    <h1>ジャンル別おすすめガイド集</h1>
+    <h1>{SITE_NAME}</h1>
     <p>映画、旅行、本などのテーマごとに、知っておくと役立つ情報や楽しみ方をまとめています。</p>
   </header>
   <ul class="cards">{cards}
@@ -100,8 +103,8 @@ def privacy_html():
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">{analytics_tag()}
-<title>プライバシーポリシー｜ジャンル別おすすめガイド集</title>
-<meta name="description" content="ジャンル別おすすめガイド集と、その中の各サイトでのアクセス解析・広告・情報の外部送信についての説明です。">
+<title>プライバシーポリシー｜{SITE_NAME}</title>
+<meta name="description" content="{SITE_NAME}と、その中の各サイトでのアクセス解析・広告・情報の外部送信についての説明です。">
 <link rel="canonical" href="{BASE_URL}privacy.html">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -110,7 +113,7 @@ def privacy_html():
 </head>
 <body>
 <div class="wrap">
-  <header><h1>プライバシーポリシー</h1><p>ジャンル別おすすめガイド集（{BASE_URL} 以下の全サイト）</p></header>
+  <header><h1>プライバシーポリシー</h1><p>{SITE_NAME}（{BASE_URL} 以下の全サイト）</p></header>
   <article class="policy">
   <p>このページでは、当サイトでのアクセス解析と広告の仕組み、利用者の情報の扱いについて説明します。最終更新：{POLICY_UPDATED}</p>
 
