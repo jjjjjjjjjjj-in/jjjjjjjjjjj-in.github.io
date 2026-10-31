@@ -407,6 +407,10 @@ def page_guide():
   {rule_cards(D.TABLE_RULES)}
   {source('users', D.UPDATED)}
 </section>
+<section aria-labelledby="h-floor"><h2 id="h-floor">フロアの並びとおすすめのテーブル</h2>
+  <p>{badge('exp')} 入口のすぐ手前にクラップスとルーレット、まっすぐ進むとブラックジャックやポーカー、その先にたくさんのバカラの台があります。運営者の体感では、サレンダーができるブラックジャックがいちばんチップが減りにくかったです。</p>
+  <p><a class="btn" href="article-floor-tables.html">体験談を読む</a></p>
+</section>
 <section aria-labelledby="h-b"><h2 id="h-b">カジノの基本情報</h2>
   {basics_cards()}
 </section>
