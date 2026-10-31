@@ -500,7 +500,11 @@ def page_articles():
 
 
 def page_article(a):
-    sections = "".join(f"<section><h2>{e(h)}</h2><p>{e(t)}</p></section>" for h, t in a["body"])
+    def table(rows):
+        head, *rest = rows
+        return ('<div class="table-wrap"><table><thead><tr>' + "".join(f"<th>{e(c)}</th>" for c in head) + "</tr></thead><tbody>"
+                + "".join("<tr>" + "".join(f"<td>{e(c)}</td>" for c in r) + "</tr>" for r in rest) + "</tbody></table></div>")
+    sections = "".join(f"<section><h2>{e(b[0])}</h2><p>{e(b[1])}</p>{table(b[2]) if len(b) > 2 else ''}</section>" for b in a["body"])
     pics = {"hotel": photos(), "cafe9": photos(D.CAFE9_PHOTOS, wide=True)}.get(a.get("photos"), "")
     body = f"""
 <div class="article-body">
@@ -511,7 +515,7 @@ def page_article(a):
   <p class="notice">この記事は{D.STATUS_LABEL[a['status']]}です。公式情報ではありません。条件は変わることがあるので、最新の情報は公式サイトで確認してください。</p>
   <p><a class="btn" href="articles.html">記事一覧に戻る</a></p>
 </div>"""
-    index_search("体験談・記事", f"article-{a['slug']}.html", a["title"], a["lead"] + " " + " ".join(t for _, t in a["body"]))
+    index_search("体験談・記事", f"article-{a['slug']}.html", a["title"], a["lead"] + " " + " ".join(b[1] for b in a["body"]))
     return layout(f"article-{a['slug']}.html", f"{a['title']}｜{SITE}", a["lead"], body, page_head(a["title"], a["lead"]))
 
 
