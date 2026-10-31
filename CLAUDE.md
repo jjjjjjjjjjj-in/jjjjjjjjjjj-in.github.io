@@ -19,10 +19,10 @@
    - A8.net: DMM TV を申請中（2026-10-31）。承認されたら広告コードを運営者から受け取る
 3. 広告のルール: 「PR」表記を出す。Amazon の場合は「Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。」（英語: "As an Amazon Associate, this site earns from qualifying purchases."）を出す。誤クリックを誘う配置はしない。
 4. そのサイトの `sitemap.xml` を作り、`src/sites.py` に1件追加して `python3 src/build.py` を実行し、push する。これで入口ページと Google への通知（サイトマップインデックス）が自動で更新される。
-5. Amazon・もしも・A8 には `https://jjjjjjjjjjj-in.github.io/` を登録してもらう（運営者の作業、1回だけ）。済んだらこの行を更新する。
+5. Amazon（日本・アメリカ）・もしも・A8 には `https://jjjjjjjjjjj-in.github.io/` を登録済み（2026-10-31）。このドメインの中のサイトなら、運営者の追加作業なしで広告を使える。
 6. 公式予告編などのリンクは、確認できた公式のものだけ使う。推測した URL は使わない。
 7. オンラインカジノの宣伝は日本では違法で、ASP でも禁止。カジノを扱うときはリゾートの旅行ガイドとして書く。
 
 ## Google Search Console
 - `https://jjjjjjjjjjj-in.github.io/`（URLプレフィックス）の確認コードは `src/build.py` の `GOOGLE_SITE_VERIFICATION` に設定済み（2026-10-31）。
-- 確認後、サイトマップに `sitemap.xml` を1回登録すれば、以降のサイト追加は自動で伝わる。
+- 所有権の確認とサイトマップ（`sitemap.xml`）の登録は済み（2026-10-31）。以降のサイト追加は `src/sites.py` に足すだけで自動で伝わる。
