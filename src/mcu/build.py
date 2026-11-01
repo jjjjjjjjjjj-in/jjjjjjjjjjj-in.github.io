@@ -45,6 +45,9 @@ TEXT = {
         s_ending="ラストとおまけ映像", s_next="次に観るとよい作品",
         nospoil="ネタバレなし", spoil="ネタバレあり",
         story_open="あらすじを読む（結末までのネタバレを含みます）",
+        scenes_link="シーンごとの詳しいあらすじを読む", scenes_title="『{title}』詳しいあらすじ（シーンごと）",
+        scenes_lead="映画を最初から最後まで、場面ごとに文章でたどります。これを読めば、話の流れがすべて分かります。",
+        scenes_warn="※結末まで、すべてのネタバレを含みます。", scenes_back="完全ガイドに戻る", scenes_desc="『{title}』のあらすじを、最初の場面からエンドクレジットの後まで、シーンごとにくわしく文章で解説します（ネタバレあり）。",
         confusing_note="結末に関わる内容を含みます。",
         post="エンドクレジットの後のおまけ映像",
         shop="この作品をもっと楽しむ", list="マーベル映画紹介のほかのページ", folder="マーベル映画紹介", folder_path="marvel/",
@@ -61,6 +64,9 @@ TEXT = {
         s_ending="The ending and post-credits", s_next="What to watch next",
         nospoil="No spoilers", spoil="Spoilers",
         story_open="Read the story (spoilers up to the ending)",
+        scenes_link="Read the detailed scene-by-scene story", scenes_title="{title}: The Full Story, Scene by Scene",
+        scenes_lead="The whole film, start to finish, told scene by scene in words. Read this and you'll know everything that happens.",
+        scenes_warn="Contains every spoiler, up to the ending.", scenes_back="Back to the complete guide", scenes_desc="The full story of {title}, from the first scene to after the credits, told scene by scene (spoilers).",
         confusing_note="Contains spoilers about the ending.",
         post="After the end credits",
         shop="More from this film", list="More Marvel movie guides", folder="Marvel Movie Guides", folder_path="marvel/en/",
@@ -232,6 +238,7 @@ def build_page(slug, lang):
 """ if has_map else "") + f"""
 <section class="fg-sec" id="story"><h2>{e(t['s_story'])}<span class="tag-warn">{e(t['spoil'])}</span></h2>
   <details class="fg-spoiler"><summary>{e(t['story_open'])}</summary>{story}</details>
+  {f'<p class="fg-more"><a class="btn primary" href="story/">{e(t["scenes_link"])}</a></p>' if g.get("scenes") else ""}
 </section>
 
 {shop}
@@ -270,11 +277,55 @@ def write(path, text):
         f.write(text)
 
 
+def build_scenes_page(slug, lang):
+    """シーンごとの詳しいあらすじのページ（/<slug>/story/ と /<slug>/en/story/）"""
+    t = TEXT[lang]
+    g = FILM_GUIDES[slug]
+    tr = title_rec(slug, lang)
+    title = tr["title"]
+    prefix = "../../" if lang == "en" else "../"
+    top = "../../../" if lang == "en" else "../../"
+    path = f"{slug}/en/story/" if lang == "en" else f"{slug}/story/"
+    chapters = [(c[2], c[3]) if lang == "en" else (c[0], c[1]) for c in g["scenes"]]
+    toc = (f'<ul><li><span class="toc-label">{e(t["toc"])}</span></li>'
+           + "".join(f'<li><a href="#c{i}">{e(h.split(" ", 1)[0] if lang == "ja" else h.split(":")[0])}</a></li>' for i, (h, _) in enumerate(chapters, 1)) + "</ul>")
+    body = "".join(
+        f'<section class="fg-sec sc-chapter" id="c{i}"><h2>{e(h)}</h2>'
+        + "".join(f'<div class="sc-scene"><h3>{e(sh)}</h3><p>{e(sp)}</p></div>' for sh, sp in scenes) + "</section>\n"
+        for i, (h, scenes) in enumerate(chapters, 1))
+    page_title = t["scenes_title"].format(title=title)
+    desc = t["scenes_desc"].format(title=title)
+    th = g.get("theme")
+    theme_css = (f"<style>:root{{--green:{th['deep']};--navy:{th['main']};--gold-bright:{th['accent']};--green-soft:{th['soft']};"
+                 f"--navy-soft:{th['soft']};--gold:{th['accent']};--gold-ink:{th['main']};--link:{th['main']};}}"
+                 ".sc-scene{border-left:3px solid var(--gold-bright);padding:2px 0 2px 14px;margin:14px 0}.sc-scene h3{margin:0 0 4px;font-size:16px;color:var(--navy)}.sc-scene p{margin:0;line-height:1.95}"
+                 "</style>\n") if th else ""
+    schema = {"@context": "https://schema.org", "@type": "Article", "headline": page_title, "description": desc, "inLanguage": lang,
+              "dateModified": g["updated"], "about": {"@type": "Movie", "name": title, "datePublished": tr["year"]}}
+    html = head(slug, page_title, desc, lang, prefix, schema, t["site_fmt"].format(title=title))
+    html = html.replace(f'<link rel="canonical" href="{BASE_URL}{slug}/{"en/" if lang == "en" else ""}">', f'<link rel="canonical" href="{BASE_URL}{path}">')
+    html = (html.replace(f'href="{BASE_URL}{slug}/">', f'href="{BASE_URL}{slug}/story/">').replace(f'href="{BASE_URL}{slug}/en/">', f'href="{BASE_URL}{slug}/en/story/">'))
+    return html + theme_css + f"""
+<nav class="crumb"><a href="{top}">{e(t['home'])}</a> ＞ <a href="{top}{t['folder_path']}">{e(t['folder'])}</a> ＞ <a href="../">{e(title)}</a> ＞ {e(t['s_story'])}<a class="lang-switch" href="{'../../story/' if lang == 'en' else '../en/story/'}">{e(t['other_lang'])}</a></nav>
+<header class="fg-hero">
+  <p class="eyebrow">{e(t['menu'])} · {e(tr['year'])}</p>
+  <h1>{e(page_title)}</h1>
+  <p class="lead">{e(t['scenes_lead'])}</p>
+  <p class="lead"><strong>{e(t['scenes_warn'])}</strong></p>
+</header>
+<nav class="site-toc" aria-label="{e(t['toc'])}">{toc}</nav>
+{body}
+<section class="panel"><div class="btns"><a class="btn primary" href="../">{e(t['scenes_back'])}</a></div></section>
+""" + footer(lang, top) + "</body>\n</html>\n"
+
+
 def main():
     og = []
     for slug, g in FILM_GUIDES.items():
         for lang in ("ja", "en"):
             write(f"{slug}/{'en/' if lang == 'en' else ''}index.html", build_page(slug, lang))
+            if g.get("scenes"):
+                write(f"{slug}/{'en/' if lang == 'en' else ''}story/index.html", build_scenes_page(slug, lang))
             tr = title_rec(slug, lang)
             og.append(dict(lang=lang, title=tr["title"], year=tr["year"], theme=g.get("theme") or {},
                            out=f"{slug}/{'en/' if lang == 'en' else ''}og.png"))
@@ -292,7 +343,9 @@ def main():
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 """ + "".join(f"""  <url><loc>{BASE_URL}{slug}/{p}</loc><lastmod>{g["updated"]}</lastmod>
     <xhtml:link rel="alternate" hreflang="ja" href="{BASE_URL}{slug}/"/><xhtml:link rel="alternate" hreflang="en" href="{BASE_URL}{slug}/en/"/></url>
-""" for p in ("", "en/")) + "</urlset>\n")
+""" for p in ("", "en/")) + ("".join(f"""  <url><loc>{BASE_URL}{slug}/{p}</loc><lastmod>{g["updated"]}</lastmod>
+    <xhtml:link rel="alternate" hreflang="ja" href="{BASE_URL}{slug}/story/"/><xhtml:link rel="alternate" hreflang="en" href="{BASE_URL}{slug}/en/story/"/></url>
+""" for p in ("story/", "en/story/")) if g.get("scenes") else "") + "</urlset>\n")
     with open(os.path.join(SRC, "og.json"), "w", encoding="utf-8") as f:
         json.dump(og, f, ensure_ascii=False, indent=1)
     print("built:", ", ".join(FILM_GUIDES))

@@ -44,7 +44,7 @@ a { color: inherit; }
 .mhead button svg { width: 26px; height: 26px; }
 .mlogo-svg { display: block; height: 50px; width: 143px; }
 .mlogo { justify-self: center; font-family: "Anton", "Oswald", "Impact", "Arial Narrow", sans-serif; color: #fff; text-decoration: none;
-  line-height: 0; display: inline-block; }
+  font-size: 40px; line-height: 1; letter-spacing: -.02em; transform: scaleY(1.18); display: inline-block; padding: 0 .1em; }
 .mmenu, .msearch { position: sticky; top: 64px; z-index: 19; background: #111; color: #fff; padding: 10px 16px 14px; }
 .mmenu[hidden], .msearch[hidden] { display: none; }
 .mmenu ul { list-style: none; margin: 0 auto; padding: 0; max-width: 1100px; display: grid; gap: 2px; }
@@ -185,7 +185,7 @@ def build(f, sites_in_group, head_extra, base_url, site_name, analytics):
 <body>
 <header class="mhead">
   <button type="button" id="mbtn-menu" aria-label="{e(t["menu"])}" aria-expanded="false" aria-controls="mmenu">{ICON_MENU}</button>
-  <a class="mlogo" href="./" aria-label="{e(f["logo"])}">{LOGO_SVG}</a>
+  <a class="mlogo" href="./" aria-label="{e(f["logo"])}">{e(f["logo"])}</a>
   <button type="button" id="mbtn-search" aria-label="{e(t["search"])}" aria-expanded="false" aria-controls="msearch">{ICON_SEARCH}</button>
 </header>
 <nav class="mmenu" id="mmenu" hidden><ul>
