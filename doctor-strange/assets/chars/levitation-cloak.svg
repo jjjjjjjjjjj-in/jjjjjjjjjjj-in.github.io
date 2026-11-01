@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- 空を飛ぶ赤いマント（このサイトのオリジナルのイラスト） -->
+  <defs>
+    <radialGradient id="bg" cx=".5" cy=".4" r=".75">
+      <stop offset="0" stop-color="#2b4d63"/>
+      <stop offset="1" stop-color="#101c26"/>
+    </radialGradient>
+    <linearGradient id="cl" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#d63a2f"/>
+      <stop offset="1" stop-color="#8e1a14"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <!-- 魔法の輪 -->
+  <circle cx="200" cy="200" r="160" fill="none" stroke="#f2a23a" stroke-width="3" stroke-dasharray="10 8" opacity=".55"/>
+  <!-- 高いえり -->
+  <path d="M120 120 Q200 60 280 120 L260 150 Q200 115 140 150 Z" fill="#b5271f"/>
+  <!-- マント本体（風になびく） -->
+  <path d="M140 150 Q200 120 260 150 C300 220 320 300 340 350 Q300 330 280 355 Q250 325 225 360 Q200 330 175 360 Q150 325 120 355 Q100 330 60 350 C80 300 100 220 140 150 Z" fill="url(#cl)"/>
+  <!-- 金の飾り -->
+  <path d="M140 150 Q200 120 260 150" stroke="#f2c23a" stroke-width="6" fill="none"/>
+  <circle cx="165" cy="162" r="9" fill="#f2c23a"/><circle cx="235" cy="162" r="9" fill="#f2c23a"/>
+  <!-- ひだ -->
+  <g stroke="#6e120d" stroke-width="4" fill="none" opacity=".7">
+    <path d="M170 175 Q160 260 150 340"/><path d="M200 170 Q200 260 200 345"/><path d="M230 175 Q240 260 250 340"/>
+  </g>
+</svg>

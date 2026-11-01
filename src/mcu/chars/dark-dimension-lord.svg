@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- 闇の次元の支配者（このサイトのオリジナルのイラスト） -->
+  <defs>
+    <radialGradient id="bg" cx=".5" cy=".45" r=".75">
+      <stop offset="0" stop-color="#5a1f8a"/>
+      <stop offset=".6" stop-color="#2a0c48"/>
+      <stop offset="1" stop-color="#0c0418"/>
+    </radialGradient>
+    <linearGradient id="fl" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#ff7a1a"/>
+      <stop offset=".6" stop-color="#ff3d6e"/>
+      <stop offset="1" stop-color="#b13cff"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <!-- うずまく闇 -->
+  <g fill="none" stroke="#8d4bd6" stroke-width="3" opacity=".45">
+    <path d="M200 60 a140 140 0 1 1 -1 0"/>
+    <path d="M200 95 a105 105 0 1 0 1 0"/>
+    <path d="M60 330 q70 -60 140 -20 t140 -30"/>
+  </g>
+  <!-- 炎の頭 -->
+  <path d="M200 70 C230 110 280 100 285 150 C320 130 330 190 305 230 C300 300 255 340 200 340 C145 340 100 300 95 230 C70 190 80 130 115 150 C120 100 170 110 200 70 Z" fill="url(#fl)"/>
+  <path d="M200 120 C220 145 255 140 258 175 C275 170 280 210 265 235 C258 285 232 310 200 310 C168 310 142 285 135 235 C120 210 125 170 142 175 C145 140 180 145 200 120 Z" fill="#2a0c48"/>
+  <!-- 目 -->
+  <path d="M150 210 q25 -18 45 2 q-25 10 -45 -2 Z" fill="#ffe14d"/>
+  <path d="M250 210 q-25 -18 -45 2 q25 10 45 -2 Z" fill="#ffe14d"/>
+  <!-- 口 -->
+  <path d="M168 270 q32 18 64 0" stroke="#ff7a1a" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- 火の粉 -->
+  <g fill="#ffb347"><circle cx="90" cy="110" r="4"/><circle cx="320" cy="90" r="3"/><circle cx="340" cy="300" r="3"/><circle cx="70" cy="280" r="3"/></g>
+</svg>

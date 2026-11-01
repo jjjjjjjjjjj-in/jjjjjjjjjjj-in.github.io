@@ -454,5 +454,29 @@
    "soft": "#e2ecef"
   },
   "out": "wakanda-forever/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ドクター・ストレンジ",
+  "year": "2016",
+  "theme": {
+   "main": "#1d3557",
+   "deep": "#0b1626",
+   "accent": "#f2a23a",
+   "soft": "#e5ebf2"
+  },
+  "out": "doctor-strange/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Doctor Strange",
+  "year": "2016",
+  "theme": {
+   "main": "#1d3557",
+   "deep": "#0b1626",
+   "accent": "#f2a23a",
+   "soft": "#e5ebf2"
+  },
+  "out": "doctor-strange/en/og.png"
  }
 ]

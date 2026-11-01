@@ -216,6 +216,16 @@ SITES = [
         updated="2026-11-02",
     ),
     dict(
+        path="doctor-strange/", folder="marvel", folder_en="marvel-en",
+        name="ドクター・ストレンジ 完全ガイド",
+        name_en="Doctor Strange Complete Guide",
+        desc="両手を失った天才外科医ストレンジが、魔術の世界へ。あらすじ・相関図・用語・Q&A。",
+        desc_en="A brilliant surgeon who loses his hands finds the world of magic: story, character map, key terms and Q&A.",
+        en_path="doctor-strange/en/",
+        sitemap="doctor-strange/sitemap.xml",
+        updated="2026-11-02",
+    ),
+    dict(
         path="wakanda-forever/", folder="marvel", folder_en="marvel-en",
         name="ブラックパンサー／ワカンダ・フォーエバー 完全ガイド",
         name_en="Black Panther: Wakanda Forever Complete Guide",
