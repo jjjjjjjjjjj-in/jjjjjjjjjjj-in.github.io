@@ -229,6 +229,19 @@ def head(slug, title, desc, lang, prefix, schema, site_name):
 
 
 
+def special_section(g, lang, t):
+    """作品ごとの特別な項目（例：エンドゲームのアンコール版）。films.py の special"""
+    sp = g.get("special")
+    if not sp:
+        return ""
+    en = lang == "en"
+    cards = "".join(f'<div class="fg-card"><h3>{e(x[2] if en else x[0])}</h3><p>{e(x[3] if en else x[1])}</p></div>' for x in sp["items"])
+    srcs = "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(n)}</a></li>' for n, u in sp["sources"])
+    return (f'<section class="fg-sec" id="{sp["id"]}"><h2>{e(sp["title_en"] if en else sp["title"])}<span class="tag-warn">{e(t["spoil"])}</span></h2>\n'
+            f'  <p>{e(sp["lead_en"] if en else sp["lead"])}</p>\n  <div class="fg-cards">{cards}</div>\n'
+            f'  <p class="src-title">{"Sources" if en else "出典"}</p><ul class="src-list">{srcs}</ul>\n</section>\n\n')
+
+
 def contents_box(items, lang):
     """ページの最初に出す番号つきの目次（運営者の希望、2026-11-02）。items: [(リンク先, 見出し, [小見出し...])]"""
     lis = "".join(
@@ -285,8 +298,11 @@ def build_page(slug, lang):
     map_html, map_scripts, actors = relmap_build.map_section(slug, lang, e, prefix) if has_map else ("", "", [])
     sections = [("before", t["s_before"])] + ([("map", t["s_map"])] if has_map else []) + [
         ("story", t["s_story"]), ("glossary", t["s_glossary"]), ("confusing", t["s_confusing"]), ("points", t["s_points"]),
-        ("ending", t["s_ending"]), ("next", t["s_next"])]
-    short = t["toc_short"]
+        ("ending", t["s_ending"])] + ([(g["special"]["id"], g["special"]["title_en" if lang == "en" else "title"])] if g.get("special") else []) + [
+        ("next", t["s_next"])]
+    short = dict(t["toc_short"])
+    if g.get("special"):
+        short[g["special"]["id"]] = g["special"]["toc_en" if lang == "en" else "toc"]
     toc = (f'<ul><li><span class="toc-label">{e(t["toc"])}</span></li>'
            + "".join(f'<li><a href="#{k}">{e(short.get(k, v))}</a></li>' for k, v in sections) + "</ul>")
     facts = [(t["year"], tr["year"]), (t["runtime"], g["runtime_en"] if lang == "en" else g["runtime"]),
@@ -350,7 +366,7 @@ def build_page(slug, lang):
   <details class="fg-spoiler"><summary>{e(t['post'])}</summary><p>{e(tr['post'])}</p></details>
 </section>
 
-<section class="fg-sec" id="next"><h2>{e(t['s_next'])}</h2>
+{special_section(g, lang, t)}<section class="fg-sec" id="next"><h2>{e(t['s_next'])}</h2>
   <ul class="fg-next">{nexts}</ul>{timeline_link(slug, lang, top)}
 </section>
 

@@ -2444,6 +2444,33 @@ FILM_GUIDES = {
               ("サノスのフィギュア", "サノス フィギュア", "Thanos Marvel Legends figure")],
     ),
     "endgame": dict(
+        # 2026年の再上映『エンドゲーム：アンコール』の説明（運営者の希望、2026-11-02）。報道で食い違う所は食い違うと書く
+        special=dict(
+            id="encore", title="アンコール版（2026年の再上映）で足された場面", title_en="What the 2026 Encore re-release adds", toc="アンコール版", toc_en="Encore",
+            lead="2026年9月から、映画館で『アベンジャーズ／エンドゲーム：アンコール』として再上映されました。物語の流れは2019年版と同じですが、『アベンジャーズ／ドゥームズデイ』につながる新しい映像が足されています。以下はアメリカの業界紙などの報道をもとにまとめたものです（当サイトの確認日：2026-11-02）。",
+            lead_en="From September 2026, the film returned to theaters as Avengers: Endgame – Encore. The story is the same as the 2019 version, but new footage leading into Avengers: Doomsday was added. This summary is based on reports from US trade outlets and others (checked 2026-11-02).",
+            items=[
+                ("本編の最後：ドアをノックする音", "過去で暮らすことを選んだスティーブが、ペギーと部屋で踊る最後の場面。そこにドアをノックする音がして、TVAの服を着たロキが現れ、2人を「助けに来た」と告げます。多くの報道はこの場面を新しく足された結末としていますが、本編には新しい場面がないとする報道もあり、上映した形式によって違う可能性があります。",
+                 "The ending: a knock at the door", "In the final scene, Steve, who chose to stay in the past, dances with Peggy. There's a knock, and Loki, in his TVA outfit, says he's there to help them. Most reports describe this as a new ending, but at least one says no new footage was added to the main story, so it may depend on the screening format."),
+                ("エンドクレジットの途中：地下のバナー", "地下の施設に1人でいるブルース・バナーのもとに、ドクター・ドゥームの声が響き、バナーを連れて行こうとします。時期は『スパイダーマン：ブランド・ニュー・デイ』の後と報じられています。",
+                 "Mid-credits: Banner underground", "Bruce Banner, alone in an underground facility, hears Doctor Doom's voice as Doom comes to take him. Reports place it after Spider-Man: Brand New Day."),
+                ("TVAの警告", "TVA（時間変異取締局）の画面に、別々の世界の地球どうしがぶつかり合う「インカージョン」の警告が次々に表示されます。",
+                 "Warnings at the TVA", "TVA screens light up with warnings of incursions, Earths from different universes colliding with each other."),
+                ("最後の金づちの音とドゥーム", "2019年版のエンドクレジットの最後は、映像がなく、トニーが1作目でスーツを作ったときの金づちの音だけでした。アンコール版では、この金属を打つ音にドゥームの姿が重なります。音の意味が変わって見える、大きな違いです。",
+                 "The final clang and Doom", "The 2019 version ended the credits with no image, just the clang of Tony hammering his first suit. In the Encore, that metal-on-metal sound plays over images of Doom, a big change in what that sound seems to mean."),
+                ("上映形式によるちがい", "新しい映像の長さは「約4分」「約5〜6分」と報道によって違います。4つの場面すべてを観られたのはIMAXや「INFINITY VISION」などの一部の形式で、通常の上映は2つだけだったという報道もあります。日本のINFINITY VISION版には、日本だけの特別映像（約3分）も付きました（マーベル公式・日本）。",
+                 "Differences by format", "Reports differ on the length of the new footage (about 4 minutes vs. 5–6). Some say all four scenes were only in IMAX and Infinity Vision screenings, with standard screenings showing two. In Japan, Infinity Vision screenings also had an extra Japan-only featurette of about 3 minutes (Marvel Japan)."),
+                ("Disney+での配信", "2019年版の『エンドゲーム』はDisney+で配信されています。アンコール版（追加映像入り）の配信については、2026年11月2日の時点で公式の発表を確認できていません。",
+                 "On Disney+", "The 2019 version is on Disney+. As of November 2, 2026, we couldn't confirm any official announcement about streaming the Encore version."),
+            ],
+            sources=[
+                ("マーベル公式（日本）：『エンドゲーム：アンコール』", "https://marvel.disney.co.jp/movie/avengers-doomsday/news/20260730_01"),
+                ("Deadline：How Avengers Endgame: Encore's New Ending & Footage Teases Doomsday", "https://deadline.com/lists/new-scenes-avengers-endgame-encore-post-credit-doomsday/"),
+                ("SlashFilm：Encore's New Ending And Post-Credits Scenes Explained", "https://www.slashfilm.com/2269097/avengers-endgame-encore-new-ending-post-credits-scenes-explained/"),
+                ("BGR：Encore's New Ending And Post-Credits Scenes", "https://www.bgr.com/2267652/avengers-endgame-encore-ending-post-credits-scenes-descriptions/"),
+                ("Screen Hype：Encore New Scenes, Explained", "https://www.screenhype.co.uk/avengers-endgame-encore-new-scenes-explained/"),
+                ("映画.com：追加の4場面について（ネタバレ）", "https://eiga.com/news/20260927/5/"),
+            ]),
         updated="2026-11-02",
         # ページの色（アベンジャーズの紺と、6つの石の光を思わせる金）
         theme=dict(main="#1f3b73", deep="#0d1424", accent="#e9b949", soft="#e7ecf4"),

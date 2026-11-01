@@ -352,7 +352,9 @@ def rerelease_html(analytics):
         badge = f'<span class="chip {"ok" if it["status"] == "confirmed" else "check"}">{e(it["status_label"])}</span>'
         facts = "".join(f"<dt>{e(k)}</dt><dd>{e(v)}</dd>" for k, v in it["facts"])
         srcs = "".join(f'<li><a href="{e(u)}" target="_blank" rel="noopener">{e(n)}</a></li>' for n, u in it["sources"])
-        guide = (f'<p style="margin:12px 0 0"><a href="{prefix}{it["slug"]}/">『{e(title_of(it["slug"]))}』の作品ガイドを見る ›</a></p>' if has_guide(it["slug"])
+        anchor = "#" + it["guide_anchor"] if it.get("guide_anchor") else ""
+        label = it.get("guide_label") or f'『{title_of(it["slug"])}』の作品ガイドを見る ›'
+        guide = (f'<p style="margin:12px 0 0"><a href="{prefix}{it["slug"]}/{anchor}">{e(label)}</a></p>' if has_guide(it["slug"])
                  else f'<p style="margin:12px 0 0"><a href="{DOOMSDAY}#{it["slug"]}">ドゥームズデイ予習ガイドで作品の説明を見る ›</a></p>')
         secs += (f'<section class="rr" id="{it["id"]}"><h2>{e(it["title"])}</h2><div class="box">{badge}<p class="sum">{e(it["summary"])}</p>'
                  f'<dl>{facts}</dl>{guide}</div><p class="src" style="margin:10px 0 2px">出典</p><ul class="src">{srcs}</ul></section>')
