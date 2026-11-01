@@ -40,7 +40,7 @@ TEXT = {
         home="もっちぃま", guide="完全ガイド", menu="作品ガイド", other_lang="English",
         tagline="映画だけでは分かりにくいところを、あらすじ・相関図・用語でやさしく解説します。",
         year="公開", runtime="上映時間", era="作中の時代",
-        toc="このページの内容", s_before="観る前に知っておくと分かりやすいこと", s_map="キャラクター相関図",
+        toc="目次", toc_short=dict(before="観る前に", map="相関図", story="あらすじ", glossary="用語集", confusing="Q&A", points="小ネタ", ending="おまけ映像", next="次に観る"), s_before="観る前に知っておくと分かりやすいこと", s_map="キャラクター相関図",
         s_story="あらすじ", s_glossary="用語集", s_confusing="ここが分かりにくい！Q&A", s_points="見逃しやすいポイント・小ネタ",
         s_ending="ラストとおまけ映像", s_next="次に観るとよい作品",
         nospoil="ネタバレなし", spoil="ネタバレあり",
@@ -56,7 +56,7 @@ TEXT = {
         home="Mocchima", guide="Complete Guide", menu="Film guide", other_lang="日本語",
         tagline="The parts that are hard to follow from the film alone, explained with a story summary, a character map and key terms.",
         year="Released", runtime="Runtime", era="Set in",
-        toc="On this page", s_before="Good to know before watching", s_map="Character map",
+        toc="Contents", toc_short=dict(before="Before you watch", map="Character map", story="Story", glossary="Key terms", confusing="Q&A", points="Details", ending="Post-credits", next="Watch next"), s_before="Good to know before watching", s_map="Character map",
         s_story="Story", s_glossary="Key terms", s_confusing="Confusing parts, explained", s_points="Easy-to-miss details",
         s_ending="The ending and post-credits", s_next="What to watch next",
         nospoil="No spoilers", spoil="Spoilers",
@@ -190,7 +190,9 @@ def build_page(slug, lang):
     sections = [("before", t["s_before"])] + ([("map", t["s_map"])] if has_map else []) + [
         ("story", t["s_story"]), ("glossary", t["s_glossary"]), ("confusing", t["s_confusing"]), ("points", t["s_points"]),
         ("ending", t["s_ending"]), ("next", t["s_next"])]
-    toc = "".join(f'<a class="chip" href="#{k}">{e(v)}</a>' for k, v in sections)
+    short = t["toc_short"]
+    toc = (f'<ul><li><span class="toc-label">{e(t["toc"])}</span></li>'
+           + "".join(f'<li><a href="#{k}">{e(short.get(k, v))}</a></li>' for k, v in sections) + "</ul>")
     facts = [(t["year"], tr["year"]), (t["runtime"], g["runtime_en"] if lang == "en" else g["runtime"]),
              (t["era"], tr["era"])]
     facts_html = "".join(f"<div><dt>{e(k)}</dt><dd>{e(str(v))}</dd></div>" for k, v in facts)
@@ -218,7 +220,7 @@ def build_page(slug, lang):
   <p class="lead">{e(t['tagline'])}</p>
   <dl class="fg-facts">{facts_html}</dl>
 </header>
-<nav class="fg-toc" aria-label="{e(t['toc'])}">{toc}</nav>
+<nav class="site-toc" aria-label="{e(t['toc'])}">{toc}</nav>
 
 <section class="fg-sec" id="before"><h2>{e(t['s_before'])}<span class="tag-ok">{e(t['nospoil'])}</span></h2>
   <div class="fg-cards">{before}</div>

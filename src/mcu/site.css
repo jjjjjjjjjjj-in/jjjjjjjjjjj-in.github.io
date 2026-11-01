@@ -399,3 +399,12 @@ footer p { margin: 0; }
 /* 作品ガイド：パンくずの右端の言語切り替え */
 .crumb { display: flex; flex-wrap: wrap; gap: 4px 6px; align-items: baseline; }
 .crumb .lang-switch { margin-left: auto; font-size: 12.5px; font-weight: 700; border: 1px solid var(--line); border-radius: 99px; padding: 0 10px; text-decoration: none; }
+
+/* 目次（ページ上部の横並びのリンク。パラダイスシティと同じ形） */
+.site-toc { min-width: 0; max-width: 100%; overflow: hidden; position: sticky; top: 0; z-index: 30; background: var(--navy); border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,.12); }
+.site-toc ul { list-style: none; margin: 0; padding: 0 6px; display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+.site-toc ul::-webkit-scrollbar { display: none; }
+.site-toc a { display: block; padding: 10px 11px; color: #fff; text-decoration: none; font-size: 13.5px; font-weight: 700; white-space: nowrap; border-bottom: 2px solid transparent; }
+.site-toc a[aria-current="page"] { border-bottom-color: var(--gold-bright, #e5b21a); }
+.site-toc .toc-label { display: block; padding: 10px 4px 10px 8px; color: var(--gold-bright, #e5b21a); font-size: 12px; font-weight: 700; white-space: nowrap; }
+[id] { scroll-margin-top: 56px; }

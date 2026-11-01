@@ -190,5 +190,125 @@
    "soft": "#ece2d2"
   },
   "out": "thor-dark-world/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "アイアンマン3",
+  "year": "2013",
+  "theme": {
+   "main": "#b8231c",
+   "deep": "#1f0e10",
+   "accent": "#ff9a3c",
+   "soft": "#f6dccb"
+  },
+  "out": "iron-man-3/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Iron Man 3",
+  "year": "2013",
+  "theme": {
+   "main": "#b8231c",
+   "deep": "#1f0e10",
+   "accent": "#ff9a3c",
+   "soft": "#f6dccb"
+  },
+  "out": "iron-man-3/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "キャプテン・アメリカ／ウィンター・ソルジャー",
+  "year": "2014",
+  "theme": {
+   "main": "#1d3d8f",
+   "deep": "#15181f",
+   "accent": "#c3cad4",
+   "soft": "#dde3ec"
+  },
+  "out": "winter-soldier/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Captain America: The Winter Soldier",
+  "year": "2014",
+  "theme": {
+   "main": "#1d3d8f",
+   "deep": "#15181f",
+   "accent": "#c3cad4",
+   "soft": "#dde3ec"
+  },
+  "out": "winter-soldier/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ガーディアンズ・オブ・ギャラクシー",
+  "year": "2014",
+  "theme": {
+   "main": "#d2611c",
+   "deep": "#1c1338",
+   "accent": "#f7c548",
+   "soft": "#e8dcf5"
+  },
+  "out": "guardians-of-the-galaxy/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Guardians of the Galaxy",
+  "year": "2014",
+  "theme": {
+   "main": "#d2611c",
+   "deep": "#1c1338",
+   "accent": "#f7c548",
+   "soft": "#e8dcf5"
+  },
+  "out": "guardians-of-the-galaxy/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ガーディアンズ・オブ・ギャラクシー：リミックス",
+  "year": "2017",
+  "theme": {
+   "main": "#c2187a",
+   "deep": "#1b1340",
+   "accent": "#7fe0ff",
+   "soft": "#f2d8ea"
+  },
+  "out": "guardians-vol2/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Guardians of the Galaxy Vol. 2",
+  "year": "2017",
+  "theme": {
+   "main": "#c2187a",
+   "deep": "#1b1340",
+   "accent": "#7fe0ff",
+   "soft": "#f2d8ea"
+  },
+  "out": "guardians-vol2/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "アイ・アム・グルート シーズン1",
+  "year": "2022",
+  "theme": {
+   "main": "#4f8a2a",
+   "deep": "#2a1f14",
+   "accent": "#b4dd7f",
+   "soft": "#e9dfcc"
+  },
+  "out": "i-am-groot-1/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "I Am Groot (Season 1)",
+  "year": "2022",
+  "theme": {
+   "main": "#4f8a2a",
+   "deep": "#2a1f14",
+   "accent": "#b4dd7f",
+   "soft": "#e9dfcc"
+  },
+  "out": "i-am-groot-1/en/og.png"
  }
 ]

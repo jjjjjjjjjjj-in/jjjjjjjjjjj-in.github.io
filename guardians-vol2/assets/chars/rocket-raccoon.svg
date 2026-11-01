@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- アライグマ（このサイトのオリジナルのイラスト） -->
+  <defs><radialGradient id="bg" cx=".5" cy=".4" r=".75"><stop offset="0" stop-color="#3a2a6e"/><stop offset="1" stop-color="#140f2c"/></radialGradient></defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <g fill="#f7c548" opacity=".75"><circle cx="50" cy="60" r="3"/><circle cx="350" cy="80" r="2.5"/><circle cx="330" cy="170" r="2"/><circle cx="70" cy="190" r="2"/></g>
+  <!-- 体（オレンジのつなぎ） -->
+  <path d="M90 400 Q100 300 200 290 Q300 300 310 400 Z" fill="#d2611c"/>
+  <path d="M170 300 L200 340 L230 300" fill="none" stroke="#8a3c0c" stroke-width="6"/>
+  <!-- 耳 -->
+  <path d="M95 150 L105 60 L170 115 Z" fill="#6b5a4c"/><path d="M305 150 L295 60 L230 115 Z" fill="#6b5a4c"/>
+  <path d="M112 128 L117 85 L150 112 Z" fill="#2e2620"/><path d="M288 128 L283 85 L250 112 Z" fill="#2e2620"/>
+  <!-- 顔 -->
+  <ellipse cx="200" cy="200" rx="115" ry="100" fill="#8a7867"/>
+  <path d="M120 175 Q200 140 280 175 Q270 225 200 215 Q130 225 120 175 Z" fill="#2e2620"/>
+  <ellipse cx="200" cy="250" rx="62" ry="45" fill="#efe6da"/>
+  <path d="M200 112 L200 165" stroke="#5c4c3f" stroke-width="10" stroke-linecap="round"/>
+  <!-- 目 -->
+  <ellipse cx="160" cy="188" rx="17" ry="18" fill="#fff"/><ellipse cx="240" cy="188" rx="17" ry="18" fill="#fff"/>
+  <circle cx="163" cy="190" r="10" fill="#4a2d12"/><circle cx="237" cy="190" r="10" fill="#4a2d12"/>
+  <circle cx="166" cy="186" r="3" fill="#fff"/><circle cx="240" cy="186" r="3" fill="#fff"/>
+  <!-- ちょっと意地悪そうな眉 -->
+  <path d="M138 165 L182 175" stroke="#efe6da" stroke-width="5" stroke-linecap="round"/><path d="M262 165 L218 175" stroke="#efe6da" stroke-width="5" stroke-linecap="round"/>
+  <!-- 鼻と口 -->
+  <ellipse cx="200" cy="232" rx="16" ry="11" fill="#1f1a16"/>
+  <path d="M200 243 L200 256 M176 262 Q200 276 226 258" fill="none" stroke="#1f1a16" stroke-width="4" stroke-linecap="round"/>
+</svg>

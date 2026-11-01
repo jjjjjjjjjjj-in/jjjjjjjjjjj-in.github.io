@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- 木の子ども（このサイトのオリジナルのイラスト） -->
+  <defs><radialGradient id="bg" cx=".5" cy=".4" r=".75"><stop offset="0" stop-color="#2f4f2a"/><stop offset="1" stop-color="#14200f"/></radialGradient></defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <!-- 植木鉢 -->
+  <path d="M110 310 L290 310 L270 400 L130 400 Z" fill="#b5652c"/><rect x="100" y="295" width="200" height="28" rx="6" fill="#cf7a3a"/>
+  <!-- 体 -->
+  <path d="M165 300 Q160 250 175 230 L225 230 Q240 250 235 300 Z" fill="#8a5a33"/>
+  <!-- 頭 -->
+  <path d="M120 175 Q115 90 200 80 Q285 90 280 175 Q280 245 200 250 Q120 245 120 175 Z" fill="#9c6a3d"/>
+  <!-- 木目 -->
+  <g stroke="#6e4524" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M150 110 Q160 140 150 165"/><path d="M250 110 Q240 140 250 165"/><path d="M200 90 L200 120"/>
+    <path d="M140 210 Q160 230 175 228"/><path d="M260 210 Q240 230 225 228"/>
+  </g>
+  <!-- 葉 -->
+  <path d="M200 80 Q190 40 160 35 Q170 70 200 80 Z" fill="#7cc242"/>
+  <path d="M215 82 Q235 45 270 48 Q250 80 215 82 Z" fill="#8fd14f"/>
+  <path d="M125 140 Q90 120 75 135 Q100 155 125 140 Z" fill="#7cc242"/>
+  <!-- 目 -->
+  <ellipse cx="168" cy="172" rx="20" ry="24" fill="#1d1309"/><ellipse cx="232" cy="172" rx="20" ry="24" fill="#1d1309"/>
+  <circle cx="175" cy="162" r="6" fill="#fff"/><circle cx="239" cy="162" r="6" fill="#fff"/>
+  <!-- 口 -->
+  <path d="M182 215 Q200 228 218 215" fill="none" stroke="#3e2512" stroke-width="5" stroke-linecap="round"/>
+</svg>
