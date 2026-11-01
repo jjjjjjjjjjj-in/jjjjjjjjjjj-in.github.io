@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- 時計の案内役（このサイトのオリジナルのイラスト） -->
+  <defs>
+    <radialGradient id="bg" cx=".5" cy=".4" r=".75">
+      <stop offset="0" stop-color="#8a5a2b"/>
+      <stop offset="1" stop-color="#3a2410"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <!-- 時計の体 -->
+  <circle cx="200" cy="210" r="130" fill="#f08a24"/>
+  <circle cx="200" cy="210" r="108" fill="#fff4e0"/>
+  <!-- 目もり -->
+  <g stroke="#7a4a1a" stroke-width="6" stroke-linecap="round">
+    <path d="M200 112 V128"/><path d="M200 292 V308"/><path d="M102 210 H118"/><path d="M282 210 H298"/>
+  </g>
+  <!-- 顔 -->
+  <ellipse cx="168" cy="196" rx="12" ry="16" fill="#3a2410"/><ellipse cx="232" cy="196" rx="12" ry="16" fill="#3a2410"/>
+  <circle cx="172" cy="190" r="4" fill="#fff"/><circle cx="236" cy="190" r="4" fill="#fff"/>
+  <path d="M166 242 Q200 268 234 242" stroke="#3a2410" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <!-- 上のベル -->
+  <circle cx="200" cy="72" r="14" fill="#f08a24"/>
+  <path d="M188 84 L212 84 L206 96 L194 96 Z" fill="#f08a24"/>
+</svg>

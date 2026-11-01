@@ -574,5 +574,53 @@
    "soft": "#e7ecf4"
   },
   "out": "endgame/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ロキ シーズン1",
+  "year": "2021",
+  "theme": {
+   "main": "#1f6b45",
+   "deep": "#10201a",
+   "accent": "#e0a43a",
+   "soft": "#e6efe8"
+  },
+  "out": "loki-s1/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Loki (Season 1)",
+  "year": "2021",
+  "theme": {
+   "main": "#1f6b45",
+   "deep": "#10201a",
+   "accent": "#e0a43a",
+   "soft": "#e6efe8"
+  },
+  "out": "loki-s1/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ロキ シーズン2",
+  "year": "2023",
+  "theme": {
+   "main": "#1d6a4a",
+   "deep": "#0c1a18",
+   "accent": "#5fc4e8",
+   "soft": "#e4f0ec"
+  },
+  "out": "loki-s2/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Loki (Season 2)",
+  "year": "2023",
+  "theme": {
+   "main": "#1d6a4a",
+   "deep": "#0c1a18",
+   "accent": "#5fc4e8",
+   "soft": "#e4f0ec"
+  },
+  "out": "loki-s2/en/og.png"
  }
 ]
