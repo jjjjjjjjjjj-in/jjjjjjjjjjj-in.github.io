@@ -11,8 +11,12 @@ const esc = (x) => String(x).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&l
 function filmOg(o) {
   const t = Object.assign({ main: "#1d3a6b", deep: "#0b1a33", accent: "#e5b21a", soft: "#dbe6f5" }, o.theme);
   const ja = o.lang === "ja";
-  const big = ja ? o.title : o.title.toUpperCase();
+  // 「A／B」「A: B」の題名は、A を大きく、B を2行目に出す
+  const parts = o.title.split(ja ? "／" : ": ");
+  const big = ja ? parts[0] : parts[0].toUpperCase();
+  const second = parts.slice(1).join(ja ? "／" : ": ");
   const size = Math.min(132, Math.floor(900 / (big.length * (ja ? 1 : 0.62))));
+  const size2 = Math.min(64, Math.floor(900 / (Math.max(second.length, 1) * (ja ? 1 : 0.55))));
   return `<!doctype html><html><head><meta charset="utf-8"><style>
 body { margin: 0; width: 1200px; height: 630px; overflow: hidden; color: #fff; font-family: "IPAGothic", sans-serif;
   background: radial-gradient(circle at 88% 50%, ${t.main} 0, ${t.deep} 55%, #12060a 100%); position: relative; }
@@ -23,10 +27,11 @@ body { margin: 0; width: 1200px; height: 630px; overflow: hidden; color: #fff; f
 .eyebrow { color: ${t.accent}; font-size: 26px; letter-spacing: .2em; margin: 0 0 16px; font-weight: bold; }
 h1 { font-size: ${size}px; white-space: nowrap; margin: 0; line-height: 1.05; font-weight: bold; letter-spacing: .02em; }
 p { font-size: 50px; margin: 20px 0 0; font-weight: bold; }
+.second { font-weight: bold; margin-top: 10px; white-space: nowrap; }
 .sub { font-size: 30px; color: ${t.soft}; font-weight: normal; margin-top: 18px; }
 </style></head><body><div class="ring"></div><div class="ring r2"></div><div class="box">
 <div class="eyebrow">${ja ? "MCU 非公式ガイド" : "UNOFFICIAL MCU GUIDE"} · ${esc(o.year)}</div>
-<h1>${esc(big)}</h1>
+<h1>${esc(big)}</h1>${second ? `<div class="second" style="font-size:${size2}px">${esc(second)}</div>` : ""}
 <p>${ja ? "完全ガイド" : "Complete Guide"}</p>
 <p class="sub">${ja ? "あらすじ・相関図・用語をやさしく解説" : "Story, character map and key terms, explained simply"}</p>
 </div></body></html>`;

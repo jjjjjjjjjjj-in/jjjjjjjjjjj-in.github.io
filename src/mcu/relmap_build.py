@@ -2,7 +2,7 @@
 import json
 import re
 
-from relations import RELATION_MAPS, LINK_TYPES, IMAGES
+from relations import RELATION_MAPS, LINK_TYPES, IMAGES, image_for
 
 
 TEXT = {
@@ -52,7 +52,7 @@ def initials(name_en):
     return (words[0][0] + words[-1][0]).upper()
 
 
-def localized_people(m, lang):
+def localized_people(m, lang, slug):
     out = []
     for p in m["people"]:
         g = (lambda k: p.get(f"{k}_en", p[k])) if lang == "en" else (lambda k: p[k])
@@ -63,7 +63,7 @@ def localized_people(m, lang):
         for k in ("x", "y", "ring", "angle"):
             if k in p:
                 q[k] = p[k]
-        img = IMAGES.get(p["id"])
+        img = image_for(slug, p["id"])
         if img:
             q["img"] = "{prefix}assets/chars/" + img["file"]
             q["credit"] = {"illustration": True} if img.get("illustration") else {k: img[k] for k in ("author", "license", "license_url", "source_url")}
@@ -74,7 +74,7 @@ def localized_people(m, lang):
 def page_data(slug, lang, prefix):
     m = RELATION_MAPS[slug]
     t = TEXT[lang]
-    people = localized_people(m, lang)
+    people = localized_people(m, lang, slug)
     for p in people:
         if "img" in p:
             p["img"] = p["img"].format(prefix=prefix)
@@ -101,7 +101,7 @@ def map_section(slug, lang, e, prefix):
         + (f'<img src="{e(p["img"])}" alt="" width="48" height="48">' if p.get("img") else f'<span class="rm-ph-html tone-{p["tone"]} r-{p["role"]}">{e(p["initials"])}</span>')
         + f'<span><b>{e(p["name"])}</b><small>{e(role_label[p["role"]])} ・ {e(p["actor"])}</small><small>{e(p["group"])}</small></span></a></li>'
         for p in sorted(people, key=lambda p: ["lead", "main", "sub"].index(p["role"])))
-    used = [(p, IMAGES[p["id"]]) for p in m["people"] if p["id"] in IMAGES]
+    used = [(p, image_for(slug, p["id"])) for p in m["people"] if image_for(slug, p["id"])]
     def credit_li(p, i):
         g = (lambda k: p.get(f"{k}_en", p[k])) if lang == "en" else (lambda k: p[k])
         if i.get("illustration"):

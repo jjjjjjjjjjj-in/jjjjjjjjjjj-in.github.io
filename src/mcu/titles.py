@@ -1,6 +1,16 @@
 # 作品の基本情報（作品ガイドのページと「次に観るとよい作品」で使う）。
 # 作品ガイドを作った作品は films.py の FILM_GUIDES にも入れる。「次に観る」に出す作品もここに足す。
 TITLES = {
+    "captain-america-first-avenger": dict(title="キャプテン・アメリカ／ザ・ファースト・アベンジャー", title_en="Captain America: The First Avenger",
+                                          year="2011", era="1940年代", era_en="1940s",
+                                          post="エンドロールの後に、次の『アベンジャーズ』の予告映像が流れる（現代のスティーブとフューリーの場面から始まる）。",
+                                          post_en="After the end credits, a teaser for The Avengers plays, starting with a scene of Steve and Fury in the present day."),
+    "captain-marvel": dict(title="キャプテン・マーベル", title_en="Captain Marvel", year="2019", era="1995年", era_en="1995",
+                           post="ミッドクレジットでキャロルがアベンジャーズ本部に現れる（エンドゲームにつながる）。ポストクレジットは猫のグースがキューブを吐き出す小ネタ。",
+                           post_en="Mid-credits: Carol appears at Avengers headquarters (leading into Endgame). Post-credits: Goose the cat coughs up the Tesseract."),
+    "winter-soldier": dict(title="キャプテン・アメリカ／ウィンター・ソルジャー", title_en="Captain America: The Winter Soldier", year="2014", era="2014年", era_en="2014",
+                           post="ミッドクレジットでワンダとピエトロの双子が初登場。ポストクレジットでバッキーが博物館で自分の展示を見る。",
+                           post_en="Mid-credits: the twins Wanda and Pietro first appear. Post-credits: Bucky visits his own museum exhibit."),
     "iron-man": dict(title="アイアンマン", title_en="Iron Man", year="2008", era="2010年", era_en="2010",
                      post="フューリーがトニーの前に現れ「アベンジャーズ計画」を口にする。",
                      post_en="Nick Fury appears and mentions the Avengers Initiative."),

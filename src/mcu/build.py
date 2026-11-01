@@ -16,7 +16,7 @@ ROOT = os.path.dirname(os.path.dirname(SRC))
 sys.path.insert(0, SRC)
 
 from films import FILM_GUIDES  # noqa: E402
-from relations import RELATION_MAPS, IMAGES  # noqa: E402
+from relations import RELATION_MAPS, image_for  # noqa: E402
 from titles import TITLES  # noqa: E402
 import relmap_build  # noqa: E402
 
@@ -282,9 +282,9 @@ def main():
         shutil.copy(os.path.join(SRC, "site.css"), os.path.join(assets, "site.css"))
         shutil.copy(os.path.join(SRC, "relmap.js"), os.path.join(assets, "relmap.js"))
         if slug in RELATION_MAPS:
-            ids = {p["id"] for p in RELATION_MAPS[slug]["people"]}
-            for pid, img in IMAGES.items():
-                if pid in ids:
+            for p in RELATION_MAPS[slug]["people"]:
+                img = image_for(slug, p["id"])
+                if img:
                     shutil.copy(os.path.join(SRC, "chars", img["file"]), os.path.join(assets, "chars", img["file"]))
         write(f"{slug}/sitemap.xml", f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">

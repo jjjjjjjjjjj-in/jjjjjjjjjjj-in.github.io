@@ -1,6 +1,30 @@
 [
  {
   "lang": "ja",
+  "title": "キャプテン・アメリカ／ザ・ファースト・アベンジャー",
+  "year": "2011",
+  "theme": {
+   "main": "#1d3d8f",
+   "deep": "#0f1f47",
+   "accent": "#e8434b",
+   "soft": "#dbe4f5"
+  },
+  "out": "captain-america-first-avenger/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Captain America: The First Avenger",
+  "year": "2011",
+  "theme": {
+   "main": "#1d3d8f",
+   "deep": "#0f1f47",
+   "accent": "#e8434b",
+   "soft": "#dbe4f5"
+  },
+  "out": "captain-america-first-avenger/en/og.png"
+ },
+ {
+  "lang": "ja",
   "title": "アイアンマン",
   "year": "2008",
   "theme": {

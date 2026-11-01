@@ -25,6 +25,16 @@ SITES = [
         updated="2026-11-01",
     ),
     dict(
+        path="captain-america-first-avenger/", folder="marvel", folder_en="marvel-en",
+        name="キャプテン・アメリカ／ザ・ファースト・アベンジャー 完全ガイド",
+        name_en="Captain America: The First Avenger Complete Guide",
+        desc="1940年代、弱い青年スティーブがキャプテン・アメリカになるまで。あらすじ・顔アイコンつき相関図・用語・Q&Aをやさしく解説。",
+        desc_en="How frail Steve Rogers becomes Captain America in the 1940s: story, character map, key terms and Q&A.",
+        en_path="captain-america-first-avenger/en/",
+        sitemap="captain-america-first-avenger/sitemap.xml",
+        updated="2026-11-01",
+    ),
+    dict(
         path="iron-man/", folder="marvel", folder_en="marvel-en",
         name="アイアンマン完全ガイド",
         name_en="Iron Man Complete Guide",
