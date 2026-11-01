@@ -478,5 +478,29 @@
    "soft": "#e5ebf2"
   },
   "out": "doctor-strange/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "マイティ・ソー バトルロイヤル",
+  "year": "2017",
+  "theme": {
+   "main": "#28409c",
+   "deep": "#140b2e",
+   "accent": "#ff5a8a",
+   "soft": "#ece7f6"
+  },
+  "out": "thor-ragnarok/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Thor: Ragnarok",
+  "year": "2017",
+  "theme": {
+   "main": "#28409c",
+   "deep": "#140b2e",
+   "accent": "#ff5a8a",
+   "soft": "#ece7f6"
+  },
+  "out": "thor-ragnarok/en/og.png"
  }
 ]

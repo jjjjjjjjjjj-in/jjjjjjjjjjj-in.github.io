@@ -226,6 +226,16 @@ SITES = [
         updated="2026-11-02",
     ),
     dict(
+        path="thor-ragnarok/", folder="marvel", folder_en="marvel-en",
+        name="マイティ・ソー バトルロイヤル 完全ガイド",
+        name_en="Thor: Ragnarok Complete Guide",
+        desc="姉ヘラにハンマーを砕かれたソーが、ごみの星でハルクと再会。あらすじ・相関図・用語・Q&A。",
+        desc_en="Thor loses his hammer to his sister Hela and reunites with the Hulk on a junk planet: story, character map, key terms and Q&A.",
+        en_path="thor-ragnarok/en/",
+        sitemap="thor-ragnarok/sitemap.xml",
+        updated="2026-11-02",
+    ),
+    dict(
         path="wakanda-forever/", folder="marvel", folder_en="marvel-en",
         name="ブラックパンサー／ワカンダ・フォーエバー 完全ガイド",
         name_en="Black Panther: Wakanda Forever Complete Guide",
