@@ -50,7 +50,7 @@ TEXT = {
         scenes_warn="※結末まで、すべてのネタバレを含みます。", scenes_back="完全ガイドに戻る", scenes_desc="『{title}』のあらすじを、最初の場面からエンドクレジットの後まで、シーンごとにくわしく文章で解説します（ネタバレあり）。",
         confusing_note="結末に関わる内容を含みます。",
         post="エンドクレジットの後のおまけ映像",
-        shop="この作品をもっと楽しむ", list="マーベル映画紹介のほかのページ", folder="マーベル映画紹介", folder_path="marvel/",
+        shop="この作品をもっと楽しむ", common_shop="マーベル映画をもっと楽しむ", list="マーベル映画紹介のほかのページ", folder="マーベル映画紹介", folder_path="marvel/",
         desc_fmt="『{title}』を映画だけでは分かりにくい人向けに解説。ネタバレなしの観る前のポイント、顔アイコンつき相関図、章ごとのあらすじ、用語集、分かりにくい場面のQ&A、おまけ映像まで。",
         title_fmt="『{title}』完全ガイド｜あらすじ・相関図・用語をやさしく解説",
         site_fmt="{title} 完全ガイド",
@@ -69,7 +69,7 @@ TEXT = {
         scenes_warn="Contains every spoiler, up to the ending.", scenes_back="Back to the complete guide", scenes_desc="The full story of {title}, from the first scene to after the credits, told scene by scene (spoilers).",
         confusing_note="Contains spoilers about the ending.",
         post="After the end credits",
-        shop="More from this film", list="More Marvel movie guides", folder="Marvel Movie Guides", folder_path="marvel/en/",
+        shop="More from this film", common_shop="More Marvel fun", list="More Marvel movie guides", folder="Marvel Movie Guides", folder_path="marvel/en/",
         desc_fmt="A guide to {title} for anyone who finds it hard to follow: spoiler-free tips, a character map with face icons, a chapter-by-chapter story, key terms, the confusing parts explained, and the post-credits scene.",
         title_fmt="{title} Complete Guide: Story, Character Map and Key Terms Explained",
         site_fmt="{title} Complete Guide",
@@ -100,6 +100,29 @@ def amazon_url(key, lang):
 def rakuten_url(keyword):
     inner = f"https://search.rakuten.co.jp/search/mall/{quote(keyword)}/"
     return f"{RAKUTEN_TOP}&url={quote(inner, safe='')}"
+
+
+# 全作品ガイドで共通に出すおすすめ商品（運営者の希望で広告を増やした、2026-11-02）
+# (日本語の表示名, 日本語の検索キーワード, 英語の表示名, 英語の検索キーワード)
+COMMON_PICKS = [
+    ("マーベル公式の年表の本（英語）", "Marvel Cinematic Universe An Official Timeline", "The official MCU timeline book", "Marvel Cinematic Universe An Official Timeline"),
+    ("Fire TV Stick（Disney+をテレビで）", "Fire TV Stick", "Fire TV Stick (Disney+ on your TV)", "Fire TV Stick"),
+    ("マーベルのレゴ", "レゴ マーベル", "Marvel LEGO", "LEGO Marvel"),
+    ("マーベルのTシャツ", "マーベル Tシャツ", "Marvel T-shirts", "Marvel t-shirt"),
+    ("アベンジャーズのフィギュア", "アベンジャーズ フィギュア", "Avengers figures", "Avengers Marvel Legends figure"),
+    ("アメコミ（日本語版）", "マーベル アメコミ 邦訳", "Marvel comics", "Marvel comics graphic novel"),
+]
+
+
+def common_panel(lang):
+    """どの作品ガイドにも出す、マーベル全体のおすすめ商品（PR）"""
+    t = TEXT[lang]
+    btns = []
+    for ja, kw, en, kw_en in COMMON_PICKS:
+        btns.append(f'<a class="btn ad" href="{e(amazon_url(kw_en if lang == "en" else kw, lang))}" target="_blank" rel="sponsored noopener">{e(en if lang == "en" else ja)}</a>')
+    if lang == "ja" and RAKUTEN_TOP:
+        btns.append(f'<a class="btn ad" href="{e(rakuten_url("マーベル グッズ"))}" target="_blank" rel="sponsored noopener">楽天でマーベルのグッズを探す</a>')
+    return f'<aside class="panel"><h2>{e(t["common_shop"])} <span class="pr">PR</span></h2><div class="btns">{"".join(btns)}</div></aside>'
 
 
 def shop_panel(g, lang):
@@ -264,6 +287,7 @@ def build_page(slug, lang):
   <ul class="fg-next">{nexts}</ul>
 </section>
 
+{common_panel(lang)}
 <section class="panel">
   <div class="btns"><a class="btn primary" href="{top}{t['folder_path']}">{e(t['list'])}</a></div>
 </section>
@@ -289,9 +313,11 @@ def build_scenes_page(slug, lang):
     chapters = [(c[2], c[3]) if lang == "en" else (c[0], c[1]) for c in g["scenes"]]
     toc = (f'<ul><li><span class="toc-label">{e(t["toc"])}</span></li>'
            + "".join(f'<li><a href="#c{i}">{e(h.split(" ", 1)[0] if lang == "ja" else h.split(":")[0])}</a></li>' for i, (h, _) in enumerate(chapters, 1)) + "</ul>")
+    mid = (len(chapters) + 1) // 2  # 真ん中の章の後に、この作品の商品（PR）を1つはさむ
     body = "".join(
         f'<section class="fg-sec sc-chapter" id="c{i}"><h2>{e(h)}</h2>'
         + "".join(f'<div class="sc-scene"><h3>{e(sh)}</h3><p>{e(sp)}</p></div>' for sh, sp in scenes) + "</section>\n"
+        + (shop_panel(g, lang) + "\n" if i == mid else "")
         for i, (h, scenes) in enumerate(chapters, 1))
     page_title = t["scenes_title"].format(title=title)
     desc = t["scenes_desc"].format(title=title)
@@ -315,6 +341,7 @@ def build_scenes_page(slug, lang):
 </header>
 <nav class="site-toc" aria-label="{e(t['toc'])}">{toc}</nav>
 {body}
+{common_panel(lang)}
 <section class="panel"><div class="btns"><a class="btn primary" href="../">{e(t['scenes_back'])}</a></div></section>
 """ + footer(lang, top) + "</body>\n</html>\n"
 

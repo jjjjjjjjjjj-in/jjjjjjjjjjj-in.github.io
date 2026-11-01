@@ -13,6 +13,32 @@ SRC = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(SRC, "mcu"))
 from films import FILM_GUIDES  # noqa: E402
 from titles import TITLES  # noqa: E402
+from urllib.parse import quote  # noqa: E402
+
+# ページの下に出すおすすめ商品（PR）。運営者の希望で広告を増やした（2026-11-02）
+# (日本語の表示名, 日本語の検索キーワード, 英語の表示名, 英語の検索キーワード)
+PICKS = [
+    ("マーベル公式の年表の本（英語）", "Marvel Cinematic Universe An Official Timeline", "The official MCU timeline book", "Marvel Cinematic Universe An Official Timeline"),
+    ("Fire TV Stick（Disney+をテレビで）", "Fire TV Stick", "Fire TV Stick (Disney+ on your TV)", "Fire TV Stick"),
+    ("マーベル映画のBlu-ray", "マーベル Blu-ray", "Marvel movies on Blu-ray", "Marvel Blu-ray"),
+    ("マーベルのレゴ", "レゴ マーベル", "Marvel LEGO", "LEGO Marvel"),
+    ("アベンジャーズのフィギュア", "アベンジャーズ フィギュア", "Avengers figures", "Avengers Marvel Legends figure"),
+    ("マーベルのTシャツ", "マーベル Tシャツ", "Marvel T-shirts", "Marvel t-shirt"),
+]
+AMAZON_TAG, AMAZON_TAG_US = "doomsdayguide-22", "doomsdaygui08-20"
+RAKUTEN_TOP = "https://af.moshimo.com/af/c/click?a_id=5875908&p_id=54&pc_id=54&pl_id=616"
+
+
+def shop_html(lang):
+    t = TEXT[lang]
+    if lang == "en":
+        links = [(en, f"https://www.amazon.com/s?k={quote(kw_en)}&tag={AMAZON_TAG_US}") for _, _, en, kw_en in PICKS]
+    else:
+        links = [(ja, f"https://www.amazon.co.jp/s?k={quote(kw)}&tag={AMAZON_TAG}") for ja, kw, _, _ in PICKS]
+        links.append(("楽天でマーベルのグッズを探す", f"{RAKUTEN_TOP}&url={quote('https://search.rakuten.co.jp/search/mall/' + quote('マーベル グッズ') + '/', safe='')}"))
+    btns = "".join(f'<a href="{e(u)}" target="_blank" rel="sponsored noopener">{e(l)}</a>' for l, u in links)
+    return (f'<section class="mshop"><h2>{e(t["shop"])} <span class="mpr">{e(t["pr"])}</span></h2>'
+            f'<div class="mshop-btns">{btns}</div><p class="mshop-note">{e(t["amazon_note"])}</p></section>')
 
 e = html.escape
 
@@ -22,12 +48,12 @@ DOOMSDAY_THEME = dict(main="#1f5c3f", deep="#08140e", accent="#e0b04a", soft="#d
 TEXT = {
     "ja": dict(menu="メニュー", search="作品を探す", search_ph="作品名で探す", all="ALL", home="もっちぃま（サイト一覧）",
                other="English", other_href="en/", none="見つかりませんでした", soon="準備中（これから作ります）",
-               doomsday="ドゥームズデイ予習ガイド", doomsday_sub="視聴順チェックリスト", close="閉じる", released="公開年", setin="作中の年代",
+               doomsday="ドゥームズデイ予習ガイド", shop="マーベル映画をもっと楽しむ", pr="PR", amazon_note="Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。", doomsday_sub="視聴順チェックリスト", close="閉じる", released="公開年", setin="作中の年代",
                note="個人が運営する非公式のファンサイトです。Marvel Studios、The Walt Disney Company とは関係ありません。各サイトにはアフィリエイト広告（PR）を含むページがあります。",
                policy="プライバシーポリシー"),
     "en": dict(menu="Menu", search="Search titles", search_ph="Search by title", all="ALL", home="Mocchima (all sites)",
                other="日本語", other_href="../", none="No matches", soon="Coming soon",
-               doomsday="Doomsday Watch Guide", doomsday_sub="Story-order checklist", close="Close", released="Released", setin="Set in",
+               doomsday="Doomsday Watch Guide", shop="More Marvel fun", pr="Ad", amazon_note="As an Amazon Associate, this site earns from qualifying purchases.", doomsday_sub="Story-order checklist", close="Close", released="Released", setin="Set in",
                note="An unofficial fan site run by an individual, not affiliated with Marvel Studios or The Walt Disney Company. Some pages contain affiliate links (ads).",
                policy="Privacy policy"),
 }
@@ -85,6 +111,13 @@ a { color: inherit; }
 .mcard .name { display: block; margin-top: 8px; font-size: 16px; line-height: 1.45; }
 .soon { grid-column: 1 / -1; padding: 16px; border: 2px dashed var(--line); border-radius: 8px; color: var(--muted); font-weight: 700; text-align: center; }
 .mnone { text-align: center; color: var(--muted); }
+.mshop { margin: 36px 0 0; padding: 18px 16px; background: #fff; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
+.mshop h2 { margin: 0 0 12px; font-size: 18px; }
+.mpr { display: inline-block; margin-left: 6px; padding: 1px 6px; border: 1px solid var(--muted); border-radius: 4px; font-size: 11px; color: var(--muted); vertical-align: middle; }
+.mshop-btns { display: flex; flex-wrap: wrap; gap: 8px; }
+.mshop-btns a { display: inline-block; padding: 9px 14px; border: 1px solid var(--line); border-radius: 999px; background: #f6f6f6; color: var(--ink); font-size: 14px; font-weight: 700; text-decoration: none; }
+.mshop-btns a:hover { background: #ececec; }
+.mshop-note { margin: 12px 0 0; font-size: 12px; color: var(--muted); }
 .mfoot { max-width: 1100px; margin: 0 auto; padding: 18px 16px 40px; font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); }
 </style>"""
 
@@ -207,7 +240,7 @@ def build(f, sites_in_group, head_extra, base_url, site_name, analytics):
   <p class="mdesc">{e(f["desc"])}</p>
   <div class="mtabs" role="tablist">{tabs}</div>
   <p class="mnone" id="mnone" hidden>{e(t["none"])}</p>
-{groups}</main>
+{groups}{shop_html(lang)}</main>
 <footer class="mfoot">{e(t["note"])} <a href="{prefix}privacy.html{"#en" if lang == "en" else ""}">{e(t["policy"])}</a></footer>
 {SCRIPT}
 </body>
