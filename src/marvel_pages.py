@@ -170,8 +170,8 @@ SCRIPT_MENU = """<script>
 def page(path, title, desc, body, analytics, extra_script=""):
     prefix = "../" * path.count("/")
     menu = (f'<li><a href="{prefix}marvel/">作品一覧（トップ）</a></li>'
-            + "".join(f'<li><a href="{prefix}{p}"{" aria-current=\"page\"" if p == path else ""}>{e(n)}</a></li>' for p, n, _ in PAGES)
-            + f'<li><a href="{DOOMSDAY}">ドゥームズデイ予習ガイド</a></li>')
+            + f'<li><a href="{DOOMSDAY}">ドゥームズデイ予習ガイド</a></li>'
+            + "".join(f'<li><a href="{prefix}{p}"{" aria-current=\"page\"" if p == path else ""}>{e(n)}</a></li>' for p, n, _ in PAGES))
     shop = marvel_folder.shop_html("ja").replace('class="mshop"', 'class="mshop"')
     return f"""<!doctype html>
 <html lang="ja">

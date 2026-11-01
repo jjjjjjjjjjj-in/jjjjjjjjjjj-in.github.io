@@ -245,7 +245,8 @@ def build(f, sites_in_group, head_extra, base_url, site_name, analytics):
 </header>
 <nav class="mmenu" id="mmenu" hidden><ul>
   <li><a href="./">{e(t["home"])}</a></li>
-{feat_menu}  <li><a href="{t["doomsday_href"]}">{e(t["doomsday_link"])}</a></li>
+  <li><a href="{t["doomsday_href"]}">{e(t["doomsday_link"])}</a></li>
+{feat_menu}
   <li><a href="{t["other_href"]}" hreflang="{"ja" if lang == "en" else "en"}">{e(t["other"])}</a></li>
 </ul></nav>
 <div class="msearch" id="msearch" hidden><input type="search" placeholder="{e(t["search_ph"])}" aria-label="{e(t["search_ph"])}"></div>
