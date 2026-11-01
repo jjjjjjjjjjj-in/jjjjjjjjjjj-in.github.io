@@ -430,5 +430,29 @@
    "soft": "#dfe6f5"
   },
   "out": "spider-man-homecoming/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ブラックパンサー／ワカンダ・フォーエバー",
+  "year": "2022",
+  "theme": {
+   "main": "#4b2a7a",
+   "deep": "#0d1a24",
+   "accent": "#3fb8b0",
+   "soft": "#e2ecef"
+  },
+  "out": "wakanda-forever/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Black Panther: Wakanda Forever",
+  "year": "2022",
+  "theme": {
+   "main": "#4b2a7a",
+   "deep": "#0d1a24",
+   "accent": "#3fb8b0",
+   "soft": "#e2ecef"
+  },
+  "out": "wakanda-forever/en/og.png"
  }
 ]

@@ -216,6 +216,16 @@ SITES = [
         updated="2026-11-02",
     ),
     dict(
+        path="wakanda-forever/", folder="marvel", folder_en="marvel-en",
+        name="ブラックパンサー／ワカンダ・フォーエバー 完全ガイド",
+        name_en="Black Panther: Wakanda Forever Complete Guide",
+        desc="国王を失ったワカンダと、海の国タロカンの王ネイモア。新しいブラックパンサーの誕生。あらすじ・相関図・用語・Q&A。",
+        desc_en="A grieving Wakanda faces Namor of Talokan, and a new Black Panther rises: story, character map, key terms and Q&A.",
+        en_path="wakanda-forever/en/",
+        sitemap="wakanda-forever/sitemap.xml",
+        updated="2026-11-02",
+    ),
+    dict(
         path="paradise-city/", folder="paradise",
         name="パラダイスシティ カジノガイド",
         desc="韓国・仁川のパラダイスシティのカジノを日本人向けに解説。宿泊プラン、食事券、入場ルール、予算の目安。",
