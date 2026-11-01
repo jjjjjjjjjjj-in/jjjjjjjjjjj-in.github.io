@@ -1109,11 +1109,6 @@ RELATION_MAPS = {
                  group="ピム・テックの社長", group_en="Head of Pym Tech",
                  desc="ハンクの元弟子。小さくなるスーツ「イエロージャケット」を作り、悪い組織に売ろうとする。最後は自分でスーツを着て戦う。",
                  desc_en="Hank's former protégé. He builds the Yellowjacket suit to sell to bad people, and finally wears it himself."),
-            dict(id="janet", gone=True, role="sub", side="hero", x=420, y=-640, tone="gold", badge='行方\n不明', badge_en='Lost',
-                 name="ジャネット・ヴァン・ダイン", name_en="Janet van Dyne", actor="（回想の場面）", actor_en="(in flashback)",
-                 group="ハンクの妻・ホープの母（行方不明）", group_en="Hank's wife, Hope's mother (lost)",
-                 desc="ハンクの妻で、ホープの母。昔はハンクと一緒にヒーローとして活躍していた。1987年、ミサイルを止めるため体を小さくしすぎて量子世界に消え、帰ってこなかった。",
-                 desc_en="Hank's wife and Hope's mother, once a hero alongside Hank. In 1987 she shrank too far to stop a missile, vanished into the Quantum Realm and never returned."),
         ],
         links=[
             dict(a="scott", b="hope", type="ally", ab="訓練を\n受ける", ab_en="Trains\nwith her", ba="最初は\n反発", ba_en="Resents him\nat first"),
@@ -1125,8 +1120,6 @@ RELATION_MAPS = {
             dict(a="cross", b="hank", type="enemy", ab="元師匠を\n見返したい", ab_en="Wants to outdo\nhis mentor", bend=0.3),
             dict(a="scott", b="cross", type="enemy", ab="スーツを\n奪う", ab_en="Steals\nhis suit"),
             dict(a="hope", b="cross", type="org", ab="そばで働き\n見張る", ab_en="Works beside him,\nwatching"),
-            dict(a="hank", b="janet", type="family", ab="妻", ab_en="Wife"),
-            dict(a="hope", b="janet", type="family", ab="母", ab_en="Mother"),
         ],
     ),
     "civil-war": dict(
