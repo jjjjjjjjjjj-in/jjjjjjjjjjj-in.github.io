@@ -186,7 +186,7 @@ TITLES = {
     "daredevil-born-again-s1": dict(title='デアデビル：ボーン・アゲイン シーズン1', title_en='Daredevil: Born Again (Season 1)', year='2025', era='2025年', era_en='2025',
         post='ドゥームズデイに関わる情報はない。',
         post_en='Nothing related to Doomsday.'),
-    "fantastic-four-first-steps": dict(title='ファンタスティック4：ファースト・ステップ', title_en='The Fantastic Four: First Steps', year='2025', era='別の宇宙（地球828）', era_en='Alternate universe (Earth-828)',
+    "fantastic-four-first-steps": dict(title='ファンタスティック4：ファースト・ステップ', title_en='The Fantastic Four: First Steps', year='2025', era='別の宇宙（Earth-828）', era_en='Alternate universe (Earth-828)',
         post='ミッドクレジットで、スーがフランクリンに本を読み聞かせていると、マスクの人物（ドクター・ドゥームとみられる）がフランクリンに近づく。',
         post_en='Mid-credits: while Sue reads to Franklin, a masked figure, apparently Doctor Doom, approaches him.'),
     "thunderbolts": dict(title='サンダーボルツ*', title_en='Thunderbolts*', year='2025', era='2025年', era_en='2025',

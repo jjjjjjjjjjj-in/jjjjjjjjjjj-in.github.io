@@ -910,5 +910,197 @@
    "soft": "#f6e6e0"
   },
   "out": "x-men-last-stand/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "X-MEN：フューチャー&パスト",
+  "year": "2014",
+  "theme": {
+   "main": "#2a3f5c",
+   "deep": "#0a0f17",
+   "accent": "#f0a03a",
+   "soft": "#e3e9f1"
+  },
+  "out": "x-men-days-of-future-past/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "X-Men: Days of Future Past",
+  "year": "2014",
+  "theme": {
+   "main": "#2a3f5c",
+   "deep": "#0a0f17",
+   "accent": "#f0a03a",
+   "soft": "#e3e9f1"
+  },
+  "out": "x-men-days-of-future-past/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "X-MEN：アポカリプス",
+  "year": "2016",
+  "theme": {
+   "main": "#1f3f7a",
+   "deep": "#0a0f1e",
+   "accent": "#e8b44a",
+   "soft": "#f3ecdc"
+  },
+  "out": "x-men-apocalypse/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "X-Men: Apocalypse",
+  "year": "2016",
+  "theme": {
+   "main": "#1f3f7a",
+   "deep": "#0a0f1e",
+   "accent": "#e8b44a",
+   "soft": "#f3ecdc"
+  },
+  "out": "x-men-apocalypse/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "X-MEN：ダーク・フェニックス",
+  "year": "2019",
+  "theme": {
+   "main": "#b0391c",
+   "deep": "#120a10",
+   "accent": "#ffb347",
+   "soft": "#f8e8df"
+  },
+  "out": "x-men-dark-phoenix/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Dark Phoenix",
+  "year": "2019",
+  "theme": {
+   "main": "#b0391c",
+   "deep": "#120a10",
+   "accent": "#ffb347",
+   "soft": "#f8e8df"
+  },
+  "out": "x-men-dark-phoenix/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "デッドプール＆ウルヴァリン",
+  "year": "2024",
+  "theme": {
+   "main": "#a3111c",
+   "deep": "#140406",
+   "accent": "#f5c518",
+   "soft": "#f7e3e4"
+  },
+  "out": "deadpool-and-wolverine/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Deadpool & Wolverine",
+  "year": "2024",
+  "theme": {
+   "main": "#a3111c",
+   "deep": "#140406",
+   "accent": "#f5c518",
+   "soft": "#f7e3e4"
+  },
+  "out": "deadpool-and-wolverine/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "アガサ・オール・アロング",
+  "year": "2024",
+  "theme": {
+   "main": "#4b2a6b",
+   "deep": "#0f0716",
+   "accent": "#7bc86c",
+   "soft": "#ece4f3"
+  },
+  "out": "agatha-all-along/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Agatha All Along",
+  "year": "2024",
+  "theme": {
+   "main": "#4b2a6b",
+   "deep": "#0f0716",
+   "accent": "#7bc86c",
+   "soft": "#ece4f3"
+  },
+  "out": "agatha-all-along/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "キャプテン・アメリカ：ブレイブ・ニュー・ワールド",
+  "year": "2025",
+  "theme": {
+   "main": "#1d3a78",
+   "deep": "#081022",
+   "accent": "#d8282f",
+   "soft": "#e4e9f4"
+  },
+  "out": "brave-new-world/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Captain America: Brave New World",
+  "year": "2025",
+  "theme": {
+   "main": "#1d3a78",
+   "deep": "#081022",
+   "accent": "#d8282f",
+   "soft": "#e4e9f4"
+  },
+  "out": "brave-new-world/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ファンタスティック4：ファースト・ステップ",
+  "year": "2025",
+  "theme": {
+   "main": "#1f5fa8",
+   "deep": "#08162a",
+   "accent": "#f2a33a",
+   "soft": "#e3edf8"
+  },
+  "out": "fantastic-four-first-steps/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "The Fantastic Four: First Steps",
+  "year": "2025",
+  "theme": {
+   "main": "#1f5fa8",
+   "deep": "#08162a",
+   "accent": "#f2a33a",
+   "soft": "#e3edf8"
+  },
+  "out": "fantastic-four-first-steps/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "サンダーボルツ*",
+  "year": "2025",
+  "theme": {
+   "main": "#2f3b2c",
+   "deep": "#0b0d0a",
+   "accent": "#e8c547",
+   "soft": "#e6ebe2"
+  },
+  "out": "thunderbolts/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Thunderbolts*",
+  "year": "2025",
+  "theme": {
+   "main": "#2f3b2c",
+   "deep": "#0b0d0a",
+   "accent": "#e8c547",
+   "soft": "#e6ebe2"
+  },
+  "out": "thunderbolts/en/og.png"
  }
 ]
