@@ -862,5 +862,29 @@
    "soft": "#e8eaf0"
   },
   "out": "x-men/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "X-MEN2",
+  "year": "2003",
+  "theme": {
+   "main": "#1f3a5a",
+   "deep": "#0b1018",
+   "accent": "#f2c02e",
+   "soft": "#e6ecf2"
+  },
+  "out": "x2/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "X2",
+  "year": "2003",
+  "theme": {
+   "main": "#1f3a5a",
+   "deep": "#0b1018",
+   "accent": "#f2c02e",
+   "soft": "#e6ecf2"
+  },
+  "out": "x2/en/og.png"
  }
 ]

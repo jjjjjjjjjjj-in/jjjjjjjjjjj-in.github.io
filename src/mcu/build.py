@@ -178,7 +178,7 @@ def footer(lang, top):
 <p>As an Amazon Associate, this site earns from qualifying purchases.</p>
 <p>For how this site uses analytics (Google Analytics) and ads, see the <a href="{PRIVACY_URL}#en">privacy policy</a>.</p>
 <p>This is an unofficial fan site run by an individual. It is not affiliated with Marvel Studios, The Walt Disney Company, Sony Pictures or 20th Century Studios. Titles and character names are trademarks of their respective owners.</p>
-<p><a href="{top}">Mocchima (all my sites)</a></p>
+<p><a href="{top}marvel/en/">Marvel Movie Guides (all titles)</a></p>
 </footer>
 </div>
 """
@@ -187,7 +187,7 @@ def footer(lang, top):
 <p>Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。</p>
 <p>アクセス解析（Googleアナリティクス）と広告の仕組みについては<a href="{PRIVACY_URL}">プライバシーポリシー</a>をご覧ください。</p>
 <p>当サイトは個人が運営する非公式ファンサイトです。Marvel Studios、The Walt Disney Company、Sony Pictures、20th Century Studios とは関係ありません。作品名・キャラクター名は各権利者の商標です。</p>
-<p><a href="{top}">もっちぃま（運営者のサイト一覧）</a></p>
+<p><a href="{top}marvel/">マーベル映画紹介（作品一覧）</a></p>
 </footer>
 </div>
 """
@@ -242,7 +242,7 @@ def build_page(slug, lang):
                  f"--navy-soft:{th['soft']};--gold:{th['accent']};--gold-ink:{th['main']};--link:{th['main']};}}</style>\n") if th else ""
     return head(slug, t["title_fmt"].format(title=title), t["desc_fmt"].format(title=title), lang, prefix, schema,
                 t["site_fmt"].format(title=title)) + theme_css + f"""
-<nav class="crumb"><a href="{top}">{e(t['home'])}</a> ＞ <a href="{top}{t['folder_path']}">{e(t['folder'])}</a> ＞ {e(title)}<a class="lang-switch" href="{'../' if lang == 'en' else 'en/'}" hreflang="{'ja' if lang == 'en' else 'en'}">{e(t['other_lang'])}</a></nav>
+<nav class="crumb"><a href="{top}{t['folder_path']}">{e(t['folder'])}</a> ＞ {e(title)}<a class="lang-switch" href="{'../' if lang == 'en' else 'en/'}" hreflang="{'ja' if lang == 'en' else 'en'}">{e(t['other_lang'])}</a></nav>
 <header class="fg-hero">
   <p class="eyebrow">{e(t['menu'])} · {e(tr['year'])}</p>
   <h1>{e(h1)}<small>{e(t['guide'])}</small></h1>
@@ -332,7 +332,7 @@ def build_scenes_page(slug, lang):
     html = html.replace(f'<link rel="canonical" href="{BASE_URL}{slug}/{"en/" if lang == "en" else ""}">', f'<link rel="canonical" href="{BASE_URL}{path}">')
     html = (html.replace(f'href="{BASE_URL}{slug}/">', f'href="{BASE_URL}{slug}/story/">').replace(f'href="{BASE_URL}{slug}/en/">', f'href="{BASE_URL}{slug}/en/story/">'))
     return html + theme_css + f"""
-<nav class="crumb"><a href="{top}">{e(t['home'])}</a> ＞ <a href="{top}{t['folder_path']}">{e(t['folder'])}</a> ＞ <a href="../">{e(title)}</a> ＞ {e(t['s_story'])}<a class="lang-switch" href="{'../../story/' if lang == 'en' else '../en/story/'}">{e(t['other_lang'])}</a></nav>
+<nav class="crumb"><a href="{top}{t['folder_path']}">{e(t['folder'])}</a> ＞ <a href="../">{e(title)}</a> ＞ {e(t['s_story'])}<a class="lang-switch" href="{'../../story/' if lang == 'en' else '../en/story/'}">{e(t['other_lang'])}</a></nav>
 <header class="fg-hero">
   <p class="eyebrow">{e(t['menu'])} · {e(tr['year'])}</p>
   <h1>{e(page_title)}</h1>

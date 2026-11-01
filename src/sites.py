@@ -6,12 +6,12 @@
 # トップページのフォルダ。中身が1つだけのフォルダは、フォルダのページを作らずにそのサイトへ直接つなぐ
 FOLDERS = [
     dict(key="marvel", path="marvel/", lang="ja", name="マーベル映画紹介", theme="red", logo="MARVEL",
-         desc="マーベル映画の見る順番や作品同士のつながりを紹介する完全ガイド。『アベンジャーズ／ドゥームズデイ』の予習ガイドと、1本ずつのあらすじ・相関図を、世界（アース）ごとに分けてまとめています。",
+         desc="マーベル映画の見る順番や作品同士のつながりを紹介する完全ガイド。『アベンジャーズ／ドゥームズデイ』の予習ガイドと、1本ずつのあらすじ・相関図を、世界（Earth）ごとに分けてまとめています。",
          # フォルダの中の区分。各サイトの group で入る区分が決まる（書かなければ earth616）
          groups=[("doomsday", "ドゥームズデイ予習ガイド", "公開前に観ておきたい作品を、視聴順のチェックリストで整理。", "予習ガイド"),
-                 ("earth616", "マーベル・ユニバース（アース616）", "アベンジャーズたちが暮らす、MCUのメインの世界。物語の時代順に並べています。", "アース616"),
-                 ("earth10005", "X-MENの世界（アース10005）", "20世紀フォックスのX-MEN映画の世界。", "X-MEN"),
-                 ("earth828", "ファンタスティック4の世界（アース828）", "『ファンタスティック4：ファースト・ステップ』の世界。", "アース828"),
+                 ("earth616", "マーベル・ユニバース（Earth-616）", "アベンジャーズたちが暮らす、MCUのメインの世界。物語の時代順に並べています。", "Earth-616"),
+                 ("earth10005", "X-MENの世界（Earth-10005）", "20世紀フォックスのX-MEN映画の世界。", "X-MEN"),
+                 ("earth828", "ファンタスティック4の世界（Earth-828）", "『ファンタスティック4：ファースト・ステップ』の世界。", "Earth-828"),
                  ("other", "そのほかの世界", "ソニーのスパイダーマン（トビー・マグワイア版）やヴェノムの世界など。", "そのほか")]),
     dict(key="marvel-en", path="marvel/en/", lang="en", name="Marvel Movie Guides", theme="red", logo="MARVEL",
          desc="A complete guide to the order to watch Marvel movies and how they connect: a watch guide for Avengers: Doomsday, plus story and character maps film by film, sorted by universe (Earth). All in English.",
@@ -393,6 +393,16 @@ SITES = [
         desc_en="Logan, a man with no past, and a girl named Rogue find their way to Professor X's school: story, character map, key terms and Q&A.",
         en_path="x-men/en/",
         sitemap="x-men/sitemap.xml",
+        updated="2026-11-02",
+    ),
+    dict(
+        path="x2/", folder="marvel", folder_en="marvel-en", group="earth10005",
+        name="X-MEN2 完全ガイド",
+        name_en="X2 Complete Guide",
+        desc="ミュータントを憎む軍人ストライカーに対し、X-MENが宿敵マグニートーと手を組む。あらすじ・相関図・用語・Q&A。",
+        desc_en="Against the mutant-hating colonel Stryker, the X-Men team up with their enemy Magneto: story, character map, key terms and Q&A.",
+        en_path="x2/en/",
+        sitemap="x2/sitemap.xml",
         updated="2026-11-02",
     ),
     dict(
