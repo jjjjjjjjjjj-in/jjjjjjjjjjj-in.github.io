@@ -376,6 +376,16 @@ SITES = [
         updated="2026-11-02",
     ),
     dict(
+        path="guardians-vol3/", folder="marvel", folder_en="marvel-en",
+        name="ガーディアンズ・オブ・ギャラクシー：VOLUME 3 完全ガイド",
+        name_en="Guardians of the Galaxy Vol. 3 Complete Guide",
+        desc="大けがをしたロケットを救うため、ガーディアンズは彼の過去と向き合う。あらすじ・相関図・用語・Q&A。",
+        desc_en="To save the badly injured Rocket, the Guardians confront his past: story, character map, key terms and Q&A.",
+        en_path="guardians-vol3/en/",
+        sitemap="guardians-vol3/sitemap.xml",
+        updated="2026-11-02",
+    ),
+    dict(
         path="paradise-city/", folder="paradise",
         name="パラダイスシティ カジノガイド",
         desc="韓国・仁川のパラダイスシティのカジノを日本人向けに解説。宿泊プラン、食事券、入場ルール、予算の目安。",

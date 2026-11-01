@@ -814,5 +814,29 @@
    "soft": "#ece6f4"
   },
   "out": "quantumania/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ガーディアンズ・オブ・ギャラクシー：VOLUME 3",
+  "year": "2023",
+  "theme": {
+   "main": "#a8462a",
+   "deep": "#1a1220",
+   "accent": "#f2b23a",
+   "soft": "#f4e8e2"
+  },
+  "out": "guardians-vol3/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Guardians of the Galaxy Vol. 3",
+  "year": "2023",
+  "theme": {
+   "main": "#a8462a",
+   "deep": "#1a1220",
+   "accent": "#f2b23a",
+   "soft": "#f4e8e2"
+  },
+  "out": "guardians-vol3/en/og.png"
  }
 ]
