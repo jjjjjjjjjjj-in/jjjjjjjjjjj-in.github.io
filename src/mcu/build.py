@@ -123,6 +123,45 @@ def _timeline_works():
 TIMELINE_WORKS = _timeline_works()
 
 
+def _box_office():
+    p = os.path.join(os.path.dirname(SRC), "marvel_data", "box_office.json")
+    with open(p, encoding="utf-8") as f:
+        d = json.load(f)
+    films = sorted(d["films"], key=lambda x: -x["gross"])
+    return d, {x["slug"]: (i, x) for i, x in enumerate(films, 1)}
+
+
+BOX, BOX_RANK = _box_office()
+
+
+def box_office_badge(slug, lang, top):
+    """作品ガイドの一番上に出す「世界興行収入 歴代○位」の派手な帯（運営者の希望、2026-11-02）。
+    数字は src/marvel_data/box_office.json。確かめていない数字には「確認中」と出す"""
+    if slug not in BOX_RANK:
+        return ""
+    mrank, f = BOX_RANK[slug]
+    ja = lang != "en"
+    gross = f"${f['gross']:,}"
+    if ja:
+        oku, man = divmod(f["gross"] // 10000, 10000)
+        sub = f"約{oku}億{man:,}万ドル・マーベル作品で{mrank}位"
+        state = {"確認済み": "確認済み", "一部確認": "金額は確認中"}.get(f["verify"], "数字は確認中")
+        when = f"{BOX['as_of']}時点・{state}" + ("・再上映を含む" if f["rerelease"] else "")
+        head, label = "WORLD BOX OFFICE", f"世界興行収入 歴代<b>{f['world_rank']}</b>位"
+        more = f'<a href="{top}marvel/box-office/">ランキングを見る ›</a>'
+    else:
+        sub = f"#{mrank} among Marvel films"
+        state = {"確認済み": "verified", "一部確認": "amount being verified"}.get(f["verify"], "figures being verified")
+        when = f"As of {BOX['as_of']} · {state}" + (" · incl. re-release" if f["rerelease"] else "")
+        head, label, more = "WORLD BOX OFFICE", f"<b>#{f['world_rank']}</b> all-time worldwide", ""
+    return (f'\n  <div class="bo-badge"><span class="bo-head">{head}</span><span class="bo-rank">{label}</span>'
+            f'<span class="bo-gross">{gross}</span><span class="bo-sub">{e(sub)}</span>'
+            f'<span class="bo-when">{e(when)} {more}</span></div>')
+
+
+box_badge = box_office_badge
+
+
 def timeline_link(slug, lang, top):
     """MCU完全年表（/marvel/timeline/、日本語だけ）でこの作品の出来事を見るリンク"""
     if lang != "ja" or slug not in TIMELINE_WORKS:
@@ -264,7 +303,7 @@ def build_page(slug, lang):
   <p class="eyebrow">{e(t['menu'])} · {e(tr['year'])}</p>
   <h1>{e(h1)}<small>{e(t['guide'])}</small></h1>
   <p class="lead">{e(t['tagline'])}</p>
-  <dl class="fg-facts">{facts_html}</dl>
+  <dl class="fg-facts">{facts_html}</dl>{box_badge(slug, lang, top)}
 </header>
 <nav class="site-toc" aria-label="{e(t['toc'])}">{toc}</nav>
 

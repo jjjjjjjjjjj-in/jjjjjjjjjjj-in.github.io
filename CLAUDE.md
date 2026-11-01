@@ -38,6 +38,7 @@
 - `/marvel/timeline/`（MCU完全年表）・`/marvel/box-office/`（興行収入ランキング）・`/marvel/rerelease/`（再上映情報）。作るのは `src/marvel_pages.py`（`python3 src/build.py` で一緒に書き出す）。黒地に赤と金。マーベル映画紹介の☰メニューとトップの「特集」からリンク。
 - データは `src/marvel_data/`: 年表は `timeline_raw.txt`（運営者の元の年表）を `make_timeline.py` で `timeline.json` に。直した行は status=fixed で元の表記を残す、確かめられない行は check（「確認中」と出る）。興行収入は `box_office.json`（verify: 確認済み／一部確認／提供データ）、再上映は `rerelease.json`（公式決定と報道段階を分ける）。確かめていない数字を事実として書かない。出典と確認日を必ず書く。
 - 年表の作品名は、作品ガイドがあればそこへ、なければドゥームズデイ予習ガイドのその作品の行（#slug）へ。作品ガイドからは「MCU完全年表でこの作品の時代を見る」（?work=slug）で年表へ。
+- 作品ガイドの一番上（タイトルの枠の中）に、box_office.json に入っている作品だけ「世界興行収入 歴代○位」の赤と金の帯を出す（運営者の希望、2026-11-02。`src/mcu/build.py` の box_office_badge）。確かめていない数字には「数字は確認中」と出す。
 - もっちぃまのトップは noindex（検索に出さない）。GitHub Pages では完全な非公開にはできない。
 
 ## サイト一覧
