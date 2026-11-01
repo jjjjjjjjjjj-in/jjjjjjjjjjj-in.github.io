@@ -81,7 +81,7 @@ TITLES = {
     "spider-man-homecoming": dict(title='スパイダーマン：ホームカミング', title_en='Spider-Man: Homecoming', year='2017', era='2016年', era_en='2016',
         post='ミッドクレジットでヴァルチャーが刑務所で仲間をかばう。ポストクレジットはキャプテン・アメリカの「忍耐」の教育ビデオの小ネタ。',
         post_en="Mid-credits: the Vulture protects Peter's identity in prison. Post-credits: a Captain America PSA about patience."),
-    "doctor-strange": dict(title='ドクター・ストレンジ', title_en='Doctor Strange', year='2016', era='2016-17年', era_en='2016-17',
+    "doctor-strange": dict(title='ドクター・ストレンジ', title_en='Doctor Strange', year='2016', era='2016年', era_en='2016',
         post='ミッドクレジットでストレンジがソーと会う（バトルロイヤルにつながる）。ポストクレジットでモルドが「魔術師が多すぎる」と動き出す。',
         post_en='Mid-credits: Strange meets Thor (leading into Ragnarok). Post-credits: Mordo decides there are too many sorcerers.'),
     "ant-man-and-the-wasp": dict(title='アントマン＆ワスプ', title_en='Ant-Man and the Wasp', year='2018', era='2018年', era_en='2018',

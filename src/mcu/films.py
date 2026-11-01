@@ -1758,9 +1758,9 @@ FILM_GUIDES = {
              "Stan Lee's cameo", "Marvel Comics legend Stan Lee appears as a delivery man with a package for Tony."),
         ],
         next=[
-            ("black-widow", "物語の時代順で次の作品。協定に背いて追われるナターシャの話。", "Next in story order: Natasha on the run after defying the Accords."),
+            ("doctor-strange", "物語の時代順で次の作品。ストレンジの修行は、この作品と同じころの出来事。", "Next in story order. Strange trains in magic around the same time as this film."),
             ("black-panther", "ティ・チャラが国王になる物語。", "T'Challa's story as king."),
-            ("spider-man-homecoming", "トニーに見いだされたピーターのその後。", "Peter, after being recruited by Tony."),
+            ("black-widow", "協定に背いて追われるナターシャの話。", "Natasha on the run after defying the Accords."),
         ],
         shop=[("シビル・ウォー／キャプテン・アメリカ Blu-ray", "シビル・ウォー キャプテン・アメリカ Blu-ray", "Captain America Civil War Blu-ray"),
               ("キャプテン・アメリカの盾", "キャプテンアメリカ 盾", "Captain America shield replica"),
@@ -1954,7 +1954,7 @@ FILM_GUIDES = {
              "Stan Lee's cameo", "Marvel Comics legend Stan Lee appears as a neighbor yelling at Peter from his window."),
         ],
         next=[
-            ("doctor-strange", "物語の時代順で次の作品。魔術の世界が登場する。", "Next in story order: the world of magic arrives."),
+            ("thor-ragnarok", "物語の時代順で次の作品。宇宙に飛ばされたソーと、行方不明のハルク。", "Next in story order: Thor stranded across the universe, and the missing Hulk."),
             ("infinity-war", "ピーターがアベンジャーズと一緒に宇宙で戦う。", "Peter fights alongside the Avengers in space."),
             ("spider-man-far-from-home", "ピーターの物語の続き。", "Peter's story continues."),
         ],
@@ -2075,12 +2075,14 @@ FILM_GUIDES = {
         ],
         before=[
             ("ほかの作品を知らなくても楽しめます", "新しいヒーローの始まりの物語です。アベンジャーズの話はほとんど出てきません。"),
+            ("いつごろの話？", "マーベル・スタジオ公式の年表の本によると、物語は『アントマン』の後に始まり、ストレンジの修行は『シビル・ウォー』と同じころ。最後の戦いは『ブラック・ウィドウ』より前の出来事です。"),
             ("魔術がテーマです", "これまでの科学やよろいの戦いとちがい、呪文や別の次元が出てきます。用語集を先に読んでおくと分かりやすくなります。"),
             ("映像が見どころ", "ビルがねじれたり、街が万華鏡のように折りたたまれたりする場面が続きます。大きな画面で観るのがおすすめです。"),
             ("エンドクレジットの途中と後に映像があります", "途中の映像は『マイティ・ソー バトルロイヤル』につながります。"),
         ],
         before_en=[
             ("No homework needed", "It's an origin story for a new hero, with very little Avengers material."),
+            ("When is it set?", "According to Marvel Studios' official timeline book, the story begins after Ant-Man, Strange trains around the time of Civil War, and the final battle happens before Black Widow."),
             ("It's about magic", "Instead of science and armor, there are spells and other dimensions. Reading the key terms first helps."),
             ("A visual feast", "Buildings twist and cities fold like kaleidoscopes. Best on a big screen."),
             ("There are scenes during and after the credits", "The mid-credits scene leads into Thor: Ragnarok."),
@@ -2148,7 +2150,8 @@ FILM_GUIDES = {
              "Stan Lee's cameo", "Marvel Comics legend Stan Lee appears as a bus passenger laughing at a book."),
         ],
         next=[
-            ("thor-ragnarok", "物語の時代順で次の作品。ストレンジも少しだけ登場する。", "Next in story order. Strange makes a brief appearance."),
+            ("black-widow", "物語の時代順で次の作品。協定に背いて追われるナターシャの話。", "Next in story order: Natasha on the run after defying the Accords."),
+            ("thor-ragnarok", "おまけ映像の続き。ストレンジも少しだけ登場する。", "Follows the mid-credits scene. Strange makes a brief appearance."),
             ("infinity-war", "ストレンジとタイム・ストーンが物語の中心になる。", "Strange and the Time Stone are at the center of the story."),
             ("multiverse-of-madness", "ストレンジの物語の続き。", "Strange's story continues."),
         ],
