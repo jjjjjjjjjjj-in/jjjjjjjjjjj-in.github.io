@@ -886,5 +886,29 @@
    "soft": "#e6ecf2"
   },
   "out": "x2/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "X-MEN：ファイナル ディシジョン",
+  "year": "2006",
+  "theme": {
+   "main": "#8a1f12",
+   "deep": "#140806",
+   "accent": "#f59a2e",
+   "soft": "#f6e6e0"
+  },
+  "out": "x-men-last-stand/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "X-Men: The Last Stand",
+  "year": "2006",
+  "theme": {
+   "main": "#8a1f12",
+   "deep": "#140806",
+   "accent": "#f59a2e",
+   "soft": "#f6e6e0"
+  },
+  "out": "x-men-last-stand/en/og.png"
  }
 ]

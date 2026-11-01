@@ -406,6 +406,16 @@ SITES = [
         updated="2026-11-02",
     ),
     dict(
+        path="x-men-last-stand/", folder="marvel", folder_en="marvel-en", group="earth10005",
+        name="X-MEN：ファイナル ディシジョン 完全ガイド",
+        name_en="X-Men: The Last Stand Complete Guide",
+        desc="ミュータントの力を消す「治療薬」と、湖から戻ったジーン。X-MEN旧3部作の完結編。あらすじ・相関図・用語・Q&A。",
+        desc_en="A 'cure' for mutant powers and Jean's return from the lake, in the finale of the original X-Men trilogy: story, character map, key terms and Q&A.",
+        en_path="x-men-last-stand/en/",
+        sitemap="x-men-last-stand/sitemap.xml",
+        updated="2026-11-02",
+    ),
+    dict(
         path="paradise-city/", folder="paradise",
         name="パラダイスシティ カジノガイド",
         desc="韓国・仁川のパラダイスシティのカジノを日本人向けに解説。宿泊プラン、食事券、入場ルール、予算の目安。",
