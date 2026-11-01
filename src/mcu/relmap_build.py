@@ -57,7 +57,7 @@ def localized_people(m, lang, slug):
     for p in m["people"]:
         g = (lambda k: p.get(f"{k}_en", p[k])) if lang == "en" else (lambda k: p[k])
         name = g("name")
-        q = dict(id=p["id"], role=p["role"], side=p["side"], tone=p.get("tone", "gold"), badge=g("badge") if "badge" in p else "",
+        q = dict(id=p["id"], role=p["role"], side=p["side"], tone="gray" if p.get("gone") else p.get("tone", "gold"), gone=bool(p.get("gone")), badge=g("badge") if "badge" in p else "",
                  name=name, short=re.sub(r"（.*?）", "", name),
                  actor=g("actor"), group=g("group"), desc=g("desc"), initials=p.get("initials") or initials(p["name_en"]))
         for k in ("x", "y", "ring", "angle"):
@@ -97,7 +97,7 @@ def map_section(slug, lang, e, prefix):
                      for k, v in LINK_TYPES.items() if any(l["type"] == k for l in m["links"]))
     role_label = {"lead": t["lead_role"], "main": t["main_role"], "sub": t["sub_role"]}
     roster = "".join(
-        f'<li class="r-{p["role"]}"><a href="#relmap" data-rm-open="{p["id"]}">'
+        f'<li class="r-{p["role"]}{" gone" if p.get("gone") else ""}"><a href="#relmap" data-rm-open="{p["id"]}">'
         + (f'<img src="{e(p["img"])}" alt="" width="48" height="48">' if p.get("img") else f'<span class="rm-ph-html tone-{p["tone"]} r-{p["role"]}">{e(p["initials"])}</span>')
         + f'<span><b>{e(p["name"])}</b><small>{e(role_label[p["role"]])} ・ {e(p["actor"])}</small><small>{e(p["group"])}</small></span></a></li>'
         for p in sorted(people, key=lambda p: ["lead", "main", "sub"].index(p["role"])))

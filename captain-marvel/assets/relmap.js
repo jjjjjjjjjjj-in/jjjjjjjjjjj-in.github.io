@@ -115,7 +115,7 @@
   });
 
   const nodes = people.map((p) => {
-    const g = svgEl("g", { class: `rm-node r-${p.role} tone-${p.tone || "gold"}`, transform: `translate(${p.x},${p.y})`, tabindex: 0, role: "button",
+    const g = svgEl("g", { class: `rm-node r-${p.role} tone-${p.tone || "gold"}${p.gone ? " gone" : ""}`, transform: `translate(${p.x},${p.y})`, tabindex: 0, role: "button",
       "aria-label": `${p.name}（${p.actor}）` }, gNodes);
     const x0 = -p.w / 2, y0 = -p.h / 2;
     svgEl("rect", { x: x0 - 5, y: y0 - 5, width: p.w + 10, height: p.h + 10, rx: 14, class: "rm-frame" }, g);
@@ -311,7 +311,7 @@
   const sheetBody = document.getElementById("rm-sheet-body");
   const sheetIsBottom = () => window.matchMedia("(max-width: 759px)").matches;
   const avatarHtml = (p, size) => p.img
-    ? `<img src="${esc(p.img)}" alt="" width="${size}" height="${size}">`
+    ? `<img src="${esc(p.img)}" alt="" width="${size}" height="${size}"${p.gone ? ' style="filter:grayscale(1)"' : ""}>`
     : `<span class="rm-ph-html tone-${p.tone || "gold"} r-${p.role}" style="width:${size}px;height:${size}px;font-size:${size * 0.36}px">${esc(p.initials)}</span>`;
   let current = null;
   function select(p, center) {

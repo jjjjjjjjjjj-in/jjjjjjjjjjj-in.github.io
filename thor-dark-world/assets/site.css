@@ -408,3 +408,10 @@ footer p { margin: 0; }
 .site-toc a[aria-current="page"] { border-bottom-color: var(--gold-bright, #e5b21a); }
 .site-toc .toc-label { display: block; padding: 10px 4px 10px 8px; color: var(--gold-bright, #e5b21a); font-size: 12px; font-weight: 700; white-space: nowrap; }
 [id] { scroll-margin-top: 56px; }
+
+/* 亡くなっている人物（物語が始まる前に亡くなり、話にたびたび出てくる人）は灰色のカード。写真も白黒に */
+.tone-gray .rm-frame, .tone-gray .rm-band, .tone-gray .rm-badge circle { fill: #6b6f76; }
+.tone-gray .rm-ph { fill: #d9dbde; } .tone-gray .rm-sil { fill: #6b6f76; }
+.rm-node.gone image { filter: grayscale(1); }
+.rm-ph-html.tone-gray { background: #d9dbde; border-color: #6b6f76; color: #3b3e43; }
+.rm-roster li.gone img { filter: grayscale(1); }
