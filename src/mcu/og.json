@@ -838,5 +838,29 @@
    "soft": "#f4e8e2"
   },
   "out": "guardians-vol3/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "X-メン",
+  "year": "2000",
+  "theme": {
+   "main": "#1f2a44",
+   "deep": "#0c0f18",
+   "accent": "#f2c02e",
+   "soft": "#e8eaf0"
+  },
+  "out": "x-men/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "X-Men",
+  "year": "2000",
+  "theme": {
+   "main": "#1f2a44",
+   "deep": "#0c0f18",
+   "accent": "#f2c02e",
+   "soft": "#e8eaf0"
+  },
+  "out": "x-men/en/og.png"
  }
 ]

@@ -386,6 +386,16 @@ SITES = [
         updated="2026-11-02",
     ),
     dict(
+        path="x-men/", folder="marvel", folder_en="marvel-en", group="earth10005",
+        name="X-メン 完全ガイド",
+        name_en="X-Men Complete Guide",
+        desc="過去を失った男ローガンと少女ローグが、プロフェッサーXの学校にたどり着く。あらすじ・相関図・用語・Q&A。",
+        desc_en="Logan, a man with no past, and a girl named Rogue find their way to Professor X's school: story, character map, key terms and Q&A.",
+        en_path="x-men/en/",
+        sitemap="x-men/sitemap.xml",
+        updated="2026-11-02",
+    ),
+    dict(
         path="paradise-city/", folder="paradise",
         name="パラダイスシティ カジノガイド",
         desc="韓国・仁川のパラダイスシティのカジノを日本人向けに解説。宿泊プラン、食事券、入場ルール、予算の目安。",
