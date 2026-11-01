@@ -622,5 +622,77 @@
    "soft": "#e4f0ec"
   },
   "out": "loki-s2/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ワンダヴィジョン",
+  "year": "2021",
+  "theme": {
+   "main": "#b0213a",
+   "deep": "#1c1014",
+   "accent": "#f0c45a",
+   "soft": "#f6ebe4"
+  },
+  "out": "wandavision/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "WandaVision",
+  "year": "2021",
+  "theme": {
+   "main": "#b0213a",
+   "deep": "#1c1014",
+   "accent": "#f0c45a",
+   "soft": "#f6ebe4"
+  },
+  "out": "wandavision/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "シャン・チー／テン・リングスの伝説",
+  "year": "2021",
+  "theme": {
+   "main": "#b51f2a",
+   "deep": "#13121c",
+   "accent": "#3fa6e0",
+   "soft": "#f3e5e2"
+  },
+  "out": "shang-chi/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Shang-Chi and the Legend of the Ten Rings",
+  "year": "2021",
+  "theme": {
+   "main": "#b51f2a",
+   "deep": "#13121c",
+   "accent": "#3fa6e0",
+   "soft": "#f3e5e2"
+  },
+  "out": "shang-chi/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ファルコン＆ウィンター・ソルジャー",
+  "year": "2021",
+  "theme": {
+   "main": "#1f4fa0",
+   "deep": "#101826",
+   "accent": "#e0423a",
+   "soft": "#e6ecf6"
+  },
+  "out": "falcon-and-winter-soldier/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "The Falcon and the Winter Soldier",
+  "year": "2021",
+  "theme": {
+   "main": "#1f4fa0",
+   "deep": "#101826",
+   "accent": "#e0423a",
+   "soft": "#e6ecf6"
+  },
+  "out": "falcon-and-winter-soldier/en/og.png"
  }
 ]
