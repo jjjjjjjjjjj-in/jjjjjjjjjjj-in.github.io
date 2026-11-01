@@ -9,7 +9,17 @@ SITES = [
         desc_en="What to watch before Avengers: Doomsday, with a story-order checklist and importance ratings.",
         en_path="doomsday-guide/en/",
         sitemap="doomsday-guide/sitemap.xml",
-        updated="2026-10-31",
+        updated="2026-11-01",
+    ),
+    dict(
+        path="doomsday-guide/films/iron-man.html",
+        name="アイアンマン完全ガイド",
+        name_en="Iron Man Complete Guide",
+        desc="映画だけでは分かりにくい人向けに、『アイアンマン』のあらすじ・顔アイコンつき相関図・用語・Q&Aをやさしく解説。",
+        desc_en="Iron Man explained for anyone who finds it hard to follow: story, character map, key terms and Q&A.",
+        en_path="doomsday-guide/en/films/iron-man.html",
+        sitemap=None,  # ドゥームズデイ予習ガイドのサイトマップに入っている
+        updated="2026-11-01",
     ),
     dict(
         path="paradise-city/",
