@@ -6,7 +6,7 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDFL8GPPRZ"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-KDFL8GPPRZ');</script>
 <title>Marvel Movie Guides | もっちぃま</title>
-<meta name="description" content="A watch guide for Avengers: Doomsday, plus guides that explain Marvel films one at a time. All in English.">
+<meta name="description" content="A watch guide for Avengers: Doomsday, plus guides that explain Marvel films one at a time, sorted by universe (Earth). All in English.">
 <link rel="canonical" href="https://jjjjjjjjjjj-in.github.io/marvel/en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,16 +34,46 @@ a { color: var(--ink); font-weight: 700; }
 .policy p, .policy li { margin: 6px 0; }
 footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; }
 </style>
+<style>
+:root { --red: #c8102e; --red-deep: #8f0b20; --red-soft: #fdecee; }
+body { background: #fff; }
+header { background: var(--red); color: #fff; border-radius: 12px; box-shadow: 0 4px 0 var(--red-deep); }
+header p { color: #ffe3e7; }
+.crumb a { color: var(--red); }
+.ftoc { position: sticky; top: 0; z-index: 5; background: var(--red); border-radius: 10px; }
+.ftoc ul { list-style: none; margin: 0; padding: 0 6px; display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+.ftoc a { display: block; padding: 10px 11px; color: #fff; text-decoration: none; font-size: 13.5px; font-weight: 700; white-space: nowrap; }
+.fgroup, .ftoc { min-width: 0; max-width: 100%; }
+.ftoc { overflow: hidden; }
+.fgroup { display: grid; gap: 10px; scroll-margin-top: 56px; }
+.fgroup > h2 { margin: 6px 0 0; display: flex; align-items: center; gap: 10px; font-size: 20px; color: var(--red-deep); border-bottom: 3px solid var(--red); padding-bottom: 6px; }
+.fgroup > h2 .num { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--red); color: #fff; font-size: 15px; flex: none; }
+.fgroup > h2 small { margin-left: auto; font-size: 12.5px; color: #fff; background: var(--red); border-radius: 99px; padding: 1px 10px; }
+.fgroup > p { margin: 0; color: #5c5c5c; font-size: 14px; }
+.card a { background: #fff; border: 1px solid #f1c6cc; border-left: 5px solid var(--red); }
+.card a:hover, .card a:focus-visible { border-color: var(--red); }
+.card .lang { color: var(--red); border-color: #f1c6cc; }
+.card h2 { color: #222; }
+.soon { list-style: none; padding: 16px; border: 2px dashed #f1c6cc; border-radius: 10px; color: var(--red-deep); font-weight: 700; background: var(--red-soft); }
+footer a { color: var(--red); }
+</style>
 </head>
 <body>
 <div class="wrap">
   <nav class="crumb"><a href="../../">もっちぃま</a> ＞ Marvel Movie Guides</nav>
   <header>
     <h1>Marvel Movie Guides</h1>
-    <p>A watch guide for Avengers: Doomsday, plus guides that explain Marvel films one at a time. All in English.</p>
+    <p>A watch guide for Avengers: Doomsday, plus guides that explain Marvel films one at a time, sorted by universe (Earth). All in English.</p>
   </header>
   <ul class="cards">
+  </ul>
+  <nav class="ftoc" aria-label="Contents"><ul><li><a href="#doomsday">Doomsday Watch Guide</a></li><li><a href="#earth616">The Marvel Universe (Earth-616)</a></li><li><a href="#earth10005">The X-Men&#x27;s world (Earth-10005)</a></li><li><a href="#earth828">The Fantastic Four&#x27;s world (Earth-828)</a></li><li><a href="#other">Other worlds</a></li></ul></nav>
+  <section class="fgroup" id="doomsday"><h2><span class="num">1</span>Doomsday Watch Guide<small>1</small></h2><p>What to watch before release, as a story-order checklist.</p>
+  <ul class="cards">
     <li class="card"><a href="../../doomsday-guide/en/" lang="en"><span class="lang">English</span><h2>Doomsday Watch Guide</h2><p>What to watch before Avengers: Doomsday, with a story-order checklist and importance ratings.</p></a></li>
+  </ul></section>
+  <section class="fgroup" id="earth616"><h2><span class="num">2</span>The Marvel Universe (Earth-616)<small>13</small></h2><p>The MCU&#x27;s main world, home of the Avengers, in story order.</p>
+  <ul class="cards">
     <li class="card"><a href="../../captain-america-first-avenger/en/" lang="en"><span class="lang">English</span><h2>Captain America: The First Avenger Complete Guide</h2><p>How frail Steve Rogers becomes Captain America in the 1940s: story, character map, key terms and Q&amp;A.</p></a></li>
     <li class="card"><a href="../../captain-marvel/en/" lang="en"><span class="lang">English</span><h2>Captain Marvel Complete Guide</h2><p>Vers, a warrior with no memory, finds out who she really is in 1995: story, character map, key terms and Q&amp;A.</p></a></li>
     <li class="card"><a href="../../iron-man/en/" lang="en"><span class="lang">English</span><h2>Iron Man Complete Guide</h2><p>Iron Man explained for anyone who finds it hard to follow: story, character map, key terms and Q&amp;A.</p></a></li>
@@ -57,6 +87,20 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
     <li class="card"><a href="../../guardians-of-the-galaxy/en/" lang="en"><span class="lang">English</span><h2>Guardians of the Galaxy Complete Guide</h2><p>Space misfits become a team to save the galaxy: story, character map, key terms and Q&amp;A.</p></a></li>
     <li class="card"><a href="../../guardians-vol2/en/" lang="en"><span class="lang">English</span><h2>Guardians of the Galaxy Vol. 2 Complete Guide</h2><p>Peter&#x27;s father Ego, and what real family means: story, character map, key terms and Q&amp;A.</p></a></li>
     <li class="card"><a href="../../i-am-groot-1/en/" lang="en"><span class="lang">English</span><h2>I Am Groot Season 1 Complete Guide</h2><p>All five Baby Groot animated shorts, explained one by one.</p></a></li>
+  </ul></section>
+  <section class="fgroup" id="earth10005"><h2><span class="num">3</span>The X-Men&#x27;s world (Earth-10005)<small>0</small></h2><p>The world of 20th Century Fox&#x27;s X-Men films.</p>
+  <ul class="cards">
+    <li class="soon">Coming soon</li>
+  </ul></section>
+  <section class="fgroup" id="earth828"><h2><span class="num">4</span>The Fantastic Four&#x27;s world (Earth-828)<small>0</small></h2><p>The world of The Fantastic Four: First Steps.</p>
+  <ul class="cards">
+    <li class="soon">Coming soon</li>
+  </ul></section>
+  <section class="fgroup" id="other"><h2><span class="num">5</span>Other worlds<small>0</small></h2><p>Sony&#x27;s Tobey Maguire Spider-Man films, Venom and more.</p>
+  <ul class="cards">
+    <li class="soon">Coming soon</li>
+  </ul></section>
+  <ul class="cards" hidden>
   </ul>
   <footer>Unofficial fan sites run by an individual. Some pages contain affiliate links (ads).<a href="../../privacy.html#en">Privacy policy</a></footer>
 </div>

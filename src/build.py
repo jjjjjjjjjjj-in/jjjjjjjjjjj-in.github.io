@@ -59,10 +59,12 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
 e = html.escape
 
 
-def folder_items(key):
-    """フォルダに入るサイトの (場所, 名前, 説明, 言語) を、SITES の順に返す"""
+def folder_items(key, group=None):
+    """フォルダに入るサイトの (場所, 名前, 説明, 言語) を、SITES の順に返す。group を渡すと、その区分のものだけ"""
     items = []
     for site in SITES:
+        if group and site.get("group", "earth616") != group:
+            continue
         if site.get("folder") == key:
             items.append((site["path"], site["name"], site["desc"], "ja"))
         if site.get("folder_en") == key and site.get("en_path"):
@@ -127,18 +129,60 @@ def index_html():
 
 
 def folder_html(f):
-    """フォルダのページ（中のサイトを並べる）"""
+    """フォルダのページ（中のサイトを並べる）。groups があれば区分ごとに見出しをつけて並べる"""
     items = folder_items(f["key"])
     prefix = "../" * f["path"].count("/")
     en = f["lang"] == "en"
-    cards = "".join(card(prefix + path, name, desc, "English" if lang == "en" else "日本語", lang) for path, name, desc, lang in items)
+    label = lambda lang: "English" if lang == "en" else "日本語"
+    if f.get("groups"):
+        soon = "Coming soon" if en else "準備中（これから作ります）"
+        toc = "".join(f'<li><a href="#{k}">{e(t)}</a></li>' for k, t, _ in f["groups"])
+        cards = f'\n  </ul>\n  <nav class="ftoc" aria-label="{"Contents" if en else "目次"}"><ul>{toc}</ul></nav>'
+        for i, (k, t, d) in enumerate(f["groups"], 1):
+            its = folder_items(f["key"], k)
+            body = ("".join(card(prefix + path, name, desc, label(lang), lang) for path, name, desc, lang in its)
+                    if its else f'\n    <li class="soon">{e(soon)}</li>')
+            cards += (f'\n  <section class="fgroup" id="{k}"><h2><span class="num">{i}</span>{e(t)}'
+                      f'<small>{len(its)}</small></h2><p>{e(d)}</p>\n  <ul class="cards">{body}\n  </ul></section>')
+        cards += '\n  <ul class="cards" hidden>'
+    else:
+        cards = "".join(card(prefix + path, name, desc, label(lang), lang) for path, name, desc, lang in items)
     back = f'\n  <nav class="crumb"><a href="{prefix}">{SITE_NAME}</a> ＞ {e(f["name"])}</nav>'
     header = f"""
     <h1>{e(f["name"])}</h1>
     <p>{e(f["desc"])}</p>
   """
     title = f'{f["name"]} | {SITE_NAME}' if en else f'{f["name"]}｜{SITE_NAME}'
-    return page(title, f["desc"], f["path"], f["lang"], header, cards, back)
+    html = page(title, f["desc"], f["path"], f["lang"], header, cards, back)
+    if f.get("theme") == "red":
+        html = html.replace("</head>", RED_STYLE + "\n</head>", 1)
+    return html
+
+
+# マーベル映画紹介のフォルダは赤と白（運営者の希望、2026-11-02）
+RED_STYLE = """<style>
+:root { --red: #c8102e; --red-deep: #8f0b20; --red-soft: #fdecee; }
+body { background: #fff; }
+header { background: var(--red); color: #fff; border-radius: 12px; box-shadow: 0 4px 0 var(--red-deep); }
+header p { color: #ffe3e7; }
+.crumb a { color: var(--red); }
+.ftoc { position: sticky; top: 0; z-index: 5; background: var(--red); border-radius: 10px; }
+.ftoc ul { list-style: none; margin: 0; padding: 0 6px; display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+.ftoc a { display: block; padding: 10px 11px; color: #fff; text-decoration: none; font-size: 13.5px; font-weight: 700; white-space: nowrap; }
+.fgroup, .ftoc { min-width: 0; max-width: 100%; }
+.ftoc { overflow: hidden; }
+.fgroup { display: grid; gap: 10px; scroll-margin-top: 56px; }
+.fgroup > h2 { margin: 6px 0 0; display: flex; align-items: center; gap: 10px; font-size: 20px; color: var(--red-deep); border-bottom: 3px solid var(--red); padding-bottom: 6px; }
+.fgroup > h2 .num { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--red); color: #fff; font-size: 15px; flex: none; }
+.fgroup > h2 small { margin-left: auto; font-size: 12.5px; color: #fff; background: var(--red); border-radius: 99px; padding: 1px 10px; }
+.fgroup > p { margin: 0; color: #5c5c5c; font-size: 14px; }
+.card a { background: #fff; border: 1px solid #f1c6cc; border-left: 5px solid var(--red); }
+.card a:hover, .card a:focus-visible { border-color: var(--red); }
+.card .lang { color: var(--red); border-color: #f1c6cc; }
+.card h2 { color: #222; }
+.soon { list-style: none; padding: 16px; border: 2px dashed #f1c6cc; border-radius: 10px; color: var(--red-deep); font-weight: 700; background: var(--red-soft); }
+footer a { color: var(--red); }
+</style>"""
 
 
 def privacy_html():

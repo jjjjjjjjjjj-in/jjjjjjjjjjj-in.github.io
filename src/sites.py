@@ -1,21 +1,32 @@
 # 公開中のサイトの一覧。新しいサイトを作ったらここに1件足して `python3 src/build.py` を実行する。
 # path: このドメインの中の場所（末尾 /）。sitemap: そのサイトのサイトマップ（なければ None）
 # folder: トップページで入れるフォルダ（FOLDERS の key）。英語版（en_path）は folder_en のフォルダに入る。
-# フォルダの中は、このリストの順に並ぶ（上にあるものほど上）。
+# フォルダの中は、このリストの順に並ぶ（上にあるものほど上）。group: フォルダの中の区分（FOLDERS の groups。書かなければ earth616）。
 
 # トップページのフォルダ。中身が1つだけのフォルダは、フォルダのページを作らずにそのサイトへ直接つなぐ
 FOLDERS = [
-    dict(key="marvel", path="marvel/", lang="ja", name="マーベル映画紹介",
-         desc="『アベンジャーズ／ドゥームズデイ』の予習ガイドと、マーベル映画を1本ずつやさしく解説する作品ガイド。"),
-    dict(key="marvel-en", path="marvel/en/", lang="en", name="Marvel Movie Guides",
-         desc="A watch guide for Avengers: Doomsday, plus guides that explain Marvel films one at a time. All in English."),
+    dict(key="marvel", path="marvel/", lang="ja", name="マーベル映画紹介", theme="red",
+         desc="『アベンジャーズ／ドゥームズデイ』の予習ガイドと、マーベル映画を1本ずつやさしく解説する作品ガイド。世界（アース）ごとに分けています。",
+         # フォルダの中の区分。各サイトの group で入る区分が決まる（書かなければ earth616）
+         groups=[("doomsday", "ドゥームズデイ予習ガイド", "公開前に観ておきたい作品を、視聴順のチェックリストで整理。"),
+                 ("earth616", "マーベル・ユニバース（アース616）", "アベンジャーズたちが暮らす、MCUのメインの世界。物語の時代順に並べています。"),
+                 ("earth10005", "X-MENの世界（アース10005）", "20世紀フォックスのX-MEN映画の世界。"),
+                 ("earth828", "ファンタスティック4の世界（アース828）", "『ファンタスティック4：ファースト・ステップ』の世界。"),
+                 ("other", "そのほかの世界", "ソニーのスパイダーマン（トビー・マグワイア版）やヴェノムの世界など。")]),
+    dict(key="marvel-en", path="marvel/en/", lang="en", name="Marvel Movie Guides", theme="red",
+         desc="A watch guide for Avengers: Doomsday, plus guides that explain Marvel films one at a time, sorted by universe (Earth). All in English.",
+         groups=[("doomsday", "Doomsday Watch Guide", "What to watch before release, as a story-order checklist."),
+                 ("earth616", "The Marvel Universe (Earth-616)", "The MCU's main world, home of the Avengers, in story order."),
+                 ("earth10005", "The X-Men's world (Earth-10005)", "The world of 20th Century Fox's X-Men films."),
+                 ("earth828", "The Fantastic Four's world (Earth-828)", "The world of The Fantastic Four: First Steps."),
+                 ("other", "Other worlds", "Sony's Tobey Maguire Spider-Man films, Venom and more.")]),
     dict(key="paradise", path=None, lang="ja", name="パラダイスシティ",
          desc="韓国・仁川のパラダイスシティのカジノを日本人向けに解説。宿泊プラン、食事券、入場ルール、予算の目安。"),
 ]
 
 SITES = [
     dict(
-        path="doomsday-guide/", folder="marvel", folder_en="marvel-en",
+        path="doomsday-guide/", folder="marvel", folder_en="marvel-en", group="doomsday",
         name="ドゥームズデイ予習ガイド",
         name_en="Doomsday Watch Guide",
         desc="『アベンジャーズ／ドゥームズデイ』の前に観るべきMCU作品を、重要度つきの視聴順チェックリストで整理。",
