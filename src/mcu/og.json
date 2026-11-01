@@ -502,5 +502,77 @@
    "soft": "#ece7f6"
   },
   "out": "thor-ragnarok/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "アントマン＆ワスプ",
+  "year": "2018",
+  "theme": {
+   "main": "#b8202e",
+   "deep": "#1a1420",
+   "accent": "#f2c23a",
+   "soft": "#f6e7e3"
+  },
+  "out": "ant-man-and-the-wasp/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Ant-Man and the Wasp",
+  "year": "2018",
+  "theme": {
+   "main": "#b8202e",
+   "deep": "#1a1420",
+   "accent": "#f2c23a",
+   "soft": "#f6e7e3"
+  },
+  "out": "ant-man-and-the-wasp/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "アベンジャーズ／インフィニティ・ウォー",
+  "year": "2018",
+  "theme": {
+   "main": "#4a2a7a",
+   "deep": "#120a1e",
+   "accent": "#e8b23a",
+   "soft": "#ece6f3"
+  },
+  "out": "infinity-war/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Avengers: Infinity War",
+  "year": "2018",
+  "theme": {
+   "main": "#4a2a7a",
+   "deep": "#120a1e",
+   "accent": "#e8b23a",
+   "soft": "#ece6f3"
+  },
+  "out": "infinity-war/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "アベンジャーズ／エンドゲーム",
+  "year": "2019",
+  "theme": {
+   "main": "#1f3b73",
+   "deep": "#0d1424",
+   "accent": "#e9b949",
+   "soft": "#e7ecf4"
+  },
+  "out": "endgame/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Avengers: Endgame",
+  "year": "2019",
+  "theme": {
+   "main": "#1f3b73",
+   "deep": "#0d1424",
+   "accent": "#e9b949",
+   "soft": "#e7ecf4"
+  },
+  "out": "endgame/en/og.png"
  }
 ]
