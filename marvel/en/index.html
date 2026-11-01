@@ -10,112 +10,99 @@
 <link rel="canonical" href="https://jjjjjjjjjjj-in.github.io/marvel/en/">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap">
 <style>
-:root { --bg: #ffffff; --ink: #111111; --surface: #f4f4f4; --line: #d9d9d9; --muted: #5c5c5c; --on-ink: #ffffff; --soft: #bdbdbd; }
+:root { --bg: #eef0f3; --ink: #111; --muted: #5d636b; --line: #d6dae0; --accent: #2f6fe0; }
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif; line-height: 1.7;
-  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
-.wrap { max-width: 880px; margin: 0 auto; padding-block: 32px 56px; display: grid; gap: 24px; }
-header { background: var(--ink); color: var(--on-ink); border-radius: 12px; padding: clamp(22px, 5vw, 36px); }
-h1 { margin: 0; font-size: clamp(30px, 8vw, 46px); font-weight: 900; letter-spacing: .04em; line-height: 1.2; }
-header p { margin: 8px 0 0; color: var(--soft); }
-ul.cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); grid-auto-rows: 1fr; }
-.card { display: flex; }
-.card a { flex: 1; display: grid; grid-template-rows: auto auto 1fr; gap: 6px; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; color: var(--ink); text-decoration: none; min-height: 170px; }
-.card a:hover, .card a:focus-visible { border-color: var(--ink); outline: none; }
-.card .lang { font-size: 11.5px; font-weight: 700; letter-spacing: .08em; color: var(--muted); border: 1px solid var(--line); border-radius: 99px; padding: 0 8px; width: fit-content; }
-.card h2 { margin: 0; font-size: 18px; font-weight: 900; line-height: 1.4; }
-.card p { margin: 0; color: var(--muted); font-size: 14px; font-weight: 400; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-a { color: var(--ink); font-weight: 700; }
-.crumb { font-size: 13px; color: var(--muted); }
-.policy h2 { background: var(--ink); color: var(--on-ink); border-radius: 6px; padding: 8px 14px; font-size: 18px; margin: 28px 0 8px; }
-.policy h3 { font-size: 16px; margin: 16px 0 4px; }
-.policy p, .policy li { margin: 6px 0; }
-footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: "Zen Kaku Gothic New", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif; line-height: 1.6; }
+a { color: inherit; }
+/* ヘッダー：黒い帯。左メニュー・中央MARVEL・右検索 */
+.mhead { position: sticky; top: 0; z-index: 20; background: #000; color: #fff; height: 64px; display: grid; grid-template-columns: 56px 1fr 56px; align-items: center; }
+.mhead button { background: none; border: 0; color: #fff; width: 56px; height: 64px; display: grid; place-items: center; cursor: pointer; padding: 0; }
+.mhead svg { width: 26px; height: 26px; }
+.mlogo { justify-self: center; font-family: "Anton", "Oswald", "Impact", "Arial Narrow", sans-serif; color: #fff; text-decoration: none;
+  font-size: 40px; line-height: 1; letter-spacing: -.02em; transform: scaleY(1.18); display: inline-block; padding: 0 .1em; }
+.mmenu, .msearch { position: sticky; top: 64px; z-index: 19; background: #111; color: #fff; padding: 10px 16px 14px; }
+.mmenu[hidden], .msearch[hidden] { display: none; }
+.mmenu ul { list-style: none; margin: 0 auto; padding: 0; max-width: 1100px; display: grid; gap: 2px; }
+.mmenu a { display: block; padding: 10px 4px; color: #fff; text-decoration: none; font-weight: 700; border-bottom: 1px solid #333; }
+.msearch input { width: 100%; max-width: 1100px; display: block; margin: 0 auto; font: inherit; font-size: 16px; padding: 10px 12px; border-radius: 6px; border: 0; }
+.mmain { max-width: 1100px; margin: 0 auto; padding: 28px 16px 48px; }
+.mtitle { text-align: center; margin: 4px 0 10px; font-size: clamp(34px, 10vw, 56px); font-weight: 900; letter-spacing: .02em; line-height: 1.2; }
+.mdesc { text-align: center; margin: 0 auto 22px; max-width: 46em; color: var(--muted); font-size: 14px; }
+/* タブ */
+.mtabs { display: flex; gap: 26px; overflow-x: auto; scrollbar-width: none; border-bottom: 1px solid var(--line); margin: 0 -16px 22px; padding: 0 16px; }
+.mtabs::-webkit-scrollbar { display: none; }
+.mtabs button { background: none; border: 0; font: inherit; font-size: 17px; font-weight: 700; color: #333; padding: 8px 0 10px; white-space: nowrap; cursor: pointer; border-bottom: 4px solid transparent; }
+.mtabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+/* 区分 */
+.mgroup { margin-bottom: 30px; }
+.mgroup[hidden] { display: none; }
+.mgroup h2 { font-size: 15px; font-weight: 700; color: var(--muted); margin: 0 0 12px; letter-spacing: .04em; }
+.mgroup .gdesc { margin: -8px 0 12px; font-size: 13px; color: var(--muted); }
+.mgrid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 16px; }
+@media (min-width: 720px) { .mgrid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px 20px; } }
+@media (min-width: 1000px) { .mgrid { grid-template-columns: repeat(5, minmax(0, 1fr)); } }
+.mgrid li[hidden] { display: none; }
+.mcard { display: block; text-decoration: none; color: var(--ink); }
+.mcard:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 8px; }
+/* ポスター風カード（画像なし。作品の色と文字） */
+.poster { position: relative; aspect-ratio: 2 / 3; border-radius: 6px; overflow: hidden; color: #fff; display: grid; align-content: end; padding: 12px;
+  background: radial-gradient(120% 80% at 70% 20%, var(--p-main) 0%, var(--p-deep) 70%); box-shadow: 0 2px 6px rgba(0,0,0,.18); }
+.poster::before { content: ""; position: absolute; inset: 10% -30% auto auto; width: 90%; aspect-ratio: 1; border-radius: 50%; border: 10px solid var(--p-accent); opacity: .28; }
+.poster::after { content: ""; position: absolute; inset: auto 0 0 0; height: 55%; background: linear-gradient(transparent, rgba(0,0,0,.55)); }
+.poster .pt { position: relative; z-index: 1; font-weight: 900; font-size: clamp(17px, 5vw, 24px); line-height: 1.2; text-shadow: 0 2px 6px rgba(0,0,0,.5); word-break: keep-all; overflow-wrap: anywhere; }
+.poster .ps { position: relative; z-index: 1; font-size: 12px; color: var(--p-soft); margin-top: 6px; letter-spacing: .06em; }
+.poster .pyear { position: absolute; z-index: 1; top: 10px; left: 12px; font-family: "Anton", sans-serif; font-size: 15px; letter-spacing: .06em; color: var(--p-accent); }
+.mcard .name { display: block; margin-top: 8px; font-size: 16px; line-height: 1.45; }
+.soon { grid-column: 1 / -1; padding: 16px; border: 2px dashed var(--line); border-radius: 8px; color: var(--muted); font-weight: 700; text-align: center; }
+.mnone { text-align: center; color: var(--muted); }
+.mfoot { max-width: 1100px; margin: 0 auto; padding: 18px 16px 40px; font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); }
 </style>
-<style>
-:root { --red: #c8102e; --red-deep: #8f0b20; --red-soft: #fdecee; }
-body { background: #fff; }
-header { background: #000; color: #fff; border-radius: 0; box-shadow: none; padding: 14px 18px; display: flex; justify-content: center; align-items: center; }
-/* MARVEL のロゴ風の文字：縦長で幅が狭く、とても太いサンセリフ。字間を詰める */
-.mlogo { display: inline-block; font-family: "Anton", "Oswald", "Impact", "Arial Narrow", sans-serif; font-weight: 400; color: #fff;
-  font-size: clamp(44px, 12vw, 72px); line-height: .9; letter-spacing: -.02em; transform: scaleY(1.18); transform-origin: center;
-  padding: .12em .14em .06em; text-transform: uppercase; }
-.ftitle { display: grid; gap: 6px; }
-.ftitle h1 { margin: 0; color: var(--red-deep); font-size: clamp(26px, 7vw, 38px); font-weight: 900; line-height: 1.25; }
-.ftitle p { margin: 0; color: #444; }
-.crumb a { color: var(--red); }
-.ftoc { position: sticky; top: 0; z-index: 5; background: var(--red); border-radius: 10px; }
-.ftoc ul { list-style: none; margin: 0; padding: 0 6px; display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
-.ftoc a { display: block; padding: 10px 11px; color: #fff; text-decoration: none; font-size: 13.5px; font-weight: 700; white-space: nowrap; }
-.fgroup, .ftoc { min-width: 0; max-width: 100%; }
-.ftoc { overflow: hidden; }
-.fgroup { display: grid; gap: 10px; scroll-margin-top: 56px; }
-.fgroup > h2 { margin: 6px 0 0; display: flex; align-items: center; gap: 10px; font-size: 20px; color: var(--red-deep); border-bottom: 3px solid var(--red); padding-bottom: 6px; }
-.fgroup > h2 .num { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--red); color: #fff; font-size: 15px; flex: none; }
-.fgroup > h2 small { margin-left: auto; font-size: 12.5px; color: #fff; background: var(--red); border-radius: 99px; padding: 1px 10px; }
-.fgroup > p { margin: 0; color: #5c5c5c; font-size: 14px; }
-.card a { background: #fff; border: 1px solid #f1c6cc; border-left: 5px solid var(--red); }
-.card a:hover, .card a:focus-visible { border-color: var(--red); }
-.card .lang { color: var(--red); border-color: #f1c6cc; }
-.card h2 { color: #222; }
-.soon { list-style: none; padding: 16px; border: 2px dashed #f1c6cc; border-radius: 10px; color: var(--red-deep); font-weight: 700; background: var(--red-soft); }
-footer a { color: var(--red); }
-</style>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">
 </head>
 <body>
-<div class="wrap">
-  <nav class="crumb"><a href="../../">もっちぃま</a> ＞ Marvel Movie Guides</nav>
-  <header><span class="mlogo" role="img" aria-label="MARVEL">MARVEL</span></header>
-  <ul class="cards">
-  </ul>
-  <div class="ftitle"><h1>Marvel Movie Guides</h1><p>A complete guide to the order to watch Marvel movies and how they connect: a watch guide for Avengers: Doomsday, plus story and character maps film by film, sorted by universe (Earth). All in English.</p></div>
-  <ul class="cards" hidden>
-  </ul>
-  <nav class="ftoc" aria-label="Contents"><ul><li><a href="#doomsday">Doomsday Watch Guide</a></li><li><a href="#earth616">The Marvel Universe (Earth-616)</a></li><li><a href="#earth10005">The X-Men&#x27;s world (Earth-10005)</a></li><li><a href="#earth828">The Fantastic Four&#x27;s world (Earth-828)</a></li><li><a href="#other">Other worlds</a></li></ul></nav>
-  <section class="fgroup" id="doomsday"><h2><span class="num">1</span>Doomsday Watch Guide<small>1</small></h2><p>What to watch before release, as a story-order checklist.</p>
-  <ul class="cards">
-    <li class="card"><a href="../../doomsday-guide/en/" lang="en"><span class="lang">English</span><h2>Doomsday Watch Guide</h2><p>What to watch before Avengers: Doomsday, with a story-order checklist and importance ratings.</p></a></li>
-  </ul></section>
-  <section class="fgroup" id="earth616"><h2><span class="num">2</span>The Marvel Universe (Earth-616)<small>19</small></h2><p>The MCU&#x27;s main world, home of the Avengers, in story order.</p>
-  <ul class="cards">
-    <li class="card"><a href="../../captain-america-first-avenger/en/" lang="en"><span class="lang">English</span><h2>Captain America: The First Avenger Complete Guide</h2><p>How frail Steve Rogers becomes Captain America in the 1940s: story, character map, key terms and Q&amp;A.</p></a></li>
-    <li class="card"><a href="../../captain-marvel/en/" lang="en"><span class="lang">English</span><h2>Captain Marvel Complete Guide</h2><p>Vers, a warrior with no memory, finds out who she really is in 1995: story, character map, key terms and Q&amp;A.</p></a></li>
-    <li class="card"><a href="../../iron-man/en/" lang="en"><span class="lang">English</span><h2>Iron Man Complete Guide</h2><p>Iron Man explained for anyone who finds it hard to follow: story, character map, key terms and Q&amp;A.</p></a></li>
-    <li class="card"><a href="../../iron-man-2/en/" lang="en"><span class="lang">English</span><h2>Iron Man 2 Complete Guide</h2><p>Tony battles reactor poisoning and a vengeful Ivan Vanko, and Black Widow debuts: story, character map, key terms and Q&amp;A.</p></a></li>
-    <li class="card"><a href="../../incredible-hulk/en/" lang="en"><span class="lang">English</span><h2>The Incredible Hulk Complete Guide</h2><p>Bruce Banner, hunted by the army, searches for a cure for Hulk: story, character map, key terms and Q&amp;A.</p></a></li>
-    <li class="card"><a href="../../thor/en/" lang="en"><span class="lang">English</span><h2>Thor Complete Guide</h2><p>Prince Thor, stripped of his power and banished to Earth, and his brother Loki&#x27;s scheme: story, character map, key terms and Q&amp;A.</p></a></li>
-    <li class="card"><a href="../../avengers/en/" lang="en"><span class="lang">English</span><h2>The Avengers Complete Guide</h2><p>The heroes assemble for the first time against Loki and an alien army: story, character map, key terms and Q&amp;A.</p></a></li>
-    <li class="card"><a href="../../thor-dark-world/en/" lang="en"><span class="lang">English</span><h2>Thor: The Dark World Complete Guide</h2><p>Thor and Loki team up against the Dark Elves, who want to plunge the universe into darkness: story, character map, key terms and Q&amp;A.</p></a></li>
-    <li class="card"><a href="../../iron-man-3/en/" lang="en"><span class="lang">English</span><h2>Iron Man 3 Complete Guide</h2><p>Tony battles anxiety and the mysterious Mandarin after the Battle of New York: story, character map, key terms and Q&amp;A.</p></a></li>
-    <li class="card"><a href="../../winter-soldier/en/" lang="en"><span class="lang">English</span><h2>Captain America: The Winter Soldier Complete Guide</h2><p>Hydra hiding inside S.H.I.E.L.D., and the assassin&#x27;s true identity: story, character map, key terms and Q&amp;A.</p></a></li>
-    <li class="card"><a href="../../guardians-of-the-galaxy/en/" lang="en"><span class="lang">English</span><h2>Guardians of the Galaxy Complete Guide</h2><p>Space misfits become a team to save the galaxy: story, character map, key terms and Q&amp;A.</p></a></li>
-    <li class="card"><a href="../../guardians-vol2/en/" lang="en"><span class="lang">English</span><h2>Guardians of the Galaxy Vol. 2 Complete Guide</h2><p>Peter&#x27;s father Ego, and what real family means: story, character map, key terms and Q&amp;A.</p></a></li>
-    <li class="card"><a href="../../i-am-groot-1/en/" lang="en"><span class="lang">English</span><h2>I Am Groot Season 1 Complete Guide</h2><p>All five Baby Groot animated shorts, explained one by one.</p></a></li>
-    <li class="card"><a href="../../age-of-ultron/en/" lang="en"><span class="lang">English</span><h2>Avengers: Age of Ultron Complete Guide</h2><p>Ultron, the AI Tony created, runs amok, and new heroes join: story, character map, key terms and Q&amp;A.</p></a></li>
-    <li class="card"><a href="../../ant-man/en/" lang="en"><span class="lang">English</span><h2>Ant-Man Complete Guide</h2><p>Ex-thief Scott takes on a heist with a suit that shrinks him: story, character map, key terms and Q&amp;A.</p></a></li>
-    <li class="card"><a href="../../civil-war/en/" lang="en"><span class="lang">English</span><h2>Captain America: Civil War Complete Guide</h2><p>The Sokovia Accords split the Avengers in two: story, character map, key terms and Q&amp;A.</p></a></li>
-    <li class="card"><a href="../../black-panther/en/" lang="en"><span class="lang">English</span><h2>Black Panther Complete Guide</h2><p>Wakanda&#x27;s new king T&#x27;Challa faces Killmonger for the throne: story, character map, key terms and Q&amp;A.</p></a></li>
-    <li class="card"><a href="../../spider-man-homecoming/en/" lang="en"><span class="lang">English</span><h2>Spider-Man: Homecoming Complete Guide</h2><p>Teen hero Peter wants Tony&#x27;s approval as he takes on the Vulture: story, character map, key terms and Q&amp;A.</p></a></li>
-    <li class="card"><a href="../../wakanda-forever/en/" lang="en"><span class="lang">English</span><h2>Black Panther: Wakanda Forever Complete Guide</h2><p>A grieving Wakanda faces Namor of Talokan, and a new Black Panther rises: story, character map, key terms and Q&amp;A.</p></a></li>
-  </ul></section>
-  <section class="fgroup" id="earth10005"><h2><span class="num">3</span>The X-Men&#x27;s world (Earth-10005)<small>0</small></h2><p>The world of 20th Century Fox&#x27;s X-Men films.</p>
-  <ul class="cards">
-    <li class="soon">Coming soon</li>
-  </ul></section>
-  <section class="fgroup" id="earth828"><h2><span class="num">4</span>The Fantastic Four&#x27;s world (Earth-828)<small>0</small></h2><p>The world of The Fantastic Four: First Steps.</p>
-  <ul class="cards">
-    <li class="soon">Coming soon</li>
-  </ul></section>
-  <section class="fgroup" id="other"><h2><span class="num">5</span>Other worlds<small>0</small></h2><p>Sony&#x27;s Tobey Maguire Spider-Man films, Venom and more.</p>
-  <ul class="cards">
-    <li class="soon">Coming soon</li>
-  </ul></section>
-  <ul class="cards" hidden>
-  </ul>
-  <footer>Unofficial fan sites run by an individual. Some pages contain affiliate links (ads).<a href="../../privacy.html#en">Privacy policy</a></footer>
-</div>
+<header class="mhead">
+  <button type="button" id="mbtn-menu" aria-label="Menu" aria-expanded="false" aria-controls="mmenu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></button>
+  <a class="mlogo" href="./" aria-label="MARVEL">MARVEL</a>
+  <button type="button" id="mbtn-search" aria-label="Search titles" aria-expanded="false" aria-controls="msearch"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M15.5 15.5l5 5" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/></svg></button>
+</header>
+<nav class="mmenu" id="mmenu" hidden><ul>
+  <li><a href="../../">Mocchima (all sites)</a></li>
+  <li><a href="../" hreflang="ja">日本語</a></li>
+</ul></nav>
+<div class="msearch" id="msearch" hidden><input type="search" placeholder="Search by title" aria-label="Search by title"></div>
+<main class="mmain">
+  <h1 class="mtitle">Marvel Movie Guides</h1>
+  <p class="mdesc">A complete guide to the order to watch Marvel movies and how they connect: a watch guide for Avengers: Doomsday, plus story and character maps film by film, sorted by universe (Earth). All in English.</p>
+  <div class="mtabs" role="tablist"><button type="button" role="tab" data-key="all" aria-selected="true">ALL</button><button type="button" role="tab" data-key="doomsday" aria-selected="false">Watch guide</button><button type="button" role="tab" data-key="earth616" aria-selected="false">Earth-616</button><button type="button" role="tab" data-key="earth10005" aria-selected="false">X-Men</button><button type="button" role="tab" data-key="earth828" aria-selected="false">Earth-828</button><button type="button" role="tab" data-key="other" aria-selected="false">Others</button></div>
+  <p class="mnone" id="mnone" hidden>No matches</p>
+<section class="mgroup" id="doomsday"><h2>Doomsday Watch Guide</h2><p class="gdesc">What to watch before release, as a story-order checklist.</p><ul class="mgrid"><li data-q="doomsday watch guide ドゥームズデイ予習ガイド doomsday watch guide"><a class="mcard" href="../../doomsday-guide/en/"><span class="poster" style="--p-main:#1f5c3f;--p-deep:#08140e;--p-accent:#e0b04a;--p-soft:#dde9e1" aria-hidden="true"><span class="pyear">2026</span><span class="pt">DOOMSDAY</span><span class="ps">Story-order checklist</span></span><span class="name">Doomsday Watch Guide</span></a></li></ul></section>
+<section class="mgroup" id="earth616"><h2>The Marvel Universe (Earth-616)</h2><p class="gdesc">The MCU&#x27;s main world, home of the Avengers, in story order.</p><ul class="mgrid"><li data-q="captain america: the first avenger キャプテン・アメリカ／ザ・ファースト・アベンジャー 完全ガイド captain america: the first avenger complete guide"><a class="mcard" href="../../captain-america-first-avenger/en/"><span class="poster" style="--p-main:#1d3d8f;--p-deep:#0f1f47;--p-accent:#e8434b;--p-soft:#dbe4f5" aria-hidden="true"><span class="pyear">2011</span><span class="pt">Captain America</span><span class="ps">The First Avenger</span></span><span class="name">Captain America: The First Avenger</span></a></li><li data-q="captain marvel キャプテン・マーベル 完全ガイド captain marvel complete guide"><a class="mcard" href="../../captain-marvel/en/"><span class="poster" style="--p-main:#b51f2e;--p-deep:#16255c;--p-accent:#f2c23a;--p-soft:#f6dcc4" aria-hidden="true"><span class="pyear">2019</span><span class="pt">Captain Marvel</span></span><span class="name">Captain Marvel</span></a></li><li data-q="iron man アイアンマン完全ガイド iron man complete guide"><a class="mcard" href="../../iron-man/en/"><span class="poster" style="--p-main:#b3121b;--p-deep:#5e0a10;--p-accent:#f2c230;--p-soft:#f8dcc0" aria-hidden="true"><span class="pyear">2008</span><span class="pt">Iron Man</span></span><span class="name">Iron Man</span></a></li><li data-q="iron man 2 アイアンマン2 完全ガイド iron man 2 complete guide"><a class="mcard" href="../../iron-man-2/en/"><span class="poster" style="--p-main:#a3121c;--p-deep:#2a2e37;--p-accent:#f2c230;--p-soft:#e6dccd" aria-hidden="true"><span class="pyear">2010</span><span class="pt">Iron Man 2</span></span><span class="name">Iron Man 2</span></a></li><li data-q="the incredible hulk インクレディブル・ハルク 完全ガイド the incredible hulk complete guide"><a class="mcard" href="../../incredible-hulk/en/"><span class="poster" style="--p-main:#2f7d32;--p-deep:#24163d;--p-accent:#8fd14f;--p-soft:#dcd2ef" aria-hidden="true"><span class="pyear">2008</span><span class="pt">The Incredible Hulk</span></span><span class="name">The Incredible Hulk</span></a></li><li data-q="thor マイティ・ソー 完全ガイド thor complete guide"><a class="mcard" href="../../thor/en/"><span class="poster" style="--p-main:#a51d24;--p-deep:#1c2632;--p-accent:#c9d3dd;--p-soft:#e6ebf1" aria-hidden="true"><span class="pyear">2011</span><span class="pt">Thor</span></span><span class="name">Thor</span></a></li><li data-q="the avengers アベンジャーズ 完全ガイド the avengers complete guide"><a class="mcard" href="../../avengers/en/"><span class="poster" style="--p-main:#2c4f9e;--p-deep:#111a2e;--p-accent:#d9dfe8;--p-soft:#dfe6f1" aria-hidden="true"><span class="pyear">2012</span><span class="pt">The Avengers</span></span><span class="name">The Avengers</span></a></li><li data-q="thor: the dark world マイティ・ソー／ダーク・ワールド 完全ガイド thor: the dark world complete guide"><a class="mcard" href="../../thor-dark-world/en/"><span class="poster" style="--p-main:#8c1f2b;--p-deep:#17121f;--p-accent:#d6b56a;--p-soft:#ece2d2" aria-hidden="true"><span class="pyear">2013</span><span class="pt">Thor</span><span class="ps">The Dark World</span></span><span class="name">Thor: The Dark World</span></a></li><li data-q="iron man 3 アイアンマン3 完全ガイド iron man 3 complete guide"><a class="mcard" href="../../iron-man-3/en/"><span class="poster" style="--p-main:#b8231c;--p-deep:#1f0e10;--p-accent:#ff9a3c;--p-soft:#f6dccb" aria-hidden="true"><span class="pyear">2013</span><span class="pt">Iron Man 3</span></span><span class="name">Iron Man 3</span></a></li><li data-q="captain america: the winter soldier キャプテン・アメリカ／ウィンター・ソルジャー 完全ガイド captain america: the winter soldier complete guide"><a class="mcard" href="../../winter-soldier/en/"><span class="poster" style="--p-main:#1d3d8f;--p-deep:#15181f;--p-accent:#c3cad4;--p-soft:#dde3ec" aria-hidden="true"><span class="pyear">2014</span><span class="pt">Captain America</span><span class="ps">The Winter Soldier</span></span><span class="name">Captain America: The Winter Soldier</span></a></li><li data-q="guardians of the galaxy ガーディアンズ・オブ・ギャラクシー 完全ガイド guardians of the galaxy complete guide"><a class="mcard" href="../../guardians-of-the-galaxy/en/"><span class="poster" style="--p-main:#d2611c;--p-deep:#1c1338;--p-accent:#f7c548;--p-soft:#e8dcf5" aria-hidden="true"><span class="pyear">2014</span><span class="pt">Guardians of the Galaxy</span></span><span class="name">Guardians of the Galaxy</span></a></li><li data-q="guardians of the galaxy vol. 2 ガーディアンズ・オブ・ギャラクシー：リミックス 完全ガイド guardians of the galaxy vol. 2 complete guide"><a class="mcard" href="../../guardians-vol2/en/"><span class="poster" style="--p-main:#c2187a;--p-deep:#1b1340;--p-accent:#7fe0ff;--p-soft:#f2d8ea" aria-hidden="true"><span class="pyear">2017</span><span class="pt">Guardians of the Galaxy Vol. 2</span></span><span class="name">Guardians of the Galaxy Vol. 2</span></a></li><li data-q="i am groot (season 1) アイ・アム・グルート シーズン1 完全ガイド i am groot season 1 complete guide"><a class="mcard" href="../../i-am-groot-1/en/"><span class="poster" style="--p-main:#4f8a2a;--p-deep:#2a1f14;--p-accent:#b4dd7f;--p-soft:#e9dfcc" aria-hidden="true"><span class="pyear">2022</span><span class="pt">I Am Groot (Season 1)</span></span><span class="name">I Am Groot (Season 1)</span></a></li><li data-q="avengers: age of ultron アベンジャーズ／エイジ・オブ・ウルトロン 完全ガイド avengers: age of ultron complete guide"><a class="mcard" href="../../age-of-ultron/en/"><span class="poster" style="--p-main:#9c1c26;--p-deep:#15171c;--p-accent:#c7cdd6;--p-soft:#e6e9ee" aria-hidden="true"><span class="pyear">2015</span><span class="pt">Avengers</span><span class="ps">Age of Ultron</span></span><span class="name">Avengers: Age of Ultron</span></a></li><li data-q="ant-man アントマン 完全ガイド ant-man complete guide"><a class="mcard" href="../../ant-man/en/"><span class="poster" style="--p-main:#b0141c;--p-deep:#141414;--p-accent:#d9dde2;--p-soft:#f1dcdc" aria-hidden="true"><span class="pyear">2015</span><span class="pt">Ant-Man</span></span><span class="name">Ant-Man</span></a></li><li data-q="captain america: civil war シビル・ウォー／キャプテン・アメリカ 完全ガイド captain america: civil war complete guide"><a class="mcard" href="../../civil-war/en/"><span class="poster" style="--p-main:#1d3d8f;--p-deep:#3a0f16;--p-accent:#ef5a62;--p-soft:#e8e0ea" aria-hidden="true"><span class="pyear">2016</span><span class="pt">Captain America</span><span class="ps">Civil War</span></span><span class="name">Captain America: Civil War</span></a></li><li data-q="black panther ブラックパンサー 完全ガイド black panther complete guide"><a class="mcard" href="../../black-panther/en/"><span class="poster" style="--p-main:#5b2a86;--p-deep:#111014;--p-accent:#c9c3d8;--p-soft:#e6e0ef" aria-hidden="true"><span class="pyear">2018</span><span class="pt">Black Panther</span></span><span class="name">Black Panther</span></a></li><li data-q="spider-man: homecoming スパイダーマン：ホームカミング 完全ガイド spider-man: homecoming complete guide"><a class="mcard" href="../../spider-man-homecoming/en/"><span class="poster" style="--p-main:#c8102e;--p-deep:#0f2550;--p-accent:#8cc0ff;--p-soft:#dfe6f5" aria-hidden="true"><span class="pyear">2017</span><span class="pt">Spider-Man</span><span class="ps">Homecoming</span></span><span class="name">Spider-Man: Homecoming</span></a></li><li data-q="black panther: wakanda forever ブラックパンサー／ワカンダ・フォーエバー 完全ガイド black panther: wakanda forever complete guide"><a class="mcard" href="../../wakanda-forever/en/"><span class="poster" style="--p-main:#4b2a7a;--p-deep:#0d1a24;--p-accent:#3fb8b0;--p-soft:#e2ecef" aria-hidden="true"><span class="pyear">2022</span><span class="pt">Black Panther</span><span class="ps">Wakanda Forever</span></span><span class="name">Black Panther: Wakanda Forever</span></a></li></ul></section>
+<section class="mgroup" id="earth10005"><h2>The X-Men&#x27;s world (Earth-10005)</h2><p class="gdesc">The world of 20th Century Fox&#x27;s X-Men films.</p><ul class="mgrid"><li class="soon">Coming soon</li></ul></section>
+<section class="mgroup" id="earth828"><h2>The Fantastic Four&#x27;s world (Earth-828)</h2><p class="gdesc">The world of The Fantastic Four: First Steps.</p><ul class="mgrid"><li class="soon">Coming soon</li></ul></section>
+<section class="mgroup" id="other"><h2>Other worlds</h2><p class="gdesc">Sony&#x27;s Tobey Maguire Spider-Man films, Venom and more.</p><ul class="mgrid"><li class="soon">Coming soon</li></ul></section>
+</main>
+<footer class="mfoot">An unofficial fan site run by an individual, not affiliated with Marvel Studios or The Walt Disney Company. Some pages contain affiliate links (ads). <a href="../../privacy.html#en">Privacy policy</a></footer>
+<script>
+(function(){
+  var $=function(s){return document.querySelector(s)}, $$=function(s){return Array.prototype.slice.call(document.querySelectorAll(s))};
+  function toggle(btn, panel){ btn.addEventListener('click', function(){ var open=panel.hidden; $$('.mmenu,.msearch').forEach(function(p){p.hidden=true});
+    $$('.mhead button').forEach(function(b){b.setAttribute('aria-expanded','false')}); panel.hidden=!open; btn.setAttribute('aria-expanded', String(open));
+    if(open && panel.querySelector('input')) panel.querySelector('input').focus(); }); }
+  toggle($('#mbtn-menu'), $('#mmenu')); toggle($('#mbtn-search'), $('#msearch'));
+  var tabs=$$('.mtabs button');
+  function show(key){ tabs.forEach(function(t){t.setAttribute('aria-selected', String(t.dataset.key===key))});
+    $$('.mgroup').forEach(function(g){ g.hidden = !(key==='all' || g.id===key); }); }
+  tabs.forEach(function(t){ t.addEventListener('click', function(){ show(t.dataset.key); try{history.replaceState(null,'',t.dataset.key==='all'?location.pathname:'#'+t.dataset.key)}catch(e){} }); });
+  if(location.hash && $('.mtabs button[data-key="'+location.hash.slice(1)+'"]')) show(location.hash.slice(1));
+  var input=$('#msearch input'), none=$('#mnone');
+  input.addEventListener('input', function(){ var q=input.value.trim().toLowerCase(), hit=0;
+    if(q) show('all');
+    $$('.mgrid li[data-q]').forEach(function(li){ var ok=!q || li.dataset.q.indexOf(q)>=0; li.hidden=!ok; if(ok) hit++; });
+    $$('.mgroup').forEach(function(g){ if(q) g.hidden = !g.querySelector('li[data-q]:not([hidden])'); });
+    none.hidden = !(q && !hit); });
+})();
+</script>
 </body>
 </html>

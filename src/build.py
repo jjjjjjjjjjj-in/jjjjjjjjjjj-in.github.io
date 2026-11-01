@@ -11,6 +11,7 @@ ROOT = os.path.dirname(SRC)
 sys.path.insert(0, SRC)
 
 from sites import SITES, FOLDERS, WATCH_ORDER  # noqa: E402
+import marvel_folder  # noqa: E402
 
 BASE_URL = "https://jjjjjjjjjjj-in.github.io/"
 
@@ -132,7 +133,16 @@ def index_html():
     return page(SITE_NAME, "映画、旅行、本などのテーマごとに、知っておくと役立つ情報や楽しみ方をまとめたガイドサイトです。", "", "ja", header, cards)
 
 
+def sites_in(key, group):
+    """フォルダ key の区分 group に入るサイト（視聴順）。英語のフォルダなら英語版のあるもの"""
+    order = lambda site: WATCH_ORDER.index(site["path"].strip("/").split("/")[0]) if site["path"].strip("/").split("/")[0] in WATCH_ORDER else -1
+    return [x for x in sorted(SITES, key=order) if x.get("group", "earth616") == group
+            and (x.get("folder") == key or (x.get("folder_en") == key and x.get("en_path")))]
+
+
 def folder_html(f):
+    if f.get("logo"):
+        return marvel_folder.build(f, lambda g: sites_in(f["key"], g), "", BASE_URL, SITE_NAME, analytics_tag())
     """フォルダのページ（中のサイトを並べる）。groups があれば区分ごとに見出しをつけて並べる"""
     items = folder_items(f["key"])
     prefix = "../" * f["path"].count("/")
@@ -142,7 +152,7 @@ def folder_html(f):
         soon = "Coming soon" if en else "準備中（これから作ります）"
         toc = "".join(f'<li><a href="#{k}">{e(t)}</a></li>' for k, t, _ in f["groups"])
         cards = f'\n  </ul>\n  <nav class="ftoc" aria-label="{"Contents" if en else "目次"}"><ul>{toc}</ul></nav>'
-        for i, (k, t, d) in enumerate(f["groups"], 1):
+        for i, (k, t, d, *_) in enumerate(f["groups"], 1):
             its = folder_items(f["key"], k)
             body = ("".join(card(prefix + path, name, desc, label(lang), lang) for path, name, desc, lang in its)
                     if its else f'\n    <li class="soon">{e(soon)}</li>')
