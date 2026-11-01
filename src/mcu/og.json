@@ -766,5 +766,53 @@
    "soft": "#e7e6f2"
   },
   "out": "multiverse-of-madness/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ソー：ラブ＆サンダー",
+  "year": "2022",
+  "theme": {
+   "main": "#2b4fb5",
+   "deep": "#140c26",
+   "accent": "#ff5fa2",
+   "soft": "#ebe8f7"
+  },
+  "out": "love-and-thunder/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Thor: Love and Thunder",
+  "year": "2022",
+  "theme": {
+   "main": "#2b4fb5",
+   "deep": "#140c26",
+   "accent": "#ff5fa2",
+   "soft": "#ebe8f7"
+  },
+  "out": "love-and-thunder/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "アントマン＆ワスプ：クアントマニア",
+  "year": "2023",
+  "theme": {
+   "main": "#5a2a8a",
+   "deep": "#0d1424",
+   "accent": "#3fd1c4",
+   "soft": "#ece6f4"
+  },
+  "out": "quantumania/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Ant-Man and the Wasp: Quantumania",
+  "year": "2023",
+  "theme": {
+   "main": "#5a2a8a",
+   "deep": "#0d1424",
+   "accent": "#3fd1c4",
+   "soft": "#ece6f4"
+  },
+  "out": "quantumania/en/og.png"
  }
 ]

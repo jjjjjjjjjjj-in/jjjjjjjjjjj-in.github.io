@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="400" height="400">
+  <!-- 岩でできた体の戦士（このサイトのオリジナルのイラスト） -->
+  <defs>
+    <radialGradient id="bg" cx=".5" cy=".4" r=".75">
+      <stop offset="0" stop-color="#3a6f8f"/>
+      <stop offset="1" stop-color="#16293a"/>
+    </radialGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#bg)"/>
+  <!-- 肩と体 -->
+  <path d="M40 400 L60 320 L120 290 L280 290 L340 320 L360 400 Z" fill="#7d7468"/>
+  <path d="M120 290 L160 330 L200 300 L240 330 L280 290" fill="none" stroke="#5a534a" stroke-width="6"/>
+  <!-- 頭（ごつごつした岩） -->
+  <path d="M120 150 L150 95 L210 80 L265 100 L290 150 L285 230 L250 285 L150 285 L115 230 Z" fill="#958b7d"/>
+  <path d="M150 95 L170 140 L210 80 M265 100 L240 140 L290 150 M115 230 L160 220 L150 285 M285 230 L245 222 L250 285" fill="none" stroke="#6d655a" stroke-width="5" stroke-linejoin="round"/>
+  <!-- 目（やさしい青） -->
+  <ellipse cx="170" cy="185" rx="16" ry="12" fill="#cfe9ff"/><circle cx="172" cy="186" r="7" fill="#1f5f9a"/>
+  <ellipse cx="236" cy="185" rx="16" ry="12" fill="#cfe9ff"/><circle cx="234" cy="186" r="7" fill="#1f5f9a"/>
+  <!-- まゆと口（にっこり） -->
+  <path d="M150 162 L188 168 M256 162 L218 168" stroke="#5a534a" stroke-width="7" stroke-linecap="round"/>
+  <path d="M175 240 Q205 258 235 240" stroke="#4a443c" stroke-width="7" fill="none" stroke-linecap="round"/>
+</svg>

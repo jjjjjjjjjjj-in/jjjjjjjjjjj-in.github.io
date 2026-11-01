@@ -1,0 +1,46 @@
+SCENES = [
+    ("第1章 30年前の出会い", "Part 1: A meeting 30 years ago", [
+        ("取り残されたジャネット", "30年前、量子の世界に取り残されたジャネットの前に、宇宙船を背にした1人の男が現れる。2人は協力し、壊れた船を動かす装置を直そうとする。",
+         "Janet stranded", "Thirty years ago, stranded in the Quantum Realm, Janet meets a man beside a crashed ship. They work together to repair its power source."),
+    ]),
+    ("第2章 有名人のスコット", "Part 2: Scott the celebrity", [
+        ("自伝と人気", "現代。スコットはヒーローとして有名になり、自分の本を出して、街で声をかけられる毎日を送っている。",
+         "Fame", "The present. Scott is a famous hero with a memoir, recognized everywhere he goes."),
+        ("キャシーの装置", "18歳になった娘キャシーは、ハンクと一緒に、量子の世界に信号を送る装置を作っていた。それを聞いたジャネットは、すぐに止めるよう叫ぶ。",
+         "Cassie's device", "Cassie, now 18, has been building a device with Hank to send signals into the Quantum Realm. Janet panics and shouts for them to shut it off."),
+        ("吸いこまれる", "装置から光が広がり、スコット、ホープ、キャシー、ハンク、ジャネットの5人は、量子の世界に吸いこまれてしまう。",
+         "Pulled in", "Light bursts from the device, and all five are sucked into the Quantum Realm."),
+    ]),
+    ("第3章 量子の世界", "Part 3: The Quantum Realm", [
+        ("2組に分かれて", "スコットとキャシーは、量子の世界で暮らす人々の反乱軍に助けられる。ホープ、ハンク、ジャネットは、別の場所に落ちていた。",
+         "Separated", "Scott and Cassie are taken in by a band of rebels. Hope, Hank and Janet land elsewhere."),
+        ("にぎやかな街", "ジャネットたちは、量子の世界の街で、ジャネットの昔の知り合いの男性に会う。ハンクはやきもちを焼く。",
+         "A bustling city", "Janet's group visits a city where they meet an old acquaintance of hers, to Hank's jealousy."),
+        ("ジャネットの秘密", "ジャネットはついに打ち明ける。30年前に助けた男カーンは、世界を次々に滅ぼしてきた征服者だった。ジャネットは、彼が外に出られないよう、船の装置を小さくして隠したのだった。",
+         "Janet's secret", "Janet finally explains: the man she helped 30 years ago, Kang, is a conqueror who destroyed world after world. She shrank his ship's power core so he could never escape."),
+    ]),
+    ("第4章 カーンの取り引き", "Part 4: Kang's deal", [
+        ("捕まったスコット", "スコットとキャシーはカーンに捕まる。カーンは、小さくなった装置を取ってくれば、家族を元の世界に帰すと言う。",
+         "Scott captured", "Kang captures Scott and Cassie. He offers to send the family home if Scott retrieves the shrunken power core."),
+        ("確率の嵐", "装置の中で、スコットの前に、たくさんの「もしも」のスコットたちが現れる。スコットはみんなで力を合わせて、装置にたどり着く。",
+         "The probability storm", "Inside the core, Scott is surrounded by countless possible versions of himself. They work together to reach it."),
+        ("裏切りと反乱", "カーンは約束を破る。家族と量子の世界の人々は力を合わせ、カーンの軍に反乱を起こす。",
+         "Betrayal and revolt", "Kang breaks his word. The family and the people of the realm rise up against his army."),
+    ]),
+    ("第5章 最後の戦い", "Part 5: The final battle", [
+        ("アリの軍団", "ハンクは、量子の世界で長い時間をかけて進化したアリたちを率いて現れる。",
+         "The ant army", "Hank arrives leading ants that have evolved over ages in the Quantum Realm."),
+        ("モードックの改心", "カーンの手下モードックの正体は、1作目の敵ダレン・クロスだった。彼は最後にスコットたちの味方になる。",
+         "M.O.D.O.K. turns", "Kang's henchman M.O.D.O.K. turns out to be Darren Cross from the first film. In the end, he sides with Scott."),
+        ("カーンの最後", "スコットとホープは、カーンを船の装置に落とす。",
+         "Kang's fall", "Scott and Hope send Kang tumbling into his ship's power core."),
+        ("家族の帰り道", "キャシーが入り口を開き、家族はぎりぎりで元の世界に戻る。",
+         "The way home", "Cassie opens a portal, and the family makes it home just in time."),
+    ]),
+    ("第6章 エンドクレジットの映像", "Part 6: The credit scenes", [
+        ("途中の映像", "大きな広間に、たくさんのカーンたちが集まっている。追放されたカーンが倒されたことを知り、動き出す。",
+         "Mid-credits", "A vast council of Kangs learns their exiled variant has been defeated and begins to act."),
+        ("最後の映像", "1901年、発明家ヴィクター・タイムリーの発表会を、ロキとメビウスが見つめている。",
+         "After the credits", "In 1901, Loki and Mobius watch a presentation by the inventor Victor Timely."),
+    ]),
+]
