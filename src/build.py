@@ -10,7 +10,7 @@ SRC = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(SRC)
 sys.path.insert(0, SRC)
 
-from sites import SITES, FOLDERS  # noqa: E402
+from sites import SITES, FOLDERS, WATCH_ORDER  # noqa: E402
 
 BASE_URL = "https://jjjjjjjjjjj-in.github.io/"
 
@@ -62,7 +62,11 @@ e = html.escape
 def folder_items(key, group=None):
     """フォルダに入るサイトの (場所, 名前, 説明, 言語) を、SITES の順に返す。group を渡すと、その区分のものだけ"""
     items = []
-    for site in SITES:
+    # 作品ガイドはドゥームズデイ予習ガイドの視聴順（時系列）に並べる。順番の表は sites.py の WATCH_ORDER
+    def order(site):
+        slug = site["path"].strip("/").split("/")[0]
+        return WATCH_ORDER.index(slug) if slug in WATCH_ORDER else -1
+    for site in sorted(SITES, key=order):
         if group and site.get("group", "earth616") != group:
             continue
         if site.get("folder") == key:
@@ -152,19 +156,36 @@ def folder_html(f):
     <h1>{e(f["name"])}</h1>
     <p>{e(f["desc"])}</p>
   """
+    if f.get("logo"):
+        # ヘッダーは黒地に白の「MARVEL」ロゴ風の文字。ページの題名と説明はその下に出す
+        header = f"""<span class="mlogo" role="img" aria-label="{e(f["logo"])}">{e(f["logo"])}</span>"""
+        cards = f"""
+  </ul>
+  <div class="ftitle"><h1>{e(f["name"])}</h1><p>{e(f["desc"])}</p></div>
+  <ul class="cards" hidden>""" + cards
     title = f'{f["name"]} | {SITE_NAME}' if en else f'{f["name"]}｜{SITE_NAME}'
     html = page(title, f["desc"], f["path"], f["lang"], header, cards, back)
     if f.get("theme") == "red":
         html = html.replace("</head>", RED_STYLE + "\n</head>", 1)
+    if f.get("logo"):
+        html = html.replace("</head>", LOGO_FONT + "\n</head>", 1)
     return html
 
 
-# マーベル映画紹介のフォルダは赤と白（運営者の希望、2026-11-02）
+LOGO_FONT = '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&display=swap">'
+
+# マーベル映画紹介のフォルダは赤と白（運営者の希望、2026-11-02）。ヘッダーは黒地に白の「MARVEL」（2026-11-02）
 RED_STYLE = """<style>
 :root { --red: #c8102e; --red-deep: #8f0b20; --red-soft: #fdecee; }
 body { background: #fff; }
-header { background: var(--red); color: #fff; border-radius: 12px; box-shadow: 0 4px 0 var(--red-deep); }
-header p { color: #ffe3e7; }
+header { background: #000; color: #fff; border-radius: 0; box-shadow: none; padding: 14px 18px; display: flex; justify-content: center; align-items: center; }
+/* MARVEL のロゴ風の文字：縦長で幅が狭く、とても太いサンセリフ。字間を詰める */
+.mlogo { display: inline-block; font-family: "Anton", "Oswald", "Impact", "Arial Narrow", sans-serif; font-weight: 400; color: #fff;
+  font-size: clamp(44px, 12vw, 72px); line-height: .9; letter-spacing: -.02em; transform: scaleY(1.18); transform-origin: center;
+  padding: .12em .14em .06em; text-transform: uppercase; }
+.ftitle { display: grid; gap: 6px; }
+.ftitle h1 { margin: 0; color: var(--red-deep); font-size: clamp(26px, 7vw, 38px); font-weight: 900; line-height: 1.25; }
+.ftitle p { margin: 0; color: #444; }
 .crumb a { color: var(--red); }
 .ftoc { position: sticky; top: 0; z-index: 5; background: var(--red); border-radius: 10px; }
 .ftoc ul { list-style: none; margin: 0; padding: 0 6px; display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
