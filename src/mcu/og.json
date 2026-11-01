@@ -1,0 +1,26 @@
+[
+ {
+  "lang": "ja",
+  "title": "アイアンマン",
+  "year": "2008",
+  "theme": {
+   "main": "#b3121b",
+   "deep": "#5e0a10",
+   "accent": "#f2c230",
+   "soft": "#f8dcc0"
+  },
+  "out": "iron-man/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Iron Man",
+  "year": "2008",
+  "theme": {
+   "main": "#b3121b",
+   "deep": "#5e0a10",
+   "accent": "#f2c230",
+   "soft": "#f8dcc0"
+  },
+  "out": "iron-man/en/og.png"
+ }
+]

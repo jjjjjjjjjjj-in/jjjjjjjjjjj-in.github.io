@@ -27,6 +27,13 @@
 ## サイト一覧
 - `/paradise-city/`（パラダイスシティ カジノガイド）: `src/paradise/data.py` の情報を直して `python3 src/paradise/build.py` を実行する。情報には必ず区分（公式・ユーザー提供・体験談・要確認・過去）、出典、確認日を付ける。終わったキャンペーンは `CAMPAIGNS["archive"]` に移す。公式サイト（p-city.com）はこの環境から直接読めないので、検索で公式ページの内容を確認する。広告は旅行用品（Amazon・もしもの楽天市場の検索リンク）だけを、旅行のページ（data.py の AD_PAGES）に出す（2026-10-31、運営者の希望）。カジノやゲームの広告、カジノのルール・お金のページへの広告は入れない。Trip.com の広告は運営者が Trip.com のアフィリエイトに登録したら追加する。運営者は2026年に8回訪問しており、体験談は「体験談」区分で書く。
 
+- `/iron-man/`（アイアンマン完全ガイド。英語版は `/iron-man/en/`）: MCU の作品ガイド。1作品＝1つの独立したサイト（運営者の希望で、ドゥームズデイ予習ガイドとは別。ドゥームズデイの名前・視聴順・重要度は出さない）。仕組みは `src/mcu/`: 文章は `films.py`、相関図は `relations.py`（顔写真は `IMAGES`、ファイルは `src/mcu/chars/`）、作品の基本情報は `titles.py`。`python3 src/mcu/build.py` のあと `node src/mcu/render.js`（共有画像 og.png）。作品を足すと `/<slug>/` が増えるので、`src/sites.py` にも1件足す。
+  - 2026-11-01 にドゥームズデイ予習ガイド（別リポジトリ）の /films/iron-man.html から移した。旧アドレスはこちらへ転送している。
+  - 文章はすべて自分の言葉で書く。他サイトの文章を写さない。確かめられない裏話は書かない。人物の説明・相関図の線・本文で食い違いがないか、映画の内容と照らして確かめる。
+  - 相関図の矢印の言葉（ab: a→b、ba: b→a）は「a から見た b（b の立場）」か「a が b にすること・言うこと」にする（例: フューリー→コールソン「部下」）。
+  - 顔写真は Wikimedia Commons の自由ライセンス（CC BY / CC BY-SA / パブリックドメイン）の俳優本人の写真だけ。映画の場面写真・ポスター・Marvel公式画像・ウィキペディアの「フェアユース」画像は使わない。API（commons.wikimedia.org/w/api.php の prop=imageinfo&iiprop=url|extmetadata）でライセンス・作者・出典を確認する。thumb.wikimedia.org にはつながらないので upload.wikimedia.org の元画像を PIL で顔中心の正方形・幅400px・JPEG品質80に。連続取得は 429 になるので間を空ける。人間でないキャラ（ダミーなど）は自作の SVG イラストを `IMAGES` に illustration=True で登録する。
+  - ページに出さないもの（運営者の希望）: 重要度、「この作品を3行で」（データの summary は残してある）。用語集は説明を最初から表示する。
+
 ## Google Search Console
 - `https://jjjjjjjjjjj-in.github.io/`（URLプレフィックス）の確認コードは `src/build.py` の `GOOGLE_SITE_VERIFICATION` に設定済み（2026-10-31）。
 - 所有権の確認とサイトマップ（`sitemap.xml`）の登録は済み（2026-10-31）。以降のサイト追加は `src/sites.py` に足すだけで自動で伝わる。
