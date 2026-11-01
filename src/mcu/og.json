@@ -694,5 +694,29 @@
    "soft": "#e6ecf6"
   },
   "out": "falcon-and-winter-soldier/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "スパイダーマン：ファー・フロム・ホーム",
+  "year": "2019",
+  "theme": {
+   "main": "#c4162c",
+   "deep": "#121219",
+   "accent": "#45c08a",
+   "soft": "#f3e3e5"
+  },
+  "out": "spider-man-far-from-home/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Spider-Man: Far From Home",
+  "year": "2019",
+  "theme": {
+   "main": "#c4162c",
+   "deep": "#121219",
+   "accent": "#45c08a",
+   "soft": "#f3e3e5"
+  },
+  "out": "spider-man-far-from-home/en/og.png"
  }
 ]

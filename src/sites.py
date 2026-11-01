@@ -316,6 +316,16 @@ SITES = [
         updated="2026-11-02",
     ),
     dict(
+        path="spider-man-far-from-home/", folder="marvel", folder_en="marvel-en",
+        name="スパイダーマン：ファー・フロム・ホーム 完全ガイド",
+        name_en="Spider-Man: Far From Home Complete Guide",
+        desc="トニーを失ったピーターが、ヨーロッパ旅行の先で謎のヒーロー、ミステリオと出会う。あらすじ・相関図・用語・Q&A。",
+        desc_en="Grieving Tony, Peter meets the mysterious hero Mysterio on a school trip to Europe: story, character map, key terms and Q&A.",
+        en_path="spider-man-far-from-home/en/",
+        sitemap="spider-man-far-from-home/sitemap.xml",
+        updated="2026-11-02",
+    ),
+    dict(
         path="wakanda-forever/", folder="marvel", folder_en="marvel-en",
         name="ブラックパンサー／ワカンダ・フォーエバー 完全ガイド",
         name_en="Black Panther: Wakanda Forever Complete Guide",
