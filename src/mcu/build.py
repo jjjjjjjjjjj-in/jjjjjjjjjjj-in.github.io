@@ -227,24 +227,18 @@ def head(slug, title, desc, lang, prefix, schema, site_name):
 """
 
 
-FOLD_JS = """<script>
-(function(){ var en=document.documentElement.lang==='en';
-  document.querySelectorAll('.fg-sec > h2').forEach(function(h){ var s=h.parentNode, b=document.createElement('button');
-    b.type='button'; b.className='fold-btn'; b.setAttribute('aria-expanded','true'); b.setAttribute('aria-label', en?'Close this section':'この項目を閉じる');
-    b.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16L12 19z"/></svg>';
-    b.addEventListener('click',function(){ var c=s.classList.toggle('closed'); b.setAttribute('aria-expanded',String(!c));
-      b.setAttribute('aria-label', c?(en?'Open this section':'この項目を開く'):(en?'Close this section':'この項目を閉じる'));
-      if(!c){ try{ window.dispatchEvent(new Event('resize')); }catch(e){} } else if(s.getBoundingClientRect().top<0){ s.scrollIntoView(); } });
-    h.appendChild(b); }); })();
-</script>
-"""
+
+
+def contents_box(items, lang):
+    """ページの最初に出す番号つきの目次（運営者の希望、2026-11-02）。items: [(リンク先, 見出し, [小見出し...])]"""
+    lis = "".join(
+        f'<li><a href="{h}"><span class="cb-no">{i:02d}</span><span class="cb-t">{e(label)}</span></a>'
+        + (f'<ul>{"".join(f"<li>{e(x)}</li>" for x in subs)}</ul>' if subs else "") + "</li>"
+        for i, (h, label, subs) in enumerate(items, 1))
+    return f'<nav class="contents-box" aria-label="{"Contents" if lang == "en" else "目次"}"><p class="cb-title">{"Contents" if lang == "en" else "目次"}</p><ol>{lis}</ol></nav>\n'
 
 
 def footer(lang, top):
-    return FOLD_JS + _footer(lang, top)
-
-
-def _footer(lang, top):
     if lang == "en":
         return f"""<footer>
 <p>This site contains affiliate links (ads).</p>
@@ -323,7 +317,7 @@ def build_page(slug, lang):
   <dl class="fg-facts">{facts_html}</dl>{box_badge(slug, lang, top)}
 </header>
 <nav class="site-toc" aria-label="{e(t['toc'])}">{toc}</nav>
-
+{contents_box([("#" + k, v, []) for k, v in sections], lang)}
 <section class="fg-sec" id="before"><h2>{e(t['s_before'])}<span class="tag-ok">{e(t['nospoil'])}</span></h2>
   <div class="fg-cards">{before}</div>
 </section>
@@ -413,6 +407,7 @@ def build_scenes_page(slug, lang):
   <p class="lead"><strong>{e(t['scenes_warn'])}</strong></p>
 </header>
 <nav class="site-toc" aria-label="{e(t['toc'])}">{toc}</nav>
+{contents_box([(f"#c{i}", h, [sh for sh, _ in sc]) for i, (h, sc) in enumerate(chapters, 1)], lang)}
 {body}
 {common_panel(lang)}
 <section class="panel"><div class="btns"><a class="btn primary" href="../">{e(t['scenes_back'])}</a></div></section>
