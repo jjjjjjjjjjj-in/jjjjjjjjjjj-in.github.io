@@ -3914,6 +3914,10 @@ IMAGES = {
     "taskmaster": dict(file="olga-kurylenko.jpg", author="Mikołaj Kirschke", license="CC BY-SA 4.0",
                license_url="https://creativecommons.org/licenses/by-sa/4.0/",
                source_url="https://commons.wikimedia.org/wiki/File:Olga_Kurylenko_by_Mikolaj_Kirschke_Wikipedia_cropped.JPG"),
+    # X-MEN（若いスコット）
+    "scott-young": dict(file="tye-sheridan.jpg", author="Gage Skidmore", license="CC BY-SA 2.0",
+               license_url="https://creativecommons.org/licenses/by-sa/2.0/",
+               source_url="https://commons.wikimedia.org/wiki/File:Tye_Sheridan_(39295803380).jpg"),
 }
 
 
