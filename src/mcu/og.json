@@ -70,5 +70,125 @@
    "soft": "#f8dcc0"
   },
   "out": "iron-man/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "アイアンマン2",
+  "year": "2010",
+  "theme": {
+   "main": "#a3121c",
+   "deep": "#2a2e37",
+   "accent": "#f2c230",
+   "soft": "#e6dccd"
+  },
+  "out": "iron-man-2/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Iron Man 2",
+  "year": "2010",
+  "theme": {
+   "main": "#a3121c",
+   "deep": "#2a2e37",
+   "accent": "#f2c230",
+   "soft": "#e6dccd"
+  },
+  "out": "iron-man-2/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "インクレディブル・ハルク",
+  "year": "2008",
+  "theme": {
+   "main": "#2f7d32",
+   "deep": "#24163d",
+   "accent": "#8fd14f",
+   "soft": "#dcd2ef"
+  },
+  "out": "incredible-hulk/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "The Incredible Hulk",
+  "year": "2008",
+  "theme": {
+   "main": "#2f7d32",
+   "deep": "#24163d",
+   "accent": "#8fd14f",
+   "soft": "#dcd2ef"
+  },
+  "out": "incredible-hulk/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "マイティ・ソー",
+  "year": "2011",
+  "theme": {
+   "main": "#a51d24",
+   "deep": "#1c2632",
+   "accent": "#c9d3dd",
+   "soft": "#e6ebf1"
+  },
+  "out": "thor/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Thor",
+  "year": "2011",
+  "theme": {
+   "main": "#a51d24",
+   "deep": "#1c2632",
+   "accent": "#c9d3dd",
+   "soft": "#e6ebf1"
+  },
+  "out": "thor/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "アベンジャーズ",
+  "year": "2012",
+  "theme": {
+   "main": "#2c4f9e",
+   "deep": "#111a2e",
+   "accent": "#d9dfe8",
+   "soft": "#dfe6f1"
+  },
+  "out": "avengers/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "The Avengers",
+  "year": "2012",
+  "theme": {
+   "main": "#2c4f9e",
+   "deep": "#111a2e",
+   "accent": "#d9dfe8",
+   "soft": "#dfe6f1"
+  },
+  "out": "avengers/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "マイティ・ソー／ダーク・ワールド",
+  "year": "2013",
+  "theme": {
+   "main": "#8c1f2b",
+   "deep": "#17121f",
+   "accent": "#d6b56a",
+   "soft": "#ece2d2"
+  },
+  "out": "thor-dark-world/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Thor: The Dark World",
+  "year": "2013",
+  "theme": {
+   "main": "#8c1f2b",
+   "deep": "#17121f",
+   "accent": "#d6b56a",
+   "soft": "#ece2d2"
+  },
+  "out": "thor-dark-world/en/og.png"
  }
 ]
