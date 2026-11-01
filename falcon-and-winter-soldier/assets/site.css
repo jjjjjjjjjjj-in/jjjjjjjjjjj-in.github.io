@@ -430,7 +430,7 @@ footer p { margin: 0; }
 .bo-when a { color: #fff; font-weight: 700; margin-left: 4px; }
 
 /* 見出しの「閉じる」ボタン（運営者の希望、2026-11-02） */
-.fold-btn { margin-left: auto; align-self: flex-start; font: inherit; font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 999px; cursor: pointer;
-  background: rgba(255,255,255,.14); color: var(--on-dark); border: 1px solid rgba(255,255,255,.45); white-space: nowrap; }
-.fold-btn:hover { background: rgba(255,255,255,.26); }
+.fold-btn { margin-left: auto; flex: none; width: 36px; height: 30px; display: grid; place-items: center; padding: 0; cursor: pointer; background: none; border: 0; color: #e23636; }
+.fold-btn svg { width: 24px; height: 24px; fill: none; stroke: currentColor; stroke-width: 3; stroke-linejoin: round; transition: transform .2s; }
+.closed .fold-btn svg { transform: rotate(-90deg); }
 .fg-sec.closed > :not(h2) { display: none !important; }

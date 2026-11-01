@@ -228,10 +228,12 @@ def head(slug, title, desc, lang, prefix, schema, site_name):
 
 
 FOLD_JS = """<script>
-(function(){ var L=document.documentElement.lang==='en'?['Close','Open']:['閉じる','開く'];
+(function(){ var en=document.documentElement.lang==='en';
   document.querySelectorAll('.fg-sec > h2').forEach(function(h){ var s=h.parentNode, b=document.createElement('button');
-    b.type='button'; b.className='fold-btn'; b.setAttribute('aria-expanded','true'); b.textContent=L[0];
-    b.addEventListener('click',function(){ var c=s.classList.toggle('closed'); b.textContent=L[c?1:0]; b.setAttribute('aria-expanded',String(!c));
+    b.type='button'; b.className='fold-btn'; b.setAttribute('aria-expanded','true'); b.setAttribute('aria-label', en?'Close this section':'この項目を閉じる');
+    b.innerHTML='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16L12 19z"/></svg>';
+    b.addEventListener('click',function(){ var c=s.classList.toggle('closed'); b.setAttribute('aria-expanded',String(!c));
+      b.setAttribute('aria-label', c?(en?'Open this section':'この項目を開く'):(en?'Close this section':'この項目を閉じる'));
       if(!c){ try{ window.dispatchEvent(new Event('resize')); }catch(e){} } else if(s.getBoundingClientRect().top<0){ s.scrollIntoView(); } });
     h.appendChild(b); }); })();
 </script>
