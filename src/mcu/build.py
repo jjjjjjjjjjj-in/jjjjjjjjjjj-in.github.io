@@ -47,7 +47,7 @@ TEXT = {
         story_open="あらすじを読む（結末までのネタバレを含みます）",
         confusing_note="結末に関わる内容を含みます。",
         post="エンドクレジットの後のおまけ映像",
-        shop="この作品をもっと楽しむ", list="ほかのサイトを見る",
+        shop="この作品をもっと楽しむ", list="マーベル映画紹介のほかのページ", folder="マーベル映画紹介", folder_path="marvel/",
         desc_fmt="『{title}』を映画だけでは分かりにくい人向けに解説。ネタバレなしの観る前のポイント、顔アイコンつき相関図、章ごとのあらすじ、用語集、分かりにくい場面のQ&A、おまけ映像まで。",
         title_fmt="『{title}』完全ガイド｜あらすじ・相関図・用語をやさしく解説",
         site_fmt="{title} 完全ガイド",
@@ -63,7 +63,7 @@ TEXT = {
         story_open="Read the story (spoilers up to the ending)",
         confusing_note="Contains spoilers about the ending.",
         post="After the end credits",
-        shop="More from this film", list="See my other sites",
+        shop="More from this film", list="More Marvel movie guides", folder="Marvel Movie Guides", folder_path="marvel/en/",
         desc_fmt="A guide to {title} for anyone who finds it hard to follow: spoiler-free tips, a character map with face icons, a chapter-by-chapter story, key terms, the confusing parts explained, and the post-credits scene.",
         title_fmt="{title} Complete Guide: Story, Character Map and Key Terms Explained",
         site_fmt="{title} Complete Guide",
@@ -211,7 +211,7 @@ def build_page(slug, lang):
                  f"--navy-soft:{th['soft']};--gold:{th['accent']};--gold-ink:{th['main']};--link:{th['main']};}}</style>\n") if th else ""
     return head(slug, t["title_fmt"].format(title=title), t["desc_fmt"].format(title=title), lang, prefix, schema,
                 t["site_fmt"].format(title=title)) + theme_css + f"""
-<nav class="crumb"><a href="{top}">{e(t['home'])}</a> ＞ {e(title)}<a class="lang-switch" href="{'../' if lang == 'en' else 'en/'}" hreflang="{'ja' if lang == 'en' else 'en'}">{e(t['other_lang'])}</a></nav>
+<nav class="crumb"><a href="{top}">{e(t['home'])}</a> ＞ <a href="{top}{t['folder_path']}">{e(t['folder'])}</a> ＞ {e(title)}<a class="lang-switch" href="{'../' if lang == 'en' else 'en/'}" hreflang="{'ja' if lang == 'en' else 'en'}">{e(t['other_lang'])}</a></nav>
 <header class="fg-hero">
   <p class="eyebrow">{e(t['menu'])} · {e(tr['year'])}</p>
   <h1>{e(h1)}<small>{e(t['guide'])}</small></h1>
@@ -256,7 +256,7 @@ def build_page(slug, lang):
 </section>
 
 <section class="panel">
-  <div class="btns"><a class="btn primary" href="{top}">{e(t['list'])}</a></div>
+  <div class="btns"><a class="btn primary" href="{top}{t['folder_path']}">{e(t['list'])}</a></div>
 </section>
 {map_scripts}""" + footer(lang, top) + "</body>\n</html>\n"
 

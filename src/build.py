@@ -10,7 +10,7 @@ SRC = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(SRC)
 sys.path.insert(0, SRC)
 
-from sites import SITES  # noqa: E402
+from sites import SITES, FOLDERS  # noqa: E402
 
 BASE_URL = "https://jjjjjjjjjjj-in.github.io/"
 
@@ -49,6 +49,7 @@ ul.cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; gr
 .card h2 { margin: 0; font-size: 18px; font-weight: 900; line-height: 1.4; }
 .card p { margin: 0; color: var(--muted); font-size: 14px; font-weight: 400; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 a { color: var(--ink); font-weight: 700; }
+.crumb { font-size: 13px; color: var(--muted); }
 .policy h2 { background: var(--ink); color: var(--on-ink); border-radius: 6px; padding: 8px 14px; font-size: 18px; margin: 28px 0 8px; }
 .policy h3 { font-size: 16px; margin: 16px 0 4px; }
 .policy p, .policy li { margin: 6px 0; }
@@ -58,42 +59,86 @@ footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--lin
 e = html.escape
 
 
-def index_html():
-    tiles = []
+def folder_items(key):
+    """フォルダに入るサイトの (場所, 名前, 説明, 言語) を、SITES の順に返す"""
+    items = []
     for site in SITES:
-        tiles.append((site["path"], site["name"], site["desc"], "日本語", "ja"))
-        if site.get("en_path"):
-            tiles.append((site["en_path"], site["name_en"], site["desc_en"], "English", "en"))
-    cards = "".join(f"""
-    <li class="card"><a href="{e(path)}" lang="{lang}"><span class="lang">{label}</span><h2>{e(name)}</h2><p>{e(desc)}</p></a></li>"""
-                    for path, name, desc, label, lang in tiles)
-    verify = f'\n<meta name="google-site-verification" content="{e(GOOGLE_SITE_VERIFICATION)}">' if GOOGLE_SITE_VERIFICATION else ""
+        if site.get("folder") == key:
+            items.append((site["path"], site["name"], site["desc"], "ja"))
+        if site.get("folder_en") == key and site.get("en_path"):
+            items.append((site["en_path"], site["name_en"], site["desc_en"], "en"))
+    return items
+
+
+def card(href, name, desc, label, lang):
+    return f"""
+    <li class="card"><a href="{e(href)}" lang="{lang}"><span class="lang">{e(label)}</span><h2>{e(name)}</h2><p>{e(desc)}</p></a></li>"""
+
+
+def page(title, desc, path, lang, header, body, back=""):
+    verify = f'\n<meta name="google-site-verification" content="{e(GOOGLE_SITE_VERIFICATION)}">' if GOOGLE_SITE_VERIFICATION and not path else ""
+    prefix = "../" * path.count("/")
+    note = ("Unofficial fan sites run by an individual. Some pages contain affiliate links (ads)."
+            if lang == "en" else "個人が運営する非公式のファンサイトです。各サイトにはアフィリエイト広告（PR）を含むページがあります。")
+    policy = "Privacy policy" if lang == "en" else "プライバシーポリシー"
     return f"""<!doctype html>
-<html lang="ja">
+<html lang="{lang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">{analytics_tag()}
-<title>{SITE_NAME}</title>
-<meta name="description" content="映画、旅行、本などのテーマごとに、知っておくと役立つ情報や楽しみ方をまとめたガイドサイトです。">
-<link rel="canonical" href="{BASE_URL}">{verify}
+<title>{e(title)}</title>
+<meta name="description" content="{e(desc)}">
+<link rel="canonical" href="{BASE_URL}{path}">{verify}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap">
 {STYLE}
 </head>
 <body>
-<div class="wrap">
-  <header>
-    <h1>{SITE_NAME}</h1>
-    <p>映画、旅行、本などのテーマごとに、知っておくと役立つ情報や楽しみ方をまとめています。</p>
-  </header>
-  <ul class="cards">{cards}
+<div class="wrap">{back}
+  <header>{header}</header>
+  <ul class="cards">{body}
   </ul>
-  <footer>個人が運営する非公式のファンサイトです。各サイトにはアフィリエイト広告（PR）を含むページがあります。<a href="privacy.html">プライバシーポリシー</a></footer>
+  <footer>{note}<a href="{prefix}privacy.html{"#en" if lang == "en" else ""}">{policy}</a></footer>
 </div>
 </body>
 </html>
 """
+
+
+def index_html():
+    cards = ""
+    for f in FOLDERS:
+        items = folder_items(f["key"])
+        if not items:
+            continue
+        if len(items) == 1:
+            href = items[0][0]
+            label = "English" if f["lang"] == "en" else "日本語"
+        else:
+            href = f["path"]
+            label = (f"Folder · {len(items)} sites" if f["lang"] == "en" else f"フォルダ・{len(items)}件")
+        cards += card(href, f["name"], f["desc"], label, f["lang"])
+    header = f"""
+    <h1>{SITE_NAME}</h1>
+    <p>映画、旅行、本などのテーマごとに、知っておくと役立つ情報や楽しみ方をまとめています。</p>
+  """
+    return page(SITE_NAME, "映画、旅行、本などのテーマごとに、知っておくと役立つ情報や楽しみ方をまとめたガイドサイトです。", "", "ja", header, cards)
+
+
+def folder_html(f):
+    """フォルダのページ（中のサイトを並べる）"""
+    items = folder_items(f["key"])
+    prefix = "../" * f["path"].count("/")
+    en = f["lang"] == "en"
+    cards = "".join(card(prefix + path, name, desc, "English" if lang == "en" else "日本語", lang) for path, name, desc, lang in items)
+    back = f'\n  <nav class="crumb"><a href="{prefix}">{SITE_NAME}</a> ＞ {e(f["name"])}</nav>'
+    header = f"""
+    <h1>{e(f["name"])}</h1>
+    <p>{e(f["desc"])}</p>
+  """
+    title = f'{f["name"]} | {SITE_NAME}' if en else f'{f["name"]}｜{SITE_NAME}'
+    return page(title, f["desc"], f["path"], f["lang"], header, cards, back)
 
 
 def privacy_html():
@@ -174,11 +219,18 @@ def main():
 
     latest = max(s["updated"] for s in SITES)
     write("index.html", index_html())
+    folder_pages = []
+    for f in FOLDERS:
+        if f["path"] and len(folder_items(f["key"])) > 1:
+            os.makedirs(os.path.join(ROOT, f["path"]), exist_ok=True)
+            write(f["path"] + "index.html", folder_html(f))
+            folder_pages.append(f["path"])
     write("privacy.html", privacy_html())
     write("sitemap.xml", sitemap_index())
     write("sitemap-top.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
           f"  <url><loc>{BASE_URL}</loc><lastmod>{latest}</lastmod></url>\n"
-          f"  <url><loc>{BASE_URL}privacy.html</loc><lastmod>{POLICY_UPDATED}</lastmod></url>\n</urlset>\n")
+          f"  <url><loc>{BASE_URL}privacy.html</loc><lastmod>{POLICY_UPDATED}</lastmod></url>\n"
+          + "".join(f"  <url><loc>{BASE_URL}{p}</loc><lastmod>{latest}</lastmod></url>\n" for p in folder_pages) + "</urlset>\n")
     # robots.txt はドメインのトップにあるものだけが有効。全サイトのサイトマップをここで伝える
     write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}sitemap.xml\n")
     write(".nojekyll", "")
