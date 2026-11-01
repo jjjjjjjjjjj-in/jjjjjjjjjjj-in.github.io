@@ -109,6 +109,8 @@ a { color: inherit; }
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .poster .ps { display: none; }
 .mcard .name { display: block; margin-top: 8px; font-size: 16px; line-height: 1.45; }
+.soonbadge { display: inline-block; font-size: 11px; font-weight: 900; color: #fff; background: #e23636; border-radius: 4px; padding: 0 6px; vertical-align: 2px; }
+.unote { display: block; font-size: 12px; color: var(--muted); }
 .soon { grid-column: 1 / -1; padding: 16px; border: 2px dashed var(--line); border-radius: 8px; color: var(--muted); font-weight: 700; text-align: center; }
 .mnone { text-align: center; color: var(--muted); }
 .mfeats { margin: 34px 0 0; }
@@ -179,6 +181,31 @@ ICON_MENU = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h1
 ICON_SEARCH = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M15.5 15.5l5 5" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/></svg>'
 
 
+# 公開予定の作品（作品ガイドはまだ作らない。公式ページへリンク）。group の区分の最後に出す（運営者の希望、2026-11-02）
+# 日付はアメリカの公開日（2025年5月の延期発表。marvel.com で確認、2026-11-02）。日本の公開日は未発表
+UPCOMING = [
+    dict(group="doomsday", title="アベンジャーズ／シークレット・ウォーズ", title_en="Avengers: Secret Wars", big="SECRET WARS",
+         date="2027年12月17日（米国）", date_en="Dec 17, 2027 (US)", note="日本の公開日は未発表", note_en="Japan date TBA",
+         url="https://www.marvel.com/movies/avengers-secret-wars",
+         theme=dict(main="#5b2a86", deep="#12061f", accent="#f2c02e", soft="#e9def5")),
+]
+
+
+def upcoming_card(u, lang):
+    t = TEXT[lang]
+    en = lang == "en"
+    th = u["theme"]
+    style = f'--p-main:{th["main"]};--p-deep:{th["deep"]};--p-accent:{th["accent"]};--p-soft:{th["soft"]}'
+    name = u["title_en"] if en else u["title"]
+    q = e((u["title"] + " " + u["title_en"]).lower())
+    return (f'<li data-q="{q}"><a class="mcard" href="{e(u["url"])}" target="_blank" rel="noopener">'
+            f'<span class="poster" style="{style}"><span class="pmeta">'
+            f'<span class="pm"><small>{"Coming" if en else "公開予定"}</small><span class="pera">{e(u["date_en"] if en else u["date"])}</span></span></span>'
+            f'<span class="pt">{e(u["big"])}</span></span>'
+            f'<span class="name">{e(name)} <span class="soonbadge">{"COMING SOON" if en else "公開予定"}</span></span>'
+            f'<span class="unote">{e(u["note_en"] if en else u["note"])}・{"official site" if en else "公式サイトへ"}</span></a></li>')
+
+
 def site_card(site, lang, prefix):
     """1作品（または予習ガイド）のポスター風カード"""
     t = TEXT[lang]
@@ -215,7 +242,8 @@ def build(f, sites_in_group, head_extra, base_url, site_name, analytics):
     groups = ""
     for k, title, desc, _ in f["groups"]:
         sites = sites_in_group(k)
-        body = "".join(site_card(s, lang, prefix) for s in sites) if sites else f'<li class="soon">{e(t["soon"])}</li>'
+        ups = "".join(upcoming_card(u, lang) for u in UPCOMING if u["group"] == k)
+        body = ("".join(site_card(s, lang, prefix) for s in sites) + ups) if (sites or ups) else f'<li class="soon">{e(t["soon"])}</li>'
         groups += f'<section class="mgroup" id="{k}"><h2>{e(title)}</h2><p class="gdesc">{e(desc)}</p><ul class="mgrid">{body}</ul></section>\n'
     # 特集ページ（年表・興行収入・再上映。日本語だけ）
     feat_menu, feats = "", ""
