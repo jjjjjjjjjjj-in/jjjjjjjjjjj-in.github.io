@@ -310,5 +310,125 @@
    "soft": "#e9dfcc"
   },
   "out": "i-am-groot-1/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "アベンジャーズ／エイジ・オブ・ウルトロン",
+  "year": "2015",
+  "theme": {
+   "main": "#9c1c26",
+   "deep": "#15171c",
+   "accent": "#c7cdd6",
+   "soft": "#e6e9ee"
+  },
+  "out": "age-of-ultron/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Avengers: Age of Ultron",
+  "year": "2015",
+  "theme": {
+   "main": "#9c1c26",
+   "deep": "#15171c",
+   "accent": "#c7cdd6",
+   "soft": "#e6e9ee"
+  },
+  "out": "age-of-ultron/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "アントマン",
+  "year": "2015",
+  "theme": {
+   "main": "#b0141c",
+   "deep": "#141414",
+   "accent": "#d9dde2",
+   "soft": "#f1dcdc"
+  },
+  "out": "ant-man/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Ant-Man",
+  "year": "2015",
+  "theme": {
+   "main": "#b0141c",
+   "deep": "#141414",
+   "accent": "#d9dde2",
+   "soft": "#f1dcdc"
+  },
+  "out": "ant-man/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "シビル・ウォー／キャプテン・アメリカ",
+  "year": "2016",
+  "theme": {
+   "main": "#1d3d8f",
+   "deep": "#3a0f16",
+   "accent": "#ef5a62",
+   "soft": "#e8e0ea"
+  },
+  "out": "civil-war/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Captain America: Civil War",
+  "year": "2016",
+  "theme": {
+   "main": "#1d3d8f",
+   "deep": "#3a0f16",
+   "accent": "#ef5a62",
+   "soft": "#e8e0ea"
+  },
+  "out": "civil-war/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ブラックパンサー",
+  "year": "2018",
+  "theme": {
+   "main": "#5b2a86",
+   "deep": "#111014",
+   "accent": "#c9c3d8",
+   "soft": "#e6e0ef"
+  },
+  "out": "black-panther/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Black Panther",
+  "year": "2018",
+  "theme": {
+   "main": "#5b2a86",
+   "deep": "#111014",
+   "accent": "#c9c3d8",
+   "soft": "#e6e0ef"
+  },
+  "out": "black-panther/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "スパイダーマン：ホームカミング",
+  "year": "2017",
+  "theme": {
+   "main": "#c8102e",
+   "deep": "#0f2550",
+   "accent": "#8cc0ff",
+   "soft": "#dfe6f5"
+  },
+  "out": "spider-man-homecoming/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Spider-Man: Homecoming",
+  "year": "2017",
+  "theme": {
+   "main": "#c8102e",
+   "deep": "#0f2550",
+   "accent": "#8cc0ff",
+   "soft": "#dfe6f5"
+  },
+  "out": "spider-man-homecoming/en/og.png"
  }
 ]
