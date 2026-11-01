@@ -68,14 +68,14 @@ a { color: inherit; }
 .mgrid li[hidden] { display: none; }
 .mcard { display: block; text-decoration: none; color: var(--ink); }
 .mcard:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 8px; }
-/* ポスター風カード（画像なし。作品の色と文字） */
-.poster { position: relative; aspect-ratio: 2 / 3; border-radius: 6px; overflow: hidden; color: #fff; display: grid; align-content: end; padding: 12px;
-  background: radial-gradient(120% 80% at 70% 20%, var(--p-main) 0%, var(--p-deep) 70%); box-shadow: 0 2px 6px rgba(0,0,0,.18); }
-.poster::before { content: ""; position: absolute; inset: 10% -30% auto auto; width: 90%; aspect-ratio: 1; border-radius: 50%; border: 10px solid var(--p-accent); opacity: .28; }
-.poster::after { content: ""; position: absolute; inset: auto 0 0 0; height: 55%; background: linear-gradient(transparent, rgba(0,0,0,.55)); }
-.poster .pt { position: relative; z-index: 1; font-weight: 900; font-size: clamp(17px, 5vw, 24px); line-height: 1.2; text-shadow: 0 2px 6px rgba(0,0,0,.5); word-break: keep-all; overflow-wrap: anywhere; }
-.poster .ps { position: relative; z-index: 1; font-size: 12px; color: var(--p-soft); margin-top: 6px; letter-spacing: .06em; }
-.poster .pyear { position: absolute; z-index: 1; top: 10px; left: 12px; font-family: "Anton", sans-serif; font-size: 15px; letter-spacing: .06em; color: var(--p-accent); }
+/* ポスター風カード（画像なし。作品の色と文字）。幅はそのまま、高さは縦長ポスターの約4分の1の横長の帯（運営者の希望、2026-11-02） */
+.poster { position: relative; aspect-ratio: 8 / 3; border-radius: 6px; overflow: hidden; color: #fff; display: grid; align-content: space-between; padding: 8px 10px;
+  background: radial-gradient(120% 160% at 80% 0%, var(--p-main) 0%, var(--p-deep) 75%); box-shadow: 0 2px 6px rgba(0,0,0,.18); }
+.poster::before { content: ""; position: absolute; top: -40%; right: -12%; width: 55%; aspect-ratio: 1; border-radius: 50%; border: 6px solid var(--p-accent); opacity: .3; }
+.poster .pyear { position: relative; z-index: 1; font-family: "Anton", sans-serif; font-size: 14px; line-height: 1; letter-spacing: .06em; color: var(--p-accent); }
+.poster .pt { position: relative; z-index: 1; font-weight: 900; font-size: clamp(13px, 3.6vw, 17px); line-height: 1.2; text-shadow: 0 1px 4px rgba(0,0,0,.6);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.poster .ps { display: none; }
 .mcard .name { display: block; margin-top: 8px; font-size: 16px; line-height: 1.45; }
 .soon { grid-column: 1 / -1; padding: 16px; border: 2px dashed var(--line); border-radius: 8px; color: var(--muted); font-weight: 700; text-align: center; }
 .mnone { text-align: center; color: var(--muted); }
