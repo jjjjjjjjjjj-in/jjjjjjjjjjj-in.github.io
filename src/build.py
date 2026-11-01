@@ -12,6 +12,7 @@ sys.path.insert(0, SRC)
 
 from sites import SITES, FOLDERS, WATCH_ORDER  # noqa: E402
 import marvel_folder  # noqa: E402
+import marvel_pages  # noqa: E402
 
 BASE_URL = "https://jjjjjjjjjjj-in.github.io/"
 
@@ -84,6 +85,9 @@ def card(href, name, desc, label, lang):
 
 def page(title, desc, path, lang, header, body, back=""):
     verify = f'\n<meta name="google-site-verification" content="{e(GOOGLE_SITE_VERIFICATION)}">' if GOOGLE_SITE_VERIFICATION and not path else ""
+    # もっちぃま（トップ）は運営者の管理用。検索結果に出さない（GitHub Pages では完全な非公開にはできない。2026-11-02）
+    if not path:
+        verify += '\n<meta name="robots" content="noindex">'
     prefix = "../" * path.count("/")
     note = ("Unofficial fan sites run by an individual. Some pages contain affiliate links (ads)."
             if lang == "en" else "個人が運営する非公式のファンサイトです。各サイトにはアフィリエイト広告（PR）を含むページがあります。")
@@ -300,10 +304,11 @@ def main():
             os.makedirs(os.path.join(ROOT, f["path"]), exist_ok=True)
             write(f["path"] + "index.html", folder_html(f))
             folder_pages.append(f["path"])
+    # マーベル映画紹介の特集ページ（年表・興行収入・再上映）
+    folder_pages += marvel_pages.build_all(write, analytics_tag())
     write("privacy.html", privacy_html())
     write("sitemap.xml", sitemap_index())
     write("sitemap-top.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-          f"  <url><loc>{BASE_URL}</loc><lastmod>{latest}</lastmod></url>\n"
           f"  <url><loc>{BASE_URL}privacy.html</loc><lastmod>{POLICY_UPDATED}</lastmod></url>\n"
           + "".join(f"  <url><loc>{BASE_URL}{p}</loc><lastmod>{latest}</lastmod></url>\n" for p in folder_pages) + "</urlset>\n")
     # robots.txt はドメインのトップにあるものだけが有効。全サイトのサイトマップをここで伝える

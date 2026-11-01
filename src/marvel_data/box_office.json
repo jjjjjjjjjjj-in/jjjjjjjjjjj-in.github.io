@@ -1,0 +1,31 @@
+{
+ "as_of": "2026-11-01",
+ "checked": "2026-11-02",
+ "basis": "世界興行収入（再上映分を含む累計、名目額・米ドル、インフレ調整なし）",
+ "source_note": "運営者が Box Office Mojo（2026年11月1日時点）の世界歴代ランキングから抜き出したデータ。当サイトでは、このサイトの環境から Box Office Mojo に直接接続できなかったため、報道や他のデータベースと照らし合わせて確認の状態を書いています。",
+ "sources": [
+  {"name": "Box Office Mojo: Spider-Man: Brand New Day", "url": "https://www.boxofficemojo.com/release/rl2299756545/"},
+  {"name": "Box Office Mojo: Avengers Endgame: Encore（2026年の再上映）", "url": "https://www.boxofficemojo.com/release/rl1250000897/"},
+  {"name": "Variety: 『エンドゲーム』が再上映でアバターを抜き歴代1位に", "url": "https://variety.com/2026/film/box-office/avengers-endgame-highest-grossing-movie-ever-avatar-1236894787/"},
+  {"name": "Deadline: Avengers: Endgame Overtakes Avatar Again", "url": "https://deadline.com/2026/10/box-office-avengers-endgame-avatar-record-1237146168/"},
+  {"name": "The Numbers: Spider-Man: Brand New Day", "url": "https://www.the-numbers.com/movie/spider-man-brand-new-day-(2026)"}
+ ],
+ "films": [
+  {"world_rank": 1, "slug": "endgame", "title_en": "Avengers: Endgame", "title_ja": "アベンジャーズ／エンドゲーム", "year": 2019, "gross": 2942186933, "rerelease": true,
+   "verify": "一部確認", "note": "2026年の再上映『エンドゲーム：アンコール』で『アバター』を抜き、歴代1位に戻ったことは複数の報道で確認済み（約29.4億ドル）。1ドル単位の金額は Box Office Mojo で最終確認中。"},
+  {"world_rank": 3, "slug": "spider-man-brand-new-day", "title_en": "Spider-Man: Brand New Day", "title_ja": "スパイダーマン：ブランド・ニュー・デイ", "year": 2026, "gross": 2519512338, "rerelease": false,
+   "verify": "確認済み", "note": "金額は Box Office Mojo の作品ページの数字と一致（国内 $958,776,568／海外 $1,560,735,770）。まだ上映中のため、数字は増える可能性があります。"},
+  {"world_rank": 8, "slug": "infinity-war", "title_en": "Avengers: Infinity War", "title_ja": "アベンジャーズ／インフィニティ・ウォー", "year": 2018, "gross": 2052415039, "rerelease": false,
+   "verify": "提供データ", "note": "金額・順位は運営者提供のデータ（Box Office Mojo）。当サイトで最終確認中。"},
+  {"world_rank": 9, "slug": "spider-man-no-way-home", "title_en": "Spider-Man: No Way Home", "title_ja": "スパイダーマン：ノー・ウェイ・ホーム", "year": 2021, "gross": 1921426073, "rerelease": false,
+   "verify": "提供データ", "note": "金額・順位は運営者提供のデータ（Box Office Mojo）。当サイトで最終確認中。"},
+  {"world_rank": 15, "slug": "avengers", "title_en": "The Avengers", "title_ja": "アベンジャーズ", "year": 2012, "gross": 1520538536, "rerelease": false,
+   "verify": "提供データ", "note": "金額・順位は運営者提供のデータ（Box Office Mojo）。当サイトで最終確認中。"},
+  {"world_rank": 21, "slug": "age-of-ultron", "title_en": "Avengers: Age of Ultron", "title_ja": "アベンジャーズ／エイジ・オブ・ウルトロン", "year": 2015, "gross": 1405018048, "rerelease": false,
+   "verify": "提供データ", "note": "金額・順位は運営者提供のデータ（Box Office Mojo）。当サイトで最終確認中。"},
+  {"world_rank": 23, "slug": "black-panther", "title_en": "Black Panther", "title_ja": "ブラックパンサー", "year": 2018, "gross": 1349926083, "rerelease": false,
+   "verify": "提供データ", "note": "金額・順位は運営者提供のデータ（Box Office Mojo）。当サイトで最終確認中。"},
+  {"world_rank": 25, "slug": "deadpool-and-wolverine", "title_en": "Deadpool & Wolverine", "title_ja": "デッドプール＆ウルヴァリン", "year": 2024, "gross": 1338073645, "rerelease": false,
+   "verify": "提供データ", "note": "金額・順位は運営者提供のデータ（Box Office Mojo）。当サイトで最終確認中。"}
+ ]
+}

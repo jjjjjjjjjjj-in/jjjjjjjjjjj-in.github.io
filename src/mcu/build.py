@@ -114,6 +114,23 @@ COMMON_PICKS = [
 ]
 
 
+def _timeline_works():
+    p = os.path.join(os.path.dirname(SRC), "marvel_data", "timeline.json")
+    with open(p, encoding="utf-8") as f:
+        return {w for it in json.load(f)["items"] for w in it["works"]}
+
+
+TIMELINE_WORKS = _timeline_works()
+
+
+def timeline_link(slug, lang, top):
+    """MCU完全年表（/marvel/timeline/、日本語だけ）でこの作品の出来事を見るリンク"""
+    if lang != "ja" or slug not in TIMELINE_WORKS:
+        return ""
+    return (f'\n  <p style="margin:12px 0 0"><a class="btn" href="{top}marvel/timeline/?work={slug}">'
+            f'MCU完全年表でこの作品の時代を見る ›</a></p>')
+
+
 def common_panel(lang):
     """どの作品ガイドにも出す、マーベル全体のおすすめ商品（PR）"""
     t = TEXT[lang]
@@ -284,7 +301,7 @@ def build_page(slug, lang):
 </section>
 
 <section class="fg-sec" id="next"><h2>{e(t['s_next'])}</h2>
-  <ul class="fg-next">{nexts}</ul>
+  <ul class="fg-next">{nexts}</ul>{timeline_link(slug, lang, top)}
 </section>
 
 {common_panel(lang)}

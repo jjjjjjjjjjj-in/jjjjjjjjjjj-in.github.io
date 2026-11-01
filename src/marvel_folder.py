@@ -111,6 +111,13 @@ a { color: inherit; }
 .mcard .name { display: block; margin-top: 8px; font-size: 16px; line-height: 1.45; }
 .soon { grid-column: 1 / -1; padding: 16px; border: 2px dashed var(--line); border-radius: 8px; color: var(--muted); font-weight: 700; text-align: center; }
 .mnone { text-align: center; color: var(--muted); }
+.mfeats { margin: 34px 0 0; }
+.mfeats h2 { font-size: 15px; font-weight: 700; color: var(--muted); margin: 0 0 12px; letter-spacing: .04em; }
+.mfeats ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+@media (min-width: 720px) { .mfeats ul { grid-template-columns: repeat(3, 1fr); } }
+.mfeat { display: block; height: 100%; text-decoration: none; color: #fff; background: #111; border-left: 6px solid #e23636; border-radius: 8px; padding: 12px 14px; }
+.mfeat b { display: block; font-size: 17px; color: #f2c02e; }
+.mfeat span { font-size: 13px; color: #ddd; }
 .mshop { margin: 36px 0 0; padding: 18px 16px; background: #fff; border-radius: 10px; box-shadow: 0 1px 4px rgba(0,0,0,.08); }
 .mshop h2 { margin: 0 0 12px; font-size: 18px; }
 .mpr { display: inline-block; margin-left: 6px; padding: 1px 6px; border: 1px solid var(--muted); border-radius: 4px; font-size: 11px; color: var(--muted); vertical-align: middle; }
@@ -210,6 +217,12 @@ def build(f, sites_in_group, head_extra, base_url, site_name, analytics):
         sites = sites_in_group(k)
         body = "".join(site_card(s, lang, prefix) for s in sites) if sites else f'<li class="soon">{e(t["soon"])}</li>'
         groups += f'<section class="mgroup" id="{k}"><h2>{e(title)}</h2><p class="gdesc">{e(desc)}</p><ul class="mgrid">{body}</ul></section>\n'
+    # 特集ページ（年表・興行収入・再上映。日本語だけ）
+    feat_menu, feats = "", ""
+    if lang == "ja":
+        import marvel_pages
+        feat_menu = "".join(f'  <li><a href="{prefix}{p}">{e(n)}</a></li>\n' for p, n, _ in marvel_pages.PAGES)
+        feats = marvel_pages.feature_html(prefix)
     page_title = f'{f["name"]} | {site_name}' if lang == "en" else f'{f["name"]}｜{site_name}'
     return f"""<!doctype html>
 <html lang="{lang}">
@@ -232,7 +245,7 @@ def build(f, sites_in_group, head_extra, base_url, site_name, analytics):
 </header>
 <nav class="mmenu" id="mmenu" hidden><ul>
   <li><a href="./">{e(t["home"])}</a></li>
-  <li><a href="{t["doomsday_href"]}">{e(t["doomsday_link"])}</a></li>
+{feat_menu}  <li><a href="{t["doomsday_href"]}">{e(t["doomsday_link"])}</a></li>
   <li><a href="{t["other_href"]}" hreflang="{"ja" if lang == "en" else "en"}">{e(t["other"])}</a></li>
 </ul></nav>
 <div class="msearch" id="msearch" hidden><input type="search" placeholder="{e(t["search_ph"])}" aria-label="{e(t["search_ph"])}"></div>
@@ -241,7 +254,7 @@ def build(f, sites_in_group, head_extra, base_url, site_name, analytics):
   <p class="mdesc">{e(f["desc"])}</p>
   <div class="mtabs" role="tablist">{tabs}</div>
   <p class="mnone" id="mnone" hidden>{e(t["none"])}</p>
-{groups}{shop_html(lang)}</main>
+{groups}{feats}{shop_html(lang)}</main>
 <footer class="mfoot">{e(t["note"])} <a href="{prefix}privacy.html{"#en" if lang == "en" else ""}">{e(t["policy"])}</a></footer>
 {SCRIPT}
 </body>

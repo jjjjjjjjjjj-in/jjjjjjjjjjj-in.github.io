@@ -1,0 +1,2076 @@
+{
+ "updated": "2026-11-02",
+ "source": "運営者提供の年表（2026-11-02）をもとに作成。作品の時期はマーベル・スタジオ公式の年表の本を参考に、運営者が整理したもの。",
+ "eras": [
+  "太古",
+  "先史時代",
+  "西暦",
+  "1900年代",
+  "2000年代以降"
+ ],
+ "items": [
+  {
+   "id": "e001",
+   "era": "太古",
+   "when": "",
+   "text": "セレスティアル誕生",
+   "works": [
+    "guardians-vol2"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "info",
+   "note": "宇宙の始まりにかかわる出来事で、作中で語られる伝説です。",
+   "original": "セレスティアル誕生(リミックス)"
+  },
+  {
+   "id": "e002",
+   "era": "太古",
+   "when": "",
+   "text": "インフィニティストーン誕生",
+   "works": [
+    "guardians-of-the-galaxy"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "インフィニティストーン誕生"
+  },
+  {
+   "id": "e003",
+   "era": "太古",
+   "when": "",
+   "text": "デヴィアンツ誕生",
+   "works": [
+    "eternals"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "デヴィアンツ誕生(エターナルズ)"
+  },
+  {
+   "id": "e004",
+   "era": "太古",
+   "when": "",
+   "text": "エターナルズ誕生",
+   "works": [
+    "eternals"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "エターナルズ誕生(エターナルズ)"
+  },
+  {
+   "id": "e005",
+   "era": "太古",
+   "when": "",
+   "text": "悪魔がワンダゴア山に神殿を造る",
+   "works": [
+    "multiverse-of-madness"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "悪魔がワンダゴア山に神殿を造る(MOM)"
+  },
+  {
+   "id": "e006",
+   "era": "太古",
+   "when": "",
+   "text": "エゴが種を蒔き始める",
+   "works": [
+    "guardians-vol2"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "エゴが種を蒔き始める(リミックス)"
+  },
+  {
+   "id": "e007",
+   "era": "先史時代",
+   "when": "紀元前5000年",
+   "text": "エターナルズが地球に到来",
+   "works": [
+    "eternals"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "紀元前5000年:エターナルズが地球に到来(エターナルズ)"
+  },
+  {
+   "id": "e008",
+   "era": "先史時代",
+   "when": "",
+   "text": "ワカンダ誕生",
+   "works": [
+    "black-panther"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "ワカンダ誕生(ブラックパンサー)"
+  },
+  {
+   "id": "e009",
+   "era": "先史時代",
+   "when": "",
+   "text": "アガモットがタイムストーンを管理",
+   "works": [
+    "doctor-strange"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "アガモットがタイムストーンを管理(ドクスト)"
+  },
+  {
+   "id": "e010",
+   "era": "先史時代",
+   "when": "紀元前2988年",
+   "text": "ダークエルフ反乱",
+   "works": [
+    "thor-dark-world"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "紀元前2988年:ダークエルフ反乱(ダークワールド)"
+  },
+  {
+   "id": "e011",
+   "era": "先史時代",
+   "when": "",
+   "text": "ターローに闇の門",
+   "works": [
+    "shang-chi"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "ターローに闇の門(シャンチー)"
+  },
+  {
+   "id": "e012",
+   "era": "先史時代",
+   "when": "",
+   "text": "ムジョルニア誕生、オーディンが9つの世界を征服",
+   "works": [
+    "thor"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "ムジョルニア誕生、オーディンが9つの世界を征服(ソー)"
+  },
+  {
+   "id": "e013",
+   "era": "先史時代",
+   "when": "",
+   "text": "ダークホールド誕生",
+   "works": [
+    "multiverse-of-madness"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "ダークホールド誕生(MOM)"
+  },
+  {
+   "id": "e014",
+   "era": "先史時代",
+   "when": "紀元前575年",
+   "text": "バビロンの戦い",
+   "works": [
+    "eternals"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "紀元前575年:バビロンの戦い(エターナルズ)"
+  },
+  {
+   "id": "e015",
+   "era": "西暦",
+   "when": "",
+   "text": "ヴァルキリー部隊が壊滅、ヘラ幽閉",
+   "works": [
+    "thor-ragnarok"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "ヴァルキリー部隊が壊滅、ヘラ幽閉(バトルロイヤル)"
+  },
+  {
+   "id": "e016",
+   "era": "西暦",
+   "when": "400年",
+   "text": "イカリスとセルシ結婚",
+   "works": [
+    "eternals"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "400年:イカリスとセルシ結婚(エターナルズ)"
+  },
+  {
+   "id": "e017",
+   "era": "西暦",
+   "when": "",
+   "text": "エンシェントワンが至高の魔術師に",
+   "works": [
+    "doctor-strange"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "エンシェントワンが至高の魔術師に(ドクスト)"
+  },
+  {
+   "id": "e018",
+   "era": "西暦",
+   "when": "965年",
+   "text": "トンスベルグの戦い",
+   "works": [
+    "thor"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "965年:トンスベルグの戦い(ソー)"
+  },
+  {
+   "id": "e019",
+   "era": "西暦",
+   "when": "1000年ごろ",
+   "text": "クリーとザンダーの戦争",
+   "works": [
+    "guardians-of-the-galaxy"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1000年ごろ:クリーとザンダーの戦争(ガーディアンズ)"
+  },
+  {
+   "id": "e020",
+   "era": "西暦",
+   "when": "",
+   "text": "ウェンウーがテンリングスを手にする",
+   "works": [
+    "shang-chi"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "ウェンウーがテンリングスを手にする(シャンチー)"
+  },
+  {
+   "id": "e021",
+   "era": "西暦",
+   "when": "",
+   "text": "地球にテッセラクトが隠される",
+   "works": [
+    "captain-america-first-avenger"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "地球にテッセラクトが隠される(FA)"
+  },
+  {
+   "id": "e022",
+   "era": "西暦",
+   "when": "1521年",
+   "text": "ディヴィアンツの全滅",
+   "works": [
+    "eternals"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1521年:ディヴィアンツの全滅(エターナルズ)"
+  },
+  {
+   "id": "e023",
+   "era": "西暦",
+   "when": "1571年",
+   "text": "ネイモア誕生",
+   "works": [
+    "wakanda-forever"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1571年:ネイモア誕生(WF)"
+  },
+  {
+   "id": "e024",
+   "era": "西暦",
+   "when": "1693年",
+   "text": "魔女裁判",
+   "works": [
+    "wandavision"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1693年:魔女裁判(ワンダヴィジョン)"
+  },
+  {
+   "id": "e025",
+   "era": "1900年代",
+   "when": "1930年代",
+   "text": "キンゴがボリウッドスターに",
+   "works": [
+    "eternals"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1930年代:キンゴがボリウッドスターに(エターナルズ)"
+  },
+  {
+   "id": "e026",
+   "era": "1900年代",
+   "when": "1942年3月",
+   "text": "レッドスカルがテッセラクトを手にする",
+   "works": [
+    "captain-america-first-avenger"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1942年3月:レッドスカルがテッセラクトを手にする(FA)"
+  },
+  {
+   "id": "e027",
+   "era": "1900年代",
+   "when": "1942年",
+   "text": "バングルの発見",
+   "works": [
+    "ms-marvel"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1942年:バングルの発見(ミズマーベル)"
+  },
+  {
+   "id": "e028",
+   "era": "1900年代",
+   "when": "1943年6月14日",
+   "text": "スタークエキスポ",
+   "works": [
+    "captain-america-first-avenger"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1943年6月14日:スタークエキスポ(FA)"
+  },
+  {
+   "id": "e029",
+   "era": "1900年代",
+   "when": "1943年6月22日",
+   "text": "スティーブが血清を打つ",
+   "works": [
+    "captain-america-first-avenger"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1943年6月22日:スティーブが血清を打つ(FA)"
+  },
+  {
+   "id": "e030",
+   "era": "1900年代",
+   "when": "1943年11月3〜10日",
+   "text": "スティーブが107連隊を救出",
+   "works": [
+    "captain-america-first-avenger"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1943年11月3〜10日:スティーブが107連隊を救出(FA)"
+  },
+  {
+   "id": "e031",
+   "era": "1900年代",
+   "when": "1945年5月",
+   "text": "スティーブ行方不明",
+   "works": [
+    "captain-america-first-avenger"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1945年5月:スティーブ行方不明(FA)"
+  },
+  {
+   "id": "e032",
+   "era": "1900年代",
+   "when": "1945年8月",
+   "text": "ファストスが広島に",
+   "works": [
+    "eternals"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1945年8月:ファストスが広島に(エターナルズ)"
+  },
+  {
+   "id": "e033",
+   "era": "1900年代",
+   "when": "1946年",
+   "text": "ペギーがシールドに",
+   "works": [],
+   "labels": [
+    "エージェント・カーター（ドラマ）"
+   ],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1946年:ペギーがシールドに(エージェントカーター)"
+  },
+  {
+   "id": "e034",
+   "era": "1900年代",
+   "when": "1947年",
+   "text": "カマラがタイムスリップ",
+   "works": [
+    "ms-marvel"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1947年:カマラがタイムスリップ(ミズマーベル)"
+  },
+  {
+   "id": "e035",
+   "era": "1900年代",
+   "when": "1940年代後半〜1950年代前半",
+   "text": "イザイアが超人に",
+   "works": [
+    "falcon-and-winter-soldier"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1940年代後半〜1950年代前半:イザイアが超人に(F&W)"
+  },
+  {
+   "id": "e036",
+   "era": "1900年代",
+   "when": "1951年",
+   "text": "イザイアとウィンターソルジャーが戦闘",
+   "works": [
+    "falcon-and-winter-soldier"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1951年:イザイアとウィンターソルジャーが戦闘(F&W)"
+  },
+  {
+   "id": "e037",
+   "era": "1900年代",
+   "when": "1950年代初頭",
+   "text": "イザイア投獄",
+   "works": [
+    "falcon-and-winter-soldier"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1950年代初頭:イザイア投獄(F &W)"
+  },
+  {
+   "id": "e038",
+   "era": "1900年代",
+   "when": "1963年",
+   "text": "アントンヴァンコがアメリカに亡命",
+   "works": [
+    "iron-man-2"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1963年:アントンヴァンコがアメリカに亡命(アイアンマン2)"
+  },
+  {
+   "id": "e039",
+   "era": "1900年代",
+   "when": "1971年11月24日",
+   "text": "ロキが飛行機をジャック",
+   "works": [
+    "loki-s1"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "info",
+   "note": "ドラマ『ロキ』の中で語られる、別の時間の流れの出来事です（Earth-616本編の出来事とは区別してください）。",
+   "original": "1971年11月24日:ロキが飛行機をジャック(ロキ)"
+  },
+  {
+   "id": "e040",
+   "era": "1900年代",
+   "when": "1972年",
+   "text": "ゾラ死亡",
+   "works": [
+    "winter-soldier"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1972年:ゾラ死亡(WS)"
+  },
+  {
+   "id": "e041",
+   "era": "1900年代",
+   "when": "1973年9月15日",
+   "text": "ハワードがエキスポの模型に新元素の構造を隠す",
+   "works": [
+    "iron-man-2"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "fixed",
+   "note": "日付の区切りを整えました。作品名がなかったので『アイアンマン2』（父の映像の場面）にあてました。",
+   "original": "1973年:9月15日:ハワードがエキスポに新元素の構図を隠す"
+  },
+  {
+   "id": "e042",
+   "era": "1900年代",
+   "when": "1970年代半ば",
+   "text": "カルーンがキンゴの付き人に",
+   "works": [
+    "eternals"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1970年代半ば:カルーンがキンゴの付き人に(エターナルズ)"
+  },
+  {
+   "id": "e043",
+   "era": "1900年代",
+   "when": "1980年",
+   "text": "エゴが地球に到来",
+   "works": [
+    "guardians-vol2"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1980年:エゴが地球に到来(リミックス)"
+  },
+  {
+   "id": "e044",
+   "era": "1900年代",
+   "when": "1980年代初頭",
+   "text": "イザイア解放",
+   "works": [
+    "falcon-and-winter-soldier"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1980年代初頭:イザイア解放(F&W)"
+  },
+  {
+   "id": "e045",
+   "era": "1900年代",
+   "when": "1985年〜1986年",
+   "text": "トレバーがドラマに出演",
+   "works": [
+    "iron-man-3"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1985年〜1986年:トレバーがドラマに出演(アイアンマン3)"
+  },
+  {
+   "id": "e046",
+   "era": "1900年代",
+   "when": "1987年",
+   "text": "ジャネット失踪",
+   "works": [
+    "ant-man"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1987年:ジャネット失踪(アントマン)"
+  },
+  {
+   "id": "e047",
+   "era": "1900年代",
+   "when": "1988年",
+   "text": "ピータークイル失踪",
+   "works": [
+    "guardians-of-the-galaxy"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1988年:ピータークイル失踪"
+  },
+  {
+   "id": "e048",
+   "era": "1900年代",
+   "when": "1980年代後半",
+   "text": "エイヴァが事故に遭う",
+   "works": [
+    "ant-man-and-the-wasp"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1980年代後半:エイヴァが事故に遭う(A&W)"
+  },
+  {
+   "id": "e049",
+   "era": "1900年代",
+   "when": "1980年代後半",
+   "text": "マーベルがプロジェクトペガサスに参加",
+   "works": [
+    "captain-marvel"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1980年代後半:マーベルがプロジェクトペガサスに参加(キャプテンマーベル)"
+  },
+  {
+   "id": "e050",
+   "era": "1900年代",
+   "when": "1989年",
+   "text": "ハンクピムがシールドを辞任",
+   "works": [
+    "ant-man"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1989年:ハンクピムがシールドを辞任(アントマン)"
+  },
+  {
+   "id": "e051",
+   "era": "1900年代",
+   "when": "1989年",
+   "text": "キャプテンマーベル事故",
+   "works": [
+    "captain-marvel"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1989年:キャプテンマーベル事故(キャプテンマーベル)"
+  },
+  {
+   "id": "e052",
+   "era": "1900年代",
+   "when": "1991年12月16日",
+   "text": "ハワードとマリア殺害",
+   "works": [
+    "civil-war"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1991年12月16日:ハワードとマリア殺害(シビルウォー)"
+  },
+  {
+   "id": "e053",
+   "era": "1900年代",
+   "when": "1992年",
+   "text": "トニーが会社を継ぐ",
+   "works": [
+    "iron-man"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1992年:トニーが会社を継ぐ(アイアンマン)"
+  },
+  {
+   "id": "e054",
+   "era": "1900年代",
+   "when": "1992年",
+   "text": "ンジョブが殺害され、キルモンガーが孤児に",
+   "works": [
+    "black-panther"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "fixed",
+   "note": "人名の表記を「ンジョブ」に統一しました。",
+   "original": "1992年:ウンジョブ殺害、キルモンガーが孤児に(ブラックパンサー)"
+  },
+  {
+   "id": "e055",
+   "era": "1900年代",
+   "when": "1995年夏",
+   "text": "キャプテンマーベル本編",
+   "works": [
+    "captain-marvel"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "1995年夏:キャプテンマーベル本編"
+  },
+  {
+   "id": "e056",
+   "era": "1900年代",
+   "when": "1996年",
+   "text": "ウェンウーがターローに辿り着く",
+   "works": [
+    "shang-chi"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1996年:ウェンウーがターローに辿り着く(シャンチー)"
+  },
+  {
+   "id": "e057",
+   "era": "1900年代",
+   "when": "1990年代後半",
+   "text": "サノスがガモーラを引き取る",
+   "works": [
+    "infinity-war"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1990年代後半:サノスがガモーラを引き取る"
+  },
+  {
+   "id": "e058",
+   "era": "1900年代",
+   "when": "1996年",
+   "text": "ランドールが事故死",
+   "works": [
+    "moon-knight"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "check",
+   "note": "前後の行と年の順番が入れかわっています（1990年代後半の出来事の後に1996年）。確認中です。",
+   "original": "1996年:ランドールが事故死(ムーンナイト)"
+  },
+  {
+   "id": "e059",
+   "era": "1900年代",
+   "when": "1999年春",
+   "text": "マークが解離性同一性障害を発症",
+   "works": [
+    "moon-knight"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1999年春:マークが解離性同一性障害を発症(ムーンナイト)"
+  },
+  {
+   "id": "e060",
+   "era": "1900年代",
+   "when": "1999年",
+   "text": "ワンダとピエトロが瓦礫の下敷きに",
+   "works": [
+    "age-of-ultron"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1999年:ワンダとピエトロが瓦礫の下敷きに(AOU)"
+  },
+  {
+   "id": "e061",
+   "era": "1900年代",
+   "when": "1999年12月31日",
+   "text": "キリアンが屋上に取り残される",
+   "works": [
+    "iron-man-3"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "1999年12月31日:キリアンが屋上に取り残される(アイアンマン3)"
+  },
+  {
+   "id": "e062",
+   "era": "2000年代以降",
+   "when": "2000年代半ば",
+   "text": "ハルク誕生",
+   "works": [
+    "incredible-hulk"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2000年代半ば:ハルク誕生(インクレハルク)"
+  },
+  {
+   "id": "e063",
+   "era": "2000年代以降",
+   "when": "2007年",
+   "text": "インリー死亡",
+   "works": [
+    "shang-chi"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "check",
+   "note": "作中の描写（シャン・チーが7歳のころ）から計算すると年がずれる可能性があります。確認中です。",
+   "original": "2007年:インリー死亡(シャンチー)"
+  },
+  {
+   "id": "e064",
+   "era": "2000年代以降",
+   "when": "2000年代",
+   "text": "ブダペストの戦い",
+   "works": [
+    "black-widow"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "check",
+   "note": "時期がはっきりしないため、確認中です。",
+   "original": "2000年代:ブダペストの戦い(ブラックウィドウ)"
+  },
+  {
+   "id": "e065",
+   "era": "2000年代以降",
+   "when": "2008年春",
+   "text": "アイアンマン本編",
+   "works": [
+    "iron-man"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2008年春:アイアンマン本編"
+  },
+  {
+   "id": "e066",
+   "era": "2000年代以降",
+   "when": "2008年〜2010年",
+   "text": "イワンヴァンコがスーツを作る",
+   "works": [
+    "iron-man-2"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2008年〜2010年:イワンヴァンコがスーツを作る(アイアンマン2)"
+  },
+  {
+   "id": "e067",
+   "era": "2000年代以降",
+   "when": "2009年6月",
+   "text": "エクストリミスの実験で死者が出る",
+   "works": [
+    "iron-man-3"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2009年6月:エクストリミスの実験で死者が出る(アイアンマン3)"
+  },
+  {
+   "id": "e068",
+   "era": "2000年代以降",
+   "when": "2010年春",
+   "text": "バナーの血液が飲み物に混入",
+   "works": [
+    "incredible-hulk"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2010年春:バナーの血液が飲み物に混入(インクレハルク)"
+  },
+  {
+   "id": "e069",
+   "era": "2000年代以降",
+   "when": "2010年春",
+   "text": "スタークエキスポ開幕",
+   "works": [
+    "iron-man-2"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2010年春:スタークエキスポ開幕(アイアンマン2)"
+  },
+  {
+   "id": "e070",
+   "era": "2000年代以降",
+   "when": "2010年5月5日",
+   "text": "アイアンマンがモナコでウィップラッシュと戦闘",
+   "works": [
+    "iron-man-2"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2010年5月5日:アイアンマンがモナコでウィップラッシュと戦闘(アイアンマン2)"
+  },
+  {
+   "id": "e071",
+   "era": "2000年代以降",
+   "when": "2010年春",
+   "text": "ハルク討伐にブロンスキーが派遣",
+   "works": [
+    "incredible-hulk"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2010年春:ハルク討伐にブロンスキーが派遣(インクレハルク)"
+  },
+  {
+   "id": "e072",
+   "era": "2000年代以降",
+   "when": "2010年春",
+   "text": "ハマーがイワンを雇う",
+   "works": [
+    "iron-man-2"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2010年春:ハマーがイワンを雇う(アイアンマン2)"
+  },
+  {
+   "id": "e073",
+   "era": "2000年代以降",
+   "when": "2010年春",
+   "text": "ソーの戴冠式が中止",
+   "works": [
+    "thor"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2010年春:ソーの戴冠式が中止(ソー)"
+  },
+  {
+   "id": "e074",
+   "era": "2000年代以降",
+   "when": "2010年春",
+   "text": "ローディがマーク2を没収",
+   "works": [
+    "iron-man-2"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2010年春:ローディがマーク2を没収(アイアンマン2)"
+  },
+  {
+   "id": "e075",
+   "era": "2000年代以降",
+   "when": "2010年春",
+   "text": "ヨトゥンヘイムにソー達が侵攻",
+   "works": [
+    "thor"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2010年春:ヨトゥンヘイムにソー達が侵攻(ソー)"
+  },
+  {
+   "id": "e076",
+   "era": "2000年代以降",
+   "when": "2010年春",
+   "text": "ソーが地球に落とされジェーン達と出会う",
+   "works": [
+    "thor"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2010年春:ソーが地球に落とされジェーン達と出会う(ソー)"
+  },
+  {
+   "id": "e077",
+   "era": "2000年代以降",
+   "when": "2010年春",
+   "text": "トニーが新元素を発見",
+   "works": [
+    "iron-man-2"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2010年春:トニーが新元素を発見(アイアンマン2)"
+  },
+  {
+   "id": "e078",
+   "era": "2000年代以降",
+   "when": "2010年春",
+   "text": "アイアンマン＆ウォーマシンVSウィップラッシュ",
+   "works": [
+    "iron-man-2"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2010年春:アイアンマン＆ウォーマシンVSウィップラッシュ(アイアンマン2)"
+  },
+  {
+   "id": "e079",
+   "era": "2000年代以降",
+   "when": "2010年春",
+   "text": "ソーがムジョルニアを持つに値する",
+   "works": [
+    "thor"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2010年春:ソーがムジョルニアを持つに値する(ソー)"
+  },
+  {
+   "id": "e080",
+   "era": "2000年代以降",
+   "when": "2010年春",
+   "text": "ロキ行方不明",
+   "works": [
+    "thor"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2010年春:ロキ行方不明(ソー)"
+  },
+  {
+   "id": "e081",
+   "era": "2000年代以降",
+   "when": "2010年春",
+   "text": "カルバー大学でハルクVSブロンスキー",
+   "works": [
+    "incredible-hulk"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2010年春:カルバー大学でハルクVSブロンスキー(インクレハルク)"
+  },
+  {
+   "id": "e082",
+   "era": "2000年代以降",
+   "when": "2010年春",
+   "text": "ハーレムでハルクVSアボミネーション",
+   "works": [
+    "incredible-hulk"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2010年春:ハーレムでハルクVSアボミネーション(インクレハルク)"
+  },
+  {
+   "id": "e083",
+   "era": "2000年代以降",
+   "when": "2010年春",
+   "text": "ソーがジェーン達の様子をヘイムダルに聞く",
+   "works": [
+    "thor"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2010年春:ソーがジェーン達の様子をヘイムダルに聞く(ソー)"
+  },
+  {
+   "id": "e084",
+   "era": "2000年代以降",
+   "when": "2010年夏",
+   "text": "バナーがインドに辿り着く",
+   "works": [
+    "avengers"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2010年夏:バナーがインドに辿り着く(アベンジャーズ)"
+  },
+  {
+   "id": "e085",
+   "era": "2000年代以降",
+   "when": "2011年",
+   "text": "キャプテンアメリカ発見",
+   "works": [
+    "captain-america-first-avenger"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2011年:キャプテンアメリカ発見(FA)"
+  },
+  {
+   "id": "e086",
+   "era": "2000年代以降",
+   "when": "2012年春",
+   "text": "アベンジャーズ本編",
+   "works": [
+    "avengers"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2012年春:アベンジャーズ本編"
+  },
+  {
+   "id": "e087",
+   "era": "2000年代以降",
+   "when": "2012年春",
+   "text": "ケイトがホークアイの活躍を見る",
+   "works": [
+    "hawkeye"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2012年春:ケイトがホークアイの活躍を見る(ホークアイ)"
+  },
+  {
+   "id": "e088",
+   "era": "2000年代以降",
+   "when": "2012年春",
+   "text": "トゥームスが解雇",
+   "works": [
+    "spider-man-homecoming"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2012年春:トゥームスが解雇(HC)"
+  },
+  {
+   "id": "e089",
+   "era": "2000年代以降",
+   "when": "2013年秋",
+   "text": "ダークワールド本編",
+   "works": [
+    "thor-dark-world"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2013年秋:ダークワールド本編"
+  },
+  {
+   "id": "e090",
+   "era": "2000年代以降",
+   "when": "2013年冬",
+   "text": "トレバーがマンダリンとして活動",
+   "works": [
+    "iron-man-3"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2013年冬:トレバーがマンダリンとして活動(アイアンマン3)"
+  },
+  {
+   "id": "e091",
+   "era": "2000年代以降",
+   "when": "2013年12月23〜25日",
+   "text": "アイアンマン3本編",
+   "works": [
+    "iron-man-3"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2013年12月23〜25日:アイアンマン3本編"
+  },
+  {
+   "id": "e092",
+   "era": "2000年代以降",
+   "when": "2014年",
+   "text": "トニーがリアクターを取り外す",
+   "works": [
+    "iron-man-3"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2014年:トニーがリアクターを取り外す(アイアンマン3)"
+  },
+  {
+   "id": "e093",
+   "era": "2000年代以降",
+   "when": "2014年初頭",
+   "text": "トレバーがテンリングスに拉致",
+   "works": [],
+   "labels": [
+    "ワンショット『俺は王だ』（短編）"
+   ],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2014年初頭:トレバーがテンリングスに拉致(俺は王だ)"
+  },
+  {
+   "id": "e094",
+   "era": "2000年代以降",
+   "when": "2014年",
+   "text": "シャンチーが暗殺任務をこなす",
+   "works": [
+    "shang-chi"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2014年:シャンチーが暗殺任務をこなす(シャンチー)"
+  },
+  {
+   "id": "e095",
+   "era": "2000年代以降",
+   "when": "2014年春",
+   "text": "ウィンターソルジャー本編",
+   "works": [
+    "winter-soldier"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2014年春:ウィンターソルジャー本編"
+  },
+  {
+   "id": "e096",
+   "era": "2000年代以降",
+   "when": "2014年春",
+   "text": "ストラッカーがワンダとピエトロに人体実験を行う",
+   "works": [
+    "winter-soldier",
+    "age-of-ultron"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2014年春:ストラッカーがワンダとピエトロに人体実験を行う"
+  },
+  {
+   "id": "e097",
+   "era": "2000年代以降",
+   "when": "2014年夏",
+   "text": "ガーディアンズ本編",
+   "works": [
+    "guardians-of-the-galaxy"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2014年夏:ガーディアンズ本編"
+  },
+  {
+   "id": "e098",
+   "era": "2000年代以降",
+   "when": "2014年夏",
+   "text": "アイアムグルート S1EP1",
+   "works": [
+    "i-am-groot-1"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2014年夏:アイアムグルート S1EP1"
+  },
+  {
+   "id": "e099",
+   "era": "2000年代以降",
+   "when": "2014年秋",
+   "text": "リミックス本編",
+   "works": [
+    "guardians-vol2"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2014年秋:リミックス本編"
+  },
+  {
+   "id": "e100",
+   "era": "2000年代以降",
+   "when": "2014年秋",
+   "text": "アイアムグルートその他のEP",
+   "works": [
+    "i-am-groot-1",
+    "i-am-groot-2"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2014年秋:アイアムグルートその他のEP"
+  },
+  {
+   "id": "e101",
+   "era": "2000年代以降",
+   "when": "2015年春",
+   "text": "AOU本編",
+   "works": [
+    "age-of-ultron"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2015年春:AOU本編"
+  },
+  {
+   "id": "e102",
+   "era": "2000年代以降",
+   "when": "2015年夏",
+   "text": "アントマン本編",
+   "works": [
+    "ant-man"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2015年夏:アントマン本編"
+  },
+  {
+   "id": "e103",
+   "era": "2000年代以降",
+   "when": "2015年冬",
+   "text": "ピーターが蜘蛛に噛まれる",
+   "works": [
+    "civil-war"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2015年冬:ピーターが蜘蛛に噛まれる(シビルウォー)"
+  },
+  {
+   "id": "e104",
+   "era": "2000年代以降",
+   "when": "2016年2月2日",
+   "text": "ストレンジ事故",
+   "works": [
+    "doctor-strange"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2016年2月2日:ストレンジ事故(ドクスト)"
+  },
+  {
+   "id": "e105",
+   "era": "2000年代以降",
+   "when": "2016年春",
+   "text": "シビルウォー本編",
+   "works": [
+    "civil-war"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2016年春:シビルウォー本編"
+  },
+  {
+   "id": "e106",
+   "era": "2000年代以降",
+   "when": "2016年春〜夏",
+   "text": "ブラックウィドウ本編",
+   "works": [
+    "black-widow"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2016年春〜夏:ブラックウィドウ本編"
+  },
+  {
+   "id": "e107",
+   "era": "2000年代以降",
+   "when": "2016年夏",
+   "text": "ブラックパンサー本編",
+   "works": [
+    "black-panther"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2016年夏:ブラックパンサー本編"
+  },
+  {
+   "id": "e108",
+   "era": "2000年代以降",
+   "when": "2016年夏",
+   "text": "ラフト襲撃",
+   "works": [
+    "civil-war"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2016年夏:ラフト襲撃(シビルウォー)"
+  },
+  {
+   "id": "e109",
+   "era": "2000年代以降",
+   "when": "2016年秋",
+   "text": "HC本編",
+   "works": [
+    "spider-man-homecoming"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2016年秋:HC本編"
+  },
+  {
+   "id": "e110",
+   "era": "2000年代以降",
+   "when": "2016年秋",
+   "text": "ストレンジがカマー・タージに辿り着く",
+   "works": [
+    "doctor-strange"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "fixed",
+   "note": "「2026年」は「2016年」の書き間違いと考えられるため直しました（前後の出来事が2016〜2017年）。",
+   "original": "2026年秋:ストレンジがカマータージに辿り着く(ドクスト)"
+  },
+  {
+   "id": "e111",
+   "era": "2000年代以降",
+   "when": "2017年",
+   "text": "ストレンジ修行",
+   "works": [
+    "doctor-strange"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2017年:ストレンジ修行(ドクスト)"
+  },
+  {
+   "id": "e112",
+   "era": "2000年代以降",
+   "when": "2017年",
+   "text": "ストレンジVSドルマムゥ",
+   "works": [
+    "doctor-strange"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2017年:ストレンジVSドルマムゥ(ドクスト)"
+  },
+  {
+   "id": "e113",
+   "era": "2000年代以降",
+   "when": "2017年秋",
+   "text": "バトルロイヤル本編",
+   "works": [
+    "thor-ragnarok"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2017年秋:バトルロイヤル本編"
+  },
+  {
+   "id": "e114",
+   "era": "2000年代以降",
+   "when": "2018年春",
+   "text": "A＆W本編",
+   "works": [
+    "ant-man-and-the-wasp"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2018年春:A＆W本編"
+  },
+  {
+   "id": "e115",
+   "era": "2000年代以降",
+   "when": "2018年",
+   "text": "バッキーが洗脳から解放",
+   "works": [
+    "black-panther"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "check",
+   "note": "『ブラックパンサー』のおまけ映像の出来事です。時期は確認中です。",
+   "original": "2018年:バッキーが洗脳から解放(ブラックパンサー)"
+  },
+  {
+   "id": "e116",
+   "era": "2000年代以降",
+   "when": "2018年春",
+   "text": "サノスがザンダーを攻撃",
+   "works": [
+    "infinity-war"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2018年春:サノスがザンダーを攻撃(インフィニティウォー)"
+  },
+  {
+   "id": "e117",
+   "era": "2000年代以降",
+   "when": "2018年春",
+   "text": "インフィニティウォー本編",
+   "works": [
+    "infinity-war"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2018年春:インフィニティウォー本編"
+  },
+  {
+   "id": "e118",
+   "era": "2000年代以降",
+   "when": "2018年春",
+   "text": "ハンク、ジャネット、ホープ消滅（A&W）、バートン家消滅（エンドゲーム）、エレーナ消滅（ブラックウィドウ）、モニカ消滅",
+   "works": [
+    "wandavision",
+    "ant-man-and-the-wasp",
+    "endgame",
+    "black-widow"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2018年春:ハンク、ジャネット、ホープ消滅(A&W)、バートン家消滅(エンドゲーム)、エレーナ消滅(ブラックウィドウ)、モニカ消滅(ワンダヴィジョン)"
+  },
+  {
+   "id": "e119",
+   "era": "2000年代以降",
+   "when": "2018年春",
+   "text": "惑星ガーデン侵攻",
+   "works": [
+    "endgame"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2018年春:惑星ガーデン侵攻(エンドゲーム)"
+  },
+  {
+   "id": "e120",
+   "era": "2000年代以降",
+   "when": "2018年秋〜2023年",
+   "text": "シャロンがパワーブローカーへ",
+   "works": [
+    "falcon-and-winter-soldier"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2018年秋〜2023年:シャロンがパワーブローカーへ(F＆W)"
+  },
+  {
+   "id": "e121",
+   "era": "2000年代以降",
+   "when": "2018年秋〜2023年",
+   "text": "クリントがローニンへ",
+   "works": [
+    "endgame"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2018年秋〜2023年:クリントがローニンへ(エンドゲーム)"
+  },
+  {
+   "id": "e122",
+   "era": "2000年代以降",
+   "when": "2019年後半",
+   "text": "スマートハルク融合",
+   "works": [
+    "endgame"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2019年後半:スマートハルク融合(エンドゲーム)"
+  },
+  {
+   "id": "e123",
+   "era": "2000年代以降",
+   "when": "2020年",
+   "text": "マリアランボー死亡",
+   "works": [
+    "wandavision"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2020年:マリアランボー死亡(ワンダヴィジョン)"
+  },
+  {
+   "id": "e124",
+   "era": "2000年代以降",
+   "when": "2022年",
+   "text": "マークがコンスと契約",
+   "works": [
+    "moon-knight"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2022年:マークがコンスと契約(ムーンナイト)"
+  },
+  {
+   "id": "e125",
+   "era": "2000年代以降",
+   "when": "2023年秋",
+   "text": "エンドゲーム5年後",
+   "works": [
+    "endgame"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2023年秋:エンドゲーム5年後"
+  },
+  {
+   "id": "e126",
+   "era": "2000年代以降",
+   "when": "2023年秋",
+   "text": "ワンダヴィジョン本編",
+   "works": [
+    "wandavision"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2023年秋:ワンダヴィジョン本編"
+  },
+  {
+   "id": "e127",
+   "era": "2000年代以降",
+   "when": "2024年春",
+   "text": "シャンチー本編",
+   "works": [
+    "shang-chi"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2024年春:シャンチー本編"
+  },
+  {
+   "id": "e128",
+   "era": "2000年代以降",
+   "when": "2024年春",
+   "text": "F＆W EP1〜5",
+   "works": [
+    "falcon-and-winter-soldier"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2024年春:F＆W EP1〜5"
+  },
+  {
+   "id": "e129",
+   "era": "2000年代以降",
+   "when": "2024年春",
+   "text": "ティチャラ死亡",
+   "works": [
+    "wakanda-forever"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2024年春:ティチャラ死亡(WF)"
+  },
+  {
+   "id": "e130",
+   "era": "2000年代以降",
+   "when": "2024年夏",
+   "text": "FFH本編",
+   "works": [
+    "spider-man-far-from-home"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2024年夏:FFH本編"
+  },
+  {
+   "id": "e131",
+   "era": "2000年代以降",
+   "when": "2024年夏",
+   "text": "F＆W EP6",
+   "works": [
+    "falcon-and-winter-soldier"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2024年夏:F＆W EP6"
+  },
+  {
+   "id": "e132",
+   "era": "2000年代以降",
+   "when": "2024年秋",
+   "text": "マットがピーターを弁護",
+   "works": [
+    "spider-man-no-way-home"
+   ],
+   "labels": [],
+   "main": false,
+   "status": "ok",
+   "note": "",
+   "original": "2024年秋:マットがピーターを弁護(NWH)"
+  },
+  {
+   "id": "e133",
+   "era": "2000年代以降",
+   "when": "2024年秋",
+   "text": "シーハルクEP1",
+   "works": [
+    "she-hulk"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2024年秋:シーハルクEP1"
+  },
+  {
+   "id": "e134",
+   "era": "2000年代以降",
+   "when": "2024年秋",
+   "text": "エターナルズ本編",
+   "works": [
+    "eternals"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2024年秋:エターナルズ本編"
+  },
+  {
+   "id": "e135",
+   "era": "2000年代以降",
+   "when": "2024年秋",
+   "text": "NWH本編",
+   "works": [
+    "spider-man-no-way-home"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2024年秋:NWH本編"
+  },
+  {
+   "id": "e136",
+   "era": "2000年代以降",
+   "when": "2024年秋",
+   "text": "MOM本編",
+   "works": [
+    "multiverse-of-madness"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2024年秋:MOM本編"
+  },
+  {
+   "id": "e137",
+   "era": "2000年代以降",
+   "when": "2024年12月",
+   "text": "ホークアイ本編",
+   "works": [
+    "hawkeye"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2024年12月:ホークアイ本編"
+  },
+  {
+   "id": "e138",
+   "era": "2000年代以降",
+   "when": "2025年春",
+   "text": "シーハルクEP2.3",
+   "works": [
+    "she-hulk"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2025年春:シーハルクEP2.3"
+  },
+  {
+   "id": "e139",
+   "era": "2000年代以降",
+   "when": "2025年春",
+   "text": "ムーンナイト本編",
+   "works": [
+    "moon-knight"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2025年春:ムーンナイト本編"
+  },
+  {
+   "id": "e140",
+   "era": "2000年代以降",
+   "when": "2025年春",
+   "text": "WF本編",
+   "works": [
+    "wakanda-forever"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2025年春:WF本編"
+  },
+  {
+   "id": "e141",
+   "era": "2000年代以降",
+   "when": "2025年春",
+   "text": "シーハルクEP4",
+   "works": [
+    "she-hulk"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2025年春:シーハルクEP4"
+  },
+  {
+   "id": "e142",
+   "era": "2000年代以降",
+   "when": "2025年夏",
+   "text": "シーハルクEP5〜8",
+   "works": [
+    "she-hulk"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2025年夏:シーハルクEP5〜8"
+  },
+  {
+   "id": "e143",
+   "era": "2000年代以降",
+   "when": "2025年秋",
+   "text": "シーハルクEP9",
+   "works": [
+    "she-hulk"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2025年秋:シーハルクEP9"
+  },
+  {
+   "id": "e144",
+   "era": "2000年代以降",
+   "when": "2025年秋",
+   "text": "ミズマーベル本編",
+   "works": [
+    "ms-marvel"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2025年秋:ミズマーベル本編"
+  },
+  {
+   "id": "e145",
+   "era": "2000年代以降",
+   "when": "2025年秋",
+   "text": "ソー：ラブ＆サンダー 本編",
+   "works": [
+    "love-and-thunder"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "fixed",
+   "note": "作品名を正式な表記（ラブ＆サンダー）に直しました。",
+   "original": "2025年秋:ラブ＆ザンダー本編"
+  },
+  {
+   "id": "e146",
+   "era": "2000年代以降",
+   "when": "2025年秋",
+   "text": "ウェアウルフバイナイト本編",
+   "works": [
+    "werewolf-by-night"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2025年秋:ウェアウルフバイナイト本編"
+  },
+  {
+   "id": "e147",
+   "era": "2000年代以降",
+   "when": "2025年12月25日",
+   "text": "ホリデースペシャル本編",
+   "works": [
+    "guardians-holiday-special"
+   ],
+   "labels": [],
+   "main": true,
+   "status": "ok",
+   "note": "",
+   "original": "2025年12月25日:ホリデースペシャル本編"
+  }
+ ]
+}
