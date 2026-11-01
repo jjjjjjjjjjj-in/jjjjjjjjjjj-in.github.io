@@ -22,12 +22,12 @@ DOOMSDAY_THEME = dict(main="#1f5c3f", deep="#08140e", accent="#e0b04a", soft="#d
 TEXT = {
     "ja": dict(menu="メニュー", search="作品を探す", search_ph="作品名で探す", all="ALL", home="もっちぃま（サイト一覧）",
                other="English", other_href="en/", none="見つかりませんでした", soon="準備中（これから作ります）",
-               doomsday="ドゥームズデイ予習ガイド", doomsday_sub="視聴順チェックリスト", close="閉じる",
+               doomsday="ドゥームズデイ予習ガイド", doomsday_sub="視聴順チェックリスト", close="閉じる", released="公開年", setin="作中の年代",
                note="個人が運営する非公式のファンサイトです。Marvel Studios、The Walt Disney Company とは関係ありません。各サイトにはアフィリエイト広告（PR）を含むページがあります。",
                policy="プライバシーポリシー"),
     "en": dict(menu="Menu", search="Search titles", search_ph="Search by title", all="ALL", home="Mocchima (all sites)",
                other="日本語", other_href="../", none="No matches", soon="Coming soon",
-               doomsday="Doomsday Watch Guide", doomsday_sub="Story-order checklist", close="Close",
+               doomsday="Doomsday Watch Guide", doomsday_sub="Story-order checklist", close="Close", released="Released", setin="Set in",
                note="An unofficial fan site run by an individual, not affiliated with Marvel Studios or The Walt Disney Company. Some pages contain affiliate links (ads).",
                policy="Privacy policy"),
 }
@@ -73,7 +73,12 @@ a { color: inherit; }
 .poster { position: relative; aspect-ratio: 8 / 3; border-radius: 6px; overflow: hidden; color: #fff; display: grid; align-content: space-between; padding: 8px 10px;
   background: radial-gradient(120% 160% at 80% 0%, var(--p-main) 0%, var(--p-deep) 75%); box-shadow: 0 2px 6px rgba(0,0,0,.18); }
 .poster::before { content: ""; position: absolute; top: -40%; right: -12%; width: 55%; aspect-ratio: 1; border-radius: 50%; border: 6px solid var(--p-accent); opacity: .3; }
-.poster .pyear { position: relative; z-index: 1; font-family: "Anton", sans-serif; font-size: 14px; line-height: 1; letter-spacing: .06em; color: var(--p-accent); }
+/* 公開年と作中の年代（運営者の希望、2026-11-02） */
+.poster .pmeta { position: relative; z-index: 1; display: flex; gap: 14px; align-items: flex-start; }
+.poster .pm { display: grid; gap: 2px; }
+.poster .pm small { font-size: 9px; font-weight: 700; line-height: 1; letter-spacing: .04em; color: rgba(255,255,255,.75); }
+.poster .pyear { font-family: "Anton", sans-serif; font-size: 14px; line-height: 1; letter-spacing: .06em; color: var(--p-accent); }
+.poster .pera { font-weight: 800; font-size: 12px; line-height: 1.1; color: #fff; white-space: nowrap; }
 .poster .pt { position: relative; z-index: 1; font-weight: 900; font-size: clamp(13px, 3.6vw, 17px); line-height: 1.2; text-shadow: 0 1px 4px rgba(0,0,0,.6);
   white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .poster .ps { display: none; }
@@ -140,7 +145,7 @@ def site_card(site, lang, prefix):
     path = site["en_path"] if lang == "en" else site["path"]
     slug = site["path"].strip("/").split("/")[0]
     if slug == "doomsday-guide":
-        th, name, big, sub, year = DOOMSDAY_THEME, t["doomsday"], "DOOMSDAY", t["doomsday_sub"], "2026"
+        th, name, big, sub, year, era = DOOMSDAY_THEME, t["doomsday"], "DOOMSDAY", t["doomsday_sub"], "2026", ""
     else:
         rec = TITLES[slug]
         th = FILM_GUIDES.get(slug, {}).get("theme") or DOOMSDAY_THEME
@@ -148,10 +153,14 @@ def site_card(site, lang, prefix):
         sep = ": " if lang == "en" else "／"
         parts = name.split(sep, 1)
         big, sub, year = parts[0], (parts[1] if len(parts) > 1 else ""), rec["year"]
+        # 作中の年代（かっこの中の補足は省く）。運営者の希望で公開年と並べて出す（2026-11-02）
+        era = (rec["era_en"].split(" (")[0] if lang == "en" else rec["era"].split("（")[0])
     style = f'--p-main:{th["main"]};--p-deep:{th["deep"]};--p-accent:{th["accent"]};--p-soft:{th["soft"]}'
     q = e((name + " " + site.get("name", "") + " " + site.get("name_en", "")).lower())
     return (f'<li data-q="{q}"><a class="mcard" href="{e(prefix + path)}">'
-            f'<span class="poster" style="{style}" aria-hidden="true"><span class="pyear">{e(year)}</span>'
+            f'<span class="poster" style="{style}"><span class="pmeta">'
+            f'<span class="pm"><small>{e(t["released"])}</small><span class="pyear">{e(year)}</span></span>'
+            + (f'<span class="pm"><small>{e(t["setin"])}</small><span class="pera">{e(era)}</span></span>' if era else "") + '</span>'
             f'<span class="pt">{e(big)}</span>' + (f'<span class="ps">{e(sub)}</span>' if sub else "") + '</span>'
             f'<span class="name">{e(name)}</span></a></li>')
 
