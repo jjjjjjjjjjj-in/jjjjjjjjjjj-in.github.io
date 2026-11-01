@@ -428,3 +428,9 @@ footer p { margin: 0; }
 .bo-sub { font-weight: 700; font-size: 13.5px; }
 .bo-when { font-size: 11.5px; color: rgba(255,255,255,.85); }
 .bo-when a { color: #fff; font-weight: 700; margin-left: 4px; }
+
+/* 見出しの「閉じる」ボタン（運営者の希望、2026-11-02） */
+.fold-btn { margin-left: auto; align-self: flex-start; font: inherit; font-size: 13px; font-weight: 700; padding: 4px 12px; border-radius: 999px; cursor: pointer;
+  background: rgba(255,255,255,.14); color: var(--on-dark); border: 1px solid rgba(255,255,255,.45); white-space: nowrap; }
+.fold-btn:hover { background: rgba(255,255,255,.26); }
+.fg-sec.closed > :not(h2) { display: none !important; }

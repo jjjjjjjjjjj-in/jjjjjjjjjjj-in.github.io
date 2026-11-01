@@ -227,7 +227,22 @@ def head(slug, title, desc, lang, prefix, schema, site_name):
 """
 
 
+FOLD_JS = """<script>
+(function(){ var L=document.documentElement.lang==='en'?['Close','Open']:['閉じる','開く'];
+  document.querySelectorAll('.fg-sec > h2').forEach(function(h){ var s=h.parentNode, b=document.createElement('button');
+    b.type='button'; b.className='fold-btn'; b.setAttribute('aria-expanded','true'); b.textContent=L[0];
+    b.addEventListener('click',function(){ var c=s.classList.toggle('closed'); b.textContent=L[c?1:0]; b.setAttribute('aria-expanded',String(!c));
+      if(!c){ try{ window.dispatchEvent(new Event('resize')); }catch(e){} } else if(s.getBoundingClientRect().top<0){ s.scrollIntoView(); } });
+    h.appendChild(b); }); })();
+</script>
+"""
+
+
 def footer(lang, top):
+    return FOLD_JS + _footer(lang, top)
+
+
+def _footer(lang, top):
     if lang == "en":
         return f"""<footer>
 <p>This site contains affiliate links (ads).</p>
