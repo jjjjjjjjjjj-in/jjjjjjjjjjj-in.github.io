@@ -718,5 +718,53 @@
    "soft": "#f3e3e5"
   },
   "out": "spider-man-far-from-home/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "スパイダーマン：ノー・ウェイ・ホーム",
+  "year": "2021",
+  "theme": {
+   "main": "#b51a2c",
+   "deep": "#0f1a33",
+   "accent": "#f0b23a",
+   "soft": "#efe4e6"
+  },
+  "out": "spider-man-no-way-home/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Spider-Man: No Way Home",
+  "year": "2021",
+  "theme": {
+   "main": "#b51a2c",
+   "deep": "#0f1a33",
+   "accent": "#f0b23a",
+   "soft": "#efe4e6"
+  },
+  "out": "spider-man-no-way-home/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ドクター・ストレンジ／マルチバース・オブ・マッドネス",
+  "year": "2022",
+  "theme": {
+   "main": "#2a2f6e",
+   "deep": "#120c1c",
+   "accent": "#e2463a",
+   "soft": "#e7e6f2"
+  },
+  "out": "multiverse-of-madness/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Doctor Strange in the Multiverse of Madness",
+  "year": "2022",
+  "theme": {
+   "main": "#2a2f6e",
+   "deep": "#120c1c",
+   "accent": "#e2463a",
+   "soft": "#e7e6f2"
+  },
+  "out": "multiverse-of-madness/en/og.png"
  }
 ]
