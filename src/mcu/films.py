@@ -2059,3 +2059,21 @@ FILM_GUIDES = {
               ("サウンドトラック", "ワカンダ・フォーエバー サウンドトラック", "Wakanda Forever soundtrack")],
     ),
 }
+
+
+# シーンごとの詳しいあらすじ（作品ごとに scenes/<slug の - を _ にした名前>.py に SCENES を書く）
+# 形: SCENES = [("第1章 …", "Part 1: …", [("見出し", "本文", "Heading", "Text"), ...]), ...]
+def _load_scenes():
+    import importlib.util, os
+    here = os.path.join(os.path.dirname(os.path.abspath(__file__)), "scenes")
+    for slug, g in FILM_GUIDES.items():
+        path = os.path.join(here, slug.replace("-", "_") + ".py")
+        if g.get("scenes") or not os.path.exists(path):
+            continue
+        spec = importlib.util.spec_from_file_location("scenes_" + slug.replace("-", "_"), path)
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        g["scenes"] = [(ja, [(s[0], s[1]) for s in sc], en, [(s[2], s[3]) for s in sc]) for ja, en, sc in mod.SCENES]
+
+
+_load_scenes()
