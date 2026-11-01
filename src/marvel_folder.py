@@ -41,9 +41,10 @@ a { color: inherit; }
 /* ヘッダー：黒い帯。左メニュー・中央MARVEL・右検索 */
 .mhead { position: sticky; top: 0; z-index: 20; background: #000; color: #fff; height: 64px; display: grid; grid-template-columns: 56px 1fr 56px; align-items: center; }
 .mhead button { background: none; border: 0; color: #fff; width: 56px; height: 64px; display: grid; place-items: center; cursor: pointer; padding: 0; }
-.mhead svg { width: 26px; height: 26px; }
+.mhead button svg { width: 26px; height: 26px; }
+.mlogo-svg { display: block; height: 50px; width: 143px; }
 .mlogo { justify-self: center; font-family: "Anton", "Oswald", "Impact", "Arial Narrow", sans-serif; color: #fff; text-decoration: none;
-  font-size: 40px; line-height: 1; letter-spacing: -.02em; transform: scaleY(1.18); display: inline-block; padding: 0 .1em; }
+  line-height: 0; display: inline-block; }
 .mmenu, .msearch { position: sticky; top: 64px; z-index: 19; background: #111; color: #fff; padding: 10px 16px 14px; }
 .mmenu[hidden], .msearch[hidden] { display: none; }
 .mmenu ul { list-style: none; margin: 0 auto; padding: 0; max-width: 1100px; display: grid; gap: 2px; }
@@ -103,6 +104,32 @@ SCRIPT = """<script>
 })();
 </script>"""
 
+# 手描きのイラスト風の「赤い四角に白い文字」（運営者の希望、2026-11-02）。
+# 公式ロゴとは違うと分かるように、四角はふちがガタガタのマーカー塗り、文字も少し傾けてにじませる。画像ファイルは使わない
+LOGO_SVG = """<svg class="mlogo-svg" viewBox="0 0 240 84" role="img" aria-hidden="true">
+  <defs>
+    <filter id="rough" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="3" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="6"/>
+    </filter>
+    <filter id="roughText" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.09" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6"/>
+    </filter>
+    <pattern id="strokes" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(-24)">
+      <rect width="9" height="9" fill="#e2232f"/>
+      <path d="M0 4.5h9" stroke="#b5121d" stroke-width="2.2" opacity=".55"/>
+    </pattern>
+  </defs>
+  <g transform="rotate(-2.2 120 42)">
+    <path d="M10 9 Q62 4 120 7 T231 8 Q236 40 232 76 Q170 81 118 78 T8 77 Q4 44 10 9 Z" fill="url(#strokes)" filter="url(#rough)"/>
+    <path d="M12 12 Q120 6 228 11" fill="none" stroke="#ff6b73" stroke-width="2" opacity=".55" filter="url(#rough)"/>
+    <text x="120" y="66" text-anchor="middle" font-family="Anton, Impact, sans-serif" font-size="60" letter-spacing="-1"
+      fill="#fff" stroke="#fff" stroke-width="1.2" stroke-linejoin="round" transform="translate(120 66) scale(1 1.12) translate(-120 -66)"
+      filter="url(#roughText)">MARVEL</text>
+  </g>
+</svg>"""
+
 ICON_MENU = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>'
 ICON_SEARCH = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2.6"/><path d="M15.5 15.5l5 5" stroke="currentColor" stroke-width="2.8" stroke-linecap="round"/></svg>'
 
@@ -158,7 +185,7 @@ def build(f, sites_in_group, head_extra, base_url, site_name, analytics):
 <body>
 <header class="mhead">
   <button type="button" id="mbtn-menu" aria-label="{e(t["menu"])}" aria-expanded="false" aria-controls="mmenu">{ICON_MENU}</button>
-  <a class="mlogo" href="./" aria-label="{e(f["logo"])}">{e(f["logo"])}</a>
+  <a class="mlogo" href="./" aria-label="{e(f["logo"])}">{LOGO_SVG}</a>
   <button type="button" id="mbtn-search" aria-label="{e(t["search"])}" aria-expanded="false" aria-controls="msearch">{ICON_SEARCH}</button>
 </header>
 <nav class="mmenu" id="mmenu" hidden><ul>
