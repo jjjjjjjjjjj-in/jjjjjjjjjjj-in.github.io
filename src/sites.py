@@ -35,6 +35,16 @@ SITES = [
         updated="2026-11-01",
     ),
     dict(
+        path="captain-marvel/", folder="marvel", folder_en="marvel-en",
+        name="キャプテン・マーベル 完全ガイド",
+        name_en="Captain Marvel Complete Guide",
+        desc="1995年、記憶をなくした戦士ヴァースが本当の自分と出会うまで。あらすじ・顔アイコンつき相関図・用語・Q&Aをやさしく解説。",
+        desc_en="Vers, a warrior with no memory, finds out who she really is in 1995: story, character map, key terms and Q&A.",
+        en_path="captain-marvel/en/",
+        sitemap="captain-marvel/sitemap.xml",
+        updated="2026-11-01",
+    ),
+    dict(
         path="iron-man/", folder="marvel", folder_en="marvel-en",
         name="アイアンマン完全ガイド",
         name_en="Iron Man Complete Guide",

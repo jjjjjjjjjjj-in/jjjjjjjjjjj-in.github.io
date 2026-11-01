@@ -25,6 +25,30 @@
  },
  {
   "lang": "ja",
+  "title": "キャプテン・マーベル",
+  "year": "2019",
+  "theme": {
+   "main": "#b51f2e",
+   "deep": "#16255c",
+   "accent": "#f2c23a",
+   "soft": "#f6dcc4"
+  },
+  "out": "captain-marvel/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Captain Marvel",
+  "year": "2019",
+  "theme": {
+   "main": "#b51f2e",
+   "deep": "#16255c",
+   "accent": "#f2c23a",
+   "soft": "#f6dcc4"
+  },
+  "out": "captain-marvel/en/og.png"
+ },
+ {
+  "lang": "ja",
   "title": "アイアンマン",
   "year": "2008",
   "theme": {
