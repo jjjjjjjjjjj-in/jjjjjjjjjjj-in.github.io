@@ -79,3 +79,6 @@
 ## Google Search Console
 - `https://jjjjjjjjjjj-in.github.io/`（URLプレフィックス）の確認コードは `src/build.py` の `GOOGLE_SITE_VERIFICATION` に設定済み（2026-10-31）。
 - 所有権の確認とサイトマップ（`sitemap.xml`）の登録は済み（2026-10-31）。以降のサイト追加は `src/sites.py` に足すだけで自動で伝わる。
+
+## ホーム画面のアイコン（2026-11-02、運営者の希望）
+- 全ページに apple-touch-icon（と favicon）を入れている。マーベル映画紹介・特集・作品ガイドは /icons/movie.png（黒地に白い MOVIE GUIDE、下に赤い帯）、パラダイスシティは /icons/paradise.png（紺地に金の PARADISE CITY）、もっちぃまは /icons/mochi.png（黒地に白い「も」。/apple-touch-icon.png も同じ）。ドゥームズデイ予習ガイドは別リポジトリの /doomsday-guide/apple-touch-icon.png（濃い緑に DOOMSDAY 予習ガイド）。新しいサイトにも入れる。

@@ -256,7 +256,7 @@ def build(f, sites_in_group, head_extra, base_url, site_name, analytics):
 <html lang="{lang}">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">{analytics}
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="apple-touch-icon" href="/icons/movie.png"><link rel="icon" type="image/png" href="/icons/movie.png">{analytics}
 <title>{e(page_title)}</title>
 <meta name="description" content="{e(f["desc"])}">
 <link rel="canonical" href="{base_url}{f["path"]}">

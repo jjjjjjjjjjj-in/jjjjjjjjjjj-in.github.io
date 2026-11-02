@@ -96,7 +96,7 @@ def page(title, desc, path, lang, header, body, back=""):
 <html lang="{lang}">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">{analytics_tag()}
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="apple-touch-icon" href="/icons/mochi.png"><link rel="icon" type="image/png" href="/icons/mochi.png">{analytics_tag()}
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="{BASE_URL}{path}">{verify}
@@ -226,7 +226,7 @@ def privacy_html():
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">{analytics_tag()}
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="apple-touch-icon" href="/icons/mochi.png"><link rel="icon" type="image/png" href="/icons/mochi.png">{analytics_tag()}
 <title>プライバシーポリシー｜{SITE_NAME}</title>
 <meta name="description" content="{SITE_NAME}と、その中の各サイトでのアクセス解析・広告・情報の外部送信についての説明です。">
 <link rel="canonical" href="{BASE_URL}privacy.html">

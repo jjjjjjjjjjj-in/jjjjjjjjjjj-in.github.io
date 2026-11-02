@@ -183,7 +183,7 @@ def page(path, title, desc, body, analytics, extra_script=""):
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">{analytics}
+<meta name="viewport" content="width=device-width, initial-scale=1"><link rel="apple-touch-icon" href="/icons/movie.png"><link rel="icon" type="image/png" href="/icons/movie.png">{analytics}
 <title>{e(title)}｜マーベル映画紹介</title>
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="https://jjjjjjjjjjj-in.github.io/{path}">
