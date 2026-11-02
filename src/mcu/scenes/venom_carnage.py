@@ -1,0 +1,48 @@
+SCENES = [
+    ("第1章 少年院の2人", "Part 1: Two kids in an institution", [
+        ("1996年", "1996年、少年院のような施設で、少年クレタス・キャサディと少女フランシス・バリソンが心を通わせる。フランシスは、大きな叫び声で物をこわす力を持っていた。",
+         "1996", "In 1996, at a home for troubled kids, young Cletus Kasady bonds with Frances Barrison, a girl whose scream can shatter anything."),
+        ("引きさかれる", "フランシスはレイヴンクロフトという施設へ送られる。連れ去られる途中、若い警官マリガンがフランシスに撃たれた傷を負う。",
+         "Torn apart", "Frances is taken to Ravencroft. During the transfer, young officer Patrick Mulligan is injured by her power."),
+    ]),
+    ("第2章 死刑囚の取材", "Part 2: The death row interview", [
+        ("エディとヴェノムの毎日", "エディとヴェノムは、一緒に暮らしている。ヴェノムは人を食べたがるが、エディは許さない。2人はいつも言い合いをしている。",
+         "Life with Venom", "Eddie and Venom live together. Venom wants to eat people, and Eddie won't let it. They bicker constantly."),
+        ("キャサディの取材", "刑事になったマリガンにたのまれ、エディは刑務所のキャサディを取材する。ヴェノムの手がかりで、被害者のかくし場所を見つけ、エディの記事は大評判になる。",
+         "The interview", "At the request of Mulligan, now a detective, Eddie interviews Kasady. Venom spots clues to where the victims are buried, and Eddie's story becomes a sensation."),
+        ("アンの婚約", "アンは、医師ダンと婚約したとエディに伝える。",
+         "Anne's engagement", "Anne tells Eddie she's engaged to Dan."),
+    ]),
+    ("第3章 カーネイジ誕生", "Part 3: Carnage is born", [
+        ("かみつき", "死刑の直前、キャサディは最後の面会でエディの手にかみつく。エディの血と一緒に、ヴェノムの一部を取りこむ。",
+         "The bite", "Just before his execution, Kasady bites Eddie's hand during a final visit and takes in a piece of Venom along with the blood."),
+        ("死刑の部屋", "死刑の注射を受けたキャサディの体から、赤いシンビオートがあふれ出す。カーネイジが生まれ、刑務所は大混乱になる。",
+         "The execution chamber", "When Kasady is given the lethal injection, a red symbiote bursts out of him. Carnage is born, and the prison descends into chaos."),
+        ("けんか別れ", "同じころ、エディとヴェノムは大げんかになり、ヴェノムはエディの体から出ていってしまう。",
+         "The breakup", "At the same time, Eddie and Venom have a huge fight, and Venom leaves Eddie's body."),
+    ]),
+    ("第4章 それぞれの夜", "Part 4: Separate nights", [
+        ("仮装パーティー", "エディから離れたヴェノムは、人から人へと乗りうつりながら町をさまよい、仮装パーティーで自分の気持ちを語って人気者になる。",
+         "The costume party", "Away from Eddie, Venom hops from body to body and ends up at a costume rave, where it makes a speech and becomes the star of the party."),
+        ("シュリークの救出", "カーネイジとなったキャサディは、レイヴンクロフトからフランシス（シュリーク）を助け出す。2人はマリガンを連れ去る。",
+         "Freeing Shriek", "As Carnage, Kasady breaks Frances, Shriek, out of Ravencroft. They abduct Mulligan."),
+        ("アンをさらう", "シュリークはアンもさらう。キャサディは、教会で結婚式を挙げるつもりだった。",
+         "Anne is taken", "Shriek kidnaps Anne too. Kasady plans to hold a wedding in a church."),
+    ]),
+    ("第5章 仲直り", "Part 5: Reunited", [
+        ("チェンさんとヴェノム", "ヴェノムは、チェンさんの体を借りてエディのもとに戻る。",
+         "Mrs. Chen's help", "Venom gets back to Eddie by hitching a ride in Mrs. Chen."),
+        ("2人の仲直り", "エディとヴェノムは、お互いにひどいことを言ったと謝り、もう一度一体になる。",
+         "Making up", "Eddie and Venom apologize for what they said and bond again."),
+        ("教会の戦い", "教会で、ヴェノムとカーネイジが戦う。カーネイジはヴェノムより強く、ヴェノムは苦戦する。",
+         "Battle in the church", "In the church, Venom fights Carnage, who's stronger and has the upper hand."),
+        ("鐘の音とシュリーク", "シュリークの叫び声と教会の鐘の音で、カーネイジもヴェノムも弱る。そのすきに、ヴェノムはカーネイジを食べてしまう。キャサディとシュリークは命を落とす。",
+         "The bells and the scream", "Shriek's scream and the church bells weaken both symbiotes. Venom seizes the moment and devours Carnage. Kasady and Shriek die."),
+    ]),
+    ("第6章 その後", "Part 6: Afterward", [
+        ("海辺の休暇", "エディとヴェノムは、警察に追われる身として海辺の町で休暇を過ごす。",
+         "A beach vacation", "Now wanted by the police, Eddie and Venom lie low at a beach resort."),
+        ("エンドクレジットの途中", "ホテルの部屋で、ヴェノムが自分たちのいる世界の外のことを話していると、突然、部屋ごと別の世界に移動する。テレビでは、スパイダーマンの正体がピーター・パーカーだと伝えるニュースが流れている。",
+         "Mid-credits", "In a hotel room, as Venom talks about worlds beyond theirs, they're suddenly pulled into another universe, where the TV news reveals Spider-Man is Peter Parker."),
+    ]),
+]

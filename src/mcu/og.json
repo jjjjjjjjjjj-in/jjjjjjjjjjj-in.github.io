@@ -1102,5 +1102,149 @@
    "soft": "#e6ebe2"
   },
   "out": "thunderbolts/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "スパイダーマン（トビー・マグワイア版）",
+  "year": "2002",
+  "theme": {
+   "main": "#b51f2a",
+   "deep": "#0d1530",
+   "accent": "#3d6fd9",
+   "soft": "#f6e3e5"
+  },
+  "out": "spider-man-2002/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Spider-Man (2002, Tobey Maguire)",
+  "year": "2002",
+  "theme": {
+   "main": "#b51f2a",
+   "deep": "#0d1530",
+   "accent": "#3d6fd9",
+   "soft": "#f6e3e5"
+  },
+  "out": "spider-man-2002/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "スパイダーマン2（トビー・マグワイア版）",
+  "year": "2004",
+  "theme": {
+   "main": "#a8202b",
+   "deep": "#121418",
+   "accent": "#c9a24a",
+   "soft": "#f4e4e2"
+  },
+  "out": "spider-man-2-2004/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Spider-Man 2 (2004, Tobey Maguire)",
+  "year": "2004",
+  "theme": {
+   "main": "#a8202b",
+   "deep": "#121418",
+   "accent": "#c9a24a",
+   "soft": "#f4e4e2"
+  },
+  "out": "spider-man-2-2004/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "スパイダーマン3（トビー・マグワイア版）",
+  "year": "2007",
+  "theme": {
+   "main": "#1c1c24",
+   "deep": "#060608",
+   "accent": "#d4262f",
+   "soft": "#e8e6ea"
+  },
+  "out": "spider-man-3-2007/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Spider-Man 3 (2007, Tobey Maguire)",
+  "year": "2007",
+  "theme": {
+   "main": "#1c1c24",
+   "deep": "#060608",
+   "accent": "#d4262f",
+   "soft": "#e8e6ea"
+  },
+  "out": "spider-man-3-2007/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ヴェノム",
+  "year": "2018",
+  "theme": {
+   "main": "#20232b",
+   "deep": "#050607",
+   "accent": "#d9dde6",
+   "soft": "#e7e8ec"
+  },
+  "out": "venom/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Venom",
+  "year": "2018",
+  "theme": {
+   "main": "#20232b",
+   "deep": "#050607",
+   "accent": "#d9dde6",
+   "soft": "#e7e8ec"
+  },
+  "out": "venom/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ヴェノム：レット・ゼア・ビー・カーネイジ",
+  "year": "2021",
+  "theme": {
+   "main": "#a3121b",
+   "deep": "#0a0506",
+   "accent": "#ff4d4d",
+   "soft": "#f6e2e3"
+  },
+  "out": "venom-carnage/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Venom: Let There Be Carnage",
+  "year": "2021",
+  "theme": {
+   "main": "#a3121b",
+   "deep": "#0a0506",
+   "accent": "#ff4d4d",
+   "soft": "#f6e2e3"
+  },
+  "out": "venom-carnage/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ヴェノム：ザ・ラストダンス",
+  "year": "2024",
+  "theme": {
+   "main": "#23262e",
+   "deep": "#060708",
+   "accent": "#f08a3c",
+   "soft": "#ece7e2"
+  },
+  "out": "venom-last-dance/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Venom: The Last Dance",
+  "year": "2024",
+  "theme": {
+   "main": "#23262e",
+   "deep": "#060708",
+   "accent": "#f08a3c",
+   "soft": "#ece7e2"
+  },
+  "out": "venom-last-dance/en/og.png"
  }
 ]
