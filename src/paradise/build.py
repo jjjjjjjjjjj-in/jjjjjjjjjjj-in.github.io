@@ -58,6 +58,7 @@ ICONS = {
     "hand": '<path d="M16 26V12a3 3 0 016 0v10V9a3 3 0 016 0v13-9a3 3 0 016 0v17c0 7-5 12-12 12s-11-4-13-9l-3-7a3 3 0 015-3z"/>',
     "stack": '<ellipse cx="24" cy="14" rx="12" ry="5"/><path d="M12 14v8c0 3 5 5 12 5s12-2 12-5v-8"/><path d="M12 22v8c0 3 5 5 12 5s12-2 12-5v-8"/>',
     "dealer": '<circle cx="24" cy="14" r="7"/><path d="M10 40c1-8 7-13 14-13s13 5 14 13"/><path d="M20 27l4 5 4-5"/>',
+    "cash": '<rect x="6" y="15" width="36" height="20" rx="2"/><circle cx="24" cy="25" r="5"/><path d="M6 40h36"/>',
     "ask": '<circle cx="24" cy="24" r="17"/><path d="M19 19a5 5 0 119 3c-2 2-4 3-4 6"/><path d="M24 34v1"/>',
 }
 
