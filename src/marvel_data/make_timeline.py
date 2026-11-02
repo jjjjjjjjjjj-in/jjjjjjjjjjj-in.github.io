@@ -24,18 +24,27 @@ MAIN = {"キャプテンマーベル": "captain-marvel", "アイアンマン": "
         "A＆W": "ant-man-and-the-wasp", "インフィニティウォー": "infinity-war", "ワンダヴィジョン": "wandavision", "シャンチー": "shang-chi",
         "FFH": "spider-man-far-from-home", "エターナルズ": "eternals", "NWH": "spider-man-no-way-home", "MOM": "multiverse-of-madness",
         "ホークアイ": "hawkeye", "ムーンナイト": "moon-knight", "WF": "wakanda-forever", "ミズマーベル": "ms-marvel",
-        "ラブ＆ザンダー": "love-and-thunder", "ウェアウルフバイナイト": "werewolf-by-night", "ホリデースペシャル": "guardians-holiday-special"}
+        "ラブ＆ザンダー": "love-and-thunder", "ウェアウルフバイナイト": "werewolf-by-night", "ホリデースペシャル": "guardians-holiday-special",
+        "アイアンハート": "ironheart", "クアントマニア": "quantumania", "ガーディアンズvol.3": "guardians-vol3",
+        "シークレットインベージョン": "secret-invasion", "マーベルズ": "the-marvels", "アガサオールアロング": "agatha-all-along",
+        "BNW": "brave-new-world", "ザンダーボルツ": "thunderbolts", "BND": "spider-man-brand-new-day"}
+# 作品ガイドのない作品の「〜本編」「〜 EP」の行
+MAIN_LABEL = {"ワンラストキル本編": "パニッシャー：ワン・ラスト・キル", "ワンダーマン EP": "ドラマ『ワンダーマン』"}
 # 作品名がない行に、内容から作品をあてる（運営者のデータを補う）
 EXTRA = {"インフィニティストーン誕生": ["guardians-of-the-galaxy"], "1988年:ピータークイル失踪": ["guardians-of-the-galaxy"],
          "1990年代後半:サノスがガモーラを引き取る": ["infinity-war"], "ハワードがエキスポに新元素の構図を隠す": ["iron-man-2"],
          "ストラッカーがワンダとピエトロに人体実験を行う": ["winter-soldier", "age-of-ultron"], "アイアムグルート S1EP1": ["i-am-groot-1"],
          "アイアムグルートその他のEP": ["i-am-groot-1", "i-am-groot-2"], "エンドゲーム5年後": ["endgame"],
-         "F＆W EP1〜5": ["falcon-and-winter-soldier"], "F＆W EP6": ["falcon-and-winter-soldier"], "シーハルクEP": ["she-hulk"]}
+         "F＆W EP1〜5": ["falcon-and-winter-soldier"], "ジャックラッセル誕生": ["werewolf-by-night"],
+         "ウェイドがアース616を訪れる": ["deadpool-and-wolverine"], "サンダーボルツ14ヶ月後": ["thunderbolts"], "F＆W EP6": ["falcon-and-winter-soldier"], "シーハルクEP": ["she-hulk"]}
 # 直したところ（元の文 → 直した文, 理由）
 FIX = {
     "2026年秋:ストレンジがカマータージに辿り着く(ドクスト)": ("2016年秋", "ストレンジがカマー・タージに辿り着く", "「2026年」は「2016年」の書き間違いと考えられるため直しました（前後の出来事が2016〜2017年）。"),
     "1973年:9月15日:ハワードがエキスポに新元素の構図を隠す": ("1973年9月15日", "ハワードがエキスポの模型に新元素の構造を隠す", "日付の区切りを整えました。作品名がなかったので『アイアンマン2』（父の映像の場面）にあてました。"),
     "1992年:ウンジョブ殺害、キルモンガーが孤児に(ブラックパンサー)": ("1992年", "ンジョブが殺害され、キルモンガーが孤児に", "人名の表記を「ンジョブ」に統一しました。"),
+    "2010年春ソーが地球に落とされジェーン達と出会う(ソー)": ("2010年春", "ソーが地球に落とされジェーン達と出会う", "日付の区切り（:）を補いました。"),
+    "2027年春〜秋:ザンダーボルツ本編": ("2027年春〜秋", "サンダーボルツ* 本編", "作品名を正式な表記（サンダーボルツ*）に直しました。"),
+    "2018年:ウェイドがアース616を訪れる": ("2018年", "ウェイドがEarth-616を訪れる", "表記を「Earth-616」にそろえました。作品名がなかったので『デッドプール＆ウルヴァリン』（ハッピーの面接を受ける場面）にあてました。"),
     "2025年秋:ラブ＆ザンダー本編": ("2025年秋", "ソー：ラブ＆サンダー 本編", "作品名を正式な表記（ラブ＆サンダー）に直しました。"),
 }
 CHECK = {
@@ -44,6 +53,7 @@ CHECK = {
     "2000年代:ブダペストの戦い(ブラックウィドウ)": "時期がはっきりしないため、確認中です。",
     "2018年:バッキーが洗脳から解放(ブラックパンサー)": "『ブラックパンサー』のおまけ映像の出来事です。時期は確認中です。",
     "1971年11月24日:ロキが飛行機をジャック(ロキ)": "ドラマ『ロキ』の中で語られる、別の時間の流れの出来事です（Earth-616本編の出来事とは区別してください）。",
+    "1600年〜1800年の間:ジャックラッセル誕生": "作品名がなかったので『ウェアウルフ・バイ・ナイト』にあてました。作中で年ははっきり語られないため、確認中です。",
     "セレスティアル誕生(リミックス)": "宇宙の始まりにかかわる出来事で、作中で語られる伝説です。",
 }
 ERAS = ["太古", "先史時代", "西暦", "1900年代", "2000年代以降"]
@@ -81,6 +91,9 @@ for raw in open(os.path.join(HERE, "timeline_raw.txt"), encoding="utf-8"):
             works += [w for w in v if w not in works]
     if body.startswith(("F＆W EP", "シーハルクEP")):
         main = True
+    for k, v in MAIN_LABEL.items():
+        if body.startswith(k):
+            labels.append(v); main = True
     note, status = "", "ok"
     if line in FIX:
         when, body_clean, note = FIX[line]; status = "fixed"
