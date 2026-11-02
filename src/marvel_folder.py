@@ -251,13 +251,14 @@ def build(f, sites_in_group, head_extra, base_url, site_name, analytics):
         import marvel_pages
         feat_menu = "".join(f'  <li><a href="{prefix}{p}">{e(n)}</a></li>\n' for p, n, _ in marvel_pages.PAGES)
         feats = marvel_pages.feature_html(prefix)
-    page_title = f'{f["name"]} | {site_name}' if lang == "en" else f'{f["name"]}｜{site_name}'
+    page_title = f["name"]  # ホーム画面に追加したとき「もっちぃま」が出ないよう、サイト名は付けない（2026-11-02）
     return f"""<!doctype html>
 <html lang="{lang}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"><link rel="apple-touch-icon" href="/icons/movie.png"><link rel="icon" type="image/png" href="/icons/movie.png">{analytics}
 <title>{e(page_title)}</title>
+<meta name="apple-mobile-web-app-title" content="{e(f["name"])}">
 <meta name="description" content="{e(f["desc"])}">
 <link rel="canonical" href="{base_url}{f["path"]}">
 <link rel="preconnect" href="https://fonts.googleapis.com">

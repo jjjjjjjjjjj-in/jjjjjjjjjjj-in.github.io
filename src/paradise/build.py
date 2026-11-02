@@ -94,6 +94,7 @@ def layout(file, title, desc, body, head_html, extra_head=""):
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="apple-touch-icon" href="/icons/paradise.png"><link rel="icon" type="image/png" href="/icons/paradise.png">{analytics_tag()}
 <title>{e(title)}</title>
+<meta name="apple-mobile-web-app-title" content="パラダイスシティ">
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="{canonical}">
 <meta property="og:type" content="website">
@@ -126,7 +127,7 @@ def layout(file, title, desc, body, head_html, extra_head=""):
   <p><strong>カジノは満19歳以上の外国人のみ入場できます。</strong>日本国内からオンラインカジノに参加することは違法です。このサイトは韓国にある施設の旅行情報として掲載しています。</p>
   <p>カジノは「なくなっても困らない金額」で楽しみましょう。のめり込みが心配なときは、お住まいの地域の精神保健福祉センターなどに相談できます。</p>
   <p>当サイトは個人が運営する非公式の情報サイトで、パラダイスシティおよび各ホテルとは関係ありません。料金・条件・キャンペーンは変わることがあります。最新の情報は必ず<a href="{D.SOURCES['official_top'][1]}" target="_blank" rel="noopener">公式サイト</a>で確認してください。最終更新 {D.UPDATED}</p>
-  <p><a href="https://jjjjjjjjjjj-in.github.io/">もっちぃま トップ</a> ・ <a href="https://jjjjjjjjjjj-in.github.io/privacy.html">プライバシーポリシー</a></p>
+  <p><a href="https://jjjjjjjjjjj-in.github.io/privacy.html">プライバシーポリシー</a></p>
 </div></footer>
 <script src="assets/app.js"></script>
 </body>
