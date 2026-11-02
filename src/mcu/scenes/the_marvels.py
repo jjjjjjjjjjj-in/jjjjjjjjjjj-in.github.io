@@ -1,0 +1,42 @@
+SCENES = [
+    ("第1章 腕輪の片割れ", "Part 1: The other bangle", [
+        ("ダー・ベン", "クリーのリーダー、ダー・ベンは、ある星で、カマラが持つ腕輪の片割れを見つける。腕輪の力で、宇宙の遠い場所をつなぐ通り道を傷つけてしまう。",
+         "Dar-Benn", "Kree leader Dar-Benn finds the twin of Kamala's bangle and uses its power to damage the jump points that connect space."),
+        ("3人のヒーロー", "宇宙の通り道を調べに行ったキャロル、宇宙ステーションのモニカ、ジャージーシティのカマラ。3人が同時に力を使った瞬間、居場所が入れかわる。",
+         "Three heroes", "Carol investigates a jump point, Monica is on a space station, and Kamala is in Jersey City. The moment they all use their powers, they swap places."),
+        ("カマラの部屋", "カマラの部屋にキャロルが現れ、カマラは大喜びする。",
+         "Kamala's room", "Carol appears in Kamala's bedroom, and Kamala is thrilled."),
+    ]),
+    ("第2章 チーム結成", "Part 2: Becoming a team", [
+        ("宇宙ステーション", "3人は、フューリーのいる宇宙ステーションに集まる。力を使うたびに入れかわる問題を解決するため、一緒に練習する。",
+         "The space station", "The three gather on Fury's space station and practice together to handle the swapping."),
+        ("モニカとキャロル", "モニカは子どものころ、キャロルを家族のように慕っていた。しかし、キャロルが戻ってこなかったことに、さびしさを感じていた。",
+         "Monica and Carol", "As a child, Monica loved Carol like family, and she's hurt that Carol never came back."),
+        ("ダー・ベンの計画", "ダー・ベンは、クリーの星を救うため、ほかの星から空気や水、太陽の力をうばおうとしていた。",
+         "Dar-Benn's plan", "To save the Kree homeworld, Dar-Benn is stealing air, water and even sunlight from other worlds."),
+    ]),
+    ("第3章 歌の星", "Part 3: The singing planet", [
+        ("アラドナ", "3人は、歌で話す人々が暮らす星アラドナを訪れる。キャロルは、そこのヤン王子と「結婚」していた。",
+         "Aladna", "They visit Aladna, where people communicate through song. Carol is 'married' to Prince Yan."),
+        ("海をうばう", "ダー・ベンがアラドナの海をうばいに来て、3人は戦う。",
+         "Stealing the sea", "Dar-Benn comes to take Aladna's water, and the three fight her."),
+        ("フラーケンの避難", "宇宙ステーションでは、グースの子どもたちが人々を飲みこんで運び、救い出す。",
+         "Flerken evacuation", "On the space station, Goose's kittens swallow the crew to carry them to safety."),
+    ]),
+    ("第4章 宇宙の裂け目", "Part 4: The rift", [
+        ("2つの腕輪", "ダー・ベンは、カマラの腕輪もうばい、2つの腕輪で大きな裂け目を開く。",
+         "Two bangles", "Dar-Benn takes Kamala's bangle too and uses both to open an enormous rift."),
+        ("ダー・ベンの最期", "あふれる力に耐えられず、ダー・ベンは消える。",
+         "Dar-Benn's end", "Overwhelmed by the power, Dar-Benn is destroyed."),
+        ("モニカの犠牲", "裂け目を閉じるため、モニカは別の世界に取り残される。",
+         "Monica's sacrifice", "To close the rift, Monica is left behind on the other side."),
+        ("太陽をともす", "キャロルは、自分の力でクリーの星の太陽を再び明るくする。",
+         "Relighting the sun", "Carol uses her power to reignite the Kree sun."),
+    ]),
+    ("第5章 その後", "Part 5: Afterward", [
+        ("新しい仲間", "カマラは、弓の名手ケイト・ビショップを訪ね、若いヒーローのチームに誘う。",
+         "New recruits", "Kamala visits archer Kate Bishop to recruit her for a team of young heroes."),
+        ("エンドクレジットの途中", "モニカは、別の世界で目を覚ます。そこには、モニカの母親によく似た人と、青い毛のビーストがいた。",
+         "Mid-credits", "Monica wakes up in another universe, where a woman who looks like her mother and the blue-furred Beast are waiting."),
+    ]),
+]

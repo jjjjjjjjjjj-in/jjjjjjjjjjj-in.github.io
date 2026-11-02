@@ -1246,5 +1246,341 @@
    "soft": "#ece7e2"
   },
   "out": "venom-last-dance/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ブラック・ウィドウ",
+  "year": "2021",
+  "theme": {
+   "main": "#1d1d24",
+   "deep": "#070709",
+   "accent": "#d62f3a",
+   "soft": "#ebe7ea"
+  },
+  "out": "black-widow/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Black Widow",
+  "year": "2021",
+  "theme": {
+   "main": "#1d1d24",
+   "deep": "#070709",
+   "accent": "#d62f3a",
+   "soft": "#ebe7ea"
+  },
+  "out": "black-widow/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "エターナルズ",
+  "year": "2021",
+  "theme": {
+   "main": "#1f3b6e",
+   "deep": "#0a0f1d",
+   "accent": "#e6b84a",
+   "soft": "#e7ecf4"
+  },
+  "out": "eternals/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Eternals",
+  "year": "2021",
+  "theme": {
+   "main": "#1f3b6e",
+   "deep": "#0a0f1d",
+   "accent": "#e6b84a",
+   "soft": "#e7ecf4"
+  },
+  "out": "eternals/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ホークアイ",
+  "year": "2021",
+  "theme": {
+   "main": "#4a2a7a",
+   "deep": "#120a1e",
+   "accent": "#e0393e",
+   "soft": "#ece5f4"
+  },
+  "out": "hawkeye/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Hawkeye",
+  "year": "2021",
+  "theme": {
+   "main": "#4a2a7a",
+   "deep": "#120a1e",
+   "accent": "#e0393e",
+   "soft": "#ece5f4"
+  },
+  "out": "hawkeye/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ムーンナイト",
+  "year": "2022",
+  "theme": {
+   "main": "#2b3550",
+   "deep": "#0a0d16",
+   "accent": "#d9dbe6",
+   "soft": "#e8eaf0"
+  },
+  "out": "moon-knight/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Moon Knight",
+  "year": "2022",
+  "theme": {
+   "main": "#2b3550",
+   "deep": "#0a0d16",
+   "accent": "#d9dbe6",
+   "soft": "#e8eaf0"
+  },
+  "out": "moon-knight/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "エコー",
+  "year": "2024",
+  "theme": {
+   "main": "#7a2f1f",
+   "deep": "#160a07",
+   "accent": "#2fb3a3",
+   "soft": "#f3e7e2"
+  },
+  "out": "echo/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Echo",
+  "year": "2024",
+  "theme": {
+   "main": "#7a2f1f",
+   "deep": "#160a07",
+   "accent": "#2fb3a3",
+   "soft": "#f3e7e2"
+  },
+  "out": "echo/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "シー・ハルク：ザ・アトーニー",
+  "year": "2022",
+  "theme": {
+   "main": "#2f6b3a",
+   "deep": "#0a160d",
+   "accent": "#a874d8",
+   "soft": "#e4efe6"
+  },
+  "out": "she-hulk/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "She-Hulk: Attorney at Law",
+  "year": "2022",
+  "theme": {
+   "main": "#2f6b3a",
+   "deep": "#0a160d",
+   "accent": "#a874d8",
+   "soft": "#e4efe6"
+  },
+  "out": "she-hulk/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ミズ・マーベル",
+  "year": "2022",
+  "theme": {
+   "main": "#c0303a",
+   "deep": "#151735",
+   "accent": "#f2c33a",
+   "soft": "#f6e4e5"
+  },
+  "out": "ms-marvel/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Ms. Marvel",
+  "year": "2022",
+  "theme": {
+   "main": "#c0303a",
+   "deep": "#151735",
+   "accent": "#f2c33a",
+   "soft": "#f6e4e5"
+  },
+  "out": "ms-marvel/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ウェアウルフ・バイ・ナイト",
+  "year": "2022",
+  "theme": {
+   "main": "#3a3a3f",
+   "deep": "#0b0b0c",
+   "accent": "#c42b2b",
+   "soft": "#ebebed"
+  },
+  "out": "werewolf-by-night/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Werewolf by Night",
+  "year": "2022",
+  "theme": {
+   "main": "#3a3a3f",
+   "deep": "#0b0b0c",
+   "accent": "#c42b2b",
+   "soft": "#ebebed"
+  },
+  "out": "werewolf-by-night/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ガーディアンズ・オブ・ギャラクシー：ホリデー・スペシャル",
+  "year": "2022",
+  "theme": {
+   "main": "#b5262b",
+   "deep": "#14090a",
+   "accent": "#3fa65a",
+   "soft": "#f6e5e5"
+  },
+  "out": "guardians-holiday-special/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "The Guardians of the Galaxy Holiday Special",
+  "year": "2022",
+  "theme": {
+   "main": "#b5262b",
+   "deep": "#14090a",
+   "accent": "#3fa65a",
+   "soft": "#f6e5e5"
+  },
+  "out": "guardians-holiday-special/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "シークレット・インベージョン",
+  "year": "2023",
+  "theme": {
+   "main": "#2b4a35",
+   "deep": "#0a110c",
+   "accent": "#7fd18e",
+   "soft": "#e3ede6"
+  },
+  "out": "secret-invasion/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Secret Invasion",
+  "year": "2023",
+  "theme": {
+   "main": "#2b4a35",
+   "deep": "#0a110c",
+   "accent": "#7fd18e",
+   "soft": "#e3ede6"
+  },
+  "out": "secret-invasion/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "マーベルズ",
+  "year": "2023",
+  "theme": {
+   "main": "#b52a35",
+   "deep": "#0f1530",
+   "accent": "#f2c14e",
+   "soft": "#f5e3e5"
+  },
+  "out": "the-marvels/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "The Marvels",
+  "year": "2023",
+  "theme": {
+   "main": "#b52a35",
+   "deep": "#0f1530",
+   "accent": "#f2c14e",
+   "soft": "#f5e3e5"
+  },
+  "out": "the-marvels/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "LOGAN／ローガン",
+  "year": "2017",
+  "theme": {
+   "main": "#6b4a2b",
+   "deep": "#140e08",
+   "accent": "#d9a441",
+   "soft": "#f1ebe3"
+  },
+  "out": "logan/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Logan",
+  "year": "2017",
+  "theme": {
+   "main": "#6b4a2b",
+   "deep": "#140e08",
+   "accent": "#d9a441",
+   "soft": "#f1ebe3"
+  },
+  "out": "logan/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "デアデビル：ボーン・アゲイン シーズン1",
+  "year": "2025",
+  "theme": {
+   "main": "#8f1418",
+   "deep": "#0d0505",
+   "accent": "#e2c06a",
+   "soft": "#f3e2e2"
+  },
+  "out": "daredevil-born-again-s1/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Daredevil: Born Again (Season 1)",
+  "year": "2025",
+  "theme": {
+   "main": "#8f1418",
+   "deep": "#0d0505",
+   "accent": "#e2c06a",
+   "soft": "#f3e2e2"
+  },
+  "out": "daredevil-born-again-s1/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "アイアンハート",
+  "year": "2025",
+  "theme": {
+   "main": "#b0242c",
+   "deep": "#150708",
+   "accent": "#f0b93a",
+   "soft": "#f6e4e4"
+  },
+  "out": "ironheart/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Ironheart",
+  "year": "2025",
+  "theme": {
+   "main": "#b0242c",
+   "deep": "#150708",
+   "accent": "#f0b93a",
+   "soft": "#f6e4e4"
+  },
+  "out": "ironheart/en/og.png"
  }
 ]

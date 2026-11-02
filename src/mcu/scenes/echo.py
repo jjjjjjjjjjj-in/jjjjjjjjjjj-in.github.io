@@ -1,0 +1,36 @@
+SCENES = [
+    ("第1話 チャファ", "Episode 1: Chafa", [
+        ("最初の先祖", "はるか昔、チョクトー族の最初の人々が地上に現れたころの物語から始まる。",
+         "The first ancestor", "It opens long ago, with the story of the first Choctaw people emerging into the world."),
+        ("マヤの子ども時代", "少女マヤは、オクラホマで家族と暮らしていた。ある日の事故で、マヤは母を失い、自分も足にけがを負う。父ウィリアムは、マヤを連れてニューヨークへ移る。",
+         "Maya's childhood", "Young Maya lives with her family in Oklahoma. An accident takes her mother's life and injures Maya's leg. Her father, William, takes her to New York."),
+        ("「おじさん」フィスク", "父の上司ウィルソン・フィスク（キングピン）は、マヤを自分の娘のようにかわいがり、戦い方を教える。成長したマヤは、フィスクの組織で働くようになる。",
+         "'Uncle' Fisk", "Her father's boss, Wilson Fisk, Kingpin, treats Maya like a daughter and trains her to fight. As she grows up, she works for his organization."),
+        ("デアデビルとの戦い", "マヤは任務の中で、目の見えない弁護士でヒーローのデアデビルと戦う。",
+         "Fighting Daredevil", "On a job, Maya fights Daredevil, the blind lawyer turned vigilante."),
+        ("キングピンを撃つ", "父の死の真相を知ったマヤは、キングピンを撃ち、オクラホマへ帰る。",
+         "Shooting Kingpin", "Learning the truth about her father's death, Maya shoots Kingpin and heads home to Oklahoma."),
+    ]),
+    ("第2話〜第3話 ふるさと", "Episodes 2–3: Home", [
+        ("タマハの家族", "ふるさとのタマハには、おじのヘンリー、おばあさんのチュラ、いとこのボニー、ローラースケート場を経営するおじのスカリーがいた。マヤは、家族と気まずい再会をする。",
+         "Family in Tamaha", "In Tamaha are her uncle Henry, her grandmother Chula, her cousin Bonnie and her uncle Skully, who runs a roller rink. Maya's reunion with them is awkward."),
+        ("組織への攻撃", "マヤは、キングピンの組織の荷物を積んだ列車をおそい、組織に打撃を与える。",
+         "Hitting the empire", "Maya robs a train carrying Kingpin's goods, striking at his operation."),
+        ("先祖の物語", "各話の始まりには、チョクトー族の女性の先祖たちの物語が描かれる。マヤは、自分にも先祖から受けついだ力があることを感じ始める。",
+         "The ancestors", "Each episode opens with a story of Maya's female ancestors. Maya begins to sense their power within her."),
+    ]),
+    ("第4話 キングピンの来訪", "Episode 4: Kingpin arrives", [
+        ("生きていたキングピン", "撃たれたキングピンは生きていた。彼はマヤを取り戻すため、タマハにやってくる。",
+         "Kingpin lives", "Kingpin survived the shooting and comes to Tamaha to bring Maya back."),
+        ("家族の危機", "キングピンの手下たちが、マヤの家族をねらう。",
+         "Family in danger", "Kingpin's men target Maya's family."),
+    ]),
+    ("第5話 先祖の力", "Episode 5: Maya", [
+        ("パウワウ", "町のお祭りパウワウの日、キングピンの手下がおそってくる。家族や町の人たちは、マヤと一緒に戦う。",
+         "The powwow", "On the day of the town's powwow, Kingpin's men attack. Maya's family and neighbors fight beside her."),
+        ("心の痛み", "マヤは、家族の女性たちと力を合わせ、先祖の力でキングピンの心の奥の痛みにふれる。キングピンは、子どものころの自分の記憶を見せられ、町を去る。",
+         "Sharing the pain", "Joining with the women of her family, Maya uses the ancestors' power to reach into Kingpin's pain. Shown his own childhood memories, he leaves town."),
+        ("エンドクレジットの後", "ニューヨークに戻ったキングピンは、テレビのニュースを見て、新しい野望を抱く。",
+         "After the credits", "Back in New York, Kingpin watches the news and sets his sights on a new ambition."),
+    ]),
+]

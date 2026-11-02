@@ -1,0 +1,30 @@
+SCENES = [
+    ("第1話〜第2話 シカゴに戻る", "Episodes 1–2: Back to Chicago", [
+        ("大学を追われる", "マサチューセッツ工科大学（MIT）で学ぶ天才リリ・ウィリアムズは、アーマーの研究のお金をめぐる問題で、大学を追い出される。",
+         "Expelled", "Riri Williams, a genius at MIT, is expelled over how she's been funding her armor research."),
+        ("ふるさとシカゴ", "リリは、母ロニーの待つシカゴに戻る。リリは、昔の事件で亡くした親友ナタリーのことを、今も忘れられずにいた。",
+         "Home to Chicago", "Riri returns to her mother, Ronnie, in Chicago. She still can't move on from losing her best friend Natalie years ago."),
+        ("ナタリーの人工知能", "リリはアーマーに人工知能を入れる。その人工知能は、ナタリーの姿と性格で話し始める。",
+         "The AI", "Riri installs an AI in her armor, and it starts talking with Natalie's face and personality."),
+        ("パーカーの誘い", "アーマーを完成させるお金がないリリは、なぞの男パーカー・ロビンスに誘われ、泥棒の仲間に加わる。",
+         "Parker's offer", "Short on money, Riri accepts an offer from the mysterious Parker Robbins to join his crew of thieves."),
+    ]),
+    ("第3話〜第4話 フッドの仲間", "Episodes 3–4: The Hood's crew", [
+        ("大きな盗み", "リリはアーマーで、パーカーたちの大きな盗みを手伝う。",
+         "The heist", "Riri uses her armor to help the crew with a big heist."),
+        ("フッドの力", "パーカーは、マントを身につけると姿を消したり、不思議な力を使えたりする。リリは、その力に科学では説明できないものを感じる。",
+         "The Hood's power", "In his cloak, Parker can vanish and wield strange powers. Riri senses something science can't explain."),
+        ("仲間の死", "盗みの最中に仲間が死に、リリは、パーカーのやり方の危うさに気づく。",
+         "A death on the job", "A crew member dies during a job, and Riri realizes how dangerous Parker is."),
+        ("ジョー", "リリは、技術者のジョー・マクギリカディと出会い、協力し合う。",
+         "Joe", "Riri meets engineer Joe McGillicuddy and they work together."),
+    ]),
+    ("第5話〜第6話 最後の取り引き", "Episodes 5–6: The final bargain", [
+        ("ジョーの秘密", "ジョーには、ある有名な人物と関係のある過去があった。",
+         "Joe's secret", "Joe has a past tied to a famous name."),
+        ("フッドとの戦い", "リリは、アイアンハートとして、フッドの力を手に入れたパーカーと戦う。",
+         "Battling the Hood", "As Ironheart, Riri battles Parker and the power of the Hood."),
+        ("悪魔の王", "最終話、マントの力の正体である悪魔の王メフィストが現れる。メフィストは、ナタリーを取り戻すための取り引きをリリに持ちかける。",
+         "The demon lord", "In the finale, Mephisto, the demon behind the cloak's power, appears and offers Riri a deal to bring Natalie back."),
+    ]),
+]
