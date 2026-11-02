@@ -33,7 +33,7 @@ SITES = [
         desc_en="What to watch before Avengers: Doomsday, with a story-order checklist and importance ratings.",
         en_path="doomsday-guide/en/",
         sitemap="doomsday-guide/sitemap.xml",
-        updated="2026-11-01",
+        updated="2026-11-02",
     ),
     dict(
         path="captain-america-first-avenger/", folder="marvel", folder_en="marvel-en",
