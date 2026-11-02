@@ -32,7 +32,7 @@ SOURCES = {
     "articles": ("複数の旅行・攻略ブログ（公式ではない）", ""),
     "operator": ("運営者の体験（" + "2026年に8回訪問" + "）", ""),
     "users": ("ユーザー提供情報", ""),
-    "user_notice_1102": ("ユーザー提供：パラダイスシティの日本向けのお知らせ（運営者が2026-11-02に受け取ったもの）", ""),
+    "official_line": ("パラダイスシティ公式LINE（日本語）の配信", ""),
 }
 
 STATUS_LABEL = {
@@ -156,7 +156,7 @@ CAMPAIGNS = dict(
             conditions="カジノで遊ぶことが条件（くわしい条件は要確認）。12月は特に混み合うとのこと。",
             book_from="", book_to="2026-11-30", stay_from="", stay_to="2026-12-31",
             note="予約の締め切りが11月末まで延長されたと案内されています。ゲームの条件は書かれていなかったので、予約前に確認してください。",
-            status="user", src="user_notice_1102", checked="2026-11-02", url="",
+            status="official", src="official_line", month="2026年11月", checked="2026-11-02", url="",
         ),
         dict(
             name="無料宿泊キャンペーン（パラダイスシティプラン）", kind="カジノで遊ぶと宿泊が無料になるキャンペーン",
@@ -165,7 +165,7 @@ CAMPAIGNS = dict(
             conditions="カジノで遊ぶことが条件（くわしい条件は要確認）。12月は特に混み合うとのこと。",
             book_from="", book_to="2026-11-30", stay_from="", stay_to="2026-12-31",
             note="予約の締め切りが11月末まで延長されたと案内されています。ゲームの条件は書かれていなかったので、予約前に確認してください。",
-            status="user", src="user_notice_1102", checked="2026-11-02", url="",
+            status="official", src="official_line", month="2026年11月", checked="2026-11-02", url="",
         ),
         dict(
             name="11月 再訪問クーポン（カジノクーポン 30,000ウォン）", kind="2回目以降に来た人向けのクーポン",
@@ -173,8 +173,8 @@ CAMPAIGNS = dict(
             perks="カジノで使えるクーポン 30,000ウォン分",
             conditions="メンバーシップデスクでクーポンを見せる／初めて来た人は使えない／新しく会員登録した人は翌日から使える／11月中に1人1回まで／韓国に住んでいる人は使えない",
             book_from="", book_to="", stay_from="2026-11-01", stay_to="2026-11-30",
-            note="クーポンの画像（バーコードつき）は、パラダイスシティの案内で配られています。このサイトではバーコードは載せていません。",
-            status="user", src="user_notice_1102", checked="2026-11-02", url="",
+            note="クーポンの画像（バーコードつき）は、パラダイスシティの案内で配られています。クーポンは公式LINEで配られています。",
+            status="official", src="official_line", month="2026年11月", checked="2026-11-02", url="",
         ),
         dict(
             name="VIPディナーショーへの招待（抽選）", kind="抽選のプレゼント",
@@ -182,8 +182,8 @@ CAMPAIGNS = dict(
             perks="ディナーショーへの招待（「冬の女王」で知られる人気歌手が出演と案内）／ハイアット リージェンシー 仁川に2泊・朝食つき",
             conditions="抽選で6組12名。応募の締め切りは要確認。",
             book_from="", book_to="", stay_from="2026-11-27", stay_to="2026-11-29",
-            note="応募はパラダイスシティの案内に書かれた応募フォームから。このサイトでは、公式のものか確かめられていないため、フォームのリンクは載せていません。",
-            status="user", src="user_notice_1102", checked="2026-11-02", url="",
+            note="応募は公式LINEで案内された応募フォームから。",
+            status="official", src="official_line", month="2026年11月", checked="2026-11-02", url="https://forms.gle/CumtWnxZ2Y5b7k3Y9", url_label="応募フォームを開く（公式LINEの案内より）",
         ),
     ],
     archive=[

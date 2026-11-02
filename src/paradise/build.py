@@ -161,7 +161,9 @@ def campaign_card(c):
     else:
         state = '<span class="state state-unknown">期間：要確認</span>'
     period = lambda a, b: f"{a or '要確認'} 〜 {b or '要確認'}"
-    link = f'<p><a class="btn" href="{e(c["url"])}" target="_blank" rel="noopener">公式ページで内容を確認する</a></p>' if c["url"] else ""
+    link = f'<p><a class="btn" href="{e(c["url"])}" target="_blank" rel="noopener">{e(c.get("url_label", "公式ページで内容を確認する"))}</a></p>' if c["url"] else ""
+    if c.get("month"):
+        state += f' <span class="state state-unknown">{e(c["month"])}の情報</span>'
     return f"""<article class="card" data-campaign data-start="{c['book_from']}" data-end="{end}">
   <div class="badge-row">{badge(c['status'])}{state}</div>
   <h3>{e(c['name'])}</h3>
