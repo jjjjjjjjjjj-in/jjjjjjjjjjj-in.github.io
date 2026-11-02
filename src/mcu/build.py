@@ -397,7 +397,22 @@ def build_scenes_page(slug, lang):
     toc = (f'<ul><li><span class="toc-label">{e(t["toc"])}</span></li>'
            + "".join(f'<li><a href="#c{i}">{e(h.split(" ", 1)[0] if lang == "ja" else h.split(":")[0])}</a></li>' for i, (h, _) in enumerate(chapters, 1)) + "</ul>")
     mid = (len(chapters) + 1) // 2  # 真ん中の章の後に、この作品の商品（PR）を1つはさむ
-    body = "".join(
+    fold = g.get("episodes_fold")  # 話ごとに押して開く形（運営者の希望、2026-11-02。ビジョンクエストなど）
+    if fold:
+        body = "".join(
+            f'<details class="fg-sec sc-chapter sc-fold" id="c{i}"><summary><h2>{e(h)}</h2></summary>'
+            + "".join(f'<div class="sc-scene"><h3>{e(sh)}</h3><p>{e(sp)}</p></div>' for sh, sp in scenes) + "</details>\n"
+            for i, (h, scenes) in enumerate(chapters, 1))
+        for j, u in enumerate(g.get("upcoming", []), len(chapters) + 1):
+            ut, ud = (u[1], u[3]) if lang == "en" else (u[0], u[2])
+            body += (f'<details class="fg-sec sc-chapter sc-fold sc-upcoming" id="c{j}"><summary><h2>{e(ut)}'
+                     f'<span class="tag-warn">{"Not yet released" if lang == "en" else "未公開"}</span></h2></summary>'
+                     f'<p class="sc-soon">{e(ud)}</p></details>\n')
+        body += shop_panel(g, lang) + "\n"
+        body += ("<script>(function(){function o(){var d=document.getElementById(location.hash.slice(1));"
+                 "if(d&&d.tagName==='DETAILS'){d.open=true;}}window.addEventListener('hashchange',o);o();})();</script>\n")
+    else:
+      body = "".join(
         f'<section class="fg-sec sc-chapter" id="c{i}"><h2>{e(h)}</h2>'
         + "".join(f'<div class="sc-scene"><h3>{e(sh)}</h3><p>{e(sp)}</p></div>' for sh, sp in scenes) + "</section>\n"
         + (shop_panel(g, lang) + "\n" if i == mid else "")
@@ -423,7 +438,7 @@ def build_scenes_page(slug, lang):
   <p class="lead"><strong>{e(t['scenes_warn'])}</strong></p>
 </header>
 <nav class="site-toc" aria-label="{e(t['toc'])}">{toc}</nav>
-{contents_box([(f"#c{i}", h, [sh for sh, _ in sc]) for i, (h, sc) in enumerate(chapters, 1)], lang)}
+{contents_box([(f"#c{i}", h, [sh for sh, _ in sc]) for i, (h, sc) in enumerate(chapters, 1)] + [(f"#c{j}", (u[1] if lang == "en" else u[0]) + (" (not yet released)" if lang == "en" else "（未公開）"), []) for j, u in enumerate(g.get("upcoming", []), len(chapters) + 1)], lang)}
 {body}
 {common_panel(lang)}
 <section class="panel"><div class="btns"><a class="btn primary" href="../">{e(t['scenes_back'])}</a></div></section>

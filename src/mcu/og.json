@@ -1582,5 +1582,29 @@
    "soft": "#f6e4e4"
   },
   "out": "ironheart/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "ビジョンクエスト（VisionQuest）",
+  "year": "2026",
+  "theme": {
+   "main": "#8a1f3a",
+   "deep": "#0d1210",
+   "accent": "#e2b84a",
+   "soft": "#f3e3e8"
+  },
+  "out": "visionquest/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "VisionQuest",
+  "year": "2026",
+  "theme": {
+   "main": "#8a1f3a",
+   "deep": "#0d1210",
+   "accent": "#e2b84a",
+   "soft": "#f3e3e8"
+  },
+  "out": "visionquest/en/og.png"
  }
 ]

@@ -444,3 +444,14 @@ footer p { margin: 0; }
 .src-title { margin: 14px 0 2px; font-size: 13px; font-weight: 700; color: #5d636b; }
 .src-list { margin: 0; padding-left: 1.2em; font-size: 13px; }
 .src-list li { margin: 3px 0; }
+
+/* 話ごとに押して開く形（ビジョンクエストなど） */
+details.sc-fold > summary { list-style: none; cursor: pointer; }
+details.sc-fold > summary::-webkit-details-marker { display: none; }
+details.sc-fold > summary h2::after { content: "＋"; margin-left: auto; font-weight: 900; color: var(--gold-bright); }
+details.sc-fold[open] > summary h2::after { content: "－"; }
+details.sc-fold > summary h2 { display: flex; align-items: center; gap: 8px; }
+.sc-upcoming > summary h2 { opacity: .8; }
+.sc-soon { margin: 12px 4px; font-weight: 700; }
+details.sc-fold > summary h2 { margin: 0; font-size: 18px; font-weight: 900; background: var(--navy); color: var(--on-dark); border-radius: 6px; border-left: 4px solid var(--gold-bright); padding: 10px 14px; line-height: 1.45; }
+details.sc-fold { margin: 12px 0; }

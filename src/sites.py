@@ -666,6 +666,16 @@ SITES = [
         updated="2026-11-02",
     ),
     dict(
+        path="visionquest/", folder="marvel", folder_en="marvel-en", group="earth616",
+        name="ビジョンクエスト 完全ガイド",
+        name_en="VisionQuest Complete Guide",
+        desc="人間のふりをして暮らすヴィジョンが、ワンダとの息子トミーを守るため、ウルトロンや賞金稼ぎと向き合う。配信中のドラマ。あらすじ・相関図・用語・Q&A。",
+        desc_en="Living as a human, Vision fights to protect Tommy, his son with Wanda, from Ultron and a bounty hunter. Now streaming: story, character map, key terms and Q&A.",
+        en_path="visionquest/en/",
+        sitemap="visionquest/sitemap.xml",
+        updated="2026-11-02",
+    ),
+    dict(
         path="spider-man-2002/", folder="marvel", folder_en="marvel-en", group="other",
         name="スパイダーマン（2002年） 完全ガイド",
         name_en="Spider-Man (2002) Complete Guide",
