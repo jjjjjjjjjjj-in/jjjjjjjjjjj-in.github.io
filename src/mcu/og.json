@@ -1606,5 +1606,53 @@
    "soft": "#f3e3e8"
   },
   "out": "visionquest/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "アメイジング・スパイダーマン",
+  "year": "2012",
+  "theme": {
+   "main": "#1d3b8a",
+   "deep": "#0b1638",
+   "accent": "#d42a2a",
+   "soft": "#e6eaf4"
+  },
+  "out": "amazing-spider-man/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "The Amazing Spider-Man",
+  "year": "2012",
+  "theme": {
+   "main": "#1d3b8a",
+   "deep": "#0b1638",
+   "accent": "#d42a2a",
+   "soft": "#e6eaf4"
+  },
+  "out": "amazing-spider-man/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "アメイジング・スパイダーマン2",
+  "year": "2014",
+  "theme": {
+   "main": "#1565c0",
+   "deep": "#08203f",
+   "accent": "#d42a2a",
+   "soft": "#e4eef8"
+  },
+  "out": "amazing-spider-man-2/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "The Amazing Spider-Man 2",
+  "year": "2014",
+  "theme": {
+   "main": "#1565c0",
+   "deep": "#08203f",
+   "accent": "#d42a2a",
+   "soft": "#e4eef8"
+  },
+  "out": "amazing-spider-man-2/en/og.png"
  }
 ]
