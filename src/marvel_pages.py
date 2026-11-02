@@ -110,22 +110,28 @@ h2 { font-size: 21px; margin: 34px 0 12px; padding-left: 12px; border-left: 5px 
 .eranow { position: sticky; top: 67px; z-index: 10; background: rgba(11,11,13,.94); backdrop-filter: blur(4px); border-bottom: 1px solid var(--line); margin: 14px -16px 0; padding: 8px 16px; display: flex; gap: 10px; align-items: center; font-weight: 900; }
 .eranow small { font-family: "Anton", sans-serif; letter-spacing: .12em; color: var(--red); font-size: 12px; font-weight: 400; }
 .eranow span { color: var(--gold); font-size: 17px; }
-.era { margin-top: 26px; }
+.era { margin-top: 16px; }
+.era > h2 { font-size: 19px; margin-bottom: 8px; }
 .era[hidden], .ev[hidden] { display: none; }
 .era > h2 { margin-top: 0; }
-.tl { list-style: none; margin: 0; padding: 0 0 0 22px; position: relative; }
-.tl::before { content: ""; position: absolute; left: 6px; top: 6px; bottom: 6px; width: 2px; background: linear-gradient(var(--red), #5a1414); }
-.ev { position: relative; margin: 0 0 12px; background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
-.ev::before { content: ""; position: absolute; left: -21px; top: 16px; width: 10px; height: 10px; border-radius: 50%; background: var(--bg); border: 2px solid var(--red); }
+.tl { list-style: none; margin: 0; padding: 0 0 0 18px; position: relative; }
+.tl::before { content: ""; position: absolute; left: 5px; top: 6px; bottom: 6px; width: 2px; background: linear-gradient(var(--red), #5a1414); }
+/* 1画面に多く出せるよう、詰めて1行に並べる（運営者の希望、2026-11-02） */
+.ev { position: relative; margin: 0 0 5px; background: var(--card); border: 1px solid var(--line); border-radius: 8px; padding: 5px 9px; display: flex; flex-wrap: wrap; align-items: center; column-gap: 6px; row-gap: 3px; line-height: 1.45; }
+.ev::before { content: ""; position: absolute; left: -17px; top: 10px; width: 8px; height: 8px; border-radius: 50%; background: var(--bg); border: 2px solid var(--red); }
 .ev.main { border-color: #5c4a12; background: linear-gradient(90deg, #241d08, var(--card) 60%); }
-.ev.main::before { background: var(--gold); border-color: var(--gold); width: 12px; height: 12px; left: -22px; }
-.ev .when { font-size: 12.5px; font-weight: 700; color: var(--gold); margin-right: 8px; }
-.ev .txt { font-weight: 700; font-size: 15.5px; }
-.ev .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
-.ev .tags a { font-size: 12.5px; font-weight: 700; text-decoration: none; padding: 2px 9px; border-radius: 999px; background: var(--card2); border: 1px solid var(--line); color: var(--ink); }
+.ev.main::before { background: var(--gold); border-color: var(--gold); width: 10px; height: 10px; left: -18px; top: 9px; }
+.ev .when { font-size: 11.5px; font-weight: 700; color: var(--gold); white-space: nowrap; }
+.ev { letter-spacing: -.01em; font-feature-settings: "palt"; }
+.ev .txt { font-weight: 700; font-size: 14px; }
+.ev a.txt { color: var(--ink); text-decoration: none; }
+.ev a.txt::after { content: " ›"; color: var(--red); }
+.ev .chip { font-size: 10.5px; padding: 0 6px; }
+.ev .tags { display: contents; }
+.ev .tags a, .ev .tags .chip { font-size: 11px; font-weight: 700; text-decoration: none; padding: 1px 7px; border-radius: 999px; background: var(--card2); border: 1px solid var(--line); color: #d6d6dd; line-height: 1.5; }
 .ev .tags a.kind-s { border-color: #4a3a7a; }
 .ev .tags a::after { content: " ›"; color: var(--red); }
-.ev .note { margin: 6px 0 0; font-size: 13px; color: #c9c9d1; }
+.ev .note { flex-basis: 100%; margin: 0; font-size: 11.5px; color: #b9b9c2; line-height: 1.5; }
 .ev .orig { font-size: 12px; color: var(--muted); }
 .legend { display: flex; flex-wrap: wrap; gap: 8px 14px; font-size: 12.5px; color: var(--muted); margin: 8px 0 0; }
 .none { text-align: center; color: var(--muted); padding: 20px; }
@@ -246,10 +252,16 @@ def timeline_html(analytics):
             # 直した行は、直した後の表記だけを出す（運営者の希望、2026-11-02。元の表記はデータに残す）
             if it["note"] and it["status"] != "fixed":
                 note = f'<p class="note">{e(it["note"])}</p>'
+            txt = f'<span class="txt">{e(display_text(it))}</span>'
+            # 本編の行は、作品名そのものをリンクにして、同じ作品名の札を重ねて出さない（縦を短くするため）
+            if it["main"] and len(it["works"]) == 1 and not it["labels"]:
+                w = it["works"][0]
+                txt = f'<a class="txt" href="{e(work_href(w, prefix))}">{e(display_text(it))}</a>'
+                tags = ""
             kinds = " ".join(sorted({"series" if w in SERIES else "film" for w in it["works"]}))
             q = " ".join([it["when"], display_text(it), it["text"], it["note"] if it["status"] != "fixed" else ""] + [title_of(w) for w in it["works"]] + it["labels"]).lower()
             lis += (f'<li class="ev{" main" if it["main"] else ""}" id="{it["id"]}" data-works="{" ".join(it["works"])}" data-kinds="{kinds}" data-q="{e(q)}">'
-                    f'{f"<span class=when>{e(it["when"])}</span>" if it["when"] else ""}<span class="txt">{e(display_text(it))}</span>{st}'
+                    f'{f"<span class=when>{e(it["when"])}</span>" if it["when"] else ""}{txt}{st}'
                     f'<div class="tags">{tags}</div>{note}</li>')
         eras_html += f'<section class="era" id="era{i}" data-era="{e(era)}"><h2>{e(era)}</h2><ol class="tl">{lis}</ol></section>\n'
     era_btns = '<button type="button" data-era="" aria-pressed="true">すべて</button>' + "".join(
