@@ -220,7 +220,7 @@ def display_text(it):
     return t
 
 
-STATUS = {"fixed": ("修正済み", "part"), "check": ("確認中", "check"), "info": ("補足", "")}
+STATUS = {"check": ("確認中", "check"), "info": ("補足", "")}
 
 
 def timeline_html(analytics):
@@ -243,13 +243,11 @@ def timeline_html(analytics):
                 lab, cls = STATUS[it["status"]]
                 st = f' <span class="chip {cls}">{lab}</span>'
             note = ""
-            if it["note"] or it["status"] in ("fixed", "check"):
-                note = f'<p class="note">{e(it["note"])}'
-                if it["status"] == "fixed" and it["original"]:
-                    note += f'<br><span class="orig">元の表記：{e(it["original"])}</span>'
-                note += "</p>"
+            # 直した行は、直した後の表記だけを出す（運営者の希望、2026-11-02。元の表記はデータに残す）
+            if it["note"] and it["status"] != "fixed":
+                note = f'<p class="note">{e(it["note"])}</p>'
             kinds = " ".join(sorted({"series" if w in SERIES else "film" for w in it["works"]}))
-            q = " ".join([it["when"], display_text(it), it["text"], it["note"]] + [title_of(w) for w in it["works"]] + it["labels"]).lower()
+            q = " ".join([it["when"], display_text(it), it["text"], it["note"] if it["status"] != "fixed" else ""] + [title_of(w) for w in it["works"]] + it["labels"]).lower()
             lis += (f'<li class="ev{" main" if it["main"] else ""}" id="{it["id"]}" data-works="{" ".join(it["works"])}" data-kinds="{kinds}" data-q="{e(q)}">'
                     f'{f"<span class=when>{e(it["when"])}</span>" if it["when"] else ""}<span class="txt">{e(display_text(it))}</span>{st}'
                     f'<div class="tags">{tags}</div>{note}</li>')
@@ -269,7 +267,7 @@ def timeline_html(analytics):
   <div class="seg" id="eras" aria-label="時代で絞り込む">{era_btns}</div>
   <div class="seg" id="kinds" aria-label="種類で絞り込む"><button type="button" data-kind="" aria-pressed="true">映画もドラマも</button><button type="button" data-kind="film" aria-pressed="false">映画</button><button type="button" data-kind="series" aria-pressed="false">ドラマ・配信</button></div>
 </div>
-<div class="legend"><span><span class="chip ok" style="background:var(--gold)">●</span> 金色の行＝作品の本編</span><span><span class="chip part">修正済み</span> 元の表記を直した行（元の表記も表示）</span><span><span class="chip check">確認中</span> 時期などをまだ確かめている行</span><span><span class="chip">補足</span> 説明を足した行</span></div>
+<div class="legend"><span><span class="chip ok" style="background:var(--gold)">●</span> 金色の行＝作品の本編</span><span><span class="chip check">確認中</span> 時期などをまだ確かめている行</span><span><span class="chip">補足</span> 説明を足した行</span></div>
 <p class="count" id="count"></p>
 <div class="eranow" aria-live="polite"><small>ERA</small><span id="eranow">{e(d["eras"][0])}</span></div>
 {eras_html}<p class="none" id="none" hidden>見つかりませんでした</p>"""
