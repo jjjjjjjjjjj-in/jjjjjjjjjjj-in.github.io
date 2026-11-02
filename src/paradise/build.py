@@ -25,7 +25,7 @@ e = html.escape
 
 NAV = [
     ("index.html", "トップ"), ("stay.html", "宿泊プラン"), ("campaigns.html", "キャンペーン"),
-    ("perks.html", "お得情報"), ("guide.html", "初心者ガイド"), ("budget.html", "予算"),
+    ("perks.html", "お得情報"), ("guide.html", "初心者ガイド"),
     ("howto.html", "会員登録・予約"), ("faq.html", "よくある質問"), ("articles.html", "体験談・記事"),
 ]
 
@@ -237,8 +237,8 @@ def page_index():
     tiles = [
         ("perks.html", "お得情報", "会員特典・食事券・ポイント"), ("campaigns.html", "キャンペーン", "今のプランと過去の事例"),
         ("article-cafe9.html", "Cafe 9", "カジノの中のご飯"), ("stay.html", "宿泊プラン", "ホテルと比較表"),
-        ("guide.html", "初心者ガイド", "入場とテーブルのルール"),
-        ("budget.html", "予算", "最低ベットとシミュレーター"), ("howto.html", "会員登録・予約", "予約前の確認ポイント"),
+        ("guide.html", "初心者ガイド", "入場・テーブルのルールと予算"),
+        ("howto.html", "会員登録・予約", "予約前の確認ポイント"),
         ("faq.html", "よくある質問", "パスポート・日本円など"), ("articles.html", "体験談・記事", "8回通った運営者のメモ"),
     ]
     tile_html = '<nav class="tiles" aria-label="主なページ">' + "".join(
@@ -413,26 +413,28 @@ def page_guide():
   <p>{badge('exp')} 入口のすぐ手前にクラップスとルーレット、まっすぐ進むとブラックジャックやポーカー、その先にたくさんのバカラの台があります。運営者の体感では、サレンダーができるブラックジャックがいちばんチップが減りにくかったです。</p>
   <p><a class="btn" href="article-floor-tables.html">体験談を読む</a></p>
 </section>
+{budget_sections()}
 <section aria-labelledby="h-b"><h2 id="h-b">カジノの基本情報</h2>
   {basics_cards()}
 </section>
 <section aria-labelledby="h-next"><h2 id="h-next">次に読む</h2>
-  <div class="btns"><a class="btn primary" href="budget.html">予算の目安を見る</a><a class="btn" href="howto.html">会員登録の流れを見る</a></div>
+  <div class="btns"><a class="btn primary" href="howto.html">会員登録の流れを見る</a></div>
 </section>"""
     for r in D.ENTRY_RULES + D.TABLE_RULES:
         index_search("初心者ガイド", "guide.html", r["title"], r["text"])
     for b in D.BASICS:
         index_search("初心者ガイド", "guide.html#h-b", b["title"], b["text"])
+    bd = D.BUDGET
+    index_search("初心者ガイド", "guide.html#h-budget", "最低ベットと予算の目安", bd["text_min_bet"] + " " + bd["text_budget"])
+    index_search("初心者ガイド", "guide.html#h-sim", "予算シミュレーター", "予算 最低ベット 資金管理 シミュレーター")
     return layout("guide.html", "パラダイスシティ カジノ初心者ガイド｜入場ルールとテーブルのマナー",
                   "初めてパラダイスシティのカジノに行く人向けに、パスポート・服装・撮影禁止などの入場ルールと、テーブルゲームでのマナーをイラストつきで解説します。",
-                  body, page_head("カジノ初心者ガイド", "入場のルールと、テーブルで気をつけることを分かりやすくまとめました。"))
+                  body, page_head("カジノ初心者ガイド", "入場のルール、テーブルで気をつけること、予算の目安を分かりやすくまとめました。"))
 
 
-def page_budget():
+def budget_sections():
     b = D.BUDGET
-    body = f"""
-{LEGEND}
-<section aria-labelledby="h-ex"><h2 id="h-ex">運営者の体験から分かった目安</h2>
+    return f"""<section aria-labelledby="h-budget"><h2 id="h-budget">予算の目安（最低ベット）</h2>
   <div class="cards">
     {info_card('最低ベット', b['text_min_bet'], b['status'], b['src'], b['checked'])}
     {info_card('持って行く金額', b['text_budget'], b['status'], b['src'], b['checked'])}
@@ -457,11 +459,14 @@ def page_budget():
     <li>カジノで利益が出ることは保証されていません</li>
   </ul>
 </section>"""
-    index_search("予算", "budget.html", "最低ベットと予算の目安", b["text_min_bet"] + " " + b["text_budget"])
-    index_search("予算", "budget.html#h-sim", "予算シミュレーター", "予算 最低ベット 資金管理 シミュレーター")
-    return layout("budget.html", "パラダイスシティ カジノの予算と最低ベット｜初心者向け予算シミュレーター",
-                  "パラダイスシティのカジノの最低ベットの目安と、持って行く予算の考え方。予算を入れると資金管理の目安が分かるシミュレーターつき。",
-                  body, page_head("予算・最低ベット", "体験談をもとにした予算の目安と、資金管理のシミュレーターです。"))
+
+
+def page_budget():
+    # 予算のページは初心者ガイドにまとめた（運営者の希望、2026-11-02）。古いアドレスは転送だけ
+    return """<!doctype html><html lang="ja"><head><meta charset="utf-8"><title>初心者ガイドへ移動しました</title>
+<meta name="robots" content="noindex"><link rel="canonical" href="guide.html#h-budget">
+<meta http-equiv="refresh" content="0; url=guide.html#h-budget"></head>
+<body><p><a href="guide.html#h-budget">初心者ガイドの「予算」へ移動しました</a></p></body></html>"""
 
 
 def page_howto():
@@ -573,7 +578,7 @@ def main():
             f.write(text)
     with open(os.path.join(OUT, "search.json"), "w", encoding="utf-8") as f:
         json.dump(SEARCH, f, ensure_ascii=False)
-    urls = [n for n in pages if n != "search.html"]
+    urls = [n for n in pages if n not in ("search.html", "budget.html")]
     with open(os.path.join(OUT, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                 + "".join(f"  <url><loc>{BASE}{'' if n == 'index.html' else n}</loc><lastmod>{D.UPDATED}</lastmod></url>\n" for n in urls)
