@@ -536,7 +536,7 @@ def page_article(a):
         return ('<div class="table-wrap fit"><table><thead><tr>' + "".join(f"<th>{e(c)}</th>" for c in head) + "</tr></thead><tbody>"
                 + "".join("<tr>" + "".join(f"<td>{e(c)}</td>" for c in r) + "</tr>" for r in rest) + "</tbody></table></div>")
     sections = "".join(f"<section><h2>{e(b[0])}</h2><p>{e(b[1])}</p>{table(b[2]) if len(b) > 2 else ''}</section>" for b in a["body"])
-    pics = {"hotel": photos(), "cafe9": photos(D.CAFE9_PHOTOS, wide=True)}.get(a.get("photos"), "")
+    pics = {"hotel": photos(), "cafe9": photos(D.CAFE9_PHOTOS, wide=True), "trip-2611": photos(D.TRIP_2611_PHOTOS)}.get(a.get("photos"), "")
     body = f"""
 <div class="article-body">
   <div class="badge-row">{badge(a['status'])}<span class="muted">{e(a['category'])} ・ {a['date']}</span></div>
