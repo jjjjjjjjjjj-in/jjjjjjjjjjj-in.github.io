@@ -103,7 +103,7 @@ def layout(file, title, desc, body, head_html, extra_head=""):
 <meta property="og:title" content="{e(title)}">
 <meta property="og:description" content="{e(desc)}">
 <meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{BASE}img/hyatt-lobby.jpg">
+<meta property="og:image" content="{BASE}og.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">{extra_head}
 <link rel="preconnect" href="https://fonts.googleapis.com">

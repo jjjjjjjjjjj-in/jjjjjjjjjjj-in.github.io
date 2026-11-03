@@ -261,6 +261,14 @@ def build(f, sites_in_group, head_extra, base_url, site_name, analytics):
 <meta name="apple-mobile-web-app-title" content="{e(f["name"])}">
 <meta name="description" content="{e(f["desc"])}">
 <link rel="canonical" href="{base_url}{f["path"]}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="{e(f["name"])}">
+<meta property="og:title" content="{e(page_title)}">
+<meta property="og:description" content="{e(f["desc"])}">
+<meta property="og:url" content="{base_url}{f["path"]}">
+<meta property="og:image" content="{base_url}{f["path"]}og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Zen+Kaku+Gothic+New:wght@400;700;900&display=swap">

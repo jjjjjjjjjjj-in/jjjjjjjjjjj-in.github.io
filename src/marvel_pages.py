@@ -188,6 +188,14 @@ def page(path, title, desc, body, analytics, extra_script=""):
 <meta name="apple-mobile-web-app-title" content="{e(title)}">
 <meta name="description" content="{e(desc)}">
 <link rel="canonical" href="https://mocchima.com/{path}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="マーベル映画紹介">
+<meta property="og:title" content="{e(title + "｜マーベル映画紹介")}">
+<meta property="og:description" content="{e(desc)}">
+<meta property="og:url" content="https://mocchima.com/{path}">
+<meta property="og:image" content="https://mocchima.com/{path}og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#000000">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

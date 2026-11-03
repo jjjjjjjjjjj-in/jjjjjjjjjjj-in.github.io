@@ -87,3 +87,6 @@
 ## 独自ドメイン（2026-11-03）
 - 全サイトは https://mocchima.com/ で公開（Xserverドメインで取得。2年目から年1,721円、自動更新。ネームサーバーは XServerドメイン ns1〜3.xdomain.ne.jp、DNS は A 185.199.108〜111.153 ×4 と www CNAME jjjjjjjjjjj-in.github.io）。リポジトリ直下の CNAME ファイルが mocchima.com。古い github.io のアドレスは GitHub が自動で mocchima.com へ転送する。ドゥームズデイ予習ガイド（別リポジトリ）も https://mocchima.com/doomsday-guide/ になる。
 - src のアドレスはすべて https://mocchima.com に置き換えた。新しいページでも github.io のアドレスは使わない。
+
+## 共有画像（LINEなどで送ったときの絵、2026-11-03）
+- マーベル映画紹介（日本語・英語）、特集3ページ、パラダイスシティ、もっちぃまのトップの og.png は `node src/og_pages.js` で作る（1200x630）。作品ガイドは src/mcu/render.js、ドゥームズデイ予習ガイドは別リポジトリの render.js。新しいページにも og:image を必ず入れる。
