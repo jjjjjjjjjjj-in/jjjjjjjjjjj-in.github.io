@@ -14,9 +14,9 @@ from sites import SITES, FOLDERS, WATCH_ORDER  # noqa: E402
 import marvel_folder  # noqa: E402
 import marvel_pages  # noqa: E402
 
-BASE_URL = "https://jjjjjjjjjjj-in.github.io/"
+BASE_URL = "https://mocchima.com/"
 
-# Google Search Console（URLプレフィックス https://jjjjjjjjjjj-in.github.io/）の HTMLタグの content の値
+# Google Search Console（URLプレフィックス https://mocchima.com/）の HTMLタグの content の値
 GOOGLE_SITE_VERIFICATION = "qCmKqyCaXzHH3V_hEqM1lhQKy9os6X5RIR2zZmw4fZc"
 
 # Google アナリティクスの測定ID（全サイト共通）。各サイトの全ページにも同じタグを入れる

@@ -20,7 +20,7 @@ from relations import RELATION_MAPS, image_for  # noqa: E402
 from titles import TITLES  # noqa: E402
 import relmap_build  # noqa: E402
 
-BASE_URL = "https://jjjjjjjjjjj-in.github.io/"
+BASE_URL = "https://mocchima.com/"
 GA_MEASUREMENT_ID = "G-KDFL8GPPRZ"
 PRIVACY_URL = BASE_URL + "privacy.html"
 

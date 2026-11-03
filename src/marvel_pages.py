@@ -22,7 +22,7 @@ from titles import TITLES  # noqa: E402
 import marvel_folder  # noqa: E402
 
 e = html.escape
-DOOMSDAY = "https://jjjjjjjjjjj-in.github.io/doomsday-guide/"
+DOOMSDAY = "https://mocchima.com/doomsday-guide/"
 
 # 映画以外（ドラマ・配信）の作品。年表の「映画／ドラマ」の絞り込みに使う
 SERIES = {"loki-s1", "loki-s2", "wandavision", "falcon-and-winter-soldier", "hawkeye", "moon-knight", "echo", "she-hulk",
@@ -187,7 +187,7 @@ def page(path, title, desc, body, analytics, extra_script=""):
 <title>{e(title)}｜マーベル映画紹介</title>
 <meta name="apple-mobile-web-app-title" content="{e(title)}">
 <meta name="description" content="{e(desc)}">
-<link rel="canonical" href="https://jjjjjjjjjjj-in.github.io/{path}">
+<link rel="canonical" href="https://mocchima.com/{path}">
 <meta name="theme-color" content="#000000">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

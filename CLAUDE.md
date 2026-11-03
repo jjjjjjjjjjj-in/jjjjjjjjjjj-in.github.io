@@ -1,6 +1,6 @@
 # jjjjjjjjjjj-in.github.io（全サイトの入口）
 
-運営者の全サイトの入口ページ（サイト名「もっちぃま」。デザインはモノトーンで、各サイトのタイルは同じ大きさにそろえる。映画に限らず旅行・本・自分の有料noteなど色々なテーマを扱う予定）。GitHub Pages で https://jjjjjjjjjjj-in.github.io/ に公開される。
+運営者の全サイトの入口ページ（サイト名「もっちぃま」。デザインはモノトーンで、各サイトのタイルは同じ大きさにそろえる。映画に限らず旅行・本・自分の有料noteなど色々なテーマを扱う予定）。GitHub Pages で https://mocchima.com/ に公開される。
 運営者は日本語で、技術に詳しくない。返答は日本語で、短く、専門用語を避ける。コミット作成者は Claude <noreply@anthropic.com>。
 
 ## このリポジトリの役割
@@ -19,8 +19,8 @@
    - A8.net: DMM TV を申請中（2026-10-31）。承認されたら広告コードを運営者から受け取る
 3. 広告のルール: 「PR」表記を出す。Amazon の場合は「Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。」（英語: "As an Amazon Associate, this site earns from qualifying purchases."）を出す。誤クリックを誘う配置はしない。
 4. そのサイトの `sitemap.xml` を作り、`src/sites.py` に1件追加して `python3 src/build.py` を実行し、push する。これで入口ページと Google への通知（サイトマップインデックス）が自動で更新される。
-5. Amazon（日本・アメリカ）・もしも・A8 には `https://jjjjjjjjjjj-in.github.io/` を登録済み（2026-10-31）。このドメインの中のサイトなら、運営者の追加作業なしで広告を使える。
-6. Google アナリティクス（測定ID `G-KDFL8GPPRZ`、全サイト共通）のタグを全ページに入れ、フッターに共通のプライバシーポリシー https://jjjjjjjjjjj-in.github.io/privacy.html へのリンクを置く。新しい広告サービスを使い始めたら、このページ（`src/build.py` の privacy_html）にも追記する。
+5. Amazon（日本・アメリカ）・もしも・A8 には `https://mocchima.com/` を登録済み（2026-10-31）。このドメインの中のサイトなら、運営者の追加作業なしで広告を使える。
+6. Google アナリティクス（測定ID `G-KDFL8GPPRZ`、全サイト共通）のタグを全ページに入れ、フッターに共通のプライバシーポリシー https://mocchima.com/privacy.html へのリンクを置く。新しい広告サービスを使い始めたら、このページ（`src/build.py` の privacy_html）にも追記する。
 7. 公式予告編などのリンクは、確認できた公式のものだけ使う。推測した URL は使わない。
 8. オンラインカジノの宣伝は日本では違法で、ASP でも禁止。カジノを扱うときはリゾートの旅行ガイドとして書く。
 
@@ -33,7 +33,7 @@
 - 公開予定の作品は `src/marvel_folder.py` の UPCOMING（今はシークレット・ウォーズ。米国2027-12-17、日本は未発表。公式サイトへリンク）。日本の公開日が決まったら直す。
 
 ## もっちぃま（このトップページ）の扱い（運営者の希望、2026-11-02）
-- もっちぃまは運営者の管理用の場所。各サイト（マーベル映画紹介・作品ガイド・ドゥームズデイ予習ガイドなど）から、もっちぃまのトップ（https://jjjjjjjjjjj-in.github.io/）へのリンクを置かない。三本線メニュー・パンくず・フッターも、そのサイトの中だけで完結させる（作品ガイドのパンくずは「マーベル映画紹介 ＞ 作品名」）。
+- もっちぃまは運営者の管理用の場所。各サイト（マーベル映画紹介・作品ガイド・ドゥームズデイ予習ガイドなど）から、もっちぃまのトップ（https://mocchima.com/）へのリンクを置かない。三本線メニュー・パンくず・フッターも、そのサイトの中だけで完結させる（作品ガイドのパンくずは「マーベル映画紹介 ＞ 作品名」）。
 - 表記は「Earth-616」「Earth-828」「Earth-10005」（「アース」は使わない）。タブは ALL／予習ガイド／Earth-616／X-MEN／Earth-828／その他。
 
 ## マーベル映画紹介の特集ページ（2026-11-02、運営者の希望。日本語だけ）
@@ -78,8 +78,12 @@
 - push のあと、GitHub の「pages build and deployment」が成功したかを確認する（2026-11-01 に、前の公開処理が止まったままで3回続けて失敗し、運営者のトップページが古いままだったことがある）。失敗していたらログを見て、次の push か再実行で直す。
 
 ## Google Search Console
-- `https://jjjjjjjjjjj-in.github.io/`（URLプレフィックス）の確認コードは `src/build.py` の `GOOGLE_SITE_VERIFICATION` に設定済み（2026-10-31）。
+- `https://mocchima.com/`（URLプレフィックス）の確認コードは `src/build.py` の `GOOGLE_SITE_VERIFICATION` に設定済み（2026-10-31）。
 - 所有権の確認とサイトマップ（`sitemap.xml`）の登録は済み（2026-10-31）。以降のサイト追加は `src/sites.py` に足すだけで自動で伝わる。
 
 ## ホーム画面のアイコン（2026-11-02、運営者の希望）
 - 全ページに apple-touch-icon（と favicon）を入れている。マーベル映画紹介・特集・作品ガイドは /icons/movie.png（黒地に白い MOVIE GUIDE、下に赤い帯）、パラダイスシティは /icons/paradise.png（紺地に金の PARADISE CITY）、もっちぃまは /icons/mochi.png（ピンク地に白い「もっちぃまーん」。運営者の希望。/apple-touch-icon.png も同じ）。ドゥームズデイ予習ガイドは別リポジトリの /doomsday-guide/apple-touch-icon.png（濃い緑に DOOMSDAY 予習ガイド）。新しいサイトにも入れる。
+
+## 独自ドメイン（2026-11-03）
+- 全サイトは https://mocchima.com/ で公開（Xserverドメインで取得。2年目から年1,721円、自動更新。ネームサーバーは XServerドメイン ns1〜3.xdomain.ne.jp、DNS は A 185.199.108〜111.153 ×4 と www CNAME jjjjjjjjjjj-in.github.io）。リポジトリ直下の CNAME ファイルが mocchima.com。古い github.io のアドレスは GitHub が自動で mocchima.com へ転送する。ドゥームズデイ予習ガイド（別リポジトリ）も https://mocchima.com/doomsday-guide/ になる。
+- src のアドレスはすべて https://mocchima.com に置き換えた。新しいページでも github.io のアドレスは使わない。

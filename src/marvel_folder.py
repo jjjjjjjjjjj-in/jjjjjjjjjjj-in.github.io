@@ -46,12 +46,12 @@ e = html.escape
 DOOMSDAY_THEME = dict(main="#1f5c3f", deep="#08140e", accent="#e0b04a", soft="#dde9e1")
 
 TEXT = {
-    "ja": dict(menu="メニュー", search="作品を探す", search_ph="作品名で探す", all="ALL", home="作品一覧（トップ）", doomsday_link="ドゥームズデイ予習ガイド", doomsday_href="https://jjjjjjjjjjj-in.github.io/doomsday-guide/",
+    "ja": dict(menu="メニュー", search="作品を探す", search_ph="作品名で探す", all="ALL", home="作品一覧（トップ）", doomsday_link="ドゥームズデイ予習ガイド", doomsday_href="https://mocchima.com/doomsday-guide/",
                other="English", other_href="en/", none="見つかりませんでした", soon="準備中（これから作ります）",
                doomsday="ドゥームズデイ予習ガイド", shop="マーベル映画をもっと楽しむ", pr="PR", amazon_note="Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。", doomsday_sub="視聴順チェックリスト", close="閉じる", released="公開年", setin="作中の年代",
                note="個人が運営する非公式のファンサイトです。Marvel Studios、The Walt Disney Company とは関係ありません。各サイトにはアフィリエイト広告（PR）を含むページがあります。",
                policy="プライバシーポリシー"),
-    "en": dict(menu="Menu", search="Search titles", search_ph="Search by title", all="ALL", home="All titles (top)", doomsday_link="Doomsday Watch Guide", doomsday_href="https://jjjjjjjjjjj-in.github.io/doomsday-guide/en/",
+    "en": dict(menu="Menu", search="Search titles", search_ph="Search by title", all="ALL", home="All titles (top)", doomsday_link="Doomsday Watch Guide", doomsday_href="https://mocchima.com/doomsday-guide/en/",
                other="日本語", other_href="../", none="No matches", soon="Coming soon",
                doomsday="Doomsday Watch Guide", shop="More Marvel fun", pr="Ad", amazon_note="As an Amazon Associate, this site earns from qualifying purchases.", doomsday_sub="Story-order checklist", close="Close", released="Released", setin="Set in",
                note="An unofficial fan site run by an individual, not affiliated with Marvel Studios or The Walt Disney Company. Some pages contain affiliate links (ads).",
