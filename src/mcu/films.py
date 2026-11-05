@@ -6015,9 +6015,6 @@ FILM_GUIDES = {
         # 話ごとに押して開く形。まだ配信されていない話は「未公開」と配信予定日だけを出す（運営者の希望、2026-11-02）
         episodes_fold=True,
         upcoming=[
-            ("第7話「イモレーション」", "Episode 7: Immolation",
-             "Disney+で11月3日（アメリカ時間）に配信予定です。配信されたら、あらすじを追加します。",
-             "Scheduled for November 3 (US time) on Disney+. We'll add the recap once it's out."),
             ("第8話（最終話）「フォーエバー」", "Episode 8 (finale): Forever",
              "Disney+で11月10日（アメリカ時間）に配信予定です。配信されたら、あらすじを追加します。",
              "Scheduled for November 10 (US time) on Disney+. We'll add the recap once it's out."),
@@ -6033,13 +6030,13 @@ FILM_GUIDES = {
             "But his old enemy Ultron is lurking inside his mind.",
         ],
         before=[
-            ("配信中のドラマです", "全8話のうち、第6話まで配信されています（2026年11月2日時点）。第7話は11月3日、最終話は11月10日（いずれもアメリカ時間）の配信予定です。"),
+            ("配信中のドラマです", "全8話のうち、第7話まで配信されています（2026年11月5日時点）。最終話は11月10日（アメリカ時間）の配信予定です。"),
             ("『ワンダヴィジョン』の続き", "『ワンダヴィジョン』の最後に、白いヴィジョンが記憶を取り戻して飛び去りました。その後の物語です。"),
             ("トミー", "ワンダが魔法で生み出した双子の1人、トミーが登場します。もう1人のビリーは『アガサ・オール・アロング』に出てきました。"),
             ("トニーのAIたち", "トニー・スタークが作った人工知能、フライデーやイーディスなどが、人の姿で登場します。"),
         ],
         before_en=[
-            ("Still airing", "Six of eight episodes are out as of November 2, 2026. Episode 7 arrives November 3 and the finale November 10 (US time)."),
+            ("Still airing", "Seven of eight episodes are out as of November 5, 2026. The finale arrives November 10 (US time)."),
             ("After WandaVision", "At the end of WandaVision, White Vision regained his memories and flew away. This picks up from there."),
             ("Tommy", "Tommy, one of the twins Wanda created, appears. His brother Billy was in Agatha All Along."),
             ("Tony's AIs", "Tony Stark's AIs, like F.R.I.D.A.Y. and E.D.I.T.H., appear in human form."),
@@ -6063,8 +6060,8 @@ FILM_GUIDES = {
              "3. Ultron", "Ultron takes over Vision's body."),
             ("4. ブッチャーバード", "なぞの殺し屋の正体と目的が見えてくる。",
              "4. Butcherbird", "The mysterious killer's identity and goal come into view."),
-            ("5. 最後の2話", "物語はクライマックスへ（第7話・第8話は配信待ち）。",
-             "5. The last two episodes", "The story heads to its climax (Episodes 7 and 8 still to come)."),
+            ("5. 最後の2話", "第7話で謎の依頼人が姿を見せ、物語はクライマックスへ（最終話は配信待ち）。",
+             "5. The last two episodes", "The story heads to its climax (the finale is still to come)."),
         ],
         confusing=[
             ("このヴィジョンは誰？",

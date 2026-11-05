@@ -53,4 +53,16 @@ SCENES = [
         ("イーディスの説得", "イーディスは、パラディンのAIを説得して、パラディンから離れさせる。",
          "E.D.I.T.H.'s persuasion", "E.D.I.T.H. hacks Paladin's AI and convinces her to abandon him."),
     ]),
+    ("第7話「イモレーション」（11月3日配信）", "Episode 7: Immolation (Nov. 3)", [
+        ("リサを救うために", "リサという女性の体の中に、ジョカスタのナノボット（小さな機械）が入りこんでいた。取り出すと命が危ないため、ヴィジョンとトミーは、ナノボットを書きかえて助ける方法を探す。",
+         "Saving Lisa", "One of Jocasta's nanobots has fused with a woman named Lisa. Removing it would kill her, so Vision and Tommy look for a way to reprogram it instead."),
+        ("謎の依頼人", "これまで影の中にいた、帽子をかぶった「依頼人」が姿を見せる。依頼人はヴィジョンに、自分とリサを救う方法があると持ちかける。",
+         "The Client", "The hat-wearing \"Client,\" who has stayed in the shadows until now, steps forward and offers Vision a way to save both himself and Lisa."),
+        ("自分の中へ", "ヴィジョンは、自分の元のプログラムを開くことを選ぶ。心の中で、もとのヴィジョンと向き合い、自分が何者なのかを受け入れていく。",
+         "Into his own code", "Vision chooses to unlock his source code. Inside his mind he confronts the original Vision and begins to accept who he is."),
+        ("リサは助かる", "ヴィジョンは、リサの体に広がっていたものを止め、リサを救う。",
+         "Lisa is saved", "Vision stops the infection spreading through Lisa's system and saves her."),
+        ("依頼人の顔", "依頼人の顔は、ウルトロンが人の姿をとったときの顔とそっくりだった。最後に、ヴィジョンは依頼人のもとへ自分から向かう。物語は、いくつもの命が危ない状態のまま、最終話へ続く。",
+         "The Client's face", "The Client's face matches the human face Ultron has worn. In the end Vision hands himself over to the Client, and the episode closes on a cliffhanger leading into the finale."),
+    ]),
 ]
