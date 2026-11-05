@@ -191,3 +191,19 @@ tr.is-past td, tr.is-past th { color: var(--past); }
 .ad-list li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px; padding: 10px 0; border-top: 1px solid var(--line); }
 .ad-links { display: flex; gap: 8px; }
 .ad-links a { font-size: 13px; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; text-decoration: none; color: inherit; }
+/* 2026-11-05 組み直し：トップの横並び・ステップ・目次 */
+.duo { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
+.duo > section { background: var(--paper); border: 1px solid var(--line); border-top: 3px solid var(--gold); border-radius: 8px; padding: 12px 12px 4px; margin: 0; min-width: 0; }
+.duo h2 { font-size: 17px; margin-top: 0; }
+.duo .updates li, .linklist li { font-size: 13px; }
+.duo .updates time { display: block; font-size: 11px; }
+.linklist { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.linklist a { color: var(--text); }
+.steps-mini { margin: 0 0 8px; padding-left: 0; list-style: none; display: grid; gap: 6px; }
+.steps-mini a { display: block; text-decoration: none; color: var(--text); background: var(--paper); border: 1px solid var(--line); border-left: 4px solid var(--gold); border-radius: 6px; padding: 9px 12px; }
+.steps-mini strong { color: var(--gold); margin-right: 6px; }
+.step-no { display: inline-block; font-size: 12px; letter-spacing: .1em; color: #111; background: var(--gold); border-radius: 4px; padding: 1px 8px; margin-right: 8px; vertical-align: middle; }
+.toc { background: var(--paper); border: 1px solid var(--line); border-radius: 8px; padding: 10px 14px; margin: 12px 0; }
+.toc ol { margin: 0; padding-left: 0; list-style: none; display: grid; gap: 4px; font-size: 14px; }
+.notes { margin: 6px 0; padding-left: 0; list-style: none; display: grid; gap: 6px; font-size: 13.5px; }
+@media (max-width: 380px) { .duo { gap: 8px; } .duo > section { padding: 10px 8px 2px; } }

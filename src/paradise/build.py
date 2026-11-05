@@ -17,17 +17,28 @@ sys.path.insert(0, HERE)
 sys.path.insert(0, SRC)
 
 import data as D  # noqa: E402
+from games import GAMES  # noqa: E402
 from build import analytics_tag  # noqa: E402  ドメイン共通の Google アナリティクス
 
 BASE = "https://mocchima.com/paradise-city/"
 SITE = "パラダイスシティ カジノガイド"
 e = html.escape
 
+# ページの並び（2026-11-05 にテーマ別に組み直した。アクセスは「最初にやること」からも案内する）
 NAV = [
-    ("index.html", "トップ"), ("stay.html", "宿泊プラン"), ("campaigns.html", "キャンペーン"),
-    ("perks.html", "お得情報"), ("guide.html", "初心者ガイド"),
-    ("howto.html", "会員登録・予約"), ("faq.html", "よくある質問"), ("articles.html", "体験談・記事"),
+    ("index.html", "トップ"), ("start.html", "最初にやること"), ("perks.html", "お得情報"), ("articles.html", "体験談ブログ"),
+    ("cafe9.html", "Cafe 9"), ("stay.html", "宿泊プラン"), ("guide.html", "初心者ガイド"), ("faq.html", "よくある質問"),
+    ("campaigns.html", "キャンペーン"), ("access.html", "アクセス"),
 ]
+# トップのタイル（運営者の希望の順）
+TILES = [
+    ("start.html", "最初にやること", "到着から帰るまでの流れ"), ("perks.html", "お得情報", "会員特典・クーポン・ポイント"),
+    ("articles.html", "体験談ブログ", "8回以上通った運営者の記録"), ("cafe9.html", "Cafe 9", "食事券の使い方とご飯"),
+    ("stay.html", "宿泊プラン", "ホテルと無料宿泊"), ("guide.html", "初心者ガイド", "ルール・ゲーム・予算"),
+    ("faq.html", "よくある質問", "パスポート・日本円など"), ("campaigns.html", "キャンペーン", "今月の情報と過去の事例"),
+]
+# 内容をほかのページへまとめた古いアドレス（転送だけ。サイトマップには入れない）
+REDIRECTS = {"howto.html": "start.html#h-member", "budget.html": "guide.html#h-budget"}
 
 SEARCH = []  # サイト内検索のデータ
 
@@ -145,13 +156,31 @@ def page_head(h1, lead):
 </div></header>"""
 
 
-def info_card(title, text, status, src, checked, dark=False):
+def info_card(title, text, status, src, checked, dark=False, link=None):
+    more = f'<p><a class="btn" href="{e(link[0])}">{e(link[1])}</a></p>' if link else ""
     return f"""<div class="card{' dark' if dark else ''}">
   <div class="badge-row">{badge(status)}</div>
   <h3>{e(title)}</h3>
   <p>{e(text)}</p>
+  {more}
   {source(src, checked)}
 </div>"""
+
+
+def item_cards(items):
+    return '<div class="cards">' + "".join(info_card(d["title"], d["text"], d["status"], d["src"], d["checked"], link=d.get("link")) for d in items) + "</div>"
+
+
+def redirect_page(to, label):
+    return f"""<!doctype html><html lang="ja"><head><meta charset="utf-8"><title>{e(label)}へ移動しました</title>
+<meta name="robots" content="noindex"><link rel="canonical" href="{BASE}{e(to)}">
+<meta http-equiv="refresh" content="0; url={e(to)}"></head>
+<body><p><a href="{e(to)}">{e(label)}へ移動しました</a></p></body></html>"""
+
+
+def blog_articles():
+    """一覧に出す記事（内容をメインページへ移した記事を除き、日付の新しい順）"""
+    return sorted((a for a in D.ARTICLES if not a.get("moved_to")), key=lambda a: a["date"], reverse=True)
 
 
 def campaign_card(c):
@@ -230,79 +259,158 @@ def photos(items=None, wide=False):
 
 
 def deal_cards(items):
-    return '<div class="cards">' + "".join(info_card(d["title"], d["text"], d["status"], d["src"], d["checked"]) for d in items) + "</div>"
+    return item_cards(items)
 
 
 # ---------- pages ----------
 
 def page_index():
-    tiles = [
-        ("perks.html", "お得情報", "会員特典・食事券・ポイント"), ("campaigns.html", "キャンペーン", "今のプランと過去の事例"),
-        ("article-cafe9.html", "Cafe 9", "カジノの中のご飯"), ("stay.html", "宿泊プラン", "ホテルと比較表"),
-        ("guide.html", "初心者ガイド", "入場・テーブルのルールと予算"),
-        ("howto.html", "会員登録・予約", "予約前の確認ポイント"),
-        ("faq.html", "よくある質問", "パスポート・日本円など"), ("articles.html", "体験談・記事", "8回通った運営者のメモ"),
-    ]
     tile_html = '<nav class="tiles" aria-label="主なページ">' + "".join(
-        f'<a class="tile" href="{u}"><strong>{e(t)}</strong><span>{e(s)}</span></a>' for u, t, s in tiles) + "</nav>"
+        f'<a class="tile" href="{u}"><strong>{e(t)}</strong><span>{e(sub)}</span></a>' for u, t, sub in TILES) + "</nav>"
     head = f"""<header class="hero gutter">
   <img src="img/pegasus.jpg" alt="" width="1050" height="1400">
   <div class="inner">
     <p class="eyebrow">PARADISE CITY · INCHEON</p>
-    <h1><span class="nb">日本人向け</span><span class="nb">パラダイスシティ</span><br><span class="nb">カジノの</span><span class="nb">お得情報まとめ</span></h1>
-    <p class="lead">韓国・仁川のパラダイスシティのカジノで使える、新規会員のクーポン、ポイント、食事券、宿泊プランなどのお得情報を、公式情報と体験談を分けて紹介します。</p>
+    <h1><span class="nb">日本人向け</span><span class="nb">パラダイスシティ</span><br><span class="nb">カジノの</span><span class="nb">攻略ガイド</span></h1>
+    <p class="lead">韓国・仁川のパラダイスシティのカジノに行く人のために、到着から帰るまでの流れ、お得情報、食事券、宿泊プランを、公式情報と体験談を分けて紹介します。</p>
     <p class="photo-credit">写真：パラダイスシティのホテルのロビーにある金色のペガサス像（運営者撮影）・最終更新 {D.UPDATED}</p>
   </div>
 </header>"""
     current = "".join(campaign_card(c) for c in D.CAMPAIGNS["current"])
     updates = "".join(f'<li><time datetime="{d}">{d}</time>{e(t)}</li>' for d, t in D.UPDATES)
-    latest = "".join(f'<li><time datetime="{a["date"]}">{a["date"]}</time><a href="article-{a["slug"]}.html">{e(a["title"])}</a></li>' for a in D.ARTICLES)
+    steps = "".join(f'<li><a href="start.html#{st["id"]}"><strong>STEP {n}</strong> {e(st["title"])}</a></li>' for n, st in enumerate(D.START_STEPS, 1))
+    deals = "".join(f'<li><a href="perks.html#h-deals">{e(d["title"])}</a></li>' for d in D.DEALS[:6])
+    posts = "".join(f'<li><time datetime="{a["date"]}">{a["date"]}</time><a href="article-{a["slug"]}.html">{e(a["title"])}</a></li>' for a in blog_articles()[:5])
     body = f"""
 {tile_html}
-{LEGEND}
-<section aria-labelledby="h-deals"><h2 id="h-deals">お得情報まとめ</h2>
-  <p class="notice">「公式情報」はパラダイスシティの公式サイトで確認した内容です。条件は変わることがあるので、使う前に現地のデスクで確認してください。</p>
-  {deal_cards(D.DEALS[:6])}
-  <p><a class="btn primary" href="perks.html">お得情報をすべて見る</a></p>
+<section aria-labelledby="h-start"><h2 id="h-start">初めての人は「最初にやること」から</h2>
+  <ol class="steps-mini">{steps}</ol>
+  <p><a class="btn primary" href="start.html">最初にやることを見る</a></p>
 </section>
-<section aria-labelledby="h-cafe9"><h2 id="h-cafe9">最初のご飯は、カジノの「Cafe 9」</h2>
-  <p><span class="badge b-exp">体験談</span> パラダイスシティに着いて最初に食べたのは、カジノの中のレストラン「Cafe 9」のご飯でした。丼もののセットがあり、日本人にも食べやすい味です。</p>
+<div class="duo">
+<section aria-labelledby="h-deals"><h2 id="h-deals">お得情報</h2>
+  <ul class="linklist">{deals}</ul>
+  <p><a class="btn" href="perks.html">お得情報をすべて見る</a></p>
+</section>
+<section aria-labelledby="h-blog"><h2 id="h-blog">体験談ブログ</h2>
+  <ul class="updates">{posts}</ul>
+  <p><a class="btn" href="articles.html">ブログをすべて見る</a></p>
+</section>
+</div>
+{LEGEND}
+<section aria-labelledby="h-cafe9"><h2 id="h-cafe9">カジノの中のご飯「Cafe 9」</h2>
+  <p>カジノのフロアの中にあるレストランです。食事券の出し方や使える枚数は、Cafe 9 のページにまとめています。</p>
   {photos(D.CAFE9_PHOTOS, wide=True)}
-  <p><a class="btn" href="article-cafe9.html">Cafe 9 の記事を読む</a></p>
+  <p><a class="btn" href="cafe9.html">Cafe 9 のページを見る</a></p>
 </section>
 <section aria-labelledby="h-camp"><h2 id="h-camp">最新のキャンペーン</h2>
-  <p class="notice alert"><strong>今のところ、内容と期間まで公式に確認できた「開催中」のキャンペーンはありません。</strong>公式予約ページに掲載されているプランを、確認できた範囲で載せています。</p>
   <div class="cards">{current}</div>
   <p><a class="btn" href="campaigns.html">過去のキャンペーンも見る</a></p>
 </section>
 <section aria-labelledby="h-stay"><h2 id="h-stay">おすすめの宿泊</h2>
   <div class="cards">
     <div class="card"><div class="badge-row">{badge('exp')}</div><h3>{D.HOTEL['name']}（{D.HOTEL['name_en']}）</h3>
-      <p>運営者が泊まったホテルの1つです。過去にはカジノ会員向けに、平日最大4泊・朝食券つきのプランがありました（過去の情報）。</p>
+      <p>運営者が泊まったホテルの1つです。無料宿泊のキャンペーンや、過去の宿泊プランは宿泊プランのページで比べられます。</p>
       <p><a class="btn primary" href="stay.html">宿泊プランを比べる</a></p></div>
     <figure class="card" style="padding:0;overflow:hidden;margin:0"><img src="img/hyatt-room.jpg" alt="ハイアット リージェンシー 仁川の客室" loading="lazy" width="1000" height="1333" style="aspect-ratio:4/3;object-fit:cover"></figure>
   </div>
 </section>
 <section aria-labelledby="h-guide"><h2 id="h-guide">カジノ初心者ガイド</h2>
   {rule_cards(D.ENTRY_RULES[:2] + D.TABLE_RULES[:2], with_meta=False)}
-  <p><a class="btn" href="guide.html">ルールをすべて見る</a></p>
-</section>
-<section aria-labelledby="h-basic"><h2 id="h-basic">カジノの基本ルール</h2>
-  {basics_cards(['hours', 'who', 'dress', 'yen'])}
+  <p><a class="btn" href="guide.html">ルールとゲームの説明を見る</a></p>
 </section>
 <section aria-labelledby="h-faq"><h2 id="h-faq">よくある質問</h2>
   {faq_block(D.FAQ[:5])}
   <p><a class="btn" href="faq.html">質問をすべて見る</a></p>
 </section>
-<section aria-labelledby="h-new"><h2 id="h-new">最新記事・更新情報</h2>
-  <h3>記事</h3><ul class="updates">{latest}</ul>
-  <h3>更新情報</h3><ul class="updates">{updates}</ul>
+<section aria-labelledby="h-new"><h2 id="h-new">更新情報</h2>
+  <ul class="updates">{updates}</ul>
 </section>"""
-    index_search("トップ", "index.html", "パラダイスシティ カジノガイド", "パラダイスシティ カジノ お得 宿泊 食事券 初心者 ルール 予算 キャンペーン")
-    for d in D.DEALS:
-        index_search("お得情報", "perks.html#h-deals", d["title"], d["text"])
-    return layout("index.html", "パラダイスシティ カジノのお得情報まとめ｜日本人向け 会員特典・食事券・宿泊【2026年版】",
-                  "韓国・仁川のパラダイスシティのカジノのお得情報を日本人向けにまとめました。新規会員のクーポン、ポイント、Cafe 9 の食事券、宿泊プランを、公式情報と体験談を区別して紹介します。", body, head)
+    index_search("トップ", "index.html", "パラダイスシティ カジノガイド", "パラダイスシティ カジノ お得 宿泊 食事券 初心者 ルール 予算 キャンペーン アクセス")
+    return layout("index.html", "パラダイスシティ カジノ攻略ガイド｜日本人向け 最初にやること・お得情報・食事券・宿泊【2026年版】",
+                  "韓国・仁川のパラダイスシティのカジノに行く人向けの攻略ガイド。到着から帰るまでの流れ、新規会員のクーポン、Cafe 9 の食事券、無料宿泊、空港へのシャトルバスを、公式情報と体験談を区別して紹介します。", body, head)
+
+
+def page_start():
+    out = []
+    for n, st in enumerate(D.START_STEPS, 1):
+        inner = item_cards(st["items"]) if st["items"] else ""
+        if st.get("games"):
+            inner += '<div class="cards">' + "".join(
+                f'<a class="card" href="guide.html#game-{g["slug"]}" style="text-decoration:none;color:inherit"><h3>{e(g["name"])}</h3><p>{e(g["summary"])}</p></a>' for g in GAMES) + "</div>"
+        alert = f'<p class="notice alert"><strong>{e(st["alert"])}</strong></p>' if st.get("alert") else ""
+        links = '<div class="btns">' + "".join(f'<a class="btn" href="{e(u)}">{e(t)}</a>' for u, t in st.get("links", [])) + "</div>"
+        out.append(f'<section aria-labelledby="{st["id"]}"><h2 id="{st["id"]}"><span class="step-no">STEP {n}</span>{e(st["title"])}</h2>{alert}{inner}{links}</section>')
+        for it in st["items"]:
+            index_search("最初にやること", f"start.html#{st['id']}", it["title"], it["text"])
+    steps = "".join(f"""<div class="card"><div class="badge-row"><strong>{i}</strong>{badge(x['status'])}</div><h3>{e(x['title'])}</h3><p>{e(x['text'])}</p>{source(x['src'], x['checked'])}</div>"""
+                    for i, x in enumerate(D.SIGNUP_STEPS, 1))
+    checks = "".join(f"<li>{e(c)}</li>" for c in D.BOOKING_CHECKS)
+    toc = "".join(f'<li><a href="#{st["id"]}">STEP {n}　{e(st["title"])}</a></li>' for n, st in enumerate(D.START_STEPS, 1))
+    body = f"""
+{LEGEND}
+<nav class="toc" aria-label="このページの目次"><ol>{toc}<li><a href="#h-member">会員登録と宿泊予約</a></li></ol></nav>
+{''.join(out)}
+<section aria-labelledby="h-member"><h2 id="h-member">会員登録と宿泊予約の流れ</h2>
+  <div class="notice alert"><strong>予約の前に必ず確認：</strong><p>キャンペーンや宿泊特典には、予約の期限が決まっていることがあります。たとえば「宿泊の3日前までに手続きが必要」なプランもありました。ただし、これはすべてのプランに共通するルールではありません。プランごとに条件を確認してください。</p></div>
+  <div class="cards">{steps}</div>
+  <h3>予約・変更・キャンセルの注意点</h3>
+  <ul class="checklist">{checks}</ul>
+  <div class="btns"><a class="btn primary" href="{D.SOURCES['official_reserve'][1]}" target="_blank" rel="noopener">公式予約ページ</a><a class="btn" href="{D.SOURCES['official_faq'][1]}" target="_blank" rel="noopener">公式FAQ</a></div>
+</section>"""
+    for x in D.SIGNUP_STEPS:
+        index_search("最初にやること", "start.html#h-member", x["title"], x["text"])
+    index_search("最初にやること", "start.html#h-member", "予約の期限・キャンセル", " ".join(D.BOOKING_CHECKS))
+    return layout("start.html", "パラダイスシティ カジノで最初にやること｜入場・チップ交換・食事・帰り方の流れ",
+                  "初めてパラダイスシティのカジノに行く人向けに、入場と会員登録、キャッシャーでのチップ交換、ゲームの選び方、Cafe 9 の食事、帰りの交換、空港への移動を順番に説明します。",
+                  body, page_head("最初にやること", "カジノに着いてから帰るまでを、6つのステップで順番に案内します。"))
+
+
+def page_access():
+    secs = []
+    for sec in D.ACCESS:
+        pics = photos(D.SHUTTLE_PHOTOS) if sec.get("photos") else ""
+        secs.append(f'<section aria-labelledby="{sec["id"]}"><h2 id="{sec["id"]}">{e(sec["title"])}</h2>{pics}{item_cards(sec["items"])}</section>')
+        for it in sec["items"]:
+            index_search("アクセス", f"access.html#{sec['id']}", it["title"], it["text"])
+    body = f"""
+{LEGEND}
+{''.join(secs)}
+<p class="notice">時間や乗り場は変わることがあります。行く前に、ホテルやパラダイスシティのスタッフに確認してください。</p>"""
+    return layout("access.html", "パラダイスシティのアクセス｜仁川空港との無料シャトルバス・乗り場・時間・タクシー",
+                  "仁川空港とパラダイスシティの行き来をまとめました。第1ターミナル行き無料シャトルバスの乗り場（地下）と時間（5時〜23時・20分おき）、深夜のタクシー、ホテルからカジノまでの時間。",
+                  body, page_head("アクセス", "仁川空港との行き来を、ここにまとめています。"))
+
+
+def page_cafe9():
+    c = D.CAFE9
+    slots = "".join(f'<div class="card"><div class="badge-row">{badge("check")}</div><h3>{e(x)}</h3><p class="muted">情報を集めています。分かり次第ここに載せます。</p></div>' for x in c["slots"])
+    body = f"""
+{LEGEND}
+<section aria-labelledby="h-about"><h2 id="h-about">Cafe 9 ってどこ？</h2>{item_cards(c["about"])}</section>
+<section aria-labelledby="h-meal"><h2 id="h-meal">食事券の使い方</h2>{item_cards(c["meal"])}</section>
+<section aria-labelledby="h-menu"><h2 id="h-menu">実際に食べたご飯</h2>{photos(D.CAFE9_PHOTOS, wide=True)}{item_cards(c["menu"])}
+  <p><a class="btn" href="article-cafe9.html">体験談ブログの記事を読む</a></p></section>
+<section aria-labelledby="h-wait"><h2 id="h-wait">これから確認すること</h2><div class="cards">{slots}</div></section>"""
+    for key in ("about", "meal", "menu"):
+        for it in c[key]:
+            index_search("Cafe 9", f"cafe9.html#h-{key}", it["title"], it["text"])
+    return layout("cafe9.html", "パラダイスシティ カジノの Cafe 9｜食事券の出し方・使える枚数・リセット時間",
+                  "パラダイスシティのカジノの中のレストラン「Cafe 9」の攻略情報。食事券の発券機の場所、1日に使える枚数、午前6時のリセット、実際に食べた丼ものセットを、公式情報と体験談を分けて紹介します。",
+                  body, page_head("Cafe 9", "カジノの中のレストランと、食事券の使い方をまとめています。"))
+
+
+def page_game(g):
+    sections = "".join(f"<section><h2>{e(h)}</h2><p>{e(t)}</p></section>" for h, t in g["detail"])
+    body = f"""
+<div class="article-body">
+  <p>{e(g['summary'])}</p>
+  {item_cards(g['notes']) if g['notes'] else ''}
+  {sections}
+  <p class="notice">ルールや最低ベットは台や時期で変わります。座る前に、テーブルの案内やディーラーに確認してください。</p>
+  <p><a class="btn" href="guide.html#h-games">ゲーム一覧に戻る</a></p>
+</div>"""
+    return layout(f"game-{g['slug']}.html", f"{g['name']}のルール｜パラダイスシティ カジノ初心者ガイド", g["summary"], body, page_head(g["name"], g["summary"]))
 
 
 def page_stay():
@@ -379,11 +487,7 @@ def page_perks():
 <section aria-labelledby="h-deals"><h2 id="h-deals">お得情報まとめ</h2>
   {deal_cards(D.DEALS)}
 </section>
-<section aria-labelledby="h-cafe9"><h2 id="h-cafe9">Cafe 9 のご飯</h2>
-  {photos(D.CAFE9_PHOTOS, wide=True)}
-  <p><a class="btn" href="article-cafe9.html">Cafe 9 の記事を読む</a></p>
-</section>
-<section aria-labelledby="h-p"><h2 id="h-p">食事券・ドリンク券・会員カード</h2>
+<section aria-labelledby="h-p"><h2 id="h-p">会員カード・会員特典</h2>
   <p class="notice">特典の条件は、会員ランクや時期によって変わる可能性があります。使う前にカジノのカウンターで確認してください。</p>
   <div class="cards">{cards}</div>
 </section>
@@ -394,34 +498,39 @@ def page_perks():
   <p>過去の宿泊プランでは、Market Caféの朝食券やSwell Loungeのドリンク券がついていました。詳しくは<a href="stay.html">宿泊プランのページ</a>を見てください。</p>
 </section>"""
     for p in D.PERKS:
-        index_search("食事券・特典", "perks.html", p["title"], p["text"])
+        index_search("お得情報", "perks.html#h-p", p["title"], p["text"])
+    for d in D.DEALS:
+        index_search("お得情報", "perks.html#h-deals", d["title"], d["text"])
     return layout("perks.html", "パラダイスシティ カジノのお得情報｜新規会員クーポン・ポイント・食事券",
-                  "パラダイスシティのカジノのお得情報。新規会員のクーポン、ポイントの使い道、会員ランク、Cafe 9 の食事券、無料シャトルを、公式情報とユーザー提供情報に分けて紹介します。",
-                  body, page_head("お得情報・特典", "新規会員のクーポン、ポイント、食事券など、日本人の旅行者に役立つお得情報をまとめています。"))
+                  "パラダイスシティのカジノのお得情報。新規会員のクーポン、ポイントの使い道、会員ランク、ほかのカジノのランクの持ち込みを、公式情報とユーザー提供情報に分けて紹介します。",
+                  body, page_head("お得情報・会員特典", "新規会員のクーポン、ポイント、会員ランクなど、会員と特典の情報をまとめています。"))
 
 
 def page_guide():
     body = f"""
 {LEGEND}
 <p class="notice alert"><strong>ここに書いているのは初心者向けの基本の案内です。</strong>ゲームやテーブルごとに細かいルールが違うことがあります。施設の規則と、現地スタッフの指示を優先してください。</p>
-<section aria-labelledby="h-in"><h2 id="h-in">入場するとき</h2>
+<section aria-labelledby="h-b"><h2 id="h-b">カジノの基本ルール</h2>
+  {basics_cards()}
+</section>
+<section aria-labelledby="h-in"><h2 id="h-in">カジノのマナー（入場するとき）</h2>
   {rule_cards(D.ENTRY_RULES)}
 </section>
-<section aria-labelledby="h-t"><h2 id="h-t">テーブルゲームで気をつけること</h2>
+<section aria-labelledby="h-t"><h2 id="h-t">テーブルゲームの基本</h2>
   {rule_cards(D.TABLE_RULES)}
   {source('users', D.UPDATED)}
 </section>
+{games_sections()}
 <section aria-labelledby="h-floor"><h2 id="h-floor">フロアの並びとおすすめのテーブル</h2>
   <p>{badge('exp')} 入口のすぐ手前にクラップスとルーレット、まっすぐ進むとブラックジャックやポーカー、その先にたくさんのバカラの台があります。運営者の体感では、サレンダーができるブラックジャックがいちばんチップが減りにくかったです。</p>
   <p><a class="btn" href="article-floor-tables.html">体験談を読む</a></p>
 </section>
 {budget_sections()}
-<section aria-labelledby="h-b"><h2 id="h-b">カジノの基本情報</h2>
-  {basics_cards()}
-</section>
 <section aria-labelledby="h-next"><h2 id="h-next">次に読む</h2>
-  <div class="btns"><a class="btn primary" href="howto.html">会員登録の流れを見る</a></div>
+  <div class="btns"><a class="btn primary" href="start.html">最初にやること（到着から帰るまで）</a></div>
 </section>"""
+    for g in GAMES:
+        index_search("初心者ガイド", f"guide.html#game-{g['slug']}", g["name"], g["summary"] + " " + " ".join(n["text"] for n in g["notes"]))
     for r in D.ENTRY_RULES + D.TABLE_RULES:
         index_search("初心者ガイド", "guide.html", r["title"], r["text"])
     for b in D.BASICS:
@@ -431,7 +540,25 @@ def page_guide():
     index_search("初心者ガイド", "guide.html#h-sim", "予算シミュレーター", "予算 最低ベット 資金管理 シミュレーター")
     return layout("guide.html", "パラダイスシティ カジノ初心者ガイド｜入場ルールとテーブルのマナー",
                   "初めてパラダイスシティのカジノに行く人向けに、パスポート・服装・撮影禁止などの入場ルールと、テーブルゲームでのマナーをイラストつきで解説します。",
-                  body, page_head("カジノ初心者ガイド", "入場のルール、テーブルで気をつけること、予算の目安を分かりやすくまとめました。"))
+                  body, page_head("カジノ初心者ガイド", "基本のルール、マナー、ゲーム別の説明、予算の目安をまとめました。"))
+
+
+def games_sections():
+    def card(g):
+        notes = "".join(f'<li>{badge(n["status"])} {e(n["text"])}</li>' for n in g["notes"])
+        more = (f'<p><a class="btn" href="game-{g["slug"]}.html">くわしいルールを見る</a></p>' if g.get("detail")
+                else '<p class="muted">くわしい解説は準備中です。</p>')
+        return (f'<div class="card" id="game-{g["slug"]}"><h3>{e(g["name"])}</h3><p>{e(g["summary"])}</p>'
+                + (f'<ul class="notes">{notes}</ul>' if notes else "") + more + "</div>")
+    table = "".join(card(g) for g in GAMES if g["kind"] == "table")
+    machine = "".join(card(g) for g in GAMES if g["kind"] == "machine")
+    return f"""<section aria-labelledby="h-games"><h2 id="h-games">ゲーム別ルール</h2>
+  <p class="notice">一般的な遊び方の短い説明と、パラダイスシティで運営者が確かめたことです。ルールや最低ベットは台や時期で変わります。</p>
+  <div class="cards">{table}</div>
+</section>
+<section aria-labelledby="h-slots"><h2 id="h-slots">スロット</h2>
+  <div class="cards">{machine}</div>
+</section>"""
 
 
 def budget_sections():
@@ -463,39 +590,6 @@ def budget_sections():
 </section>"""
 
 
-def page_budget():
-    # 予算のページは初心者ガイドにまとめた（運営者の希望、2026-11-02）。古いアドレスは転送だけ
-    return """<!doctype html><html lang="ja"><head><meta charset="utf-8"><title>初心者ガイドへ移動しました</title>
-<meta name="robots" content="noindex"><link rel="canonical" href="guide.html#h-budget">
-<meta http-equiv="refresh" content="0; url=guide.html#h-budget"></head>
-<body><p><a href="guide.html#h-budget">初心者ガイドの「予算」へ移動しました</a></p></body></html>"""
-
-
-def page_howto():
-    steps = "".join(f"""<div class="card"><div class="badge-row"><strong>STEP {i}</strong>{badge(s['status'])}</div><h3>{e(s['title'])}</h3><p>{e(s['text'])}</p>{source(s['src'], s['checked'])}</div>"""
-                    for i, s in enumerate(D.SIGNUP_STEPS, 1))
-    checks = "".join(f"<li>{e(c)}</li>" for c in D.BOOKING_CHECKS)
-    body = f"""
-{LEGEND}
-<div class="notice alert"><strong>予約の前に必ず確認：</strong><p>キャンペーンや宿泊特典には、予約の期限が決まっていることがあります。たとえば「宿泊の3日前までに手続きが必要」なプランもありました。ただし、これはすべてのプランに共通するルールではありません。プランごとに条件を確認してください。</p></div>
-<section aria-labelledby="h-steps"><h2 id="h-steps">会員登録から宿泊までの流れ</h2>
-  <div class="cards">{steps}</div>
-</section>
-<section aria-labelledby="h-need"><h2 id="h-need">登録に必要なもの</h2>
-  {basics_cards(['passport', 'who', 'dress'])}
-</section>
-<section aria-labelledby="h-chk"><h2 id="h-chk">予約・変更・キャンセルの注意点</h2>
-  <ul class="checklist">{checks}</ul>
-  <div class="btns"><a class="btn primary" href="{D.SOURCES['official_reserve'][1]}" target="_blank" rel="noopener">公式予約ページ</a><a class="btn" href="{D.SOURCES['official_faq'][1]}" target="_blank" rel="noopener">公式FAQ</a></div>
-</section>"""
-    for s in D.SIGNUP_STEPS:
-        index_search("会員登録・予約", "howto.html", s["title"], s["text"])
-    index_search("会員登録・予約", "howto.html#h-chk", "予約の期限・キャンセル", " ".join(D.BOOKING_CHECKS))
-    return layout("howto.html", "パラダイスシティ カジノ会員登録・宿泊予約の方法と注意点",
-                  "パラダイスシティのカジノ会員登録の流れ、必要なもの、宿泊予約で特典を受けるための注意点、予約期限やキャンセルの確認ポイントを解説します。",
-                  body, page_head("会員登録・予約方法", "会員登録から宿泊までの流れと、予約前に確認したいポイントです。"))
-
-
 def page_faq():
     body = f"""
 {LEGEND}
@@ -514,20 +608,21 @@ def page_faq():
 
 
 def page_articles():
-    cats = sorted({a["category"] for a in D.ARTICLES})
+    arts = blog_articles()
+    cats = sorted({a["category"] for a in arts})
     chips = '<div class="chips" role="group" aria-label="カテゴリー"><button class="chip" type="button" data-filter="all" aria-pressed="true">すべて</button>' + "".join(
         f'<button class="chip" type="button" data-filter="{e(c)}" aria-pressed="false">{e(c)}</button>' for c in cats) + "</div>"
     cards = "".join(f"""<a class="card" data-category="{e(a['category'])}" href="article-{a['slug']}.html" style="text-decoration:none;color:inherit">
   <div class="badge-row">{badge(a['status'])}<span class="muted">{e(a['category'])} ・ {a['date']}</span></div>
-  <h3>{e(a['title'])}</h3><p class="muted">{e(a['lead'])}</p></a>""" for a in D.ARTICLES)
+  <h3>{e(a['title'])}</h3><p class="muted">{e(a['lead'])}</p></a>""" for a in arts)
     body = f"""
-<section aria-labelledby="h-list"><h2 id="h-list">記事一覧</h2>
+<section aria-labelledby="h-list"><h2 id="h-list">記事一覧（新しい順）</h2>
   {chips}
   <div class="cards">{cards}</div>
 </section>"""
-    return layout("articles.html", "パラダイスシティ 体験談・記事一覧｜宿泊レポートや食事券のメモ",
+    return layout("articles.html", "パラダイスシティ 体験談ブログ｜訪問記録・宿泊レポート・食事の感想",
                   "パラダイスシティのカジノに2026年だけで8回通った運営者の体験談や、ハイアット リージェンシー 仁川の宿泊レポートなどの記事一覧です。",
-                  body, page_head("体験談・記事", "カテゴリーで絞り込めます。体験談は個人の感想で、公式情報ではありません。"))
+                  body, page_head("体験談ブログ", "運営者が実際に行ったときの記録です。新しい記事が上に出ます。体験談は個人の感想で、公式情報ではありません。"))
 
 
 def page_article(a):
@@ -544,9 +639,9 @@ def page_article(a):
   {pics}
   {sections}
   <p class="notice">この記事は{D.STATUS_LABEL[a['status']]}です。公式情報ではありません。条件は変わることがあるので、最新の情報は公式サイトで確認してください。</p>
-  <p><a class="btn" href="articles.html">記事一覧に戻る</a></p>
+  <p><a class="btn" href="articles.html">ブログの一覧に戻る</a></p>
 </div>"""
-    index_search("体験談・記事", f"article-{a['slug']}.html", a["title"], a["lead"] + " " + " ".join(b[1] for b in a["body"]))
+    index_search("体験談ブログ", f"article-{a['slug']}.html", a["title"], a["lead"] + " " + " ".join(b[1] for b in a["body"]))
     return layout(f"article-{a['slug']}.html", f"{a['title']}｜{SITE}", a["lead"], body, page_head(a["title"], a["lead"]))
 
 
@@ -568,24 +663,33 @@ def main():
     shutil.copy(os.path.join(HERE, "style.css"), os.path.join(OUT, "assets", "style.css"))
     shutil.copy(os.path.join(HERE, "app.js"), os.path.join(OUT, "assets", "app.js"))
     pages = {
-        "index.html": page_index(), "stay.html": page_stay(), "campaigns.html": page_campaigns(),
-        "perks.html": page_perks(), "guide.html": page_guide(), "budget.html": page_budget(),
-        "howto.html": page_howto(), "faq.html": page_faq(), "articles.html": page_articles(),
+        "index.html": page_index(), "start.html": page_start(), "perks.html": page_perks(), "articles.html": page_articles(),
+        "cafe9.html": page_cafe9(), "stay.html": page_stay(), "guide.html": page_guide(), "faq.html": page_faq(),
+        "campaigns.html": page_campaigns(), "access.html": page_access(),
     }
+    for g in GAMES:
+        if g.get("detail"):
+            pages[f"game-{g['slug']}.html"] = page_game(g)
+    moved = {}
     for a in D.ARTICLES:
-        pages[f"article-{a['slug']}.html"] = page_article(a)
+        if a.get("moved_to"):
+            moved[f"article-{a['slug']}.html"] = redirect_page(a["moved_to"], "まとめたページ")
+        else:
+            pages[f"article-{a['slug']}.html"] = page_article(a)
     pages["search.html"] = page_search()
-    for name, text in pages.items():
+    for name, to in REDIRECTS.items():
+        moved[name] = redirect_page(to, "新しいページ")
+    for name, text in {**pages, **moved}.items():
         with open(os.path.join(OUT, name), "w", encoding="utf-8") as f:
             f.write(text)
     with open(os.path.join(OUT, "search.json"), "w", encoding="utf-8") as f:
         json.dump(SEARCH, f, ensure_ascii=False)
-    urls = [n for n in pages if n not in ("search.html", "budget.html")]
+    urls = [n for n in pages if n != "search.html"]
     with open(os.path.join(OUT, "sitemap.xml"), "w", encoding="utf-8") as f:
         f.write('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                 + "".join(f"  <url><loc>{BASE}{'' if n == 'index.html' else n}</loc><lastmod>{D.UPDATED}</lastmod></url>\n" for n in urls)
                 + "</urlset>\n")
-    print(f"built paradise-city: {len(pages)} pages, {len(SEARCH)} search entries")
+    print(f"built paradise-city: {len(pages)} pages, {len(moved)} redirects, {len(SEARCH)} search entries")
 
 
 if __name__ == "__main__":
