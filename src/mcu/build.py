@@ -22,6 +22,7 @@ import relmap_build  # noqa: E402
 
 BASE_URL = "https://mocchima.com/"
 GA_MEASUREMENT_ID = "G-KDFL8GPPRZ"
+ADSENSE_TAG = '\n<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8047459455202561" crossorigin="anonymous"></script>'
 PRIVACY_URL = BASE_URL + "privacy.html"
 
 # 広告（運営者の登録済みID。CLAUDE.md 参照）
@@ -199,6 +200,7 @@ def head(slug, title, desc, lang, prefix, schema, site_name):
     og = BASE_URL + (f"{slug}/en/og.png" if lang == "en" else f"{slug}/og.png")
     analytics = (f'\n<script async src="https://www.googletagmanager.com/gtag/js?id={GA_MEASUREMENT_ID}"></script>\n'
                  f"<script>window.dataLayer=window.dataLayer||[];function gtag(){{dataLayer.push(arguments);}}gtag('js',new Date());gtag('config','{GA_MEASUREMENT_ID}');</script>")
+    analytics += ADSENSE_TAG  # Google アドセンス（2026-11-03）
     schema_html = '\n<script type="application/ld+json">' + json.dumps(schema, ensure_ascii=False).replace("</", "<\\/") + "</script>"
     return f"""<!doctype html>
 <html lang="{lang}">

@@ -93,7 +93,7 @@ def layout(file, title, desc, body, head_html, extra_head=""):
 <html lang="ja">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="apple-touch-icon" href="/icons/paradise.png"><link rel="icon" type="image/png" href="/icons/paradise.png">{analytics_tag()}
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><link rel="apple-touch-icon" href="/icons/paradise.png"><link rel="icon" type="image/png" href="/icons/paradise.png">{analytics_tag(adsense=False)}
 <title>{e(title)}</title>
 <meta name="apple-mobile-web-app-title" content="パラダイスシティ">
 <meta name="description" content="{e(desc)}">
