@@ -22,6 +22,9 @@ GOOGLE_SITE_VERIFICATION = "qCmKqyCaXzHH3V_hEqM1lhQKy9os6X5RIR2zZmw4fZc"
 # Google アナリティクスの測定ID（全サイト共通）。各サイトの全ページにも同じタグを入れる
 GA_MEASUREMENT_ID = "G-KDFL8GPPRZ"
 POLICY_UPDATED = "2026-10-31"
+ABOUT_UPDATED = "2026-11-06"
+OPERATOR_NAME = "もっちぃま運営"
+CONTACT_EMAIL = "mocchima.contac@gmail.com"
 
 
 def analytics_tag(adsense=True):
@@ -125,7 +128,7 @@ def page(title, desc, path, lang, header, body, back=""):
   <header>{header}</header>
   <ul class="cards">{body}
   </ul>
-  <footer>{note}<a href="{prefix}privacy.html{"#en" if lang == "en" else ""}">{policy}</a></footer>
+  <footer>{note}<a href="{prefix}privacy.html{"#en" if lang == "en" else ""}">{policy}</a> / <a href="{prefix}about.html">{"About" if lang == "en" else "運営者情報・お問い合わせ"}</a></footer>
 </div>
 </body>
 </html>
@@ -235,6 +238,45 @@ footer a { color: var(--red); }
 </style>"""
 
 
+def about_html():
+    """運営者情報とお問い合わせのページ"""
+    head = privacy_html().split("<title>")[0]
+    style = privacy_html().split('<link rel="preconnect"')[1]
+    style = '<link rel="preconnect"' + style.split("</head>")[0]
+    return head + f"""<title>運営者情報・お問い合わせ｜{SITE_NAME}</title>
+<meta name="description" content="{SITE_NAME}の運営者情報とお問い合わせ先です。">
+<link rel="canonical" href="{BASE_URL}about.html">
+{style}</head>
+<body>
+<div class="wrap">
+  <header><h1>運営者情報・お問い合わせ</h1><p>{SITE_NAME}（{BASE_URL} 以下の全サイト）</p></header>
+  <article class="policy">
+  <h2>運営者</h2>
+  <p>{OPERATOR_NAME}（個人で運営しています）</p>
+
+  <h2>このサイトについて</h2>
+  <p>マーベル映画の紹介や予習ガイド、旅行ガイドなどを掲載しています。マーベル関連のページは非公式のファンサイトで、Marvel Studios、The Walt Disney Company とは関係ありません。</p>
+
+  <h2>広告について</h2>
+  <p>当サイトは、アフィリエイト広告（Amazon アソシエイト、もしもアフィリエイトなど）を利用しており、リンクから商品が購入されると、運営者が報酬を受け取ることがあります。Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。広告には「PR」と表示しています。</p>
+
+  <h2>お問い合わせ</h2>
+  <p>内容の誤りのご指摘、ご意見、お仕事のご相談は、次のメールアドレスにお送りください。</p>
+  <p><a href="mailto:{CONTACT_EMAIL}">{CONTACT_EMAIL}</a></p>
+  <p>返信にお時間をいただくことや、内容によってはお返事できないことがあります。</p>
+
+  <h2>免責事項</h2>
+  <p>掲載する情報は、できるだけ正確になるよう努めていますが、正しさや最新であることを保証するものではありません。公開日や料金などの最新情報は、公式の発表をご確認ください。当サイトの情報を利用して生じた損害について、責任を負いかねます。</p>
+
+  <p><a href="{BASE_URL}privacy.html">プライバシーポリシー</a></p>
+  </article>
+  <footer>最終更新: {ABOUT_UPDATED}</footer>
+</div>
+</body>
+</html>
+"""
+
+
 def privacy_html():
     """全サイト共通のプライバシーポリシー（アクセス解析・広告・外部送信についての説明）"""
     return f"""<!doctype html>
@@ -327,9 +369,11 @@ def main():
     # マーベル映画紹介の特集ページ（年表・興行収入・再上映）
     folder_pages += marvel_pages.build_all(write, analytics_tag())
     write("privacy.html", privacy_html())
+    write("about.html", about_html())
     write("sitemap.xml", sitemap_index())
     write("sitemap-top.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
           f"  <url><loc>{BASE_URL}privacy.html</loc><lastmod>{POLICY_UPDATED}</lastmod></url>\n"
+          f"  <url><loc>{BASE_URL}about.html</loc><lastmod>{ABOUT_UPDATED}</lastmod></url>\n"
           + "".join(f"  <url><loc>{BASE_URL}{p}</loc><lastmod>{latest}</lastmod></url>\n" for p in folder_pages) + "</urlset>\n")
     # robots.txt はドメインのトップにあるものだけが有効。全サイトのサイトマップをここで伝える
     write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {BASE_URL}sitemap.xml\n")

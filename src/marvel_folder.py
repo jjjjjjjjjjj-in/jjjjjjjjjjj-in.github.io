@@ -293,7 +293,7 @@ def build(f, sites_in_group, head_extra, base_url, site_name, analytics):
   <div class="mtabs" role="tablist">{tabs}</div>
   <p class="mnone" id="mnone" hidden>{e(t["none"])}</p>
 {groups}{feats}{shop_html(lang)}</main>
-<footer class="mfoot">{e(t["note"])} <a href="{prefix}privacy.html{"#en" if lang == "en" else ""}">{e(t["policy"])}</a></footer>
+<footer class="mfoot">{e(t["note"])} <a href="{prefix}privacy.html{"#en" if lang == "en" else ""}">{e(t["policy"])}</a> / <a href="{prefix}about.html">{"About" if lang == "en" else "運営者情報・お問い合わせ"}</a></footer>
 {SCRIPT}
 </body>
 </html>
