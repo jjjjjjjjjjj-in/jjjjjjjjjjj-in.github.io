@@ -214,7 +214,7 @@ def page(path, title, desc, body, analytics, extra_script=""):
 {body}
 {shop}
 </main>
-<footer class="foot">個人が運営する非公式のファンサイトです。Marvel Studios、The Walt Disney Company とは関係ありません。映画のポスターや場面写真は使っていません（色と文字で作ったカードです）。 <a href="{prefix}privacy.html">プライバシーポリシー</a></footer>
+<footer class="foot">個人が運営する非公式のファンサイトです。Marvel Studios、The Walt Disney Company とは関係ありません。映画のポスターや場面写真は使っていません（色と文字で作ったカードです）。 <a href="{prefix}privacy.html">プライバシーポリシー</a> / <a href="{prefix}about.html">運営者情報・お問い合わせ</a></footer>
 {SCRIPT_MENU}{extra_script}
 </body>
 </html>

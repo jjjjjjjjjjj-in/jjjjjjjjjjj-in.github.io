@@ -336,7 +336,7 @@ def privacy_html():
   <p><strong>Data stored in your browser.</strong> Your checklist progress stays in your browser and is never sent to this site or anyone else.</p>
   </div>
   </article>
-  <footer><a href="./">トップページに戻る</a></footer>
+  <footer><a href="./">トップページに戻る</a> / <a href="about.html">運営者情報・お問い合わせ</a></footer>
 </div>
 </body>
 </html>

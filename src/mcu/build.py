@@ -259,7 +259,7 @@ def footer(lang, top):
         return f"""<footer>
 <p>This site contains affiliate links (ads).</p>
 <p>As an Amazon Associate, this site earns from qualifying purchases.</p>
-<p>For how this site uses analytics (Google Analytics) and ads, see the <a href="{PRIVACY_URL}#en">privacy policy</a>.</p>
+<p>For how this site uses analytics (Google Analytics) and ads, see the <a href="{PRIVACY_URL}#en">privacy policy</a>. About the operator and contact: <a href="https://mocchima.com/about.html">About (Japanese)</a>.</p>
 <p>This is an unofficial fan site run by an individual. It is not affiliated with Marvel Studios, The Walt Disney Company, Sony Pictures or 20th Century Studios. Titles and character names are trademarks of their respective owners.</p>
 <p><a href="{top}marvel/en/">Marvel Movie Guides (all titles)</a></p>
 </footer>
@@ -268,7 +268,7 @@ def footer(lang, top):
     return f"""<footer>
 <p>※当サイトはアフィリエイト広告（PR）を利用しています。</p>
 <p>Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。</p>
-<p>アクセス解析（Googleアナリティクス）と広告の仕組みについては<a href="{PRIVACY_URL}">プライバシーポリシー</a>をご覧ください。</p>
+<p>アクセス解析（Googleアナリティクス）と広告の仕組みについては<a href="{PRIVACY_URL}">プライバシーポリシー</a>をご覧ください。 <a href="https://mocchima.com/about.html">運営者情報・お問い合わせ</a></p>
 <p>当サイトは個人が運営する非公式ファンサイトです。Marvel Studios、The Walt Disney Company、Sony Pictures、20th Century Studios とは関係ありません。作品名・キャラクター名は各権利者の商標です。</p>
 <p><a href="{top}marvel/">マーベル映画紹介（作品一覧）</a></p>
 </footer>
