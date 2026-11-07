@@ -395,7 +395,7 @@ def paras(text):
 
 def watch_along(g, lang):
     """「ネタバレなし解説」がある作品だけ「（映画を観ながら読める）」と付ける（運営者の希望、2026-11-07）"""
-    if not any(len(x) > 2 and x[2] for c in g.get("scenes", []) for x in c[1]):
+    if not (g.get("scene_numbers") or any(len(x) > 2 and x[2] for c in g.get("scenes", []) for x in c[1])):
         return ""
     drama = "話" in g.get("runtime", "")
     if lang == "en":
@@ -427,6 +427,7 @@ def build_scenes_page(slug, lang):
     path = f"{slug}/en/story/" if lang == "en" else f"{slug}/story/"
     chapters = [(c[2], c[3]) if lang == "en" else (c[0], c[1]) for c in g["scenes"]]
     has_note = any(len(sc) > 2 and sc[2] for _, scs in chapters for sc in scs)
+    numbered = has_note or g.get("scene_numbers", False)
     toc = (f'<ul><li><span class="toc-label">{e(t["toc"])}</span></li>'
            + "".join(f'<li><a href="#c{i}">{e(h.split(" ", 1)[0] if lang == "ja" else h.split(":")[0])}</a></li>' for i, (h, _) in enumerate(chapters, 1)) + "</ul>")
     mid = (len(chapters) + 1) // 2  # 真ん中の章の後に、この作品の商品（PR）を1つはさむ
@@ -434,7 +435,7 @@ def build_scenes_page(slug, lang):
     if fold:
         body = "".join(
             f'<details class="fg-sec sc-chapter sc-fold" id="c{i}"><summary><h2>{e(h)}</h2></summary>'
-            + "".join(scene_html(i, k, sc, lang, h, has_note) for k, sc in enumerate(scenes, 1)) + "</details>\n"
+            + "".join(scene_html(i, k, sc, lang, h, numbered) for k, sc in enumerate(scenes, 1)) + "</details>\n"
             for i, (h, scenes) in enumerate(chapters, 1))
         for j, u in enumerate(g.get("upcoming", []), len(chapters) + 1):
             ut, ud = (u[1], u[3]) if lang == "en" else (u[0], u[2])
@@ -447,10 +448,10 @@ def build_scenes_page(slug, lang):
     else:
       body = "".join(
         f'<section class="fg-sec sc-chapter" id="c{i}"><h2>{e(h)}</h2>'
-        + "".join(scene_html(i, k, sc, lang, h, has_note) for k, sc in enumerate(scenes, 1)) + "</section>\n"
+        + "".join(scene_html(i, k, sc, lang, h, numbered) for k, sc in enumerate(scenes, 1)) + "</section>\n"
         + (shop_panel(g, lang) + "\n" if i == mid else "")
         for i, (h, scenes) in enumerate(chapters, 1))
-    note_lead = (f'<p class="lead"><strong>{e(watch_along(g, lang).strip(" ()（）").capitalize() if lang == "en" else watch_along(g, lang).strip(" ()（）"))}</strong></p><p class="lead sc-note-lead">{"The yellow “spoiler-free notes” give background you can know at that point (who someone is, why they act, links to earlier films, terms), with nothing about what comes later. Watch alongside and match the scene numbers." if lang == "en" else "黄色い枠「ネタバレなし解説」は、その場面までに分かることだけで書いた補足です（この人は誰か、なぜこうしているのか、前の作品とのつながり、言葉の意味）。先の展開は書いていません。作品を観ながら、場面の番号で照らし合わせてください。"}</p>' if has_note else "")
+    note_lead = (f'<p class="lead"><strong>{e(watch_along(g, lang).strip(" ()（）").capitalize() if lang == "en" else watch_along(g, lang).strip(" ()（）"))}</strong></p><p class="lead sc-note-lead">{"The yellow “spoiler-free notes” give background you can know at that point (who someone is, why they act, links to earlier films, terms), with nothing about what comes later. Watch alongside and match the scene numbers." if lang == "en" else "黄色い枠「ネタバレなし解説」は、その場面までに分かることだけで書いた補足です（この人は誰か、なぜこうしているのか、前の作品とのつながり、言葉の意味）。先の展開は書いていません。作品を観ながら、場面の番号で照らし合わせてください。"}</p>' if has_note else (f'<p class="lead"><strong>{e(watch_along(g, lang).strip(" ()（）").capitalize() if lang == "en" else watch_along(g, lang).strip(" ()（）"))}</strong></p>' if numbered else ""))
     page_title = t["scenes_title"].format(title=title)
     desc = t["scenes_desc"].format(title=title)
     th = g.get("theme")
