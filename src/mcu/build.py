@@ -348,7 +348,7 @@ def build_page(slug, lang):
 """ if has_map else "") + f"""
 <section class="fg-sec" id="story"><h2>{e(t['s_story'])}<span class="tag-warn">{e(t['spoil'])}</span></h2>
   <details class="fg-spoiler"><summary>{e(t['story_open'])}</summary>{story}</details>
-  {f'<p class="fg-more"><a class="btn primary" href="story/">{e(t["scenes_link"])}</a></p>' if g.get("scenes") else ""}
+  {f'<p class="fg-more"><a class="btn primary" href="story/">{e(t["scenes_link"] + watch_along(g, lang))}</a></p>' if g.get("scenes") else ""}
 </section>
 
 {shop}
@@ -391,6 +391,16 @@ def write(path, text):
 def paras(text):
     """改行（\n）で段落を分ける（長いあらすじを読みやすくするため。2026-11-07）"""
     return "".join(f"<p>{e(x)}</p>" for x in text.split("\n") if x.strip())
+
+
+def watch_along(g, lang):
+    """「ネタバレなし解説」がある作品だけ「（映画を観ながら読める）」と付ける（運営者の希望、2026-11-07）"""
+    if not any(len(x) > 2 and x[2] for c in g.get("scenes", []) for x in c[1]):
+        return ""
+    drama = "話" in g.get("runtime", "")
+    if lang == "en":
+        return " (read along while you watch)"
+    return "（ドラマを観ながら読める）" if drama else "（映画を観ながら読める）"
 
 
 def scene_html(ch, k, sc, lang, head=""):
@@ -440,7 +450,7 @@ def build_scenes_page(slug, lang):
         + (shop_panel(g, lang) + "\n" if i == mid else "")
         for i, (h, scenes) in enumerate(chapters, 1))
     has_note = any(len(sc) > 2 and sc[2] for _, scs in chapters for sc in scs)
-    note_lead = (f'<p class="lead sc-note-lead">{"Each scene has a yellow “spoiler-free note”: background you can know at that point (who someone is, why they act, links to earlier films, terms), with nothing about what comes later. Watch alongside and match the scene numbers." if lang == "en" else "場面ごとの黄色い枠「ネタバレなし解説」は、その場面までに分かることだけで書いた補足です（この人は誰か、なぜこうしているのか、前の作品とのつながり、言葉の意味）。先の展開は書いていません。作品を観ながら、場面の番号で照らし合わせてください。"}</p>' if has_note else "")
+    note_lead = (f'<p class="lead"><strong>{e(watch_along(g, lang).strip(" ()（）").capitalize() if lang == "en" else watch_along(g, lang).strip(" ()（）"))}</strong></p><p class="lead sc-note-lead">{"Each scene has a yellow “spoiler-free note”: background you can know at that point (who someone is, why they act, links to earlier films, terms), with nothing about what comes later. Watch alongside and match the scene numbers." if lang == "en" else "場面ごとの黄色い枠「ネタバレなし解説」は、その場面までに分かることだけで書いた補足です（この人は誰か、なぜこうしているのか、前の作品とのつながり、言葉の意味）。先の展開は書いていません。作品を観ながら、場面の番号で照らし合わせてください。"}</p>' if has_note else "")
     page_title = t["scenes_title"].format(title=title)
     desc = t["scenes_desc"].format(title=title)
     th = g.get("theme")
