@@ -6275,7 +6275,9 @@ def _load_scenes():
         spec = importlib.util.spec_from_file_location("scenes_" + slug.replace("-", "_"), path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        g["scenes"] = [(ja, [(s[0], s[1]) for s in sc], en, [(s[2], s[3]) for s in sc]) for ja, en, sc in mod.SCENES]
+        # 6つ目までの形 ("見出し", "本文", "Heading", "Text", "ネタバレなし解説", "Spoiler-free note")。解説は省略できる（2026-11-07）
+        g["scenes"] = [(ja, [(s[0], s[1], s[4] if len(s) > 5 else "") for s in sc], en,
+                        [(s[2], s[3], s[5] if len(s) > 5 else "") for s in sc]) for ja, en, sc in mod.SCENES]
 
 
 _load_scenes()

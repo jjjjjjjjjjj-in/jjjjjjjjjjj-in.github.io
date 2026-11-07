@@ -7,6 +7,7 @@
 import html
 import json
 import os
+import re
 import shutil
 import sys
 from urllib.parse import quote
@@ -392,6 +393,19 @@ def paras(text):
     return "".join(f"<p>{e(x)}</p>" for x in text.split("\n") if x.strip())
 
 
+def scene_html(ch, k, sc, lang, head=""):
+    """場面1つ分。sc = (見出し, 本文[, ネタバレなし解説])。解説がある作品は場面に番号（第○章-○）を付ける"""
+    sh, sp = sc[0], sc[1]
+    note = sc[2] if len(sc) > 2 else ""
+    if not note:
+        return f'<div class="sc-scene"><h3>{e(sh)}</h3>{paras(sp)}</div>'
+    label = "Spoiler-free note" if lang == "en" else "ネタバレなし解説"
+    m = re.search(r"(?:第|Episode |Part )(\d+)", head)  # 番号は見出しの「第○話」に合わせる（なければ番号なし）
+    no = f'<span class="sc-no">{m.group(1)}-{k}</span>' if m else ""
+    return (f'<div class="sc-scene sc-has-note" id="s{ch}-{k}"><h3>{no}{e(sh)}</h3>{paras(sp)}'
+            f'<aside class="sc-note"><p class="sc-note-label">{label}</p>{paras(note)}</aside></div>')
+
+
 def build_scenes_page(slug, lang):
     """シーンごとの詳しいあらすじのページ（/<slug>/story/ と /<slug>/en/story/）"""
     t = TEXT[lang]
@@ -409,7 +423,7 @@ def build_scenes_page(slug, lang):
     if fold:
         body = "".join(
             f'<details class="fg-sec sc-chapter sc-fold" id="c{i}"><summary><h2>{e(h)}</h2></summary>'
-            + "".join(f'<div class="sc-scene"><h3>{e(sh)}</h3>{paras(sp)}</div>' for sh, sp in scenes) + "</details>\n"
+            + "".join(scene_html(i, k, sc, lang, h) for k, sc in enumerate(scenes, 1)) + "</details>\n"
             for i, (h, scenes) in enumerate(chapters, 1))
         for j, u in enumerate(g.get("upcoming", []), len(chapters) + 1):
             ut, ud = (u[1], u[3]) if lang == "en" else (u[0], u[2])
@@ -422,15 +436,17 @@ def build_scenes_page(slug, lang):
     else:
       body = "".join(
         f'<section class="fg-sec sc-chapter" id="c{i}"><h2>{e(h)}</h2>'
-        + "".join(f'<div class="sc-scene"><h3>{e(sh)}</h3>{paras(sp)}</div>' for sh, sp in scenes) + "</section>\n"
+        + "".join(scene_html(i, k, sc, lang, h) for k, sc in enumerate(scenes, 1)) + "</section>\n"
         + (shop_panel(g, lang) + "\n" if i == mid else "")
         for i, (h, scenes) in enumerate(chapters, 1))
+    has_note = any(len(sc) > 2 and sc[2] for _, scs in chapters for sc in scs)
+    note_lead = (f'<p class="lead sc-note-lead">{"Each scene has a yellow “spoiler-free note”: background you can know at that point (who someone is, why they act, links to earlier films, terms), with nothing about what comes later. Watch alongside and match the scene numbers." if lang == "en" else "場面ごとの黄色い枠「ネタバレなし解説」は、その場面までに分かることだけで書いた補足です（この人は誰か、なぜこうしているのか、前の作品とのつながり、言葉の意味）。先の展開は書いていません。作品を観ながら、場面の番号で照らし合わせてください。"}</p>' if has_note else "")
     page_title = t["scenes_title"].format(title=title)
     desc = t["scenes_desc"].format(title=title)
     th = g.get("theme")
     theme_css = (f"<style>:root{{--green:{th['deep']};--navy:{th['main']};--gold-bright:{th['accent']};--green-soft:{th['soft']};"
                  f"--navy-soft:{th['soft']};--gold:{th['accent']};--gold-ink:{th['main']};--link:{th['main']};}}"
-                 ".sc-scene{border-left:3px solid var(--gold-bright);padding:2px 0 2px 14px;margin:14px 0}.sc-scene h3{margin:0 0 4px;font-size:16px;color:var(--navy)}.sc-scene p{margin:0;line-height:1.95}.sc-scene p+p{margin-top:.7em}"
+                 ".sc-scene{border-left:3px solid var(--gold-bright);padding:2px 0 2px 14px;margin:14px 0}.sc-scene h3{margin:0 0 4px;font-size:16px;color:var(--navy)}.sc-scene p{margin:0;line-height:1.95}.sc-scene p+p{margin-top:.7em}.sc-no{display:inline-block;min-width:2.6em;margin-right:.5em;padding:1px 6px;border-radius:6px;background:var(--navy);color:#fff;font-size:12px;text-align:center;vertical-align:2px}.sc-note{margin:10px 0 2px;padding:10px 12px;border-radius:10px;background:#fff8e1;border:1px solid #f0d58a;color:#3d3420}.sc-note p{font-size:14px;line-height:1.8}.sc-note .sc-note-label{margin:0 0 4px;font-size:12px;font-weight:700;color:#8a6a10}@media (prefers-color-scheme: dark){.sc-note{background:#2b2617;border-color:#6b5a26;color:#efe6cc}.sc-note .sc-note-label{color:#e8c766}}"
                  "</style>\n") if th else ""
     schema = {"@context": "https://schema.org", "@type": "Article", "headline": page_title, "description": desc, "inLanguage": lang,
               "dateModified": g["updated"], "about": {"@type": "Movie", "name": title, "datePublished": tr["year"]}}
@@ -443,10 +459,10 @@ def build_scenes_page(slug, lang):
   <p class="eyebrow">{e(t['menu'])} · {e(tr['year'])}</p>
   <h1>{e(page_title)}</h1>
   <p class="lead">{e(t['scenes_lead'])}</p>
-  <p class="lead"><strong>{e(t['scenes_warn'])}</strong></p>
+  <p class="lead"><strong>{e(t['scenes_warn'])}</strong></p>{note_lead}
 </header>
 <nav class="site-toc" aria-label="{e(t['toc'])}">{toc}</nav>
-{contents_box([(f"#c{i}", h, [sh for sh, _ in sc]) for i, (h, sc) in enumerate(chapters, 1)] + [(f"#c{j}", (u[1] if lang == "en" else u[0]) + (" (not yet released)" if lang == "en" else "（未公開）"), []) for j, u in enumerate(g.get("upcoming", []), len(chapters) + 1)], lang)}
+{contents_box([(f"#c{i}", h, [x[0] for x in sc]) for i, (h, sc) in enumerate(chapters, 1)] + [(f"#c{j}", (u[1] if lang == "en" else u[0]) + (" (not yet released)" if lang == "en" else "（未公開）"), []) for j, u in enumerate(g.get("upcoming", []), len(chapters) + 1)], lang)}
 {body}
 {common_panel(lang)}
 <section class="panel"><div class="btns"><a class="btn primary" href="../">{e(t['scenes_back'])}</a></div></section>
