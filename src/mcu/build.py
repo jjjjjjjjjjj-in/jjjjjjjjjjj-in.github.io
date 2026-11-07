@@ -288,7 +288,7 @@ def build_page(slug, lang):
 
     before = "".join(f'<div class="fg-card"><h3>{e(h)}</h3><p>{e(b)}</p></div>' for h, b in (g["before_en"] if lang == "en" else g["before"]))
     glossary = "".join(f"<div><dt>{e(L(x, lang, 0, 2))}</dt><dd>{e(L(x, lang, 1, 3))}</dd></div>" for x in g["glossary"])
-    story = "".join(f'<section class="fg-chapter"><h3>{e(L(x, lang, 0, 2))}</h3><p>{e(L(x, lang, 1, 3))}</p></section>' for x in g["story"])
+    story = "".join(f'<section class="fg-chapter"><h3>{e(L(x, lang, 0, 2))}</h3>{paras(L(x, lang, 1, 3))}</section>' for x in g["story"])
     confusing = "".join(f'<details class="fg-qa"><summary>{e(L(x, lang, 0, 2))}</summary><p>{e(L(x, lang, 1, 3))}</p></details>' for x in g["confusing"])
     points = "".join(f'<div class="fg-card"><h3>{e(L(x, lang, 0, 2))}</h3><p>{e(L(x, lang, 1, 3))}</p></div>' for x in g["points"])
     nexts = "".join(
@@ -387,6 +387,11 @@ def write(path, text):
         f.write(text)
 
 
+def paras(text):
+    """改行（\n）で段落を分ける（長いあらすじを読みやすくするため。2026-11-07）"""
+    return "".join(f"<p>{e(x)}</p>" for x in text.split("\n") if x.strip())
+
+
 def build_scenes_page(slug, lang):
     """シーンごとの詳しいあらすじのページ（/<slug>/story/ と /<slug>/en/story/）"""
     t = TEXT[lang]
@@ -404,7 +409,7 @@ def build_scenes_page(slug, lang):
     if fold:
         body = "".join(
             f'<details class="fg-sec sc-chapter sc-fold" id="c{i}"><summary><h2>{e(h)}</h2></summary>'
-            + "".join(f'<div class="sc-scene"><h3>{e(sh)}</h3><p>{e(sp)}</p></div>' for sh, sp in scenes) + "</details>\n"
+            + "".join(f'<div class="sc-scene"><h3>{e(sh)}</h3>{paras(sp)}</div>' for sh, sp in scenes) + "</details>\n"
             for i, (h, scenes) in enumerate(chapters, 1))
         for j, u in enumerate(g.get("upcoming", []), len(chapters) + 1):
             ut, ud = (u[1], u[3]) if lang == "en" else (u[0], u[2])
@@ -417,7 +422,7 @@ def build_scenes_page(slug, lang):
     else:
       body = "".join(
         f'<section class="fg-sec sc-chapter" id="c{i}"><h2>{e(h)}</h2>'
-        + "".join(f'<div class="sc-scene"><h3>{e(sh)}</h3><p>{e(sp)}</p></div>' for sh, sp in scenes) + "</section>\n"
+        + "".join(f'<div class="sc-scene"><h3>{e(sh)}</h3>{paras(sp)}</div>' for sh, sp in scenes) + "</section>\n"
         + (shop_panel(g, lang) + "\n" if i == mid else "")
         for i, (h, scenes) in enumerate(chapters, 1))
     page_title = t["scenes_title"].format(title=title)
@@ -425,7 +430,7 @@ def build_scenes_page(slug, lang):
     th = g.get("theme")
     theme_css = (f"<style>:root{{--green:{th['deep']};--navy:{th['main']};--gold-bright:{th['accent']};--green-soft:{th['soft']};"
                  f"--navy-soft:{th['soft']};--gold:{th['accent']};--gold-ink:{th['main']};--link:{th['main']};}}"
-                 ".sc-scene{border-left:3px solid var(--gold-bright);padding:2px 0 2px 14px;margin:14px 0}.sc-scene h3{margin:0 0 4px;font-size:16px;color:var(--navy)}.sc-scene p{margin:0;line-height:1.95}"
+                 ".sc-scene{border-left:3px solid var(--gold-bright);padding:2px 0 2px 14px;margin:14px 0}.sc-scene h3{margin:0 0 4px;font-size:16px;color:var(--navy)}.sc-scene p{margin:0;line-height:1.95}.sc-scene p+p{margin-top:.7em}"
                  "</style>\n") if th else ""
     schema = {"@context": "https://schema.org", "@type": "Article", "headline": page_title, "description": desc, "inLanguage": lang,
               "dateModified": g["updated"], "about": {"@type": "Movie", "name": title, "datePublished": tr["year"]}}
