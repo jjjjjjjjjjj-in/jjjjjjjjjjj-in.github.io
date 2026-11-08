@@ -180,11 +180,14 @@ SCENES = [('第1話 新しい世界',
     'Zemo smashes the vials one after another.\n'
     'Then Walker arrives and knocks Zemo down. He picks up the one vial Zemo missed and quietly pockets it.'),
    ('ドーラ・ミラージュとウォーカー',
-    'ウォーカーはレマーに「血清があったら打つか」とたずねる。レマーは「打つ」と答える。\n約束の8時間がすぎ、アヨたちドーラ・ミラージュがジモを取りに来る。止めようとしたウォーカーとレマーは、アヨたちにまったく歯が立たない。\nサムとバッキーは、ドーラ・ミラージュがウォーカーたちを殺してしまわないよう止めに入る。みんなが戦っているすきに、ジモはそっと姿を消す。\n「キャプテン・アメリカなのに勝てない」という悔しさから、ウォーカーは拾った血清を自分に打つ。',
+    'ウォーカーはレマーに「血清があったら打つか」とたずねる。レマーは「打つ」と答える。\n'
+    '約束の8時間がすぎ、アヨたちドーラ・ミラージュがジモを取りに来る。止めようとしたウォーカーとレマーは、アヨたちにまったく歯が立たない。\n'
+    'サムとバッキーは、ドーラ・ミラージュがウォーカーたちを殺してしまわないよう止めに入る。みんなが戦っているすきに、ジモはそっと姿を消す。\n'
+    '「キャプテン・アメリカなのに勝てない」という悔しさから、ウォーカーは拾った血清を自分に打つ。',
     'The Dora Milaje and Walker',
     'Walker asks Lemar if he would take the serum. Lemar says yes.\n'
     'When the eight hours are up, Ayo and the Dora Milaje come for Zemo. Walker and Lemar try to stop them and are utterly outmatched.\n'
-    'Sam and Bucky step in so the Dora Milaje don\'t kill Walker and Lemar. While everyone is fighting, Zemo quietly slips away.\n'
+    "Sam and Bucky step in so the Dora Milaje don't kill Walker and Lemar. While everyone is fighting, Zemo quietly slips away.\n"
     "Humiliated that Captain America can't win, Walker injects himself with the vial."),
    ('レマーの死',
     'サムとバッキー、ウォーカーたちは再びカーリたちと戦うことになる。\n混乱の中で、カーリは向かってきたレマーを、超人の力で思いきり蹴り飛ばす。レマーは石の柱にたたきつけられ、そのまま死んでしまう。カーリに殺すつもりはなかった。',
@@ -209,11 +212,10 @@ SCENES = [('第1話 新しい世界',
     "They work together. Bucky breaks Walker's arm to make him let go, and Walker is knocked out. They take the shield back.\n"
     'Sam leaves his broken wings with Torres and tells him to keep them.'),
    ('ウォーカーへの処分とヴァレンティーナ',
-    'ウォーカーは軍の審問にかけられ、キャプテン・アメリカの資格を取り上げられ、軍を不名誉なかたちで去ることになる。\nレマーの両親に会ったウォーカーは「レマーを殺した相手は、自分がやっつけた」とうそをつく。\nウォーカーのもとに、ヴァレンティーナという謎の女性が現れる。「血清を打ったのは正しかった」と言い、いずれ仕事をたのむと話して去る。',
+    'ウォーカーは軍の審問にかけられ、キャプテン・アメリカの資格を取り上げられ、軍を不名誉なかたちで去ることになる。\nベンチに座っているウォーカーのもとに、ヴァレンティーナという謎の女性が現れる。「血清を打ったのは正しかった」と言い、いずれ仕事をたのむと話して去る。',
     "Walker's punishment and Valentina",
     'At a hearing, Walker is stripped of the title and pushed out of the military in disgrace.\n'
-    "Meeting Lemar's parents, Walker lies that he got the man who killed their son.\n"
-    'A mysterious woman named Valentina visits Walker, says taking the serum was right, promises him work, and leaves.'),
+    'A mysterious woman named Valentina approaches Walker on a bench, says taking the serum was right, promises him work, and leaves.'),
    ('ジモの引き渡し',
     'バッキーは、ソコヴィアの戦いで亡くなった人々の慰霊の場所で、花を供えるジモを見つける。\nバッキーは銃を向けて引き金を引くが、弾ははじめから抜いてあった。\nジモは逃げずに、アヨたちドーラ・ミラージュに引き渡され、海の上にある特別な刑務所「ラフト」に送られる。\nバッキーはアヨに、サムのためにある「お願い」をする。',
     'Handing over Zemo',
@@ -244,6 +246,10 @@ SCENES = [('第1話 新しい世界',
     'Bucky arrives, helps with the boat, and trains with Sam, throwing the shield.\n'
     "Bucky admits that when Sam gave the shield away, it felt like Steve's faith was thrown out, and that he had nothing left.\n"
     'Sam tells him that to truly make amends, he has to be honest with the people he hurt. They finally become real friends.'),
+   ('レマーの両親',
+    'レマーの両親に会ったウォーカーは「レマーを殺した相手は、自分がやっつけた」とうそをつく。\n本当は、ウォーカーが殺したニコは、レマーを殺した人ではなかった。',
+    "Lemar's parents",
+    "Meeting Lemar's parents, Walker lies that he got the man who killed their son.\nIn truth, Nico, the man Walker killed, was not the one who killed Lemar."),
    ('カーリの次の計画',
     'カーリたちは、ニューヨークで開かれるGRCの会議をねらう計画を立てる。その会議では、難民キャンプの人々を元の国に戻す決まりが話し合われる。第1話でサムと戦ったバトロックも、カーリの仲間に加わっている。',
     "Karli's next plan",
@@ -276,7 +282,8 @@ SCENES = [('第1話 新しい世界',
     'シャロンは、カーリとバトロックに追いつく。実はシャロンこそが、マドリプールの裏社会の支配者パワー・ブローカーだった。カーリもバトロックもそれに気づく。\nバトロックは「正体をばらされたくなければ、もっと金をよこせ」とシャロンを脅す。シャロンは、その場でバトロックを撃ち殺す。\nこの撃ち合いの中で、シャロンもカーリに撃たれて傷を負う。',
     "Sharon's secret and Batroc's death",
     "Sharon catches up with Karli and Batroc. In truth, Sharon is the Power Broker, boss of Madripoor's underworld, and both of them know it.\n"
-    'Batroc threatens to expose her unless she pays far more. Sharon shoots him dead on the spot.\nIn the shootout, Sharon is also wounded by a shot from Karli.'),
+    'Batroc threatens to expose her unless she pays far more. Sharon shoots him dead on the spot.\n'
+    'In the shootout, Sharon is also wounded by a shot from Karli.'),
    ('カーリの最期',
     'サムはカーリを止めに来る。カーリはサムに襲いかかるが、サムは反撃せず、「こんなことをしなくても、ほかの道がある」と語りかけ続ける。\nサムに向かってくるカーリを、シャロンが撃つ。カーリはサムの腕の中で、「ごめんなさい」と言って息をひきとる。\nサムはカーリの体を抱えて外へ運び出す。',
     "Karli's end",
