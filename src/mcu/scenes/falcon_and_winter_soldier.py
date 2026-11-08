@@ -18,11 +18,11 @@ SCENES = [('第1話 新しい世界',
     'Two enemy helicopters appear and open fire on Sam. He dodges and fights them in mid-air.\n'
     'Sam rescues Captain Vassant. Batroc jumps out and escapes by parachute.'),
    ('トレスの報告と、盾を博物館へ',
-    '作戦のあと、トレスはサムに、ある集団の話をする。インターネットで仲間を集め、「指パッチンのあいだのほうが世界はよかった」と考えている集団、フラッグ・スマッシャーズだ。\n'
+    '作戦のあと、チュニジアの店で、トレスはサムに、ある集団の話をする。インターネットで仲間を集め、「指パッチンのあいだのほうが世界はよかった」と考えている集団、フラッグ・スマッシャーズだ。\n'
     'ワシントンの博物館で式典が開かれる。サムはスティーブから託された盾を、スティーブを紹介する展示に飾ってもらうため、政府に預ける。\n'
     '式典のあと、友人のローディ（ウォーマシン）が「本当にいいのか」とたずねる。サムは「盾は、まだスティーブのもののような気がする」と答える。',
     "Torres's report, and the shield goes to a museum",
-    'After the mission, Torres tells Sam about a group that organizes online and believes the world was better during the Blip: the Flag Smashers.\n'
+    'After the mission, at a café in Tunisia, Torres tells Sam about a group that organizes online and believes the world was better during the Blip: the Flag Smashers.\n'
     "At a ceremony in Washington, Sam hands Steve's shield to the government to be displayed in a museum exhibit about Steve.\n"
     "Afterward, his friend Rhodey (War Machine) asks if he's sure. Sam says it feels like the shield still belongs to Steve."),
    ('バッキーの悪夢とカウンセリング',
@@ -66,10 +66,12 @@ SCENES = [('第1話 新しい世界',
  ('第2話 星条旗の男',
   'Episode 2: The Star-Spangled Man',
   [('ジョン・ウォーカー',
-    '母校の高校の控え室で、ウォーカーは人前に出る準備をしている。妻のオリビアが来て、緊張する夫をはげます。\nウォーカーは新しいキャプテン・アメリカとして紹介され、テレビの番組に出る。「スティーブは兄弟のような存在だ」と話し、スティーブにふさわしい存在になりたいと語る。そばにはいつも親友のレマーがいる。',
+    '母校の高校の控え室で、ウォーカーは人前に出る準備をしている。妻のオリビアが来て、緊張する夫をはげます。\n'
+    'ウォーカーは母校のフットボール場に走り出て、新しいキャプテン・アメリカとして紹介される。マーチングバンドが、昔スティーブが舞台で歌わされた「星条旗の男」の曲を新しい演奏で鳴らす。ウォーカーはそこで、テレビの朝の番組のインタビューを受ける。「スティーブは兄弟のような存在だ」と話し、スティーブにふさわしい存在になりたいと語る。そばにはいつも親友のレマーがいる。',
     'John Walker',
     'In a locker room at his old high school, Walker gets ready for a public appearance. His wife Olivia comes in to encourage him.\n'
-    "Introduced as the new Captain America, Walker appears on TV, calls Steve a brother, and says he wants to live up to Steve's legacy. His best friend Lemar is at his side."),
+    'Walker runs onto his old school\'s football field as the new Captain America while a marching band plays a new arrangement of "The Star-Spangled Man," the song from Steve\'s 1940s shows. He '
+    "gives an interview to Good Morning America there, calls Steve a brother, and says he wants to live up to Steve's legacy. His best friend Lemar is at his side."),
    ('バッキーの怒り',
     'がらんとした自分の部屋で、バッキーはウォーカーのテレビを見て、怒りをつのらせる。\nバッキーはサムに会いに来て、「なぜ盾を政府に渡した」と怒る。\n2人は言い合いをしながらも、フラッグ・スマッシャーズを一緒に追うことにする。',
     'Bucky is angry',
@@ -128,12 +130,12 @@ SCENES = [('第1話 新しい世界',
    ('マドリプールとセルビー',
     '3人は、パワー・ブローカーが支配する犯罪者の島マドリプールへ。ジモはバッキーにウィンター・ソルジャーのふりをさせ、サムは街に出入りする悪党の金持ちになりすます。\n'
     '3人は、セルビーという女の大物に会う。ジモは、ウィンター・ソルジャーを使ってセルビーの気を引き、血清の情報を聞き出す。血清を作り直したのは、パワー・ブローカーに雇われたヒドラの科学者、ネーゲル博士だという。\n'
-    'ところが、サムの姉サラから電話がかかってきたことで、サムの正体がばれてしまう。撃ち合いになり、セルビーは撃たれて死ぬ。\n'
+    'ところが、サムの姉サラが電話でサムを本当の名前で呼んだことで、サムの正体がばれてしまう。セルビーは手下に2人を殺せと命じるが、手下が動く前に、外から何者かが撃った弾でセルビーは死ぬ。\n'
     '3人に賞金がかけられ、街じゅうの賞金かせぎから追われる。',
     'Madripoor and Selby',
     'They fly to Madripoor, a criminal haven run by the Power Broker. Zemo has Bucky act as the Winter Soldier, and Sam poses as a gangster who frequents the city.\n'
     'They meet Selby, a powerful criminal. Using the Winter Soldier to get her attention, Zemo learns that the serum was recreated by Dr. Nagel, a Hydra scientist hired by the Power Broker.\n'
-    "A call from Sam's sister Sarah blows his cover. In the shootout that follows, Selby is killed.\n"
+    "Sam's sister Sarah calls him by his real name and blows his cover. Selby orders her men to kill them, but before they can act, a shot from outside kills Selby.\n"
     'With a bounty on their heads, every bounty hunter in the city comes after them.'),
    ('シャロンとの再会',
     '3人を助けたのは、シャロン・カーターだった。シャロンは『シビル・ウォー』のあと追われる身となり、マドリプールで暮らしていた。\nシャロンは街での人脈を使って、ネーゲル博士の研究所を見つけ、3人を案内する。',
@@ -248,19 +250,25 @@ SCENES = [('第1話 新しい世界',
     'alone to rescue them. Instead of honoring him, the country imprisoned him for 30 years and kept experimenting. His family was told he had died.\n'
     "Isaiah tells Sam a Black man will never be allowed to be Captain America, and shouldn't want to be."),
    ('ルイジアナで船と盾',
-    'サムは盾を持ってルイジアナに帰り、姉サラと家族の船を直しはじめる。サムを昔から知る近所の人たちも、次々と手を貸してくれる。\n'
+    'サムは盾を持ってルイジアナに帰る。サラは結局、船を売ることができずにいた。サムは姉サラやおいたちと一緒に船を直しはじめ、両親が昔助けた近所の人たちに声をかける。サムを昔から知る人たちが、次々と手を貸してくれる。\n'
     'バッキーもやって来て、ワカンダから届いたケースをサムに渡す。バッキーは修理を手伝い、サムと一緒に盾を投げる練習をする。\n'
     'バッキーは、サムが盾を手放したとき「スティーブが信じたものまで捨てられ、自分の居場所もなくなった気がした」と打ち明ける。\n'
     'サムは「償いを本当に終わらせたいなら、相手に正直に向き合え」と助言する。2人は過去を乗りこえ、一緒に戦うと決める。',
     'The boat and the shield in Louisiana',
-    'Sam takes the shield home to Louisiana and starts fixing the family boat with Sarah. Neighbors who have known him for years pitch in.\n'
+    "Sam takes the shield home to Louisiana. Sarah couldn't bring herself to sell the boat after all. Sam starts fixing it with Sarah and his nephews and calls on neighbors his parents once helped, "
+    'who pitch in one after another.\n'
     'Bucky arrives and hands Sam a case sent from Wakanda. He helps with the boat and trains with Sam, throwing the shield.\n'
     "Bucky admits that when Sam gave the shield away, it felt like Steve's faith was thrown out, and that he had nothing left.\n"
     'Sam tells him that to truly make amends, he has to be honest with the people he hurt. They agree to move past their pasts and work together.'),
    ('レマーの両親',
-    'ウォーカーは、レマーの両親に会いに行き、「レマーを殺した相手は、自分がやっつけた」とうそをつく。\n本当は、ウォーカーが殺したニコは、レマーを殺した人ではなかった。',
+    '家で、ウォーカーは妻のオリビアに「キャプテン・アメリカがどれだけ大変か、誰も分かっていない」とこぼす。オリビアは「まずはレマーの家族に会いに行くこと」と言う。\n'
+    'ウォーカーはレマーの両親を訪ねる。レマーの父に「あなたが殺した男が、レマーを殺したのか」と聞かれ、ウォーカーは「そうだ」とうそをつく。レマーの母は「レマーは、あなたがキャプテン・アメリカになったことを誇りに思っていた」と話す。レマーの妹は、ウォーカーの話を疑うような顔をしている。\n'
+    '本当は、ウォーカーが殺したニコは、レマーを殺した人ではなかった。',
     "Lemar's parents",
-    "Walker visits Lemar's parents and falsely claims he killed the man who murdered their son.\nIn truth, Nico, the man Walker killed, was not the one who killed Lemar."),
+    "At home, Walker complains to his wife Olivia that no one understands what being Captain America takes. She tells him to start by visiting Lemar's family.\n"
+    "Walker visits Lemar's parents. When Lemar's father asks if the man he killed was the one who killed Lemar, Walker lies and says yes. Lemar's mother says Lemar was proud when Walker became "
+    "Captain America. Lemar's sister looks skeptical.\n"
+    'In truth, Nico, the man Walker killed, was not the one who killed Lemar.'),
    ('カーリの次の計画',
     'カーリたちは、ニューヨークで開かれるGRCの会議をねらう計画を立てる。その会議では、難民キャンプの人々を元の国に戻す決まりが話し合われる。\n第1話でサムと戦ったバトロックも、カーリの仲間に加わる。バトロックはシャロンの手で刑務所から出されていて、サムに仕返しをしたいと思っている。',
     "Karli's next plan",
@@ -304,10 +312,10 @@ SCENES = [('第1話 新しい世界',
     "Sharon corners Karli. In truth, Sharon is the Power Broker, the boss of Madripoor's underworld, and she is angry that Karli betrayed her.\n"
     'Batroc tries to blackmail her for more money. Sharon shoots him dead on the spot. In the shootout, Sharon is also wounded by Karli.'),
    ('カーリの最期',
-    'サムはカーリを止めに来て、話し合おうとする。しかしカーリは聞き入れず、サムに襲いかかる。サムは反撃せず、「ほかの道がある」と語りかけ続ける。\nカーリがサムに銃を向けたとき、シャロンがカーリを撃つ。カーリはサムの腕の中で、泣きながら「ごめんなさい」と言って息をひきとる。サムはカーリの体を抱えて外へ運び出す。',
+    'サムはカーリを止めに来て、話し合おうとする。しかしカーリは聞き入れず、サムに襲いかかる。サムは反撃せず、「ほかの道がある」と語りかけ続ける。\nカーリがサムに銃を向けたとき、けがをしていたシャロンがカーリを撃つ。カーリはサムの腕の中で、泣きながら「ごめんなさい」と言って息をひきとる。サムはカーリの体を抱えて外へ運び出す。',
     "Karli's end",
     "Sam tries to reason with Karli, but she won't listen and attacks him. He won't fight back and keeps telling her there is another way.\n"
-    "When Karli holds Sam at gunpoint, Sharon shoots her. Tearful, Karli dies in Sam's arms, saying she's sorry. Sam carries her body out."),
+    "When Karli holds Sam at gunpoint, the wounded Sharon shoots her. Tearful, Karli dies in Sam's arms, saying she's sorry. Sam carries her body out."),
    ('サムの言葉',
     'カメラが集まる中で、サムはGRCの議員たちに語りかける。「あなたたちは、何百万もの人の暮らしを机の上で決めている。住む場所を失った人々の声を聞いてほしい」。\nサムの言葉で、GRCは、住む場所を失った人々を元の国に戻す投票を延期する。黒人のキャプテン・アメリカとして、サムは自分の言葉で、盾を持つ意味を示す。',
     "Sam's speech",
@@ -347,7 +355,7 @@ SCENES = [('第1話 新しい世界',
     "2) Yori Nakajima (Eps. 1–6): Bucky killed Yori's son RJ, who witnessed a hit in a hotel. They became weekly lunch friends, but Bucky couldn't tell him until Episode 6. Yori is left in tears.\n"
     'Finally, he crosses off every other name and hands Dr. Raynor the notebook (Ep. 6).'),
    ('死んだ人たち（話の順に）',
-    '・セルビー（第3話）：マドリプールの大物。サムの正体がばれて起きた撃ち合いの中で撃たれて死ぬ。\n'
+    '・セルビー（第3話）：マドリプールの大物。サムたちを殺せと手下に命じた直後、外から何者かに撃たれて死ぬ。\n'
     '・ネーゲル博士（第3話）：血清を作り直した科学者。また血清が作られるのを防ぐため、ジモが撃つ。\n'
     '・GRCの倉庫の3人（第3話）：カーリが、人が中にいるまま倉庫を爆破した。\n'
     '・ドンニャ（第4話）：カーリの育ての母。難民キャンプで亡くなる（葬式の場面）。\n'
@@ -357,7 +365,7 @@ SCENES = [('第1話 新しい世界',
     '・カーリ（第6話）：サムに銃を向けたところを、シャロンが撃つ。サムの腕の中で亡くなる。\n'
     '・残ったフラッグ・スマッシャーズ（第6話）：ラフトへ運ばれる途中、ジモの執事オエズニクが仕掛けた爆弾で死ぬ。',
     'Who died (in order)',
-    "- Selby (Ep. 3): a Madripoor crime boss, killed in the shootout after Sam's cover is blown.\n"
+    '- Selby (Ep. 3): a Madripoor crime boss, shot from outside by an unseen shooter just after ordering Sam and Bucky killed.\n'
     '- Dr. Nagel (Ep. 3): the scientist who recreated the serum. Zemo shoots him so no more can be made.\n'
     '- Three people at the GRC depot (Ep. 3): Karli blew it up with people inside.\n'
     "- Donya (Ep. 4): Karli's adoptive mother, who died in the refugee camp (seen at her memorial).\n"
