@@ -300,6 +300,21 @@ TRAVEL_GOODS = {
     "wallet": ("小銭も入る旅行用の財布", "トラベル財布 スキミング防止"),
     "korean_food": ("家で作れる韓国料理の本", "韓国料理 レシピ本"),
 }
+# Trip.com（2026-11-08 審査通過。Alliance ID 11221078、SID 334979366）。リンクは運営者が管理画面で作ったものをそのまま使う
+TRIP_LINKS = {
+    "hotel_incheon": ("仁川のホテルを探す", "https://jp.trip.com/hotels/list?city=410&display=%E4%BB%81%E5%B7%9D&optionId=410&optionType=City&optionName=%E4%BB%81%E5%B7%9D&Allianceid=11221078&SID=334979366&trip_sub1=&trip_sub3=D20977742"),
+    "hotel_seoul": ("ソウルのホテルを探す", "https://jp.trip.com/hotels/list?city=274&display=%E3%82%BD%E3%82%A6%E3%83%AB&optionId=274&optionType=City&optionName=%E3%82%BD%E3%82%A6%E3%83%AB&Allianceid=11221078&SID=334979366&trip_sub1=&trip_sub3=D20977742"),
+    "flight_tokyo": ("東京からソウル（仁川）への航空券", "https://jp.trip.com/flights/Tokyo-to-Seoul/tickets-TYO-SEL?flighttype=S&dcity=TYO&acity=SEL&Allianceid=11221078&SID=334979366&trip_sub1=&trip_sub3=D20977742"),
+    "flight_osaka": ("大阪からソウル（仁川）への航空券", "https://jp.trip.com/flights/Osaka-to-Seoul/tickets-OSA-SEL?flighttype=S&dcity=OSA&acity=SEL&Allianceid=11221078&SID=334979366&trip_sub1=&trip_sub3=D20977742"),
+}
+# Trip.com を出すページ（旅行のページだけ。start.html・cafe9.html などカジノのお金の話をするページには出さない）
+TRIP_PAGES = {
+    "index.html": ["hotel_incheon", "hotel_seoul", "flight_tokyo", "flight_osaka"],
+    "stay.html": ["hotel_incheon", "hotel_seoul", "flight_tokyo", "flight_osaka"],
+    "access.html": ["flight_tokyo", "flight_osaka", "hotel_incheon"],
+    "article-hyatt-regency-incheon.html": ["hotel_incheon", "hotel_seoul"],
+}
+
 # ページごとに出す商品（キーは上の TRAVEL_GOODS）
 AD_PAGES = {
     "index.html": ["guide", "sim", "plug", "translator", "battery", "suitcase"],
