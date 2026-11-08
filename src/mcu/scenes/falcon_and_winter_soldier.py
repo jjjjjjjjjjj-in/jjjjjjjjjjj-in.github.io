@@ -174,23 +174,23 @@ SCENES = [('第1話 新しい世界',
     'Walker barges in and ruins the talk. Karli concludes Sam is working with the other side, and escapes.\n'
     "Karli calls Sam's sister Sarah and, with a veiled threat to her and her sons, has her pass a meeting place to Sam."),
    ('血清を壊す',
-    '待ち合わせの場所で、戦いになる。ジモはカーリを銃で撃つ。カーリは血清のおかげで死なないが、かばんの中の血清があらわになる。\nジモは血清を次々と踏みくだく。\nところが最後の1本だけは、ウォーカーが拾い、こっそりポケットに入れる。',
+    '待ち合わせの場所で、戦いになる。ジモはカーリを銃で撃つ。カーリは血清のおかげで死なないが、かばんの中の血清があらわになる。\nジモは血清を次々と踏みくだく。\nそこへウォーカーが来てジモを殴り倒す。ジモが壊しそこねた最後の1本を、ウォーカーは拾ってこっそりポケットに入れる。',
     'Destroying the serum',
     'A fight breaks out at the meeting place. Zemo shoots Karli. The serum keeps her alive, but her bag of vials spills out.\n'
     'Zemo smashes the vials one after another.\n'
-    'The last vial is picked up by Walker, who quietly pockets it.'),
+    'Then Walker arrives and knocks Zemo down. He picks up the one vial Zemo missed and quietly pockets it.'),
    ('ドーラ・ミラージュとウォーカー',
-    'ウォーカーはレマーに「血清があったら打つか」とたずねる。レマーは「打つ」と答える。\n約束の8時間がすぎ、アヨたちドーラ・ミラージュがジモを取りに来る。止めようとしたウォーカーとレマーは、アヨたちにまったく歯が立たない。\n「キャプテン・アメリカなのに勝てない」という悔しさから、ウォーカーは拾った血清を自分に打つ。',
+    'ウォーカーはレマーに「血清があったら打つか」とたずねる。レマーは「打つ」と答える。\n約束の8時間がすぎ、アヨたちドーラ・ミラージュがジモを取りに来る。止めようとしたウォーカーとレマーは、アヨたちにまったく歯が立たない。\nサムとバッキーは、ドーラ・ミラージュがウォーカーたちを殺してしまわないよう止めに入る。みんなが戦っているすきに、ジモはそっと姿を消す。\n「キャプテン・アメリカなのに勝てない」という悔しさから、ウォーカーは拾った血清を自分に打つ。',
     'The Dora Milaje and Walker',
     'Walker asks Lemar if he would take the serum. Lemar says yes.\n'
     'When the eight hours are up, Ayo and the Dora Milaje come for Zemo. Walker and Lemar try to stop them and are utterly outmatched.\n'
+    'Sam and Bucky step in so the Dora Milaje don\'t kill Walker and Lemar. While everyone is fighting, Zemo quietly slips away.\n'
     "Humiliated that Captain America can't win, Walker injects himself with the vial."),
    ('レマーの死',
-    'その夜、カーリたちとの戦いが再び始まる。\n混乱の中で、カーリは向かってきたレマーを、超人の力で思いきり蹴り飛ばす。レマーは石の柱にたたきつけられ、そのまま死んでしまう。カーリに殺すつもりはなかった。\nジモはこの混乱にまぎれて姿を消す。',
+    'サムとバッキー、ウォーカーたちは再びカーリたちと戦うことになる。\n混乱の中で、カーリは向かってきたレマーを、超人の力で思いきり蹴り飛ばす。レマーは石の柱にたたきつけられ、そのまま死んでしまう。カーリに殺すつもりはなかった。',
     "Lemar's death",
-    "That night the fight with Karli's group resumes.\n"
-    'In the chaos, Karli strikes Lemar with her super strength, slamming him into a stone pillar. He dies. She never meant to kill him.\n'
-    'Zemo slips away in the confusion.'),
+    "Sam, Bucky and Walker's team end up fighting Karli's group again.\n"
+    'In the chaos, Karli strikes Lemar with her super strength, slamming him into a stone pillar. He dies. She never meant to kill him.'),
    ('広場でのニコの死',
     '親友を失って怒りにのみこまれたウォーカーは、逃げるフラッグ・スマッシャーズの一人ニコを追いかける。ニコは「レマーを殺したのはぼくじゃない！」と叫ぶ。\n'
     'それでもウォーカーは、人が大勢いる広場で、ニコを盾で何度もなぐりつけて殺してしまう。サムとバッキー、カーリも、ぼう然と見ているしかなかった。\n'
@@ -273,10 +273,10 @@ SCENES = [('第1話 新しい世界',
     'A van full of hostages is about to fall from a height. Walker, with his homemade shield, chooses the hostages over revenge on Karli, drops his shield and tries to pull the van back. Sam flies '
     'in and holds it with his wings, and the hostages are saved.'),
    ('シャロンの正体とバトロックの死',
-    'シャロンは、カーリとバトロックに追いつく。実はシャロンこそが、マドリプールの裏社会の支配者パワー・ブローカーだった。カーリもバトロックもそれに気づく。\nバトロックは「正体をばらされたくなければ、もっと金をよこせ」とシャロンを脅す。シャロンは、その場でバトロックを撃ち殺す。',
+    'シャロンは、カーリとバトロックに追いつく。実はシャロンこそが、マドリプールの裏社会の支配者パワー・ブローカーだった。カーリもバトロックもそれに気づく。\nバトロックは「正体をばらされたくなければ、もっと金をよこせ」とシャロンを脅す。シャロンは、その場でバトロックを撃ち殺す。\nこの撃ち合いの中で、シャロンもカーリに撃たれて傷を負う。',
     "Sharon's secret and Batroc's death",
     "Sharon catches up with Karli and Batroc. In truth, Sharon is the Power Broker, boss of Madripoor's underworld, and both of them know it.\n"
-    'Batroc threatens to expose her unless she pays far more. Sharon shoots him dead on the spot.'),
+    'Batroc threatens to expose her unless she pays far more. Sharon shoots him dead on the spot.\nIn the shootout, Sharon is also wounded by a shot from Karli.'),
    ('カーリの最期',
     'サムはカーリを止めに来る。カーリはサムに襲いかかるが、サムは反撃せず、「こんなことをしなくても、ほかの道がある」と語りかけ続ける。\nサムに向かってくるカーリを、シャロンが撃つ。カーリはサムの腕の中で、「ごめんなさい」と言って息をひきとる。\nサムはカーリの体を抱えて外へ運び出す。',
     "Karli's end",
