@@ -207,3 +207,8 @@ tr.is-past td, tr.is-past th { color: var(--past); }
 .toc ol { margin: 0; padding-left: 0; list-style: none; display: grid; gap: 4px; font-size: 14px; }
 .notes { margin: 6px 0; padding-left: 0; list-style: none; display: grid; gap: 6px; font-size: 13.5px; }
 @media (max-width: 380px) { .duo { gap: 8px; } .duo > section { padding: 10px 8px 2px; } }
+
+/* Trip.com の小さな PR リンク（見出しの間に1行） */
+.trip-pr { display: flex; align-items: center; gap: 8px; margin: 18px 0; font-size: 13px; line-height: 1.5; }
+.trip-pr .pr { flex: none; font-size: 10px; font-weight: 700; letter-spacing: .08em; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 0 5px; }
+.trip-pr a { color: inherit; }

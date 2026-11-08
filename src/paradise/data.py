@@ -302,17 +302,19 @@ TRAVEL_GOODS = {
 }
 # Trip.com（2026-11-08 審査通過。Alliance ID 11221078、SID 334979366）。リンクは運営者が管理画面で作ったものをそのまま使う
 TRIP_LINKS = {
-    "hotel_incheon": ("仁川のホテルを探す", "https://jp.trip.com/hotels/list?city=410&display=%E4%BB%81%E5%B7%9D&optionId=410&optionType=City&optionName=%E4%BB%81%E5%B7%9D&Allianceid=11221078&SID=334979366&trip_sub1=&trip_sub3=D20977742"),
-    "hotel_seoul": ("ソウルのホテルを探す", "https://jp.trip.com/hotels/list?city=274&display=%E3%82%BD%E3%82%A6%E3%83%AB&optionId=274&optionType=City&optionName=%E3%82%BD%E3%82%A6%E3%83%AB&Allianceid=11221078&SID=334979366&trip_sub1=&trip_sub3=D20977742"),
-    "flight_tokyo": ("東京からソウル（仁川）への航空券", "https://jp.trip.com/flights/Tokyo-to-Seoul/tickets-TYO-SEL?flighttype=S&dcity=TYO&acity=SEL&Allianceid=11221078&SID=334979366&trip_sub1=&trip_sub3=D20977742"),
-    "flight_osaka": ("大阪からソウル（仁川）への航空券", "https://jp.trip.com/flights/Osaka-to-Seoul/tickets-OSA-SEL?flighttype=S&dcity=OSA&acity=SEL&Allianceid=11221078&SID=334979366&trip_sub1=&trip_sub3=D20977742"),
+    "hotel_incheon": ("仁川（パラダイスシティ周辺）のホテルを Trip.com で探す", "https://jp.trip.com/hotels/list?city=410&display=%E4%BB%81%E5%B7%9D&optionId=410&optionType=City&optionName=%E4%BB%81%E5%B7%9D&Allianceid=11221078&SID=334979366&trip_sub1=&trip_sub3=D20977742"),
+    "hotel_seoul": ("ソウルのホテルを Trip.com で探す", "https://jp.trip.com/hotels/list?city=274&display=%E3%82%BD%E3%82%A6%E3%83%AB&optionId=274&optionType=City&optionName=%E3%82%BD%E3%82%A6%E3%83%AB&Allianceid=11221078&SID=334979366&trip_sub1=&trip_sub3=D20977742"),
+    "flight_tokyo": ("東京からソウル（仁川）の航空券を Trip.com で探す", "https://jp.trip.com/flights/Tokyo-to-Seoul/tickets-TYO-SEL?flighttype=S&dcity=TYO&acity=SEL&Allianceid=11221078&SID=334979366&trip_sub1=&trip_sub3=D20977742"),
+    "flight_osaka": ("大阪からソウル（仁川）の航空券を Trip.com で探す", "https://jp.trip.com/flights/Osaka-to-Seoul/tickets-OSA-SEL?flighttype=S&dcity=OSA&acity=SEL&Allianceid=11221078&SID=334979366&trip_sub1=&trip_sub3=D20977742"),
 }
-# Trip.com を出すページ（旅行のページだけ。start.html・cafe9.html などカジノのお金の話をするページには出さない）
+# Trip.com を出す場所（旅行のページだけ。start.html・cafe9.html などカジノのお金の話をするページには出さない）
+# 2026-11-08 運営者の希望：ページの下にまとめず、見出しと見出しの間に小さく1行ずつ挟む。
+# (見出しの id か見出しの文字, TRIP_LINKS のキー) の見出しの直前に入る
 TRIP_PAGES = {
-    "index.html": ["hotel_incheon", "hotel_seoul", "flight_tokyo", "flight_osaka"],
-    "stay.html": ["hotel_incheon", "hotel_seoul", "flight_tokyo", "flight_osaka"],
-    "access.html": ["flight_tokyo", "flight_osaka", "hotel_incheon"],
-    "article-hyatt-regency-incheon.html": ["hotel_incheon", "hotel_seoul"],
+    "index.html": [("h-camp", "flight_tokyo"), ("h-stay", "hotel_incheon")],
+    "stay.html": [("h-compare", "hotel_incheon"), ("h-notes", "hotel_seoul"), ("h-archive", "flight_tokyo")],
+    "access.html": [("h-to-t1", "flight_tokyo"), ("h-taxi", "flight_osaka"), ("h-walk", "hotel_incheon")],
+    "article-hyatt-regency-incheon.html": [("客室", "hotel_incheon"), ("バスルーム", "hotel_seoul")],
 }
 
 # ページごとに出す商品（キーは上の TRAVEL_GOODS）

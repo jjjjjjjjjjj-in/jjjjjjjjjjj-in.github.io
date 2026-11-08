@@ -95,18 +95,24 @@ def travel_ads(keys):
 </aside>"""
 
 
-def trip_ads(keys):
-    rows = "".join(f'<li><span>{e(D.TRIP_LINKS[k][0])}</span><span class="ad-links"><a href="{e(D.TRIP_LINKS[k][1])}" target="_blank" rel="sponsored noopener">Trip.comで見る</a></span></li>' for k in keys)
-    return f"""<aside class="ads" aria-labelledby="h-trip"><h2 id="h-trip"><span class="pr">PR</span>ホテル・航空券を探す</h2>
-  <p class="muted">パラダイスシティは仁川（インチョン）空港のすぐそばです。リンク先は Trip.com の検索結果で、料金や空きは日によって変わります。</p>
-  <ul class="ad-list">{rows}</ul>
-  <p class="muted">このコーナーは広告（アフィリエイト）です。リンクから予約されると、運営者が報酬を受け取ることがあります。</p>
-</aside>"""
+def trip_inline(body, spots):
+    """見出しの直前に Trip.com の小さな PR リンクを1行ずつ挟む"""
+    for mark, key in spots:
+        label, url = D.TRIP_LINKS[key]
+        line = (f'<p class="trip-pr"><span class="pr">PR</span><a href="{e(url)}" target="_blank" '
+                f'rel="sponsored noopener">{e(label)}</a></p>\n')
+        for target in (f'<section aria-labelledby="{mark}">', f'<section><h2>{mark}</h2>'):
+            if target in body:
+                body = body.replace(target, line + target, 1)
+                break
+        else:
+            raise SystemExit(f"Trip.com の挟む場所が見つからない: {mark}")
+    return body
 
 
 def layout(file, title, desc, body, head_html, extra_head=""):
     if file in D.TRIP_PAGES:
-        body = body + trip_ads(D.TRIP_PAGES[file])
+        body = trip_inline(body, D.TRIP_PAGES[file])
     if file in D.AD_PAGES:
         body = body + travel_ads(D.AD_PAGES[file])
     nav = "".join(f'<li><a href="{f}"{" aria-current=\"page\"" if f == file else ""}>{e(n)}</a></li>' for f, n in NAV)
