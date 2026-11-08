@@ -160,8 +160,8 @@ SCENES = [('第1話 新しい世界',
     'Six years earlier in Wakanda, Ayo reads the trigger words that used to turn Bucky into an assassin. Nothing happens, and he weeps. He is finally free.\n'
     'In Riga, Ayo demands Zemo. Bucky asks for eight hours, and she agrees.\n'
     "Sam and the others learn that Karli's group bombed a GRC depot, killing three people."),
-   ('ドニヤおばさんの葬式',
-    'ジモは難民キャンプで、子どもたちにお菓子（トルコのお菓子ロクム）を配りながら、ドニヤという女性を知っているか、葬式はどこかを、ある女の子から聞き出す。こうして、カーリが「ドニヤおばさん」の葬式に来ると突き止める。\nドニヤは、身よりのない子どもたちを育ててきた女性で、カーリにとって母のような人だった。キャンプで亡くなっていた。カーリは悲しみと怒りをつのらせる。',
+   ('ドンニャおばさんの葬式',
+    'ジモは難民キャンプで、子どもたちにお菓子（トルコのお菓子ロクム）を配りながら、ドンニャという女性を知っているか、葬式はどこかを、ある女の子から聞き出す。こうして、カーリが「ドンニャおばさん」の葬式に来ると突き止める。\nドンニャは、身よりのない子どもたちを育ててきた女性で、カーリにとって母のような人だった。キャンプで亡くなっていた。カーリは悲しみと怒りをつのらせる。',
     "Donya's funeral",
     'In the refugee camp, Zemo hands out Turkish delight to the children and gets a girl to tell him about Donya and where her funeral will be. This is how he learns Karli will be there.\n'
     "Donya raised children with nowhere else to go; to Karli she was like a mother. She died in the camp. Karli's grief turns to anger."),
@@ -326,7 +326,7 @@ SCENES = [('第1話 新しい世界',
     '・セルビー（第3話）：情報屋。マドリプールで、窓の外から姿の見えない誰かに撃たれる。\n'
     '・ネーゲル博士（第3話）：血清を作り直した科学者。また血清が作られるのを防ぐため、ジモが撃つ。\n'
     '・GRCの倉庫の3人（第3話）：カーリが、人を閉じこめたまま倉庫を爆破した。\n'
-    '・ドニヤ（第4話）：カーリの母のような人。難民キャンプで亡くなる（葬式の場面）。\n'
+    '・ドンニャ（第4話）：カーリの母のような人。難民キャンプで亡くなる（葬式の場面）。\n'
     '・レマー（第4話）：ウォーカーの親友。戦いの中でカーリに蹴り飛ばされ、柱にぶつかって死ぬ。カーリに殺すつもりはなかった。\n'
     '・ニコ（第4話）：フラッグ・スマッシャーズの一人。レマーを殺した人ではないのに、怒ったウォーカーが広場で盾でなぐって殺す。\n'
     '・バトロック（第6話）：金をよこせと脅したため、正体を知られたシャロン（パワー・ブローカー）が撃つ。\n'
