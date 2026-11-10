@@ -130,7 +130,7 @@
 - [x] black-widow（ブラック・ウィドウ）
 - [x] hawkeye（ホークアイ）
 - [x] guardians-holiday-special（ガーディアンズ・オブ・ギャラクシー：ホリデー・スペシャル）
-- [~] the-marvels（マーベルズ）
+- [x] the-marvels（マーベルズ）
 - [x] logan（LOGAN／ローガン）
 - [x] eternals（エターナルズ）
 - [x] moon-knight（ムーンナイト）
