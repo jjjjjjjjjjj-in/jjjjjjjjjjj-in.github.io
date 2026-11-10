@@ -456,3 +456,5 @@ details.sc-fold > summary h2 { display: flex; align-items: center; gap: 8px; }
 .sc-soon { margin: 12px 4px; font-weight: 700; }
 details.sc-fold > summary h2 { margin: 0; font-size: 18px; font-weight: 900; background: var(--navy); color: var(--on-dark); border-radius: 6px; border-left: 4px solid var(--gold-bright); padding: 10px 14px; line-height: 1.45; }
 details.sc-fold { margin: 12px 0; }
+
+.fg-take p { font-size: 15px; line-height: 1.9; }

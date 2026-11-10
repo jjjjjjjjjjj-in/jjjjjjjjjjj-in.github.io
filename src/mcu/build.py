@@ -19,6 +19,7 @@ sys.path.insert(0, SRC)
 from films import FILM_GUIDES  # noqa: E402
 from relations import RELATION_MAPS, image_for  # noqa: E402
 from titles import TITLES  # noqa: E402
+from opinions import OPINIONS  # noqa: E402
 import relmap_build  # noqa: E402
 
 BASE_URL = "https://mocchima.com/"
@@ -42,7 +43,7 @@ TEXT = {
         home="もっちぃま", guide="完全ガイド", menu="作品ガイド", other_lang="English",
         tagline="映画だけでは分かりにくいところを、あらすじ・相関図・用語でやさしく解説します。",
         year="公開", runtime="上映時間", era="作中の時代",
-        toc="目次", toc_short=dict(before="観る前に", map="相関図", story="あらすじ", glossary="用語集", confusing="Q&A", points="小ネタ", ending="おまけ映像", next="次に観る"), s_before="観る前に知っておくと分かりやすいこと", s_map="キャラクター相関図",
+        toc="目次", toc_short=dict(take="感想", before="観る前に", map="相関図", story="あらすじ", glossary="用語集", confusing="Q&A", points="小ネタ", ending="おまけ映像", next="次に観る"), s_before="観る前に知っておくと分かりやすいこと", s_map="キャラクター相関図",
         s_story="あらすじ", s_glossary="用語集", s_confusing="ここが分かりにくい！Q&A", s_points="見逃しやすいポイント・小ネタ",
         s_ending="ラストとおまけ映像", s_next="次に観るとよい作品",
         nospoil="ネタバレなし", spoil="ネタバレあり",
@@ -61,7 +62,7 @@ TEXT = {
         home="Mocchima", guide="Complete Guide", menu="Film guide", other_lang="日本語",
         tagline="The parts that are hard to follow from the film alone, explained with a story summary, a character map and key terms.",
         year="Released", runtime="Runtime", era="Set in",
-        toc="Contents", toc_short=dict(before="Before you watch", map="Character map", story="Story", glossary="Key terms", confusing="Q&A", points="Details", ending="Post-credits", next="Watch next"), s_before="Good to know before watching", s_map="Character map",
+        toc="Contents", toc_short=dict(take="My take", before="Before you watch", map="Character map", story="Story", glossary="Key terms", confusing="Q&A", points="Details", ending="Post-credits", next="Watch next"), s_before="Good to know before watching", s_map="Character map",
         s_story="Story", s_glossary="Key terms", s_confusing="Confusing parts, explained", s_points="Easy-to-miss details",
         s_ending="The ending and post-credits", s_next="What to watch next",
         nospoil="No spoilers", spoil="Spoilers",
@@ -277,6 +278,17 @@ def footer(lang, top):
 """
 
 
+def take_section(slug, lang):
+    """運営者のひとこと（感想・見解）。あらすじ（事実）と分けて出す"""
+    o = OPINIONS.get(slug)
+    if not o:
+        return ""
+    h = "My take" if lang == "en" else "運営者のひとこと"
+    sub = "Opinion" if lang == "en" else "感想・見解"
+    return (f'<section class="fg-sec" id="take"><h2>{e(h)}<span class="tag-ok">{e(sub)}</span></h2>'
+            f'<div class="fg-card fg-take"><p>{e(o[1] if lang == "en" else o[0])}</p></div></section>')
+
+
 def build_page(slug, lang):
     t = TEXT[lang]
     g = FILM_GUIDES[slug]
@@ -300,7 +312,7 @@ def build_page(slug, lang):
 
     has_map = slug in RELATION_MAPS
     map_html, map_scripts, actors = relmap_build.map_section(slug, lang, e, prefix) if has_map else ("", "", [])
-    sections = [("before", t["s_before"])] + ([("map", t["s_map"])] if has_map else []) + [
+    sections = [("before", t["s_before"])] + ([("take", "My take" if lang == "en" else "運営者のひとこと")] if slug in OPINIONS else []) + ([("map", t["s_map"])] if has_map else []) + [
         ("story", t["s_story"]), ("glossary", t["s_glossary"]), ("confusing", t["s_confusing"]), ("points", t["s_points"]),
         ("ending", t["s_ending"])] + ([(g["special"]["id"], g["special"]["title_en" if lang == "en" else "title"])] if g.get("special") else []) + [
         ("next", t["s_next"])]
@@ -341,7 +353,7 @@ def build_page(slug, lang):
 <section class="fg-sec" id="before"><h2>{e(t['s_before'])}<span class="tag-ok">{e(t['nospoil'])}</span></h2>
   <div class="fg-cards">{before}</div>
 </section>
-""" + (f"""
+""" + take_section(slug, lang) + (f"""
 <section class="fg-sec" id="map"><h2>{e(t['s_map'])}<span class="tag-warn">{e(t['spoil'])}</span></h2>
   {map_html}
 </section>
@@ -473,7 +485,7 @@ def build_scenes_page(slug, lang):
   <p class="lead"><strong>{e(t['scenes_warn'])}</strong></p>{note_lead}
 </header>
 <nav class="site-toc" aria-label="{e(t['toc'])}">{toc}</nav>
-{contents_box([(f"#c{i}", h, [x[0] for x in sc]) for i, (h, sc) in enumerate(chapters, 1)] + [(f"#c{j}", (u[1] if lang == "en" else u[0]) + (" (not yet released)" if lang == "en" else "（未公開）"), []) for j, u in enumerate(g.get("upcoming", []), len(chapters) + 1)], lang)}
+{take_section(slug, lang)}{contents_box([(f"#c{i}", h, [x[0] for x in sc]) for i, (h, sc) in enumerate(chapters, 1)] + [(f"#c{j}", (u[1] if lang == "en" else u[0]) + (" (not yet released)" if lang == "en" else "（未公開）"), []) for j, u in enumerate(g.get("upcoming", []), len(chapters) + 1)], lang)}
 {body}
 {common_panel(lang)}
 <section class="panel"><div class="btns"><a class="btn primary" href="../">{e(t['scenes_back'])}</a></div></section>
