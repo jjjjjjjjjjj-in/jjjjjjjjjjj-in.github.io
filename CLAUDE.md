@@ -110,7 +110,7 @@
 - [x] guardians-of-the-galaxy（ガーディアンズ・オブ・ギャラクシー）
 - [x] black-panther（ブラックパンサー）
 - [x] ant-man-and-the-wasp（アントマン＆ワスプ）
-- [~] x-men-last-stand（X-MEN：ファイナル ディシジョン）
+- [x] x-men-last-stand（X-MEN：ファイナル ディシジョン）
 - [x] x-men-days-of-future-past（X-MEN：フューチャー&パスト）
 - [x] x-men-apocalypse（X-MEN：アポカリプス）
 - [~] x-men-dark-phoenix（X-MEN：ダーク・フェニックス）
