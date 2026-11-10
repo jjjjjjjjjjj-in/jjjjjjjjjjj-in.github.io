@@ -109,7 +109,7 @@
 - [x] thor（マイティ・ソー）
 - [~] guardians-of-the-galaxy（ガーディアンズ・オブ・ギャラクシー）
 - [x] black-panther（ブラックパンサー）
-- [~] ant-man-and-the-wasp（アントマン＆ワスプ）
+- [x] ant-man-and-the-wasp（アントマン＆ワスプ）
 - [~] x-men-last-stand（X-MEN：ファイナル ディシジョン）
 - [x] x-men-days-of-future-past（X-MEN：フューチャー&パスト）
 - [x] x-men-apocalypse（X-MEN：アポカリプス）
