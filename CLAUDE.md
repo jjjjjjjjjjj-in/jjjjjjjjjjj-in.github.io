@@ -120,7 +120,7 @@
 - [x] thor-dark-world（マイティ・ソー／ダーク・ワールド）
 - [x] iron-man-3（アイアンマン3）
 - [x] guardians-vol2（ガーディアンズ・オブ・ギャラクシー：リミックス）
-- [~] ant-man（アントマン）
+- [x] ant-man（アントマン）
 - [ ] spider-man-homecoming（スパイダーマン：ホームカミング）
 - [ ] spider-man-far-from-home（スパイダーマン：ファー・フロム・ホーム）
 - [ ] love-and-thunder（ソー：ラブ＆サンダー）
