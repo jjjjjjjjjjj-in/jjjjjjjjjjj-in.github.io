@@ -125,7 +125,7 @@
 - [x] spider-man-far-from-home（スパイダーマン：ファー・フロム・ホーム）
 - [~] love-and-thunder（ソー：ラブ＆サンダー）
 - [~] quantumania（アントマン＆ワスプ：クアントマニア）
-- [~] guardians-vol3（ガーディアンズ・オブ・ギャラクシー：VOLUME 3）
+- [x] guardians-vol3（ガーディアンズ・オブ・ギャラクシー：VOLUME 3）
 - [x] incredible-hulk（インクレディブル・ハルク）
 - [x] black-widow（ブラック・ウィドウ）
 - [~] hawkeye（ホークアイ）
