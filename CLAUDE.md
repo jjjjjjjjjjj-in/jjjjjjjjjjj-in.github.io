@@ -134,7 +134,7 @@
 - [~] logan（LOGAN／ローガン）
 - [~] eternals（エターナルズ）
 - [~] moon-knight（ムーンナイト）
-- [~] echo（エコー）
+- [x] echo（エコー）
 - [~] she-hulk（シー・ハルク：ザ・アトーニー）
 - [~] ms-marvel（ミズ・マーベル）
 - [ ] secret-invasion（シークレット・インベージョン）
