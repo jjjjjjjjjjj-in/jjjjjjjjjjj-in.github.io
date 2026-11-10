@@ -122,7 +122,7 @@
 - [x] guardians-vol2（ガーディアンズ・オブ・ギャラクシー：リミックス）
 - [x] ant-man（アントマン）
 - [x] spider-man-homecoming（スパイダーマン：ホームカミング）
-- [~] spider-man-far-from-home（スパイダーマン：ファー・フロム・ホーム）
+- [x] spider-man-far-from-home（スパイダーマン：ファー・フロム・ホーム）
 - [~] love-and-thunder（ソー：ラブ＆サンダー）
 - [~] quantumania（アントマン＆ワスプ：クアントマニア）
 - [~] guardians-vol3（ガーディアンズ・オブ・ギャラクシー：VOLUME 3）
