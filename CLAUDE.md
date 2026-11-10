@@ -97,14 +97,14 @@
 - [x] age-of-ultron（アベンジャーズ／エイジ・オブ・ウルトロン）
 - [x] civil-war（シビル・ウォー／キャプテン・アメリカ）
 - [x] x2（X-MEN2）
-- [ ] brave-new-world（キャプテン・アメリカ：ブレイブ・ニュー・ワールド）
-- [ ] captain-america-first-avenger（キャプテン・アメリカ／ザ・ファースト・アベンジャー）
-- [ ] winter-soldier（キャプテン・アメリカ／ウィンター・ソルジャー）
-- [ ] doctor-strange（ドクター・ストレンジ）
-- [ ] wandavision（ワンダヴィジョン）
-- [ ] shang-chi（シャン・チー／テン・リングスの伝説）
-- [ ] wakanda-forever（ブラックパンサー／ワカンダ・フォーエバー）
-- [ ] x-men（X-メン）
+- [~] brave-new-world（キャプテン・アメリカ：ブレイブ・ニュー・ワールド）
+- [~] captain-america-first-avenger（キャプテン・アメリカ／ザ・ファースト・アベンジャー）
+- [~] winter-soldier（キャプテン・アメリカ／ウィンター・ソルジャー）
+- [~] doctor-strange（ドクター・ストレンジ）
+- [~] wandavision（ワンダヴィジョン）
+- [~] shang-chi（シャン・チー／テン・リングスの伝説）
+- [~] wakanda-forever（ブラックパンサー／ワカンダ・フォーエバー）
+- [~] x-men（X-メン）
 - [ ] thor-ragnarok（マイティ・ソー バトルロイヤル）
 - [ ] thor（マイティ・ソー）
 - [ ] guardians-of-the-galaxy（ガーディアンズ・オブ・ギャラクシー）
