@@ -139,7 +139,7 @@
 - [x] ms-marvel（ミズ・マーベル）
 - [~] secret-invasion（シークレット・インベージョン）
 - [~] daredevil-born-again-s1（デアデビル：ボーン・アゲイン シーズン1）
-- [~] ironheart（アイアンハート）
+- [x] ironheart（アイアンハート）
 - [x] werewolf-by-night（ウェアウルフ・バイ・ナイト）
 - [x] venom（ヴェノム）
 - [x] venom-carnage（ヴェノム：レット・ゼア・ビー・カーネイジ）
