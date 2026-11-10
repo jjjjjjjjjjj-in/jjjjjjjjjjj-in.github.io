@@ -90,7 +90,7 @@
 - [x] loki-s2（ロキ シーズン2）
 - [x] spider-man-no-way-home（スパイダーマン：ノー・ウェイ・ホーム）
 - [~] multiverse-of-madness（ドクター・ストレンジ／マルチバース・オブ・マッドネス）
-- [~] deadpool-and-wolverine（デッドプール＆ウルヴァリン）
+- [x] deadpool-and-wolverine（デッドプール＆ウルヴァリン）
 - [~] fantastic-four-first-steps（ファンタスティック4：ファースト・ステップ）
 - [~] thunderbolts（サンダーボルツ*）
 - [x] iron-man（アイアンマン）
