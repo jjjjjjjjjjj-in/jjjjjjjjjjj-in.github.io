@@ -92,7 +92,7 @@
 - [x] multiverse-of-madness（ドクター・ストレンジ／マルチバース・オブ・マッドネス）
 - [x] deadpool-and-wolverine（デッドプール＆ウルヴァリン）
 - [x] fantastic-four-first-steps（ファンタスティック4：ファースト・ステップ）
-- [~] thunderbolts（サンダーボルツ*）
+- [x] thunderbolts（サンダーボルツ*）
 - [x] iron-man（アイアンマン）
 - [x] age-of-ultron（アベンジャーズ／エイジ・オブ・ウルトロン）
 - [x] civil-war（シビル・ウォー／キャプテン・アメリカ）
