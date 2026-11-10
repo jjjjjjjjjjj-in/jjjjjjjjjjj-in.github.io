@@ -138,7 +138,7 @@
 - [x] she-hulk（シー・ハルク：ザ・アトーニー）
 - [x] ms-marvel（ミズ・マーベル）
 - [x] secret-invasion（シークレット・インベージョン）
-- [~] daredevil-born-again-s1（デアデビル：ボーン・アゲイン シーズン1）
+- [x] daredevil-born-again-s1（デアデビル：ボーン・アゲイン シーズン1）
 - [x] ironheart（アイアンハート）
 - [x] werewolf-by-night（ウェアウルフ・バイ・ナイト）
 - [x] venom（ヴェノム）
