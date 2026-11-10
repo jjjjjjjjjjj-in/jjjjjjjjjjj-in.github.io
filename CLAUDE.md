@@ -107,7 +107,7 @@
 - [x] x-men（X-メン）
 - [x] thor-ragnarok（マイティ・ソー バトルロイヤル）
 - [x] thor（マイティ・ソー）
-- [~] guardians-of-the-galaxy（ガーディアンズ・オブ・ギャラクシー）
+- [x] guardians-of-the-galaxy（ガーディアンズ・オブ・ギャラクシー）
 - [x] black-panther（ブラックパンサー）
 - [x] ant-man-and-the-wasp（アントマン＆ワスプ）
 - [~] x-men-last-stand（X-MEN：ファイナル ディシジョン）
