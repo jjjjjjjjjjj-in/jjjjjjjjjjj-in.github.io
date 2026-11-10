@@ -114,7 +114,7 @@
 - [x] x-men-days-of-future-past（X-MEN：フューチャー&パスト）
 - [x] x-men-apocalypse（X-MEN：アポカリプス）
 - [x] x-men-dark-phoenix（X-MEN：ダーク・フェニックス）
-- [~] agatha-all-along（アガサ・オール・アロング）
+- [x] agatha-all-along（アガサ・オール・アロング）
 - [x] captain-marvel（キャプテン・マーベル）
 - [x] iron-man-2（アイアンマン2）
 - [x] thor-dark-world（マイティ・ソー／ダーク・ワールド）
