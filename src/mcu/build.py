@@ -312,10 +312,10 @@ def build_page(slug, lang):
 
     has_map = slug in RELATION_MAPS
     map_html, map_scripts, actors = relmap_build.map_section(slug, lang, e, prefix) if has_map else ("", "", [])
-    sections = [("before", t["s_before"])] + ([("take", "My take" if lang == "en" else "運営者のひとこと")] if slug in OPINIONS else []) + ([("map", t["s_map"])] if has_map else []) + [
+    sections = [("before", t["s_before"])] + ([("map", t["s_map"])] if has_map else []) + [
         ("story", t["s_story"]), ("glossary", t["s_glossary"]), ("confusing", t["s_confusing"]), ("points", t["s_points"]),
         ("ending", t["s_ending"])] + ([(g["special"]["id"], g["special"]["title_en" if lang == "en" else "title"])] if g.get("special") else []) + [
-        ("next", t["s_next"])]
+        ] + ([("take", "My take" if lang == "en" else "運営者のひとこと")] if slug in OPINIONS else []) + [("next", t["s_next"])]
     short = dict(t["toc_short"])
     if g.get("special"):
         short[g["special"]["id"]] = g["special"]["toc_en" if lang == "en" else "toc"]
@@ -353,7 +353,7 @@ def build_page(slug, lang):
 <section class="fg-sec" id="before"><h2>{e(t['s_before'])}<span class="tag-ok">{e(t['nospoil'])}</span></h2>
   <div class="fg-cards">{before}</div>
 </section>
-""" + take_section(slug, lang) + (f"""
+""" + (f"""
 <section class="fg-sec" id="map"><h2>{e(t['s_map'])}<span class="tag-warn">{e(t['spoil'])}</span></h2>
   {map_html}
 </section>
@@ -382,7 +382,8 @@ def build_page(slug, lang):
   <details class="fg-spoiler"><summary>{e(t['post'])}</summary><p>{e(tr['post'])}</p></details>
 </section>
 
-{special_section(g, lang, t)}<section class="fg-sec" id="next"><h2>{e(t['s_next'])}</h2>
+{special_section(g, lang, t)}{take_section(slug, lang)}
+<section class="fg-sec" id="next"><h2>{e(t['s_next'])}</h2>
   <ul class="fg-next">{nexts}</ul>{timeline_link(slug, lang, top)}
 </section>
 
@@ -485,8 +486,9 @@ def build_scenes_page(slug, lang):
   <p class="lead"><strong>{e(t['scenes_warn'])}</strong></p>{note_lead}
 </header>
 <nav class="site-toc" aria-label="{e(t['toc'])}">{toc}</nav>
-{take_section(slug, lang)}{contents_box([(f"#c{i}", h, [x[0] for x in sc]) for i, (h, sc) in enumerate(chapters, 1)] + [(f"#c{j}", (u[1] if lang == "en" else u[0]) + (" (not yet released)" if lang == "en" else "（未公開）"), []) for j, u in enumerate(g.get("upcoming", []), len(chapters) + 1)], lang)}
+{contents_box([(f"#c{i}", h, [x[0] for x in sc]) for i, (h, sc) in enumerate(chapters, 1)] + [(f"#c{j}", (u[1] if lang == "en" else u[0]) + (" (not yet released)" if lang == "en" else "（未公開）"), []) for j, u in enumerate(g.get("upcoming", []), len(chapters) + 1)], lang)}
 {body}
+{take_section(slug, lang)}
 {common_panel(lang)}
 <section class="panel"><div class="btns"><a class="btn primary" href="../">{e(t['scenes_back'])}</a></div></section>
 """ + footer(lang, top) + "</body>\n</html>\n"
