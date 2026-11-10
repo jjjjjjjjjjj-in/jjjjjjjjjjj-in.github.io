@@ -136,7 +136,7 @@
 - [x] moon-knight（ムーンナイト）
 - [x] echo（エコー）
 - [x] she-hulk（シー・ハルク：ザ・アトーニー）
-- [~] ms-marvel（ミズ・マーベル）
+- [x] ms-marvel（ミズ・マーベル）
 - [ ] secret-invasion（シークレット・インベージョン）
 - [ ] daredevil-born-again-s1（デアデビル：ボーン・アゲイン シーズン1）
 - [ ] ironheart（アイアンハート）
