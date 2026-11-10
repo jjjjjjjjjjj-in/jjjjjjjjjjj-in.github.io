@@ -5476,7 +5476,7 @@ FILM_GUIDES = {
               ("マーベルズ Blu-ray", "マーベルズ ブルーレイ", "The Marvels Blu-ray")],
     ),
     "werewolf-by-night": dict(
-        updated="2026-11-02",
+        updated="2026-11-10",
         # ページの色（白黒映画の灰色と、ブラッドストーンの赤）
         theme=dict(main="#3a3a3f", deep="#0b0b0c", accent="#c42b2b", soft="#ebebed"),
         runtime="53分", runtime_en="53 min",
@@ -5509,14 +5509,14 @@ FILM_GUIDES = {
              "Man-Thing (Ted)", "A swamp creature whose touch burns anyone who feels fear."),
         ],
         story=[
-            ("1. ハンターの集まり", "ブラッドストーン家の屋敷に、怪物ハンターたちが集められる。",
-             "1. The hunters gather", "Monster hunters are summoned to the Bloodstone estate."),
-            ("2. 迷路の狩り", "迷路に放たれた怪物を倒し、ブラッドストーンを手に入れる狩りが始まる。",
-             "2. The hunt", "The hunt begins: kill the monster loose in the maze and claim the Bloodstone."),
-            ("3. ジャックとエルサ", "ジャックとエルサは手を組む。",
-             "3. Jack and Elsa", "Jack and Elsa team up."),
-            ("4. 正体", "ジャックの秘密が明らかになる。",
-             "4. The secret", "Jack's secret comes out."),
+            ("第1部 ブラッドストーン家の屋敷", "伝説の怪物ハンター、ユリシーズ・ブラッドストーンが亡くなり、妻ヴェルッサの呼びかけで、ジャック・ラッセルら5人のハンターが屋敷に集まる。\n長い間家を出ていた娘エルサも戻り、ヴェルッサの警告をよそに狩りに加わる。\n迷路に放たれた怪物を倒し、その体に埋めこまれた赤い石ブラッドストーンを手に入れた者が、次のリーダーになる。",
+             "Part 1: Bloodstone Manor", "After legendary hunter Ulysses Bloodstone dies, his widow Verussa summons five hunters, including Jack Russell, to the manor.\nHis estranged daughter Elsa returns too, and joins the hunt despite Verussa's warning.\nWhoever kills the monster loose in the maze and claims the Bloodstone embedded in it becomes the new leader."),
+            ("第2部 迷路の狩り", "迷路の中で、エルサはハンターのリオーンを倒す。\n怪物の正体は、ジャックの友だちの沼の怪物テッドだった。ジャックはテッドを助けるためにハンターのふりをしていたのだ。\nジャックとエルサは手を組み、テッドを逃がしてエルサが石を手に入れる。しかし石はジャックに激しく反応し、ジャックもまた怪物だと分かる。",
+             "Part 2: The hunt in the maze", "In the maze, Elsa kills the hunter Liorn.\nThe monster turns out to be Jack's friend, the swamp creature Ted; Jack posed as a hunter to rescue him.\nJack and Elsa team up, free Ted and take the stone for Elsa. But the stone reacts violently to Jack: he is a monster too."),
+            ("第3部 オオカミ男", "ヴェルッサは2人を檻に閉じこめ、石の力でジャックをオオカミ男に変え、エルサを殺させようとする。\nオオカミ男は檻を破って警備の男たちを倒し、エルサは残りのハンター2人を倒す。オオカミ男はエルサを傷つけずに去り、エルサを撃とうとしたヴェルッサはテッドに焼かれる。",
+             "Part 3: The werewolf", "Verussa cages them and uses the stone to turn Jack into a werewolf, hoping he'll kill Elsa.\nInstead the werewolf breaks out and kills the guards, while Elsa kills the last two hunters. The werewolf spares Elsa and leaves, and Ted burns Verussa as she tries to shoot Elsa."),
+            ("第4部 夜が明けて", "エルサはブラッドストーンと屋敷を受け継ぎ、映像は白黒からカラーに変わる。\n次の朝、森で人間の姿に戻ったジャックをテッドが見守っていて、ジャックはエルサが無事だと知って喜ぶ。",
+             "Part 4: After the night", "Elsa inherits the Bloodstone and the manor, and the picture turns from black and white to color.\nThe next morning, Jack wakes in human form in the forest with Ted watching over him, glad to hear Elsa is safe."),
         ],
         confusing=[
             ("ジャックの正体は？",

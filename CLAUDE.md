@@ -140,7 +140,7 @@
 - [~] secret-invasion（シークレット・インベージョン）
 - [~] daredevil-born-again-s1（デアデビル：ボーン・アゲイン シーズン1）
 - [~] ironheart（アイアンハート）
-- [~] werewolf-by-night（ウェアウルフ・バイ・ナイト）
+- [x] werewolf-by-night（ウェアウルフ・バイ・ナイト）
 - [~] venom（ヴェノム）
 - [~] venom-carnage（ヴェノム：レット・ゼア・ビー・カーネイジ）
 - [~] venom-last-dance（ヴェノム：ザ・ラストダンス）
