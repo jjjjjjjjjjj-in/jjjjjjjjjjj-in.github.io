@@ -126,7 +126,7 @@
 - [~] love-and-thunder（ソー：ラブ＆サンダー）
 - [~] quantumania（アントマン＆ワスプ：クアントマニア）
 - [~] guardians-vol3（ガーディアンズ・オブ・ギャラクシー：VOLUME 3）
-- [~] incredible-hulk（インクレディブル・ハルク）
+- [x] incredible-hulk（インクレディブル・ハルク）
 - [~] black-widow（ブラック・ウィドウ）
 - [~] hawkeye（ホークアイ）
 - [ ] guardians-holiday-special（ガーディアンズ・オブ・ギャラクシー：ホリデー・スペシャル）
