@@ -123,7 +123,7 @@
 - [x] ant-man（アントマン）
 - [x] spider-man-homecoming（スパイダーマン：ホームカミング）
 - [x] spider-man-far-from-home（スパイダーマン：ファー・フロム・ホーム）
-- [~] love-and-thunder（ソー：ラブ＆サンダー）
+- [x] love-and-thunder（ソー：ラブ＆サンダー）
 - [~] quantumania（アントマン＆ワスプ：クアントマニア）
 - [x] guardians-vol3（ガーディアンズ・オブ・ギャラクシー：VOLUME 3）
 - [x] incredible-hulk（インクレディブル・ハルク）
