@@ -89,14 +89,14 @@
 - [x] loki-s1（ロキ シーズン1）
 - [x] loki-s2（ロキ シーズン2）
 - [x] spider-man-no-way-home（スパイダーマン：ノー・ウェイ・ホーム）
-- [ ] multiverse-of-madness（ドクター・ストレンジ／マルチバース・オブ・マッドネス）
-- [ ] deadpool-and-wolverine（デッドプール＆ウルヴァリン）
-- [ ] fantastic-four-first-steps（ファンタスティック4：ファースト・ステップ）
-- [ ] thunderbolts（サンダーボルツ*）
-- [ ] iron-man（アイアンマン）
-- [ ] age-of-ultron（アベンジャーズ／エイジ・オブ・ウルトロン）
-- [ ] civil-war（シビル・ウォー／キャプテン・アメリカ）
-- [ ] x2（X-MEN2）
+- [~] multiverse-of-madness（ドクター・ストレンジ／マルチバース・オブ・マッドネス）
+- [~] deadpool-and-wolverine（デッドプール＆ウルヴァリン）
+- [~] fantastic-four-first-steps（ファンタスティック4：ファースト・ステップ）
+- [~] thunderbolts（サンダーボルツ*）
+- [~] iron-man（アイアンマン）
+- [~] age-of-ultron（アベンジャーズ／エイジ・オブ・ウルトロン）
+- [~] civil-war（シビル・ウォー／キャプテン・アメリカ）
+- [~] x2（X-MEN2）
 - [ ] brave-new-world（キャプテン・アメリカ：ブレイブ・ニュー・ワールド）
 - [ ] captain-america-first-avenger（キャプテン・アメリカ／ザ・ファースト・アベンジャー）
 - [ ] winter-soldier（キャプテン・アメリカ／ウィンター・ソルジャー）
