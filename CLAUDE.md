@@ -190,6 +190,8 @@
 
 - **Trip.com（2026-11-08）**: パラダイスシティの旅行ページにホテル（仁川・ソウル）と航空券（東京・大阪→ソウル）のリンクを入れ、プライバシーポリシーにも追記。リンク先以外の宿や便の予約も報酬になるかは、検索では確かめられなかった（運営者に管理画面の規約で確認をお願いした）。
 
+- **デッドプール1・2の顔写真（2026-11-10）**: Wikimedia の画像サーバーが混み合い（429）取れなかったので、新しい人物はイニシャルのまま。確認済みの候補（ライセンス確認済み・Commons のファイル名）: エド・スクライン「Ed Skrein by Gage Skidmore.jpg」(CC BY-SA 3.0)、ジーナ・カラーノ「Gina Carano by Gage Skidmore.jpg」(CC BY-SA 3.0)、T・J・ミラー「T. J. Miller by Gage Skidmore.jpg」(CC BY-SA 3.0)、レスリー・アガムズ「Leslie Uggams 1997.jpg」(CC BY-SA 2.0)、ブリアナ・ヒルデブランド「Brianna Hildebrand by Gage Skidmore.jpg」(CC BY-SA 3.0)、カラン・ソーニー「Karan Soni by Gage Skidmore.jpg」(CC BY-SA 3.0)、ザジー・ビーツ「Zazie Beetz by Gage Skidmore.jpg」(CC BY-SA 3.0)、エディ・マーサン「Eddie Marsan in 2013.jpg」(CC BY 3.0)、ステファン・カピチッチ「Stefan Kapičić (26433560063).jpg」(CC BY-SA 2.0)、忽那汐里「Deadpool 2 Japan Premiere Red Carpet Kutsuna Shiori (27587265707) (cropped).jpg」(CC BY 2.0)。relations.py の IMAGES に ajax・angel-dust・weasel・blind-al・negasonic・dopinder・domino・headmaster・colossus・yukio として足す。ラッセル（子役）とジャガーノート（CG）は写真なしで設定済み。
+
 ## 以前の保留中のこと（2026-11-06 時点）
 - **アドセンス**: サイトのリンクと所有権の確認は済み、「審査待ち」（11/6）。結果はメールで数日〜数週間。通ったら広告の置き場所を運営者と決める。
 - **運営者情報・お問い合わせページ**: `about.html` として公開済み（2026-11-06）。運営者名と連絡先は `src/build.py` の `OPERATOR_NAME`、`CONTACT_EMAIL`。ドゥームズデイ予習ガイドと作品ガイドからの直接リンクは未対応。
