@@ -105,7 +105,7 @@
 - [x] shang-chi（シャン・チー／テン・リングスの伝説）
 - [x] wakanda-forever（ブラックパンサー／ワカンダ・フォーエバー）
 - [x] x-men（X-メン）
-- [~] thor-ragnarok（マイティ・ソー バトルロイヤル）
+- [x] thor-ragnarok（マイティ・ソー バトルロイヤル）
 - [~] thor（マイティ・ソー）
 - [~] guardians-of-the-galaxy（ガーディアンズ・オブ・ギャラクシー）
 - [~] black-panther（ブラックパンサー）
