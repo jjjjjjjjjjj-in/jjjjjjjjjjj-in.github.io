@@ -128,7 +128,7 @@
 - [x] guardians-vol3（ガーディアンズ・オブ・ギャラクシー：VOLUME 3）
 - [x] incredible-hulk（インクレディブル・ハルク）
 - [x] black-widow（ブラック・ウィドウ）
-- [~] hawkeye（ホークアイ）
+- [x] hawkeye（ホークアイ）
 - [ ] guardians-holiday-special（ガーディアンズ・オブ・ギャラクシー：ホリデー・スペシャル）
 - [ ] the-marvels（マーベルズ）
 - [ ] logan（LOGAN／ローガン）
