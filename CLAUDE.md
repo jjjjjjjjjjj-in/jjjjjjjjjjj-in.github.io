@@ -141,7 +141,7 @@
 - [~] daredevil-born-again-s1（デアデビル：ボーン・アゲイン シーズン1）
 - [~] ironheart（アイアンハート）
 - [x] werewolf-by-night（ウェアウルフ・バイ・ナイト）
-- [~] venom（ヴェノム）
+- [x] venom（ヴェノム）
 - [x] venom-carnage（ヴェノム：レット・ゼア・ビー・カーネイジ）
 - [x] venom-last-dance（ヴェノム：ザ・ラストダンス）
 - [~] spider-man-2002（スパイダーマン（トビー・マグワイア版））
