@@ -129,14 +129,14 @@
 - [x] incredible-hulk（インクレディブル・ハルク）
 - [x] black-widow（ブラック・ウィドウ）
 - [x] hawkeye（ホークアイ）
-- [ ] guardians-holiday-special（ガーディアンズ・オブ・ギャラクシー：ホリデー・スペシャル）
-- [ ] the-marvels（マーベルズ）
-- [ ] logan（LOGAN／ローガン）
-- [ ] eternals（エターナルズ）
-- [ ] moon-knight（ムーンナイト）
-- [ ] echo（エコー）
-- [ ] she-hulk（シー・ハルク：ザ・アトーニー）
-- [ ] ms-marvel（ミズ・マーベル）
+- [~] guardians-holiday-special（ガーディアンズ・オブ・ギャラクシー：ホリデー・スペシャル）
+- [~] the-marvels（マーベルズ）
+- [~] logan（LOGAN／ローガン）
+- [~] eternals（エターナルズ）
+- [~] moon-knight（ムーンナイト）
+- [~] echo（エコー）
+- [~] she-hulk（シー・ハルク：ザ・アトーニー）
+- [~] ms-marvel（ミズ・マーベル）
 - [ ] secret-invasion（シークレット・インベージョン）
 - [ ] daredevil-born-again-s1（デアデビル：ボーン・アゲイン シーズン1）
 - [ ] ironheart（アイアンハート）
