@@ -129,7 +129,7 @@
 - [x] incredible-hulk（インクレディブル・ハルク）
 - [x] black-widow（ブラック・ウィドウ）
 - [x] hawkeye（ホークアイ）
-- [~] guardians-holiday-special（ガーディアンズ・オブ・ギャラクシー：ホリデー・スペシャル）
+- [x] guardians-holiday-special（ガーディアンズ・オブ・ギャラクシー：ホリデー・スペシャル）
 - [~] the-marvels（マーベルズ）
 - [~] logan（LOGAN／ローガン）
 - [~] eternals（エターナルズ）

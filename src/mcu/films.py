@@ -5532,7 +5532,7 @@ FILM_GUIDES = {
               ("昔のホラー映画のBlu-ray", "ユニバーサル モンスター ブルーレイ", "Universal Classic Monsters Blu-ray")],
     ),
     "guardians-holiday-special": dict(
-        updated="2026-11-02",
+        updated="2026-11-10",
         # ページの色（クリスマスの赤と緑）
         theme=dict(main="#b5262b", deep="#14090a", accent="#3fa65a", soft="#f6e5e5"),
         runtime="44分", runtime_en="44 min",
@@ -5565,14 +5565,12 @@ FILM_GUIDES = {
              "Christmas", "An Earth holiday most of the Guardians know little about."),
         ],
         story=[
-            ("1. クイルの思い出", "クイルの子どものころのクリスマスの思い出が語られる。",
-             "1. Quill's memories", "We hear about Quill's childhood Christmases."),
-            ("2. 地球へ", "マンティスとドラックスは、プレゼントを探しに地球へ行く。",
-             "2. To Earth", "Mantis and Drax fly to Earth to find a gift."),
-            ("3. ケヴィン・ベーコン", "2人は、クイルのヒーローである俳優ケヴィン・ベーコンを連れてこようとする。",
-             "3. Kevin Bacon", "They try to bring back Quill's hero, the actor Kevin Bacon."),
-            ("4. 本当のプレゼント", "マンティスは、クイルに大事なことを打ち明ける。",
-             "4. The real gift", "Mantis tells Quill something important."),
+            ("第1部 ノーウェアのクリスマス", "クラグリンが、昔ヨンドゥが子どものクイルのクリスマスをだいなしにした話をする（アニメの場面）。\nガーディアンズはノーウェアを買い取って拠点にし、宇宙犬コスモも仲間になっていた。クリスマスが近づいても、ガモーラを失ったクイルは元気がない。\nマンティスはドラックスに、自分とクイルが同じ父エゴを持つきょうだいだと打ち明け、クイルの英雄ケヴィン・ベーコンをプレゼントにしようと、2人で地球へ向かう。",
+             "Part 1: Christmas on Knowhere", "Kraglin tells how Yondu once ruined young Quill's Christmas (shown in animation).\nThe Guardians have bought Knowhere as their base, and Cosmo the space dog has joined them. But with Christmas coming, Quill is still down after losing Gamora.\nMantis confides to Drax that she and Quill are both children of Ego, and the two head to Earth to bring back Quill's hero, Kevin Bacon, as a present."),
+            ("第2部 ハリウッドへ", "ハリウッドに降りた2人は、仮装した人だとまちがわれて観光客と写真をとり、酒場で酔っぱらう。\n有名人の家の地図でベーコンの家を見つけるが、ベーコンはおびえて逃げ出す。ドラックスは警官の銃も平気で、パトカーをひっくり返す。\nマンティスが力でベーコンをぼんやりさせ、2人はベーコンをノーウェアへ連れて行く。途中で、ベーコンは本物の英雄ではなく俳優だと知り、がっかりする。",
+             "Part 2: To Hollywood", "In Hollywood, the two are mistaken for costumed performers, pose for tourists' photos and get drunk at a bar.\nA star-homes map leads them to Bacon's house, but he's terrified and runs. Drax shrugs off police gunfire and flips a squad car.\nMantis puts Bacon in a trance and they take him to Knowhere, disappointed on the way to learn he's an actor, not a real hero."),
+            ("第3部 ノーウェアのパーティー", "クイルは、ベーコンがさらわれてきたと知ってぞっとし、家に帰すよう言う。\nボウイ号でクラグリンから、自分の映画がクイルを勇気づけたと聞いたベーコンは、パーティーでバンドと一緒にクリスマスの歌を歌う。その間に、仲間たちはプレゼントを交換する。\nクイルはマンティスに、ヨンドゥが本当はプレゼントを受け取り、お返しにブラスターをくれた思い出を話す。そしてマンティスがクイルのきょうだいだと打ち明け、クイルは大喜びする。",
+             "Part 3: The party on Knowhere", "Quill is horrified to find Bacon has been kidnapped and demands he be sent home.\nAfter Kraglin tells him on the Bowie how his films inspired Quill, Bacon sings a Christmas song with the band at the party while the Guardians exchange gifts.\nQuill tells Mantis how Yondu secretly accepted his gift and gave him his blasters in return. Then Mantis reveals she's Quill's sister, and he's overjoyed."),
         ],
         confusing=[
             ("マンティスがクイルに打ち明けたことは？",
