@@ -102,7 +102,7 @@
 - [x] winter-soldier（キャプテン・アメリカ／ウィンター・ソルジャー）
 - [~] doctor-strange（ドクター・ストレンジ）
 - [~] wandavision（ワンダヴィジョン）
-- [~] shang-chi（シャン・チー／テン・リングスの伝説）
+- [x] shang-chi（シャン・チー／テン・リングスの伝説）
 - [~] wakanda-forever（ブラックパンサー／ワカンダ・フォーエバー）
 - [~] x-men（X-メン）
 - [ ] thor-ragnarok（マイティ・ソー バトルロイヤル）
