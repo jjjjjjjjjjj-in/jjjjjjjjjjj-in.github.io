@@ -1537,6 +1537,54 @@
  },
  {
   "lang": "ja",
+  "title": "デッドプール",
+  "year": "2016",
+  "theme": {
+   "main": "#a8101a",
+   "deep": "#0b0b0c",
+   "accent": "#ff5a5f",
+   "soft": "#f6e1e2"
+  },
+  "out": "deadpool/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Deadpool",
+  "year": "2016",
+  "theme": {
+   "main": "#a8101a",
+   "deep": "#0b0b0c",
+   "accent": "#ff5a5f",
+   "soft": "#f6e1e2"
+  },
+  "out": "deadpool/en/og.png"
+ },
+ {
+  "lang": "ja",
+  "title": "デッドプール2",
+  "year": "2018",
+  "theme": {
+   "main": "#b3121c",
+   "deep": "#120607",
+   "accent": "#b8c0c8",
+   "soft": "#f6e2e3"
+  },
+  "out": "deadpool-2/og.png"
+ },
+ {
+  "lang": "en",
+  "title": "Deadpool 2",
+  "year": "2018",
+  "theme": {
+   "main": "#b3121c",
+   "deep": "#120607",
+   "accent": "#b8c0c8",
+   "soft": "#f6e2e3"
+  },
+  "out": "deadpool-2/en/og.png"
+ },
+ {
+  "lang": "ja",
   "title": "デアデビル：ボーン・アゲイン シーズン1",
   "year": "2025",
   "theme": {
