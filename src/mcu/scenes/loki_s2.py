@@ -13,18 +13,18 @@ SCENES = [
          "At the end of Season 1, Sylvie pushed Loki through a time door at the Citadel. He arrives back at TVA headquarters, but while staying in the same place, his body keeps jumping between past, present and future.\n"
          "The first jump takes him to the TVA's past. Nobody there knows him, Mobius included, and they chase him as an intruder."),
         ("録画の中の在り続ける者",
-         "過去のTVAで、ロキは1本の録画を見つける。TVAを作った在り続ける者（シーズン1の城の男）が、ラヴォーナ・レンスレイヤーに「一緒に働いてくれてありがとう」と礼を言っている映像だった。ラヴォーナと在り続ける者は、仲間のような関係だったのだ。",
+         "過去のTVAで、ロキは1本の録画を見つける。TVAを作った在り続ける者（シーズン1の城の男）が、ラヴォーナ・レンスレイヤーに、一緒に働いてくれたことの礼を言っている映像だった。ラヴォーナと在り続ける者は、仲間のような関係だったのだ。",
          "A recording of He Who Remains",
          "In the past, Loki finds a recording of He Who Remains, the man from the Citadel who created the TVA, thanking Ravonna Renslayer for working with him. The two had been something like partners."),
         ("混乱するTVA",
          "現在のTVA。シルヴィが在り続ける者を殺したため、決められた時間の流れはどんどん枝分かれし、TVAは大混乱になっている。ラヴォーナは姿を消し、代わりにギャンブル判事とドックス将軍が上に立っている。\n"
-         "ハンターB-15とメビウスは2人に「TVAで働く人はみな、枝分かれした時間から連れて来られた変異体だ」と伝える。ギャンブル判事は説得され、枝分かれした時間を消すのをやめるよう命じる。",
+         "ハンターB-15とメビウスは2人に、TVAで働く人はみな枝分かれした時間から連れて来られた変異体だと伝える。ギャンブル判事は説得され、枝分かれした時間を消すのをやめるよう命じる。",
          "A TVA in chaos",
          "In the present, the Sacred Timeline is branching rapidly because Sylvie killed He Who Remains, and the TVA is in disarray. Ravonna is gone, and Judge Gamble and General Dox have taken charge.\n"
          "Hunter B-15 and Mobius tell them that everyone working at the TVA is a variant taken from a branched timeline. Gamble is persuaded and orders the TVA to stop wiping out branches."),
         ("会議に飛びこむロキ",
-         "その会議の場に、時間を飛んできたロキが現れる。ロキは「TVAの裏にいたのは在り続ける者だ」と明かし、メビウスに「在り続ける者の別の姿（変異体）がたくさんいて、危ない」と警告する。\n"
-         "一方、ドックス将軍は「シルヴィを探す任務だ」と言って、多くのハンターに武器をたっぷり持たせる。",
+         "その会議の場に、時間を飛んできたロキが現れる。ロキは、TVAの裏にいたのは在り続ける者だと明かし、メビウスに、在り続ける者の別の姿（変異体）がたくさんいて危ないと警告する。\n"
+         "一方、ドックス将軍は、シルヴィを探す任務だと言って、多くのハンターに武器をたっぷり持たせる。",
          "Loki crashes the meeting",
          "Loki slips into the meeting. He reveals that He Who Remains was behind the TVA and warns Mobius about the danger of He Who Remains' many variants.\n"
          "Meanwhile, General Dox has many hunters arm themselves heavily, supposedly for a mission to find Sylvie."),
@@ -47,7 +47,7 @@ SCENES = [
          "Loki slips into the future, where the Loom is going critical and the TVA is being evacuated.\n"
          "He hunts for a TimeStick to prune himself and briefly runs into Sylvie. Then, at the last possible second, someone prunes him from behind."),
         ("引きもどされたロキ",
-         "現在では、OBがTVAを守るため、織機のまわりを閉じ始める。メビウスは「ロキを待て」と反対する。\n"
+         "現在では、OBがTVAを守るため、織機のまわりを閉じ始める。メビウスは、ロキを待つべきだと反対する。\n"
          "メビウスはロキを時間の流れから引っぱり出すことに成功し、2人は閉じていく織機の前から転がるようにして逃げ出す。\n"
          "ロキの体はもう勝手に飛ばされなくなった。ロキとメビウスは、シルヴィを探しに出発する。",
          "Loki pulled back",
@@ -61,7 +61,7 @@ SCENES = [
     ]),
     ("第2話 ブレイキング・ブラッド", "Episode 2: Breaking Brad", [
         ("連絡がとだえたX-5",
-         "ロキとメビウスは、シルヴィを探している。ドックス将軍とハンターX-5から連絡がこなくなったため、2人は「X-5がシルヴィを見つけたのでは」と考え、X-5の行方を追う。",
+         "ロキとメビウスは、シルヴィを探している。ドックス将軍とハンターX-5から連絡がこなくなったため、2人は、X-5がシルヴィを見つけたのではと考え、X-5の行方を追う。",
          "X-5 goes silent",
          "Loki and Mobius are searching for Sylvie. When General Dox and Hunter X-5 stop responding, they suspect X-5 found her and set out to track him down."),
         ("1977年のロンドン",
@@ -81,15 +81,15 @@ SCENES = [
          "O.B. locked out of the Loom",
          "O.B. tries to adjust the Temporal Loom so it can safely take in the growing branches without a meltdown, but finds he can't get into it without Miss Minutes or He Who Remains' temporal aura."),
         ("ブラッドの取り調べ",
-         "ロキとメビウスがブラッドを問いつめると、ブラッドはロキを「負け犬」とからかい、メビウスには「TVAに入る前の自分の人生を一度も調べたことがないくせに」と言う。メビウスはかっとなってしまう。\n"
-         "そこでロキが1人で取り調べる。ブラッドを入れた箱型の装置で体をしめつけ、ブラッドはついに「ドックスの任務から抜けた」「シルヴィの居場所を知っている」と認める。",
+         "ロキとメビウスがブラッドを問いつめると、ブラッドはロキを負け犬とからかい、メビウスには、TVAに入る前の自分の人生を一度も調べたことがないくせにと言う。メビウスはかっとなってしまう。\n"
+         "そこでロキが1人で取り調べる。ブラッドを入れた箱型の装置で体をしめつけ、ブラッドはついに、ドックスの任務から抜けたことと、シルヴィの居場所を知っていることを認める。",
          "Interrogating Brad",
          "When Loki and Mobius question Brad, he mocks Loki as a loser and needles Mobius for never checking what his own life was like before he joined the TVA. Mobius loses his temper.\n"
          "Loki then questions Brad alone, using a box-like device that squeezes him, until Brad admits he abandoned Dox's mission and knows where Sylvie is."),
         ("マクドナルドのシルヴィ",
          "ロキ、メビウス、ブラッドは、枝分かれした時間のオクラホマ州ブロクストンへ行き、マクドナルドでレジの仕事をしているシルヴィを見つける。\n"
-         "ロキは「TVAがあぶない。未来のTVAで君に会った」と話し、何が起きるのか調べるのを手伝ってほしいとたのむ。しかしシルヴィは、今のふつうの暮らしに満足していると言って断る。\n"
-         "ブラッドが「みんな命があぶないぞ」と言い出したため、シルヴィは魔法でブラッドをあやつり、本当のことを言わせる。ドックスの本当の計画は、枝分かれした時間すべてを一斉に爆破して消すことだった。",
+         "ロキは、TVAがあぶないこと、未来のTVAでシルヴィに会ったことを話し、何が起きるのか調べるのを手伝ってほしいとたのむ。しかしシルヴィは、今のふつうの暮らしに満足していると言って断る。\n"
+         "ブラッドが、みんな命があぶないと言い出したため、シルヴィは魔法でブラッドをあやつり、本当のことを言わせる。ドックスの本当の計画は、枝分かれした時間すべてを一斉に爆破して消すことだった。",
          "Sylvie at McDonald's",
          "Loki, Mobius and Brad travel to Broxton, Oklahoma, on a branched timeline and find Sylvie working the register at McDonald's.\n"
          "Loki tells her the TVA is in danger and that he met her in the TVA's future, and asks for help working out what happened. She refuses, content with her ordinary life.\n"
@@ -102,7 +102,7 @@ SCENES = [
          "But by then most of the branches have already been destroyed with reset charges and modified TemPads. Dox is captured, though some of her allies escape."),
         ("シルヴィが去る",
          "ケイシーは、残った時間の枝の1つで、ラヴォーナのテンパッドの反応を見つける。\n"
-         "シルヴィは「枝分かれした世界を守れなかったTVAは、根っこからくさっている」と言い、在り続ける者のテンパッドを持ったまま、オクラホマのマクドナルドへもどっていく。",
+         "シルヴィは、枝分かれした世界を守れなかったTVAは根っこからくさっていると言い、在り続ける者のテンパッドを持ったまま、オクラホマのマクドナルドへもどっていく。",
          "Sylvie leaves",
          "Casey picks up Ravonna's TemPad on one of the surviving branches.\n"
          "Sylvie declares the TVA rotten for failing to protect the branches, and goes back to her McDonald's in Oklahoma, still holding He Who Remains' TemPad."),
@@ -132,31 +132,31 @@ SCENES = [
          "1) a robber baron and his allies, out for revenge over a scam; 2) Loki and Mobius, who need Timely's temporal aura to fix the Loom; 3) Ravonna and Miss Minutes, who want him to take He Who Remains' place with them at his side; 4) Sylvie, who wants to kill him before he can rise to power."),
         ("シルヴィをとめるロキ",
          "ロキは、タイムリーを殺そうとするシルヴィをとめ、魔法で大富豪たちをおどして追い払う。そのすきに、タイムリーはラヴォーナとミス・ミニッツと一緒に逃げる。\n"
-         "タイムリーは、子どものころに手引き書をくれたのがラヴォーナだと気づいて礼を言う。しかしラヴォーナが「手を組もう」と持ちかけると、タイムリーは彼女を置き去りにする。",
+         "タイムリーは、子どものころに手引き書をくれたのがラヴォーナだと気づいて礼を言う。しかしラヴォーナが手を組もうと持ちかけると、タイムリーは彼女を置き去りにする。",
          "Loki stops Sylvie",
          "Loki stops Sylvie from killing Timely and uses magic to scare off the robber baron, while Timely escapes with Ravonna and Miss Minutes.\n"
          "Timely realizes Ravonna gave him the handbook as a child and thanks her, but when she proposes a partnership, he leaves her behind."),
         ("ウィスコンシンの研究所",
-         "タイムリーは、ウィスコンシン州の自分の研究所へもどる。ラヴォーナばかりがタイムリーにかまわれることにやきもちを焼いていたミス・ミニッツは、「本物の体がほしい」と言い、タイムリーに恋心を打ち明ける。タイムリーは、ミス・ミニッツの電源を切ってしまう。",
+         "タイムリーは、ウィスコンシン州の自分の研究所へもどる。ラヴォーナばかりがタイムリーにかまわれることにやきもちを焼いていたミス・ミニッツは、本物の体がほしいと言い、タイムリーに恋心を打ち明ける。タイムリーは、ミス・ミニッツの電源を切ってしまう。",
          "The Wisconsin lab",
          "Timely returns to his laboratory in Wisconsin. Miss Minutes, jealous of the attention Ravonna got, says she wishes she had a real body and confesses romantic love for Timely. He switches her off."),
         ("命ごいするタイムリー",
          "ラヴォーナ、ロキ、メビウス、シルヴィが研究所に追いつき、シルヴィがその場をおさえる。\n"
-         "タイムリーは命ごいをし、「自分は在り続ける者にはならない。自分のことは自分で選べる」と言う。シルヴィはタイムリーを殺さず、ロキがTVAへ連れて行くことを許す。",
+         "タイムリーは命ごいをし、自分は在り続ける者にはならない、自分のことは自分で選べると言う。シルヴィはタイムリーを殺さず、ロキがTVAへ連れて行くことを許す。",
          "Timely begs for his life",
          "Ravonna, Loki, Mobius and Sylvie catch up with Timely at the lab, and Sylvie takes control of the situation.\n"
          "Timely begs for his life, insisting he won't become He Who Remains and can make his own choices. Sylvie spares him and lets Loki take him to the TVA."),
         ("時間の果ての城へ",
          "シルヴィは、ラヴォーナを時間の果ての城へ送る。ラヴォーナはミス・ミニッツを連れて行き、城で電源を入れ直す。2人は、くさりかけた在り続ける者の遺体を目にする。\n"
-         "ミス・ミニッツは「あなたが聞いたら怒るような、あなたの秘密を知っている」とラヴォーナに告げる。",
+         "ミス・ミニッツは、ラヴォーナが聞いたら怒るような、ラヴォーナの秘密を知っていると告げる。",
          "To the Citadel",
          "Sylvie sends Ravonna to the Citadel at the End of Time. Ravonna brings Miss Minutes along and switches her back on, and they see He Who Remains' decaying body.\n"
          "Miss Minutes tells Ravonna she knows a secret about her that would make her angry."),
     ]),
     ("第4話 TVAの心臓部", "Episode 4: Heart of the TVA", [
         ("ラヴォーナの消された記憶",
-         "ミス・ミニッツは、ラヴォーナに昔の録画を見せる。在り続ける者は、自分の戦争を手伝ったラヴォーナに礼を言い、「一緒にTVAを率いよう」と持ちかけていた。しかしラヴォーナがTVAにもどると、在り続ける者はミス・ミニッツに命じて、ラヴォーナやほかのTVAの職員の記憶を消させていた。\n"
-         "ラヴォーナは、在り続ける者の軍隊を指揮していた人だったのだ。ミス・ミニッツは「あの人ぬきで、私たち2人で組もう」と持ちかける。",
+         "ミス・ミニッツは、ラヴォーナに昔の録画を見せる。在り続ける者は、自分の戦争を手伝ったラヴォーナに礼を言い、一緒にTVAを率いようと持ちかけていた。しかしラヴォーナがTVAにもどると、在り続ける者はミス・ミニッツに命じて、ラヴォーナやほかのTVAの職員の記憶を消させていた。\n"
+         "ラヴォーナは、在り続ける者の軍隊を指揮していた人だったのだ。ミス・ミニッツは、あの人ぬきで2人で組もうと持ちかける。",
          "Ravonna's erased memories",
          "Miss Minutes shows Ravonna an old recording: He Who Remains thanked her for her help in his war and proposed that they lead the TVA together. But when she returned to the TVA, he had Miss Minutes erase her memories and those of other TVA staff.\n"
          "Ravonna had commanded his army. Miss Minutes proposes that the two of them work together without him."),
@@ -169,11 +169,11 @@ SCENES = [
          "Timely meets O.B., who reveals that his own ideas came from Timely, while Timely's inventions were inspired by the TVA Handbook that O.B. wrote: a loop with no clear beginning.\n"
          "Together they build a Throughput Multiplier to fix the Loom."),
         ("B-15の申し出",
-         "ハンターB-15は、つかまっているドックス将軍とその仲間、ブラッドのところへ行き、「TVAを守るために力を合わせよう」と申し出て、その場を去る。",
+         "ハンターB-15は、つかまっているドックス将軍とその仲間、ブラッドのところへ行き、TVAを守るために力を合わせようと申し出て、その場を去る。",
          "B-15's offer",
          "Hunter B-15 visits the detained General Dox, her loyalists and Brad, offers to work together to defend the TVA, and leaves."),
         ("ラヴォーナの誘い",
-         "続いてラヴォーナとミス・ミニッツが、つかまっている人たちの前に現れる。「TVAを乗っ取るのに手を貸せば、時間の流れの中での暮らしをあげる」と持ちかける。\n"
+         "続いてラヴォーナとミス・ミニッツが、つかまっている人たちの前に現れる。TVAを乗っ取るのに手を貸せば、時間の流れの中での暮らしをあげると持ちかける。\n"
          "うなずいたのはブラッドだけだった。ドックスと仲間たちはラヴォーナを手伝うことをこばみ、ミス・ミニッツに押しつぶされて殺される。",
          "Ravonna's offer",
          "Then Ravonna and Miss Minutes appear before the detainees, offering a life on the timeline to anyone who helps them take over the TVA.\n"
@@ -197,7 +197,7 @@ SCENES = [
          "O.B. reboots the TVA's systems to shut Miss Minutes down, which also turns off the devices that suppress magic inside the TVA.\n"
          "Now able to use magic, Sylvie enchants Brad and makes him prune Ravonna. Timely is rescued."),
         ("織機の爆発",
-         "タイムリーの時間のオーラのおかげで、織機に入る道が開く。ロキは「自分がマルチプライヤーを取り付けに行く」と名乗り出るが、タイムリーは「問題が起きたら自分なら直せる」と言いはって、自分が行く。\n"
+         "タイムリーの時間のオーラのおかげで、織機に入る道が開く。ロキは、自分がマルチプライヤーを取り付けに行くと名乗り出るが、タイムリーは、問題が起きたら自分なら直せると言いはって、自分が行く。\n"
          "ところがタイムリーは、強くなった織機の時間の放射を浴びたとたん、体が糸のように引きのばされてばらばらになり、死んでしまう。マルチプライヤーは使われないままだった。\n"
          "時間の織機は爆発し、その光の波が、TVAにいるロキ、メビウス、シルヴィ、B-15、ケイシー、OBへと広がっていく。",
          "The Loom explodes",
@@ -221,8 +221,8 @@ SCENES = [
          "Mobius is Don, a jet ski salesman in Cleveland in 2022. B-15 is Dr. Verity Willis, a physician in New York in 2012. Casey is Frank Morris, a prisoner at Alcatraz in 1962. O.B. is Dr. A.D. Doug, a writer and scientist in Pasadena in 1994.\n"
          "Loki always lands close to them, but none of them know him."),
         ("A.D.ダグ博士",
-         "ロキは、爆発の前の時間へもどりたいと考え、ダグ博士に助けを求める。ダグはロキの話を信じ、「時間のすべりを自分で操れるようになれ」とはげます。\n"
-         "ロキは「TVAを救いたい」という目的に気持ちを集中させてみるが、うまくいかない。\n"
+         "ロキは、爆発の前の時間へもどりたいと考え、ダグ博士に助けを求める。ダグはロキの話を信じ、時間のすべりを自分で操れるようになれとはげます。\n"
+         "ロキは、TVAを救いたいという目的に気持ちを集中させてみるが、うまくいかない。\n"
          "そこでダグは別の方法を考える。爆発のときにその場にいた全員をもう一度集めれば、みんなの時間のオーラを合わせて、正しい時間と場所へもどれるかもしれない。ロキは、持っていたTVAの手引き書をダグに渡し、テンパッドを作ってもらう。",
          "Dr. A.D. Doug",
          "Wanting to slip back to before the explosion, Loki asks Doug for help. Doug believes his story and urges him to learn to control his time slipping.\n"
@@ -239,9 +239,9 @@ SCENES = [
          "Gathering the group",
          "Using the TemPad, Loki and Doug bring Don, Willis and Frank together in Doug's workshop."),
         ("シルヴィの問い",
-         "ロキは最後に、オクラホマ州ブロクストンのマクドナルドでシルヴィを見つける。シルヴィはほかの仲間とちがい、記憶をなくしていなかった。シルヴィは「自分の人生を生きたい」と言って手伝いを断る。\n"
+         "ロキは最後に、オクラホマ州ブロクストンのマクドナルドでシルヴィを見つける。シルヴィはほかの仲間とちがい、記憶をなくしていなかった。シルヴィは、自分の人生を生きたいと言って手伝いを断る。\n"
          "シルヴィに問いつめられ、ロキは本当の気持ちを認める。仲間を取りもどしたいのだ。そして、ひとりになるのがこわいのだ。\n"
-         "シルヴィは「あなたも自分の人生を生きて」とすすめる。ロキはあきらめ、ドン、ウィリス、フランク、ダグを元の暮らしにもどそうと言う。",
+         "シルヴィは、ロキも自分の人生を生きるようにとすすめる。ロキはあきらめ、ドン、ウィリス、フランク、ダグを元の暮らしにもどそうと言う。",
          "Sylvie's question",
          "Finally Loki finds Sylvie at the McDonald's in Broxton, Oklahoma. Unlike the others, she still has her memories. She refuses to help because she wants to live her own life.\n"
          "Pressed by her, Loki admits what he really wants: his friends back. He is afraid of being alone.\n"
@@ -254,10 +254,10 @@ SCENES = [
          "But before the group can act, the workshop unravels too, and Frank, Doug, Don, Willis and Sylvie vanish with it."),
         ("物語を書き直す",
          "その瞬間、ロキはついに時間のすべりを操れるようになる。出来事や目的ではなく、「人」に気持ちを集中させればよかったのだ。\n"
-         "ロキは作業場が消える少し前にもどり、みんなに「物語は書き直せる」と告げる。そしてOBに気持ちを集中させ、織機が爆発する前の時間へとすべる。",
+         "ロキは作業場が消える少し前にもどり、みんなに、物語は書き直せると告げる。そしてOBに気持ちを集中させ、織機が爆発する前の時間へとすべる。",
          "Rewriting the story",
          "In that moment, Loki finally learns to control his time slipping by focusing on a person instead of an event or a purpose.\n"
-         "He slips back to just before the workshop unravels and tells everyone he can \"rewrite the story.\" Then, focusing on O.B., he slips to the moment before the Loom exploded."),
+         "He slips back to just before the workshop unravels and tells everyone that the story can be rewritten. Then, focusing on O.B., he slips to the moment before the Loom exploded."),
     ]),
     ("第6話 栄光ある目的", "Episode 6: Glorious Purpose", [
         ("爆発の前へ、何度でも",
@@ -272,15 +272,15 @@ SCENES = [
          "But the Loom still explodes. No adjustment can handle infinite branches."),
         ("城へもどる",
          "ロキはやり方を変え、そもそも時間が枝分かれしないようにしようと考える。そして、シルヴィが在り続ける者を殺す直前の、時間の果ての城へすべる。\n"
-         "ロキは何度もシルヴィをとめようとするが、シルヴィは「とめたいなら私を殺すしかない」と言う。ロキはシルヴィを殺さず、シルヴィは毎回、在り続ける者を殺してしまう。",
+         "ロキは何度もシルヴィをとめようとするが、シルヴィは、とめたいなら自分を殺すしかないと言う。ロキはシルヴィを殺さず、シルヴィは毎回、在り続ける者を殺してしまう。",
          "Back to the Citadel",
          "Changing tactics, Loki decides to stop the timeline from branching at all. He slips to the Citadel at the End of Time, just before Sylvie kills He Who Remains.\n"
          "He tries again and again to stop her, but she says he'll have to kill her to do it. He won't, and every time she kills He Who Remains."),
         ("在り続ける者の答え",
-         "ロキが在り続ける者に「なぜ抵抗しないのか」とたずねると、在り続ける者はシルヴィの時間を止めてしまう。在り続ける者はロキが時間をすべっていることを見ぬき、「その道を用意したのは自分だ」とほのめかす。\n"
+         "ロキが在り続ける者に、なぜ抵抗しないのかとたずねると、在り続ける者はシルヴィの時間を止めてしまう。在り続ける者はロキが時間をすべっていることを見ぬき、その道を用意したのは自分だとほのめかす。\n"
          "ロキも時間を止められることを見せると、在り続ける者は秘密を明かす。時間の織機は、もしものときの安全装置だった。織機があふれると、枝分かれした時間がTVAごと消え、決められた時間の流れだけが守られるようにできていたのだ。",
          "He Who Remains' answer",
-         "When Loki asks He Who Remains why he never fights back, He Who Remains freezes Sylvie in time. He recognizes Loki's time slipping and hints that he \"paved that road.\"\n"
+         "When Loki asks He Who Remains why he never fights back, He Who Remains freezes Sylvie in time. He recognizes Loki's time slipping and hints that he is the one who laid that path for him.\n"
          "When Loki shows that he can freeze time too, He Who Remains reveals the truth: the Loom is a fail-safe. If it overloads, the branches are deleted along with the TVA, and only the Sacred Timeline survives."),
         ("2つの道",
          "ロキに残された道は2つだった。①織機をこわす。そうすれば、在り続ける者の変異体たちがマルチバース全体で大戦争を起こすかもしれない。②シルヴィを殺して在り続ける者を守り、決められた時間の流れを守る。\n"
@@ -290,7 +290,7 @@ SCENES = [
          "He Who Remains suggests killing Sylvie to save the Loom. Loki refuses."),
         ("メビウスとシルヴィに聞く",
          "ロキは、別々の時間のメビウスとシルヴィに会いに行き、意見を聞く。\n"
-         "シーズン1の初めのころのメビウスは「大きな目的のためなら、重い荷物を引き受けろ」と言う。第5話のころのシルヴィは「誰もが自分で選べるように、在り続ける者は死なせるべきだ」と言う。",
+         "シーズン1の初めのころのメビウスは、大きな目的のためなら重い荷物を引き受けろと言う。第5話のころのシルヴィは、誰もが自分で選べるように在り続ける者は死なせるべきだと言う。",
          "Asking Mobius and Sylvie",
          "Loki visits Mobius and Sylvie at different points in time to ask their advice.\n"
          "Mobius, from early in Season 1, tells him to accept the burden for the greater good. Sylvie, from the time of Episode 5, urges him to let He Who Remains die so that free will survives."),

@@ -25,7 +25,7 @@ SCENES = [
          "He touches the scepter to the chests of Barton and Selvig, taking control of their minds. Fury tries to leave with the cube and is shot by the brainwashed Barton, but his vest saves him."),
         ("崩れる基地",
          "ロキと操られた人たちは、キューブを持って車で逃げる。ヒルが追いかけるが、キューブが開いた穴が不安定になり、研究所はまるごと崩れ落ちる。\n"
-         "フューリーとヒルは何とか脱出するが、ロキには逃げられてしまう。フューリーは仲間たちに「たった今から、我々は戦争状態にある」と知らせる。",
+         "フューリーとヒルは何とか脱出するが、ロキには逃げられてしまう。フューリーは仲間たちに、今この時から戦争が始まったと知らせる。",
          "The base collapses",
          "Loki and his brainwashed followers flee by truck with the cube. Hill gives chase, but the unstable portal brings the whole facility down.\n"
          "Fury and Hill make it out, but Loki is gone. Fury tells his people that as of now, they are at war."),
@@ -38,7 +38,7 @@ SCENES = [
          "In Russia, Natasha Romanoff is tied to a chair and being interrogated. In fact, she's letting them think they've caught her so she can pull information out of them.\n"
          "Coulson calls to tell her that her partner Barton has been taken over. She takes down the men in the room in seconds and cuts the mission short."),
         ("インドのブルース",
-         "インドのコルカタ。ブルース・バナーは名前を隠し、貧しい人たちを診る医者として暮らしている。少女に「父が病気なの」と頼まれ、ブルースは町はずれの家へついて行く。\n"
+         "インドのコルカタ。ブルース・バナーは名前を隠し、貧しい人たちを診る医者として暮らしている。少女に、父親が病気なので来てほしいと頼まれ、ブルースは町はずれの家へついて行く。\n"
          "そこで待っていたのはナターシャだった。キューブはガンマ線という目に見えない光を出していて、ガンマ線にくわしいブルースならキューブを探せる、と協力を頼む。\n"
          "ブルースが急に大声を出すと、ナターシャは思わず銃を向ける。ハルクになることを、誰もが恐れているのだ。ブルースは、ナターシャたちと一緒に行くことを受け入れる。",
          "Bruce in India",
@@ -80,8 +80,8 @@ SCENES = [
          "In Stuttgart, Germany, Loki shows up at a museum gala in a suit and attacks the scientist hosting it, using a device on his eye to get past an eye-scanning vault.\n"
          "While everyone is distracted, Barton steals the iridium from that vault."),
         ("ひざまずく人々",
-         "ロキは外の広場に逃げた人々を、魔法の分身で囲んでひざまずかせる。「人は支配される方が楽なのだ」と言い放つ。\n"
-         "1人の老人だけが立ち上がり、「お前のような者には従わない」と逆らう。ロキが老人に光線を放つと、飛びこんできたキャプテン・アメリカが盾で防ぐ。\n"
+         "ロキは外の広場に逃げた人々を、魔法の分身で囲んでひざまずかせる。人は支配されるほうが楽なのだと言い放つ。\n"
+         "1人の老人だけが立ち上がり、お前のような者には従わないと逆らう。ロキが老人に光線を放つと、飛びこんできたキャプテン・アメリカが盾で防ぐ。\n"
          "ナターシャの乗るクインジェットが空から銃を向け、アイアンマンも到着する。囲まれたロキは、あっさりと降参する。",
          "The kneeling crowd",
          "Outside, Loki surrounds the fleeing crowd with copies of himself and forces them to kneel, telling them people are happier being ruled.\n"
@@ -153,7 +153,7 @@ SCENES = [
          "Loki hits the button and drops the cell, with Thor inside, out of the sky. Thor breaks out before it hits the ground."),
         ("コールソンの死",
          "コールソンは、アスガルドの兵器デストロイヤーの部品から作られた大きな銃を持って、ロキの前に立つ。だがそれもロキの分身で、本物のロキはコールソンの後ろから杖で胸を刺す。\n"
-         "倒れたコールソンは、それでもロキに「お前は負ける」と言い、銃を撃ってロキを壁の向こうまで吹き飛ばす。ロキは手下と一緒に空母から逃げる。\n"
+         "倒れたコールソンは、それでもロキに、お前は負けると言い、銃を撃ってロキを壁の向こうまで吹き飛ばす。ロキは手下と一緒に空母から逃げる。\n"
          "駆けつけたフューリーに見守られながら、コールソンは息を引き取る。",
          "Coulson's death",
          "Coulson faces Loki with a big gun built from parts of the Asgardian Destroyer. But that Loki is a copy too, and the real Loki stabs Coulson through the chest from behind with the scepter.\n"
@@ -161,7 +161,7 @@ SCENES = [
          "Coulson dies with Fury at his side."),
         ("戦う理由",
          "フューリーは、トニーとスティーブにコールソンの死を伝え、血のついたキャプテン・アメリカのカードを投げて見せる。コールソンが、スティーブにサインをもらいたがっていたカードだ。フューリーは、ヒーローたちが一つにまとまるきっかけが必要だったと語る。\n"
-         "あとでヒルが「カードはロッカーにあったはずでは」と聞くと、フューリーは「彼らには一押しが必要だった」と答える。\n"
+         "あとでヒルが、カードはロッカーにあったはずではと聞くと、フューリーは、彼らには一押しが必要だったと答える。\n"
          "そのころ、ブルースは空母から落ちた先の倉庫で、元の姿で目を覚ましていた。",
          "A reason to fight",
          "Fury tells Tony and Steve that Coulson is dead and tosses them the Captain America cards, stained with blood, that Coulson had wanted Steve to sign. Fury says the heroes needed something to bring them together.\n"
@@ -191,21 +191,21 @@ SCENES = [
          "Thor lands on the roof and fights Loki while trying to reason with him, but Loki stabs him with a small blade and flies off into the city on a Chitauri craft. The machine is protected by a barrier that even Thor's hammer can't break."),
         ("6人がそろう",
          "スティーブたちのクインジェットは撃たれて街に落ちる。スティーブは警察に、人々を逃がす範囲を指示する。\n"
-         "そこへブルースがバイクでやって来る。空の穴からは、くじらのように大きな空飛ぶ生き物が現れる。スティーブが「今こそ怒るときだ」と言うと、ブルースは「僕の秘密を教えよう。いつも怒っているのさ」と答え、その場でハルクに変わり、大きな生き物を一発で殴り止める。\n"
+         "そこへブルースがバイクでやって来る。空の穴からは、くじらのように大きな空飛ぶ生き物が現れる。スティーブが今こそ怒るときだと言うと、ブルースは、自分の秘密はいつも怒っていることだと明かし、その場でハルクに変わり、大きな生き物を一発で殴り止める。\n"
          "キャプテン・アメリカ、アイアンマン、ソー、ハルク、ブラック・ウィドウ、ホークアイの6人が、初めて背中合わせにそろう。",
          "All six together",
          "Steve's Quinjet is shot down in the streets. Steve tells the police how far to clear people out.\n"
          "Bruce arrives on a motorbike as a gigantic flying creature, like a whale, comes through the portal. When Steve says now might be a really good time to get angry, Bruce says his secret is that he's always angry, turns into the Hulk on the spot, and stops the creature with one punch.\n"
          "Captain America, Iron Man, Thor, the Hulk, Black Widow and Hawkeye stand back to back together for the first time."),
         ("キャプテンの作戦",
-         "スティーブが作戦を指示する。バートンはビルの屋上から敵の動きを見張って矢を放ち、トニーは空の敵を引きつけ、ソーは雷で穴から入ってくる敵を食い止める。ハルクには「暴れろ」と言うだけでよかった。\n"
+         "スティーブが作戦を指示する。バートンはビルの屋上から敵の動きを見張って矢を放ち、トニーは空の敵を引きつけ、ソーは雷で穴から入ってくる敵を食い止める。ハルクには、暴れろと一言いうだけでよかった。\n"
          "スティーブとナターシャは地上で人々を守る。ナターシャは、穴を閉じるにはタワーの上へ行くしかないと考え、スティーブの盾を足場に、飛んでいるチタウリの乗り物に飛び乗る。",
          "Captain America's plan",
          "Steve gives orders: Barton watches from a rooftop and picks off enemies with his arrows, Tony draws off the enemies in the sky, Thor uses lightning to hold back those coming through the portal, and the Hulk is simply told to smash.\n"
          "Steve and Natasha protect people on the ground. Natasha decides the only way to close the portal is to get to the top of the tower, and she uses Steve's shield as a springboard to leap onto a passing Chitauri craft."),
         ("ハルク対ロキ",
-         "ロキはスターク・タワーの中に戻り、追ってきたハルクに「私は神だぞ」と叫ぶ。\n"
-         "ハルクはロキの足をつかみ、床に何度もたたきつける。動けなくなったロキに「ちっぽけな神め」と言い捨てて去っていく。\n"
+         "ロキはスターク・タワーの中に戻り、追ってきたハルクに、自分は神だと叫ぶ。\n"
+         "ハルクはロキの足をつかみ、床に何度もたたきつける。動けなくなったロキを、ちっぽけな神だとばかにして去っていく。\n"
          "タワーの屋上に着いたナターシャは、ロキの支配から解けたセルヴィグ博士から、ロキの杖を使えば機械を止められると教わる。",
          "Hulk vs. Loki",
          "Loki retreats into Stark Tower and shouts at the pursuing Hulk that he is a god.\n"
@@ -229,7 +229,7 @@ SCENES = [
     ("第6部 戦いのあと", "Part 6: After the battle", [
         ("ロキの最後",
          "床にめりこんだロキが起き上がると、6人のヒーローが武器を向けてまわりに立っていた。\n"
-         "ロキは、前にトニーにすすめられた酒について「やはり一杯もらおうか」と言うしかなかった。",
+         "ロキは、前にトニーにすすめられた酒についてやはり一杯もらおうと言うしかなかった。",
          "Loki's last stand",
          "Loki crawls out of the floor to find all six heroes standing over him, weapons ready.\n"
          "All he can say is that he'll take that drink after all."),

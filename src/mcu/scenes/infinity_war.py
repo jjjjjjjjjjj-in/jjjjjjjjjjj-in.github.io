@@ -15,8 +15,8 @@ SCENES = [
          "Asgardians lie dead throughout the ship. The attackers are Thanos and the four lieutenants he calls his children: Ebony Maw, Cull Obsidian, Proxima Midnight and Corvus Glaive.\n"
          "Thanos wears a golden gauntlet that already holds the purple Power Stone, taken from the planet Xandar."),
         ("ロキとテッセラクト",
-         "サノスは、つかまえたソーの頭にパワー・ストーンを押し当てて痛めつけ、ロキに「テッセラクト（青い立方体）を出せ」と迫る。\n"
-         "ロキは初め「好きにしろ」と強がるが、兄が苦しむのを見ていられず、隠していたテッセラクトを差し出してしまう。",
+         "サノスは、つかまえたソーの頭にパワー・ストーンを押し当てて痛めつけ、ロキにテッセラクト（青い立方体）を出せと迫る。\n"
+         "ロキは初め、兄など好きにしろと強がるが、兄が苦しむのを見ていられず、隠していたテッセラクトを差し出してしまう。",
          "Loki and the Tesseract",
          "Thanos tortures the captured Thor by pressing the Power Stone to his head and demands that Loki hand over the Tesseract.\n"
          "Loki first acts as if he doesn't care, but he can't bear to watch his brother suffer and produces the hidden Tesseract."),
@@ -34,13 +34,13 @@ SCENES = [
          "Seeing this, Thanos takes his lieutenant's spear and stabs Heimdall to death while Thor, bound, can only watch."),
         ("2つ目の石",
          "サノスはテッセラクトを素手でにぎりつぶし、中から青いスペース・ストーンを取り出して、こてにはめる。これで石は2つになった。\n"
-         "サノスは手下たちに命じる。「地球に石があと2つある。見つけて、タイタンにいる私のところへ持ってこい」。",
+         "サノスは手下たちに、地球にある残り2つの石を見つけて、タイタンにいる自分のところへ持ってこいと命じる。",
          "The second stone",
          "Thanos crushes the Tesseract in his hand, takes out the blue Space Stone and sets it in the gauntlet. He now has two stones.\n"
          "He orders his children: there are two more stones on Earth; find them and bring them to him on Titan."),
         ("ロキの最期",
-         "ロキは「地球に行くなら案内役が要るだろう」と言ってサノスに近づき、忠誠をちかうふりをする。その名乗りの中で、自分を「オーディンの息子」と呼ぶ。\n"
-         "次の瞬間、ロキは隠していた短剣でサノスを刺そうとする。しかしサノスは力で短剣を止め、ロキの首をつかんでしめ上げる。ロキは息絶え、サノスは「今度は生き返らない」と言って遺体をソーの前に投げる。",
+         "ロキは、地球に行くなら案内役が要るだろうと言ってサノスに近づき、忠誠をちかうふりをする。その名乗りの中で、自分を「オーディンの息子」と呼ぶ。\n"
+         "次の瞬間、ロキは隠していた短剣でサノスを刺そうとする。しかしサノスは力で短剣を止め、ロキの首をつかんでしめ上げる。ロキは息絶え、サノスは、今度は生き返らないと言って遺体をソーの前に投げる。",
          "Loki's end",
          "Saying Thanos will need a guide on Earth, Loki steps forward and pretends to pledge loyalty, naming himself a son of Odin.\n"
          "Then he tries to stab Thanos with a hidden dagger. Thanos stops it with his power, seizes Loki by the throat and strangles him. Loki dies, and Thanos tosses the body in front of Thor, saying there will be no resurrections this time."),
@@ -54,27 +54,27 @@ SCENES = [
     ("第2部 ニューヨークの襲撃", "Part 2: Attack on New York", [
         ("屋根を突き破った男",
          "ニューヨークのサンクタム（魔術師の屋敷）で、ストレンジとウォンが話していると、屋根を突き破って何かが落ちてくる。ハルクから人間の姿に戻ったブルース・バナーだった。\n"
-         "ブルースは2人に「サノスが来る」と伝える。サノスは宇宙の命の半分を消すつもりだという。",
+         "ブルースは2人に、サノスが来ると伝える。サノスは宇宙の命の半分を消すつもりだという。",
          "Something crashes through the roof",
          "At the Sanctum in New York, Strange and Wong are talking when something crashes through the roof. It's Bruce Banner, back in human form.\n"
          "He warns them that Thanos is coming. Thanos means to wipe out half of all life in the universe."),
         ("公園のトニー",
          "トニーは、婚約者のペッパーとセントラルパークを歩きながら、将来の子どもの話をしている。\n"
-         "そこへストレンジが魔法の出入り口から現れ、「宇宙が危ない。一緒に来てほしい」と言う。後ろからブルースも顔を出す。トニーとブルースは久しぶりの再会だった。",
+         "そこへストレンジが魔法の出入り口から現れ、宇宙が危ないので一緒に来てほしいと言う。後ろからブルースも顔を出す。トニーとブルースは久しぶりの再会だった。",
          "Tony in the park",
          "Tony is walking in Central Park with his fiancée Pepper, talking about having a child someday.\n"
          "Strange steps out of a portal and asks him to come, because the universe is in danger. Bruce appears behind him; he and Tony haven't seen each other in years."),
         ("6つの石の話",
          "サンクタムで、ウォンとストレンジは6つのインフィニティ・ストーンの説明をする。ストレンジの首かざりの中には緑色のタイム・ストーンがあり、ストレンジはこれを命がけで守るとちかっている。\n"
          "ブルースは、2012年にロキをニューヨークへ送りこんだのもサノスだったと話す。もう1つの石、マインド・ストーンはヴィジョンの額にある。しかしヴィジョンは行方が分からなくなっていた。\n"
-         "ブルースは「スティーブに連絡しよう」と言う。トニーはスティーブから渡された古い携帯電話を出すが、シビル・ウォーで仲たがいしたままで、かけられない。",
+         "ブルースは、スティーブに連絡しようと言う。トニーはスティーブから渡された古い携帯電話を出すが、シビル・ウォーで仲たがいしたままで、かけられない。",
          "The six stones",
          "At the Sanctum, Wong and Strange explain the six Infinity Stones. Strange's amulet holds the green Time Stone, and he has sworn to protect it with his life.\n"
          "Bruce says Thanos was also behind Loki's attack on New York in 2012. Another stone, the Mind Stone, is in Vision's forehead, but Vision has gone missing.\n"
          "Bruce says they should call Steve. Tony pulls out the old flip phone Steve sent him, but after their falling-out in Civil War, he can't bring himself to call."),
         ("ブリーカー通りの船",
          "街に風が吹き荒れ、人々が逃げまどう。空には、大きなドーナツ型の宇宙船が浮かんでいる。\n"
-         "通りにはサノスの手下エボニー・マウとカル・オブシディアンが降り立ち、マウは「タイム・ストーンを渡せ」と言う。\n"
+         "通りにはサノスの手下エボニー・マウとカル・オブシディアンが降り立ち、マウはタイム・ストーンを渡せと言う。\n"
          "トニーは胸の装置から一瞬でスーツをまとう。ブルースはハルクに変わろうとするが、ハルクが出てこようとしない。",
          "A ship over Bleecker Street",
          "A wind tears through the streets and people run. A huge ring-shaped spaceship hangs overhead.\n"
@@ -93,7 +93,7 @@ SCENES = [
          "Maw tries to take the Time Stone from Strange's amulet, but Strange's spell burns his hand and he can't.\n"
          "So Maw binds Strange in metal and lifts him up into the ship. Strange's cloak tries to pull him free, but it's not enough."),
         ("宇宙船にしがみつく",
-         "トニーとピーターは、上がっていく宇宙船を追いかける。トニーはピーターに「帰れ」と言うが、ピーターは船体にしがみついたまま空高く上がってしまう。\n"
+         "トニーとピーターは、上がっていく宇宙船を追いかける。トニーはピーターに家へ帰れと言うが、ピーターは船体にしがみついたまま空高く上がってしまう。\n"
          "空気が薄くなり、ピーターは息ができなくなる。トニーは新しいスーツ（アイアン・スパイダー）をピーターに送り、スーツがピーターの体を包む。\n"
          "トニーはペッパーと電話で話している途中で、電話が切れる。2人は宇宙船の中に乗りこみ、船は地球を離れる。",
          "Clinging to the ship",
@@ -127,7 +127,7 @@ SCENES = [
          "Thor decides to go to Nidavellir, home of a legendary forge, to make a new weapon that can kill Thanos. Rocket and Groot go with him in a small pod.\n"
          "Peter Quill, Gamora, Drax and Mantis head to Knowhere to secure the Reality Stone before Thanos."),
         ("ガモーラの頼み",
-         "ノーウェアへ向かう船の中で、ガモーラはクイルに約束させる。「もしサノスに捕まったら、私を殺して」。\n"
+         "ノーウェアへ向かう船の中で、ガモーラはクイルに、もしサノスに捕まったら自分を殺してほしいと約束させる。\n"
          "ガモーラは、サノスの知らない秘密を自分だけが知っていると言う。もしその秘密を話してしまえば、宇宙が危なくなる。クイルは迷いながらも約束する。",
          "Gamora's request",
          "On the way to Knowhere, Gamora makes Quill promise that if Thanos captures her, he'll kill her.\n"
@@ -140,38 +140,38 @@ SCENES = [
          "But it was an illusion: Thanos already had the Reality Stone. The real Knowhere is burned and in ruins."),
         ("泡の出る銃",
          "サノスは石の力で、ドラックスの体をばらばらの積み木のように、マンティスをリボンのように変えてしまう。そしてガモーラをつかまえる。\n"
-         "ガモーラに「約束したでしょう」と言われ、クイルは泣きながら銃を撃つ。しかしリアリティ・ストーンの力で、銃からは泡しか出ない。サノスはガモーラを連れて消える。",
+         "ガモーラに、約束したはずだと言われ、クイルは泣きながら銃を撃つ。しかしリアリティ・ストーンの力で、銃からは泡しか出ない。サノスはガモーラを連れて消える。",
          "The bubble gun",
          "Using the stone, Thanos breaks Drax into blocks and turns Mantis into ribbons, then grabs Gamora.\n"
          "Reminded of his promise, Quill tearfully fires, but the Reality Stone turns his shots into bubbles. Thanos vanishes with Gamora."),
         ("ガモーラの子ども時代",
          "サノスの船で、サノスはガモーラと話す。ガモーラの故郷の星で、サノスは住む人の半分を殺し、幼いガモーラを連れ去って育てた。そのときサノスは、左右の重さがつり合ったナイフをガモーラに渡していた。\n"
-         "サノスは「お前の星の生き残りは、今は豊かに暮らしている」と言い、自分のしたことは正しかったと話す。",
+         "サノスは、ガモーラの星の生き残りは今は豊かに暮らしていると言い、自分のしたことは正しかったと話す。",
          "Gamora's childhood",
          "Aboard his ship, Thanos talks with Gamora. On her home world, he killed half the people and took the young Gamora to raise. Back then, he gave her a perfectly balanced knife.\n"
          "He tells her the survivors on her world now live in plenty, and insists that what he did was right."),
         ("ネビュラの苦しみ",
          "ガモーラは、行方不明のソウル・ストーンの場所は知らないと言う。するとサノスは、とらえて痛めつけているネビュラのところへガモーラを連れていく。ネビュラは前にサノスを殺そうとして捕まっていた。\n"
-         "サノスは、ネビュラの記憶から、ガモーラがソウル・ストーンを見つけたことを知っていた。妹が苦しむのを見ていられず、ガモーラは「石は惑星ヴォーミアにある」と話してしまう。",
+         "サノスは、ネビュラの記憶から、ガモーラがソウル・ストーンを見つけたことを知っていた。妹が苦しむのを見ていられず、ガモーラは、石は惑星ヴォーミアにあると話してしまう。",
          "Nebula's torment",
          "Gamora claims she doesn't know where the lost Soul Stone is. So Thanos takes her to Nebula, captured earlier when she tried to kill him and now being tortured.\n"
          "From Nebula's memories, Thanos knows Gamora found the Soul Stone. Unable to watch her sister suffer, Gamora reveals it is on the planet Vormir."),
         ("ヴォーミアの崖",
-         "サノスとガモーラは、霧に包まれた星ヴォーミアの山の上へ行く。そこには、石の番人となったレッド・スカルがいた。番人は言う。「この石を手に入れるには、愛する者の命を差し出さなければならない」。\n"
-         "ガモーラは「あなたは誰も愛していない」と笑う。しかしサノスは涙を流していた。ガモーラは自分のナイフで死のうとするが、ナイフは泡に変わる。\n"
+         "サノスとガモーラは、霧に包まれた星ヴォーミアの山の上へ行く。そこには、石の番人となったレッド・スカルがいた。番人は、この石を手に入れるには愛する者の命を差し出さなければならないと告げる。\n"
+         "ガモーラは、サノスは誰も愛していないと笑う。しかしサノスは涙を流していた。ガモーラは自分のナイフで死のうとするが、ナイフは泡に変わる。\n"
          "サノスはガモーラを崖から突き落とし、ガモーラは死ぬ。サノスはオレンジ色のソウル・ストーンを手に入れる。",
          "The cliff on Vormir",
          "Thanos and Gamora climb to a mountaintop on the misty planet Vormir. The Red Skull, now the stone's keeper, tells them the Soul Stone can only be had by sacrificing someone you love.\n"
          "Gamora laughs that Thanos loves no one, but he is weeping. She tries to kill herself with her knife, but it turns to bubbles.\n"
          "Thanos throws Gamora off the cliff and she dies. He receives the orange Soul Stone."),
         ("ネビュラの脱出",
-         "サノスがいない間に、ネビュラはサノスの船から逃げ出す。そしてマンティスたちに連絡し、「サノスの故郷の星タイタンで会おう」と伝える。",
+         "サノスがいない間に、ネビュラはサノスの船から逃げ出す。そしてマンティスたちに連絡し、サノスの故郷の星タイタンで会おうと伝える。",
          "Nebula escapes",
          "While Thanos is away, Nebula escapes his ship and contacts Mantis and the others, telling them to meet her on Titan, Thanos's home world."),
     ]),
     ("第4部 地球のアベンジャーズ", "Part 4: The Avengers on Earth", [
         ("エディンバラの2人",
-         "スコットランドのエディンバラで、ワンダとヴィジョンはひそかに一緒に暮らしている。ヴィジョンは人間の姿に見えるようにして、ワンダと「このまま一緒にいたい」と話す。\n"
+         "スコットランドのエディンバラで、ワンダとヴィジョンはひそかに一緒に暮らしている。ヴィジョンは人間の姿に見えるようにして、ワンダと、このまま一緒にいたいと話す。\n"
          "テレビには、ニューヨークの襲撃のニュースが流れている。ヴィジョンは額の石が何かを感じていると話す。",
          "Together in Edinburgh",
          "In Edinburgh, Scotland, Wanda and Vision are secretly living together. Vision, disguised as a human, talks with her about staying together.\n"
@@ -190,13 +190,13 @@ SCENES = [
          "They take the wounded Vision and fly to the Avengers compound."),
         ("ローディとロス長官",
          "本部では、ローディ（ウォーマシン）が、ロス長官と立体映像で話している。そこへスティーブたちが入ってくる。\n"
-         "ロス長官は「お尋ね者を逮捕しろ」とローディに命じる。しかしローディはこれを聞かず、通信を切る。ブルースもナターシャと久しぶりに再会する。",
+         "ロス長官は、お尋ね者たちを逮捕しろとローディに命じる。しかしローディはこれを聞かず、通信を切る。ブルースもナターシャと久しぶりに再会する。",
          "Rhodey and Secretary Ross",
          "At the compound, Rhodey (War Machine) is talking with Secretary Ross by hologram when Steve's group walks in.\n"
          "Ross orders Rhodey to arrest the fugitives. Rhodey refuses and cuts the call. Bruce also meets Natasha again after a long time."),
         ("命と石",
-         "ヴィジョンは「石を壊せばサノスは集められない。私ごと石を壊してほしい」とワンダに頼む。ワンダは「そんなことはできない」と断る。\n"
-         "スティーブも「命を引きかえにはしない」と言う。ブルースは、ヴィジョンを死なせずに石だけを取り出せるかもしれないが、すぐれた設備が要ると話す。スティーブは、心当たりがあると答える。",
+         "ヴィジョンは、石を壊せばサノスは集められないので、自分ごと石を壊してほしいとワンダに頼む。ワンダはそんなことはできないと断る。\n"
+         "スティーブも、命を引きかえにはしないと言う。ブルースは、ヴィジョンを死なせずに石だけを取り出せるかもしれないが、すぐれた設備が要ると話す。スティーブは、心当たりがあると答える。",
          "A life and a stone",
          "Vision asks Wanda to destroy the stone, and him with it, so Thanos can't have it. Wanda refuses.\n"
          "Steve says they don't trade lives. Bruce says it might be possible to remove the stone without killing Vision, but it would take advanced technology. Steve knows a place."),
@@ -260,7 +260,7 @@ SCENES = [
          "Tony's group plans to pin Thanos down and pull off the gauntlet."),
         ("サノスの故郷",
          "サノスがスペース・ストーンで現れる。サノスはストレンジに、タイタンがかつて美しい星だったことを見せる。\n"
-         "人が増えすぎて食べ物が足りなくなったとき、サノスは「住む人の半分を無作為に消せば星は救われる」と言った。しかし受け入れられず、星はほろびた。だから宇宙全体の命の半分を消す、とサノスは話す。",
+         "人が増えすぎて食べ物が足りなくなったとき、サノスは、住む人の半分を無作為に消せば星は救われると訴えた。しかし受け入れられず、星はほろびた。だから宇宙全体の命の半分を消す、とサノスは話す。",
          "Thanos's home world",
          "Thanos appears using the Space Stone. He shows Strange how beautiful Titan once was.\n"
          "When it grew overcrowded and food ran short, Thanos proposed wiping out half its people at random to save it. They refused, and the planet died. That is why, he says, he will wipe out half of all life in the universe."),
@@ -283,7 +283,7 @@ SCENES = [
          "Enraged, Quill keeps hitting Thanos, and Thanos snaps out of the daze and gets the gauntlet back.\n"
          "Thanos beats the heroes one by one. Strange fights with magic but is defeated."),
         ("ストレンジの取り引き",
-         "トニーはただ1人でサノスと戦うが、サノスに刃で腹を刺される。サノスがとどめを刺そうとしたとき、ストレンジが「彼の命を助けてくれれば、石を渡す」と言う。\n"
+         "トニーはただ1人でサノスと戦うが、サノスに刃で腹を刺される。サノスがとどめを刺そうとしたとき、ストレンジが、トニーの命を助けてくれれば石を渡すと言う。\n"
          "ストレンジはタイム・ストーンをサノスに渡す。サノスは5つ目の石をこてにはめ、地球へ消える。",
          "Strange's bargain",
          "Tony fights Thanos alone and is stabbed through the side with a blade. As Thanos moves to finish him, Strange offers the stone if he spares Tony's life.\n"
@@ -331,8 +331,8 @@ SCENES = [
          "The air shifts and Thanos steps out of a rift in space. The heroes charge him one after another, but with the stones he easily throws off Steve, Bruce, T'Challa and the rest.\n"
          "Steve holds back the gauntlet with his bare hands, but Thanos punches him down."),
         ("ワンダの涙",
-         "ヴィジョンはワンダに「今しかない。石を壊してくれ」と頼む。ワンダは泣きながら、片手でサノスを止め、もう片方の手でヴィジョンの額の石に力を注ぐ。\n"
-         "石は砕け、ヴィジョンは光とともに倒れて死ぬ。サノスは「お前の気持ちは分かる」とワンダに言う。",
+         "ヴィジョンはワンダに、今しかないから石を壊してくれと頼む。ワンダは泣きながら、片手でサノスを止め、もう片方の手でヴィジョンの額の石に力を注ぐ。\n"
+         "石は砕け、ヴィジョンは光とともに倒れて死ぬ。サノスは、お前の気持ちは分かるとワンダに言う。",
          "Wanda's tears",
          "Vision begs Wanda to destroy the stone now. Weeping, she holds Thanos back with one hand and pours her power into the stone with the other.\n"
          "The stone shatters, and Vision falls dead in a burst of light. Thanos tells Wanda he understands her pain."),
@@ -344,32 +344,32 @@ SCENES = [
          "Thanos rips the stone from Vision's forehead. Vision turns gray, falls and dies. Thanos sets the sixth stone in the gauntlet."),
         ("頭をねらうべきだった",
          "6つの石の力があふれる中、ソーが飛んできて、ストームブレイカーをサノスの胸に突き刺す。\n"
-         "サノスは大けがをしながら「頭をねらうべきだった」と言う。そして指を鳴らす。",
+         "サノスは大けがをしながら「頭を狙うべきだったな」と言う。そして指を鳴らす。",
          "\"You should have gone for the head\"",
          "As the power of all six stones surges, Thor flies in and drives Stormbreaker into Thanos's chest.\n"
          "Badly wounded, Thanos tells him he should have gone for the head, and snaps his fingers."),
     ]),
     ("第8部 消えていく人々", "Part 8: Those who vanish", [
         ("小さなガモーラ",
-         "指を鳴らした瞬間、サノスは不思議な場所で、子どものころのガモーラに会う。ガモーラは「やったの？」とたずね、サノスは「やった」と答える。「何を失ったの？」と聞かれ、サノスは「すべてだ」と答える。\n"
+         "指を鳴らした瞬間、サノスは不思議な場所で、子どものころのガモーラに会う。ガモーラはやり終えたのかとたずね、サノスはやったと答える。何を失ったのかと聞かれ、サノスはすべてだと答える。\n"
          "我に返ったサノスは、こてが焼けこげた姿で、出入り口を開いて姿を消す。",
          "Young Gamora",
          "In the instant of the snap, Thanos finds himself in a strange place with Gamora as a child. She asks if he did it; he says yes. She asks what it cost; he answers, \"Everything.\"\n"
          "Back in the battlefield, the gauntlet scorched, Thanos opens a rift and disappears."),
         ("ワカンダで消える人々",
-         "ソーが「どこへ行った」と叫ぶ。そのとき、バッキーが「スティーブ」と呼びながら、ちりになって消える。\n"
+         "ソーが、サノスはどこへ行ったのかと叫ぶ。そのとき、バッキーがスティーブの名を呼びながら、ちりになって消える。\n"
          "続いて、オコエに声をかけたティ・チャラ、ロケットの前のグルート、ヴィジョンのそばにいたワンダ、そしてサムも、ちりになって消えていく。",
          "Vanishing in Wakanda",
          "Thor shouts, asking where Thanos went. Then Bucky, calling Steve's name, turns to dust.\n"
          "Next, T'Challa as he speaks to Okoye, Groot in front of Rocket, Wanda beside Vision, and Sam all crumble to dust."),
         ("タイタンで消える人々",
-         "タイタンでは、マンティスが「何か起きている」と言って消え、ドラックス、クイルも消える。ストレンジはトニーに「これしか道はなかった」と言い残して消える。\n"
-         "最後に、ピーター・パーカーが「行きたくない」と言いながらトニーの腕の中でちりになる。タイタンにはトニーとネビュラだけが残る。",
+         "タイタンでは、マンティスが、何かが起きていると言って消え、ドラックス、クイルも消える。ストレンジはトニーに、これしか道はなかったと言い残して消える。\n"
+         "最後に、ピーター・パーカーが、行きたくないと言いながらトニーの腕の中でちりになる。タイタンにはトニーとネビュラだけが残る。",
          "Vanishing on Titan",
          "On Titan, Mantis says something is happening and fades away, followed by Drax and Quill. Strange tells Tony there was no other way and vanishes.\n"
          "Last, Peter Parker, saying he doesn't want to go, crumbles to dust in Tony's arms. Only Tony and Nebula are left on Titan."),
         ("残された人々",
-         "ワカンダの戦場には、スティーブ、ナターシャ、ソー、ブルース、ローディ、ロケット、オコエ、エムバクが残る。スティーブは、ヴィジョンの遺体のそばに座りこみ、「なんてことだ」とつぶやく。",
+         "ワカンダの戦場には、スティーブ、ナターシャ、ソー、ブルース、ローディ、ロケット、オコエ、エムバクが残る。スティーブは、ヴィジョンの遺体のそばに座りこみ、ぼうぜんと声をもらす。",
          "Those left behind",
          "On the battlefield in Wakanda, Steve, Natasha, Thor, Bruce, Rhodey, Rocket, Okoye and M'Baku remain. Steve sinks down beside Vision's body and whispers, \"Oh, God.\""),
         ("朝日を見るサノス",

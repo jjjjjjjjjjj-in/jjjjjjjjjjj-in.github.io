@@ -26,7 +26,7 @@ SCENES = [
          "A local child who wanders in is asked who killed them and points to a stained-glass devil. The child's teeth are stained blue from \"Kablooie,\" a blue candy that should not exist in that era. Mobius takes it as a clue."),
         ("ミス・ミニッツの説明と裁判",
          "待合室で、TVAの案内役のアニメの時計ミス・ミニッツが映像で説明する。昔、たくさんの時間の流れどうしが争う大きな戦争があった。それを終わらせた「時間の番人」の3人が、時間の流れを1本にまとめ、それを守るためにTVAを作った。決められた流れから外れる者は「変異体」と呼ばれ、外れた時間の流れは「リセット（消去）」される。\n"
-         "裁判で、判事ラヴォーナ・レンスレイヤーの前に立ったロキは、最初はまじめに取り合わない。そのあと「時間旅行をしたのはアベンジャーズのほうだ」と言い張る。ラヴォーナは、アベンジャーズの行動は決められた流れのとおりで、外れたのはロキだと退ける。ロキは有罪となり、消されることになる。\n"
+         "裁判で、判事ラヴォーナ・レンスレイヤーの前に立ったロキは、最初はまじめに取り合わない。そのあと、時間旅行をしたのはアベンジャーズのほうだと言い張る。ラヴォーナは、アベンジャーズの行動は決められた流れのとおりで、外れたのはロキだと退ける。ロキは有罪となり、消されることになる。\n"
          "その時、TVAに戻ってきたメビウスが割って入る。この変異体のロキは役に立つかもしれないと考え、ロキを引き取る。",
          "Miss Minutes and the trial",
          "In a waiting room, the TVA's animated clock mascot, Miss Minutes, explains in a video: long ago, timelines fought a great multiversal war. The three Time-Keepers ended it, merged time into a single flow, and created the TVA to protect it. Anyone who strays from that flow is a \"variant,\" and stray branches are \"reset.\"\n"
@@ -34,7 +34,7 @@ SCENES = [
          "Just then Mobius, back at the TVA, steps in. Thinking this variant Loki might be useful, he takes custody of him."),
         ("映像の部屋で見せられた人生",
          "メビウスは、ロキの人生の映像を見られる部屋にロキを連れていく。ニューヨークでアベンジャーズに負けた場面を見せながら、なぜ人を傷つけるのかと問う。映像には、ロキが昔の有名な飛行機強盗D・B・クーパーとして飛行機から飛び降りた場面もあった。\n"
-         "ロキは「自分は王になって、人々を『まちがった選択をする苦しみ』から自由にしてやるのだ」と言い、TVAに自分の運命を決められるのは許さないと反発する。\n"
+         "ロキは、自分は王になって、人々をまちがった選択をする苦しみから自由にしてやるのだと言い、TVAに自分の運命を決められるのは許さないと反発する。\n"
          "そこでメビウスは、ロキが本来たどるはずだった未来を見せる。ロキのせいで、育ての母フリッガが殺されてしまう場面だ。ロキは怒って取り乱す。",
          "His life on screen",
          "Mobius brings Loki to a room where scenes from his life can be replayed. He shows Loki's defeat by the Avengers in New York and asks why he hurts people. One clip even shows Loki as the famous hijacker D. B. Cooper, jumping from a plane.\n"
@@ -63,7 +63,7 @@ SCENES = [
          "A Renaissance fair, 1985",
          "Oshkosh, Wisconsin, 1985. A TVA squad arrives at a Renaissance fair and is ambushed by the variant, who uses magic to possess people and turn the soldiers against each other, then takes Hunter C-20."),
         ("現場でのかけひき",
-         "ロキはメビウスやB-15と一緒に、その現場へ向かう。B-15はロキの隠していたナイフを取り上げる。ロキは「変異体はまだ近くにいる」と言って時間をかせぎ、時間の番人に会わせろ、捕まえた後に自分を消さないと約束しろ、と取り引きを持ちかける。\n"
+         "ロキはメビウスやB-15と一緒に、その現場へ向かう。B-15はロキの隠していたナイフを取り上げる。ロキは、変異体はまだ近くにいると言って時間をかせぎ、時間の番人に会わせろ、捕まえた後に自分を消さないと約束しろ、と取り引きを持ちかける。\n"
          "メビウスはロキのうそを見ぬき、TVAはその枝分かれした時間を消す。",
          "Bargaining at the scene",
          "Loki joins Mobius and B-15 at the scene. B-15 takes away the knives he has hidden. Loki stalls, claiming the variant is still nearby, and tries to bargain: let him meet the Time-Keepers, and promise not to erase him once the variant is caught.\n"
@@ -77,8 +77,8 @@ SCENES = [
          "Loki reads the variant's case files all night, and along the way learns that Asgard was destroyed in Ragnarok.\n"
          "Then he has an idea: the variant may be hiding in places just before an apocalypse. If everything there is about to be destroyed, nothing done there changes the timeline, so the TVA never notices."),
         ("ポンペイで確かめる",
-         "ロキとメビウスは、その考えを確かめるため、紀元79年のポンペイへ行く。ベスビオ火山の噴火の直前だ。ロキは町の人たちに大声で「火山が噴火するぞ」と知らせて回るが、TVAの機械には何の枝分かれも出ない。考えは正しかった。\n"
-         "2人は、「すべてが決められているなら、自由な意思はあるのか」と話し合う。",
+         "ロキとメビウスは、その考えを確かめるため、紀元79年のポンペイへ行く。ベスビオ火山の噴火の直前だ。ロキは町の人たちに大声で火山が噴火すると知らせて回るが、TVAの機械には何の枝分かれも出ない。考えは正しかった。\n"
+         "2人は、すべてが決められているなら自由な意思はあるのか、と話し合う。",
          "Testing it in Pompeii",
          "To test the idea, Loki and Mobius go to Pompeii in 79 AD, just before Mount Vesuvius erupts. Loki runs around shouting warnings to the townspeople, but the TVA's instruments register no branch. He was right.\n"
          "They debate whether free will exists if everything is already decided."),
@@ -95,7 +95,7 @@ SCENES = [
          "The variant possesses B-15, then jumps from body to body through nearby shoppers and staff as she talks to him.\n"
          "Meanwhile, the soldiers find the missing C-20. Terrified, she says she told the variant where the Time-Keepers are."),
         ("変異体の正体",
-         "変異体はフードを取り、女性の姿のロキとして現れる。ロキは「一緒に時間の番人を倒そう」と持ちかけるが、相手は断る。\n"
+         "変異体はフードを取り、女性の姿のロキとして現れる。ロキは、一緒に時間の番人を倒そうと持ちかけるが、相手は断る。\n"
          "変異体は、TVAから盗んだ爆弾（時間の流れを消すための道具）を一斉に動かし、時間の流れのあちこちへ送りこむ。いくつもの時代で一度に枝分かれが起き、TVAは大混乱になる。\n"
          "変異体は光の門をくぐって逃げる。ロキも、あとを追って飛びこむ。",
          "The variant revealed",
@@ -151,7 +151,7 @@ SCENES = [
          "Long ago. Ravonna, then a TVA hunter, arrests a young Sylvie on Asgard for crimes against the Sacred Timeline and erases her timeline.\n"
          "Brought to the TVA, Sylvie steals Ravonna's TemPad during her trial and escapes into the timeline."),
         ("C-20はどうなった",
-         "今のTVA。メビウスはラヴォーナに、C-20に会わせてほしいとたのむ。ラヴォーナは「C-20は、変異体の魔法で心がこわれて死んだ」と答える。",
+         "今のTVA。メビウスはラヴォーナに、C-20に会わせてほしいとたのむ。ラヴォーナは、C-20は変異体の魔法で心がこわれて死んだと答える。",
          "What happened to C-20",
          "At the present-day TVA, Mobius asks Ravonna to let him see C-20. Ravonna says C-20 died after her mind broke under the variant's enchantment."),
         ("滅びる月で生まれた絆",
@@ -161,9 +161,9 @@ SCENES = [
          "On Lamentis-1, amid the falling debris, Loki and Sylvie sit side by side and talk. Sylvie describes a life spent on the run, hiding in apocalypses.\n"
          "A strong emotional bond forms between them, and in that moment it creates a huge, unprecedented branch: a Nexus Event. The TVA detects it, finds them, and brings them back."),
         ("シフの時間の牢屋",
-         "TVAでロキとシルヴィは引き離される。メビウスはロキを、同じ時間がくり返される牢屋に入れる。そこでは、ロキがアスガルドでいたずらをして、戦士シフの髪をひと房切り取った場面が何度もくり返され、そのたびにシフはロキをなぐり、「お前はずっとひとりぼっちだ」と言う。\n"
+         "TVAでロキとシルヴィは引き離される。メビウスはロキを、同じ時間がくり返される牢屋に入れる。そこでは、ロキがアスガルドでいたずらをして、戦士シフの髪をひと房切り取った場面が何度もくり返され、そのたびにシフはロキをなぐり、お前はずっとひとりぼっちだと言う。\n"
          "メビウスはロキを牢屋から出して、枝分かれが起きた理由を問いつめる。ロキがシルヴィに恋をしたと気づき、自分のことが大好きなロキらしいと、からかう。\n"
-         "ロキは「TVAの職員はみんな変異体だ」と伝えるが、メビウスはロキを再び牢屋にもどす。",
+         "ロキは、TVAの職員はみんな変異体だと伝えるが、メビウスはロキを再び牢屋にもどす。",
          "Sif's time loop",
          "At the TVA, Loki and Sylvie are separated. Mobius locks Loki in a time-loop cell, replaying the moment on Asgard when Loki cut the warrior Sif's hair as a prank. Each time, Sif beats him and tells him he will always be alone.\n"
          "Mobius pulls him out to question him about the branch. Realizing Loki has fallen for Sylvie, he mocks him for being so in love with himself.\n"
@@ -181,7 +181,7 @@ SCENES = [
          "Mobius frees Loki from the cell, but Ravonna and her soldiers confront them. Mobius admits he betrayed her and that he knows he is a variant.\n"
          "On Ravonna's order, Mobius is pruned. He vanishes and seems to be dead."),
         ("時間の番人の正体",
-         "ラヴォーナは、ロキとシルヴィを時間の番人の前へ連れていく。途中でシルヴィは、なぜ子どもの自分を捕まえたのかとたずねるが、ラヴォーナは「覚えていない」と答える。\n"
+         "ラヴォーナは、ロキとシルヴィを時間の番人の前へ連れていく。途中でシルヴィは、なぜ子どもの自分を捕まえたのかとたずねるが、ラヴォーナは覚えていないと答える。\n"
          "時間の番人は、2人を消せと命じる。その瞬間、B-15が2人の手かせを外す。ロキとシルヴィは力を合わせ、ラヴォーナと見張りの隊員たちと戦って倒す。B-15は気を失う。\n"
          "シルヴィが時間の番人の1人の首を落とすと、それは中身のない機械の人形だった。3人とも、ただの作り物だった。",
          "The truth about the Time-Keepers",
@@ -281,13 +281,13 @@ SCENES = [
          "Sylvie moves to kill He Who Remains. Loki, afraid he may be telling the truth, fights her to stop it, and tells her he just wants to keep her safe.\n"
          "They kiss, but right after, Sylvie uses the TemPad to send Loki back to the TVA."),
         ("在り続ける者の最期",
-         "ひとり残ったシルヴィは、もう抵抗しない在り続ける者の胸を剣で刺して殺す。子どものころに自分の人生を奪ったTVAを、その大もとから終わらせるためだった。在り続ける者はほほえみ、「また会おう」と言い残して死ぬ。\n"
+         "ひとり残ったシルヴィは、もう抵抗しない在り続ける者の胸を剣で刺して殺す。子どものころに自分の人生を奪ったTVAを、その大もとから終わらせるためだった。在り続ける者はほほえみ、また会うことになると言い残して死ぬ。\n"
          "時間の流れは、数えきれない枝に分かれていく。もう剪定では止められない、たくさんの世界（マルチバース）が生まれる。",
          "The end of He Who Remains",
          "Alone with him, Sylvie drives her sword into He Who Remains, who no longer resists, to end the TVA that stole her life as a child at its source. He smiles and dies saying she'll see him soon.\n"
          "The timeline splits into countless branches. A multiverse is born that pruning can no longer contain."),
         ("ちがうTVA",
-         "TVAに戻ったロキは、メビウスとB-15を見つけ、在り続ける者の変異体たちが来るかもしれないと必死に伝える。ところが2人はロキのことを知らない。メビウスは「君は誰だ」とたずねる。\n"
+         "TVAに戻ったロキは、メビウスとB-15を見つけ、在り続ける者の変異体たちが来るかもしれないと必死に伝える。ところが2人はロキのことを知らない。メビウスは、ロキが誰なのかとたずねる。\n"
          "TVAの広間にあった時間の番人の像は、在り続ける者に似た男の像に変わっていた。ロキは、元とは少しちがう世界のTVAに来てしまったのだった。",
          "A different TVA",
          "Back at the TVA, Loki finds Mobius and B-15 and desperately warns them about He Who Remains' variants. But they don't know him. Mobius asks who he is.\n"
@@ -304,7 +304,7 @@ SCENES = [
          "- The pruned (Ep. 5): not destroyed but sent to the Void, a wasteland at the end of time."),
         ("消された人・死んだ人（話の順に）",
          "・TVAの隊員たち（第1話）：変異体（シルヴィ）を追っていた隊員たちが、1549年のフランスの教会などで次々に殺されていた。1858年のオクラホマでも、隊員たちがフードの人物の前で炎に包まれる。\n"
-         "・ハンターC-20（第4話）：ラヴォーナは「変異体の魔法で心がこわれて死んだ」と言う。しかし記録には、心がしっかりしたままのC-20がラヴォーナの取り調べに答える姿が残っていた。\n"
+         "・ハンターC-20（第4話）：ラヴォーナは、変異体の魔法で心がこわれて死んだと言う。しかし記録には、心がしっかりしたままのC-20がラヴォーナの取り調べに答える姿が残っていた。\n"
          "・メビウス（第4話）：ラヴォーナの命令で剪定されるが、ヴォイドで生きていた（第5話）。\n"
          "・ロキ（第4話）：時間の番人の前で、ラヴォーナに剪定されるが、ヴォイドで生きていた（第5話）。\n"
          "・クラシック・ロキ（第5話）：ロキとシルヴィを守るため、アスガルドの大きな幻でアライオスの気をひき、アライオスに飲みこまれて死ぬ。\n"

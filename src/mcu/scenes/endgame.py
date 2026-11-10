@@ -15,18 +15,18 @@ SCENES = [
          "He looks away for a moment, and Lila is gone. His wife and sons have turned to dust too. Thanos's snap has wiped out half of all life in the universe."),
         ("宇宙をただようトニーとネビュラ",
          "惑星タイタンでの戦いのあと、トニーとネビュラは、壊れた宇宙船で宇宙をただよっていた。船の燃料の装置は戦いで壊れていて、2人で工夫して少しのあいだ飛んだものの、もう動かない。2人は紙を指ではじくゲームで時間をつぶす。\n"
-         "食べ物も水もなくなり、トニーはヘルメットの録画でペッパーに別れのメッセージを残す。「酸素は明日の朝には尽きる」と話し、やせ細った体で眠りにつく。",
+         "食べ物も水もなくなり、トニーはヘルメットの録画でペッパーに別れのメッセージを残す。酸素は明日の朝には尽きると話し、やせ細った体で眠りにつく。",
          "Tony and Nebula adrift",
          "After the battle on Titan, Tony and Nebula drift through space in a broken ship. Its fuel cells were damaged in the battle, and a fix bought them a little flight time, but now the ship is dead. They pass the time flicking a paper football.\n"
          "With no food or water left, Tony records a farewell message to Pepper on his helmet. He says the oxygen will run out by morning, then lies down, wasted and weak."),
         ("キャロルの救出",
          "光り輝くキャロル・ダンヴァースが現れ、宇宙船ごと地球のアベンジャーズの本部まで運ぶ。\n"
-         "トニーはペッパーと抱き合って再会する。スティーブには「あの子（ピーター）を失った」と打ち明ける。",
+         "トニーはペッパーと抱き合って再会する。スティーブには、ピーターを失ったと打ち明ける。",
          "Carol to the rescue",
          "A glowing Carol Danvers appears and carries the whole ship back to the Avengers Compound on Earth.\n"
          "Tony and Pepper embrace. To Steve, Tony admits that he lost the kid, Peter."),
         ("トニーの怒り",
-         "本部で、残った仲間は状況を話し合う。トニーは「地球を守るスーツの仕組みが必要だと言ったのに、反対したのはお前だ」と、スティーブに怒りをぶつける。\n"
+         "本部で、残った仲間は状況を話し合う。トニーは、地球を守るスーツの仕組みが必要だと言ったのに反対したのはお前だと、スティーブに怒りをぶつける。\n"
          "トニーは胸のアーク・リアクターを外してスティーブに押しつけ、その場に倒れてしまう。ブルースたちがトニーを休ませる。",
          "Tony's anger",
          "At the Compound, the survivors take stock. Tony lashes out at Steve: he said they needed armor around the world, and Steve was the one who opposed it.\n"
@@ -39,13 +39,13 @@ SCENES = [
          "If they can get the stones back, maybe they can undo it. Leaving the injured Tony behind, Steve, Natasha, Bruce, Thor, Rhodey, Rocket, Nebula and Carol head there."),
         ("石のないサノス",
          "サノスは、誰もいない静かな星で、ひとり畑仕事をしていた。ヒーローたちは一斉におそいかかり、ソーがこてをはめたサノスの腕を切り落とす。\n"
-         "しかし、こてには石が1つもなかった。サノスは「石を使って、石を壊した。私も死にかけた」と言う。ネビュラは「父はうそをつかない」と認める。",
+         "しかし、こてには石が1つもなかった。サノスは、石を使って石を壊し、そのせいで自分も死にかけたと言う。ネビュラは、父はうそをつかないと認める。",
          "Thanos without the stones",
          "Thanos is alone on a quiet, empty planet, farming. The heroes attack together, and Thor cuts off the arm wearing the gauntlet.\n"
          "But the gauntlet is empty. Thanos says he used the stones to destroy the stones, and it nearly killed him. Nebula confirms her father doesn't lie."),
         ("ソーの一撃",
          "もう元に戻す方法はない。怒りと後悔にかられたソーは、ストームブレイカーでサノスの首をはねる。\n"
-         "前の作品の戦いで、ソーは胸をねらったために、サノスに指を鳴らされてしまった。今度は「首をねらった」とつぶやくが、何も取り戻せない。",
+         "前の作品の戦いで、ソーは胸をねらったために、サノスに指を鳴らされてしまった。今度は首をねらったとつぶやくが、何も取り戻せない。",
          "Thor's blow",
          "There's no way left to undo it. Driven by rage and regret, Thor cuts off Thanos's head with Stormbreaker.\n"
          "In the last film, Thor aimed for the chest and Thanos got to snap. This time he mutters that he went for the head, but nothing is won back."),
@@ -54,7 +54,7 @@ SCENES = [
         ("それぞれの5年",
          "5年がたつ。スティーブはニューヨークで、大切な人を失った人たちの集まりを開き、話を聞いている。\n"
          "ナターシャは本部に残り、画面ごしに仲間と連絡を取り続けている。宇宙のロケットとネビュラ、ワカンダのオコエ、キャロル、そしてローディ。ローディは、クリントが世界中で悪人の組織をおそい、殺して回っていると伝える。\n"
-         "訪ねてきたスティーブに、ナターシャは「この仕事と仲間が、私のすべてだった」と涙を見せる。",
+         "訪ねてきたスティーブに、ナターシャは、この仕事と仲間が自分のすべてだったと涙を見せる。",
          "Five years on",
          "Five years pass. In New York, Steve runs a support group for people who lost loved ones.\n"
          "Natasha stays at the Compound, keeping in touch with allies by screen: Rocket and Nebula in space, Okoye in Wakanda, Carol, and Rhodey. Rhodey reports that Clint has been attacking criminal "
@@ -74,7 +74,7 @@ SCENES = [
          "Time works differently there. So could they pass through it into the past and get the stones before Thanos collected them?"),
         ("湖の家のトニー",
          "3人は、湖のほとりの家に住むトニーを訪ねる。トニーはペッパーと結婚し、娘のモーガンが生まれていた。\n"
-         "トニーは「やっと手に入れた家族を危険にさらせない」と断る。",
+         "トニーは、やっと手に入れた家族を危険にさらせないと断る。",
          "Tony at the lake house",
          "The three visit Tony at his house by a lake. He has married Pepper, and they have a daughter, Morgan.\n"
          "Tony turns them down: he can't put the family he finally has at risk."),
@@ -86,13 +86,13 @@ SCENES = [
          "At the Compound they try it with Scott's van, but it goes wrong: Scott turns into a teenager, an old man, and a baby."),
         ("トニーの発見",
          "その夜、トニーはピーターと一緒に写った写真を見つめる。そしてコンピューターで計算を重ね、量子の世界を安全に通る方法を見つけてしまう。\n"
-         "ペッパーは「止めても、あなたは休めないでしょう」とトニーの気持ちを受け止める。トニーはモーガンを寝かしつけ、「3000回愛してる」と言われる。",
+         "ペッパーは、止めてもトニーは休めないだろうと、その気持ちを受け止める。トニーはモーガンを寝かしつけ、「3000回愛してる」と言われる。",
          "Tony's breakthrough",
          "That night, Tony stares at a photo of himself with Peter. Running calculation after calculation on his computer, he finds a safe way through the Quantum Realm.\n"
          "Pepper understands: even if she stopped him, he wouldn't be able to rest. Tony tucks Morgan in, and she tells him she loves him 3000."),
         ("盾を返す",
          "トニーは本部に来て、時間旅行の方法ができたと伝える。そして、昔の戦いのあとスティーブが置いていった盾を返す。\n"
-         "トニーの条件は「失ったものを取り戻す。でも今あるものは失わない」こと。長いあいだ仲たがいしていた2人は、ここで仲直りする。",
+         "トニーの条件は、失ったものを取り戻しても、今あるものは失わないこと。長いあいだ仲たがいしていた2人は、ここで仲直りする。",
          "Returning the shield",
          "Tony arrives at the Compound and says he has worked out time travel. He also hands back the shield Steve left behind after their old fight.\n"
          "His condition: bring back what they lost without losing what he has. After years apart, the two make peace."),
@@ -100,13 +100,13 @@ SCENES = [
     ("第3章 仲間を集める", "Part 3: Bringing the team back", [
         ("ニュー・アスガルドのソー",
          "ブルースとロケットは、ノルウェーにあるアスガルドの人々の町、ニュー・アスガルドへ行く。町を守るヴァルキリーは、ソーが家に閉じこもっていると話す。\n"
-         "ソーはすっかり太り、コーグたちとテレビゲームをしながら酒を飲んで暮らしていた。サノスの名前を聞くと顔色を変える。ブルースたちは「船にビールがある」と誘い、ソーを連れ出す。",
+         "ソーはすっかり太り、コーグたちとテレビゲームをしながら酒を飲んで暮らしていた。サノスの名前を聞くと顔色を変える。ブルースたちは、船にビールがあると誘い、ソーを連れ出す。",
          "Thor in New Asgard",
          "Bruce and Rocket go to New Asgard, the Asgardians' town in Norway. Valkyrie, who looks after it, says Thor keeps to himself.\n"
          "Thor has grown heavy and spends his days drinking and playing video games with Korg and others. He flinches at Thanos's name. Bruce and Rocket mention beer on the ship and bring him along."),
         ("東京のクリント",
          "ナターシャは東京へ向かう。雨の夜、クリントはヤクザの組長アキヒコとその手下を刀で斬り倒していた。家族を失ってから、悪人を殺して回っていたのだ。\n"
-         "ナターシャは「希望が見つかった」と告げる。クリントは、仲間のもとへ戻ることにする。",
+         "ナターシャは、希望が見つかったと告げる。クリントは、仲間のもとへ戻ることにする。",
          "Clint in Tokyo",
          "Natasha goes to Tokyo. On a rainy night, Clint cuts down the yakuza boss Akihiko and his men with a sword. Since losing his family, he has been killing criminals.\n"
          "Natasha tells him they've found a chance. Clint agrees to come back."),
@@ -129,7 +129,7 @@ SCENES = [
          "There are only enough Pym Particles for one round trip each. They split into three teams.\n"
          "1) New York, 2012: Tony, Steve, Bruce and Scott. 2) Asgard, 2013: Thor and Rocket. 3) Space, 2014: Natasha, Clint, Rhodey and Nebula. Rocket hands Clint a shrunken spaceship."),
         ("出発",
-         "スティーブは「5年前に負けた。これが一度きりのチャンスだ。何があってもやりとげよう」と仲間に語りかける。\n"
+         "スティーブは、5年前には負けたが、これが一度きりのチャンスだから、何があってもやりとげようと仲間に語りかける。\n"
          "全員が量子トンネルの上に立ち、それぞれの過去へ飛ぶ。",
          "Departure",
          "Steve tells the team: five years ago they lost, and this is their one chance. Whatever it takes.\n"
@@ -144,7 +144,7 @@ SCENES = [
          "The four split up. Steve, Tony and Scott go to Stark Tower, where the stones are being taken away. Bruce heads to the sorcerers' Sanctum, which guards the Time Stone."),
         ("エンシェント・ワンとの約束",
          "ブルースの前に、魔術師たちの長エンシェント・ワンが現れる。石を1つ持ち去れば、その時代は別の流れの世界に分かれ、危険にさらされると話し、断る。\n"
-         "ブルースは「使い終わったら、すべての石を元の時代に返す」と約束する。この先の未来でストレンジが自分から石を渡したと聞いたエンシェント・ワンは、ブルースにタイム・ストーンを預ける。",
+         "ブルースは、使い終わったらすべての石を元の時代に返すと約束する。この先の未来でストレンジが自分から石を渡したと聞いたエンシェント・ワンは、ブルースにタイム・ストーンを預ける。",
          "The Ancient One's promise",
          "The Ancient One, leader of the sorcerers, confronts Bruce. Taking a stone away would split her time into a separate branch and leave it in danger, she says, so she refuses.\n"
          "Bruce promises to return every stone to its own time when they're done. Learning that in the future Strange gave his stone away by choice, she entrusts Bruce with the Time Stone."),
@@ -156,7 +156,7 @@ SCENES = [
          "Thinking he's one of them, they hand over the scepter, which holds the Mind Stone."),
         ("2人のキャプテン・アメリカ",
          "スティーブは、2012年の自分と鉢合わせする。過去のスティーブは、ロキが化けていると思いこみ、おそいかかってくる。\n"
-         "互角の戦いの中、スティーブは「バッキーは生きている」と叫ぶ。過去の自分がおどろいて手をゆるめたすきに、杖で気を失わせる。",
+         "互角の戦いの中、スティーブは、バッキーは生きていると告げる。過去の自分がおどろいて手をゆるめたすきに、杖で気を失わせる。",
          "Two Captain Americas",
          "Steve runs into his 2012 self, who thinks he's Loki in disguise and attacks.\n"
          "They're evenly matched until Steve shouts that Bucky is alive. His past self freezes in shock, and Steve knocks him out with the scepter."),
@@ -194,14 +194,14 @@ SCENES = [
          "Thor and Rocket arrive in Asgard during the time of Thor: The Dark World. It is the day Thor's mother Frigga will die.\n"
          "Seeing his old love Jane, Thor falls apart. Rocket goes on alone and uses a device to draw the Reality Stone out of Jane's body."),
         ("母フリッガの言葉",
-         "フリッガは、目の前のソーが未来から来たことに気づく。ソーは母の死を伝えて止めようとするが、フリッガは「あなたは自分の未来を正しに来たのでしょう」と聞こうとしない。\n"
-         "そして「誰でも、なるべき自分になれずに失敗する。大切なのは、ありのままの自分でいられるかどうか」と語りかける。",
+         "フリッガは、目の前のソーが未来から来たことに気づく。ソーは母の死を伝えて止めようとするが、フリッガは、ソーは自分の未来を正しに来たのだろうと言って、聞こうとしない。\n"
+         "そして、誰でもなるべき自分になれずに失敗するもので、大切なのはありのままの自分でいられるかどうかだと語りかける。",
          "Frigga's words",
          "Frigga realizes this Thor has come from the future. He tries to warn her of her death, but she won't hear it: he's here to fix his own future, not hers.\n"
          "She tells him that everyone fails at who they're supposed to be. What matters is how well you succeed at being who you are."),
         ("ムジョルニアが戻る",
          "立ち去る前に、ソーが手をのばすと、この時代のハンマー・ムジョルニアが飛んできて手におさまる。\n"
-         "「自分はまだふさわしい！」。元気を取り戻したソーは、ムジョルニアを持ち、ロケットと一緒に現代へ帰る。",
+         "ソーは、自分がまだふさわしいと知って大喜びする。元気を取り戻したソーは、ムジョルニアを持ち、ロケットと一緒に現代へ帰る。",
          "Mjolnir returns",
          "Before leaving, Thor holds out his hand, and this time's Mjolnir flies into it.\n"
          "\"I'm still worthy!\" His spirit restored, Thor returns to the present with Rocket, Mjolnir in hand."),
@@ -227,7 +227,7 @@ SCENES = [
     ("第6章 ヴォーミアの崖と、もう一度の指パッチン", "Part 6: Vormir, and another snap", [
         ("ソウル・ストーンの番人",
          "ナターシャとクリントは、ヴォーミアの山の頂上に着く。待っていたのは、石の番人になったレッド・スカルだった。\n"
-         "番人は「石を手に入れるには、愛する者の命を差し出さなければならない」と告げる。2人は、サノスがここでガモーラを殺したことを知る。",
+         "番人は、石を手に入れるには愛する者の命を差し出さなければならないと告げる。2人は、サノスがここでガモーラを殺したことを知る。",
          "The Soul Stone's keeper",
          "Natasha and Clint reach the top of the mountain on Vormir. Waiting for them is Red Skull, now the stone's keeper.\n"
          "He tells them the stone demands the life of someone you love. They realize this is where Thanos killed Gamora."),
@@ -238,14 +238,14 @@ SCENES = [
          "Each wants to be the one to die so the other can live. Clint feels that after all the killing of the past five years, it should be him. Natasha believes Clint must go home to his family.\n"
          "They struggle at the cliff's edge, each racing to jump first."),
         ("ナターシャの最期",
-         "崖から落ちるナターシャの手を、クリントがつかむ。ナターシャは「放して。これでいいの」と言い、自分から手を放して落ちていく。\n"
+         "崖から落ちるナターシャの手を、クリントがつかむ。ナターシャは、これでいいから手を放してと言い、自分から手を放して落ちていく。\n"
          "クリントが気づくと、水の中に倒れていて、手にはソウル・ストーンがあった。",
          "Natasha's end",
          "As Natasha goes over the edge, Clint catches her hand. She tells him to let her go, that it's okay, and lets go herself.\n"
          "Clint wakes lying in water, with the Soul Stone in his hand."),
         ("帰ってきた仲間と悲しみ",
          "全員が、6つの石を持って現代の本部に戻る。ネビュラの中身が入れ替わっていることには、誰も気づかない。ナターシャの姿だけがない。\n"
-         "湖のほとりで、ソーは「石の力で取り戻せる」と言うが、クリントは「取り戻せない」と答える。ブルースは怒りのあまりベンチを投げ飛ばす。",
+         "湖のほとりで、ソーは石の力で取り戻せると言うが、クリントは取り戻せないと答える。ブルースは怒りのあまりベンチを投げ飛ばす。",
          "Return, and grief",
          "Everyone returns to the Compound with all six stones. No one notices that Nebula has been swapped. Only Natasha is missing.\n"
          "By the lake, Thor insists the stones can bring her back, but Clint says they can't. In fury, Bruce hurls a bench."),
@@ -277,13 +277,13 @@ SCENES = [
          "Clint runs through the tunnels with the stone-filled gauntlet, protecting it from Thanos's beasts."),
         ("ネビュラとネビュラ",
          "現代のネビュラは、サノスの船でこの時代のガモーラを説得し、仲間にする。2人は地下で、クリントからこてを奪ったこの時代のネビュラを見つける。\n"
-         "現代のネビュラは「父から離れられる」と過去の自分に呼びかけるが、聞き入れない。過去のネビュラがガモーラに銃を向けたため、現代のネビュラが過去の自分を撃ち殺す。",
+         "現代のネビュラは、父から離れられると過去の自分に呼びかけるが、聞き入れない。過去のネビュラがガモーラに銃を向けたため、現代のネビュラが過去の自分を撃ち殺す。",
          "Nebula and Nebula",
          "Aboard Thanos's ship, the present-day Nebula convinces this time's Gamora to join her. Underground, they find the past Nebula, who has taken the gauntlet from Clint.\n"
          "The present Nebula tells her past self she can break free of their father, but she won't listen. When the past Nebula aims a gun at Gamora, the present Nebula shoots her past self dead."),
         ("3人とサノス",
-         "がれきの上で、トニー、スティーブ、ソーの3人がサノスと向き合う。サノスは「この宇宙を原子まで壊し、私に感謝する新しい宇宙を作る」と言う。\n"
-         "3人は戦うが、サノスは強い。追いつめられたソーのもとから、ムジョルニアが飛んでいき、スティーブの手におさまる。「やっぱりな！」とソーは喜ぶ。",
+         "がれきの上で、トニー、スティーブ、ソーの3人がサノスと向き合う。サノスは、この宇宙を原子まで壊し、自分に感謝する新しい宇宙を作ると言う。\n"
+         "3人は戦うが、サノスは強い。追いつめられたソーのもとから、ムジョルニアが飛んでいき、スティーブの手におさまる。ソーは、やっぱりそうだったと大喜びする。",
          "Three against Thanos",
          "On the rubble, Tony, Steve and Thor face Thanos. He says he will tear this universe down to its last atom and build a new one that will be grateful.\n"
          "They fight, but Thanos is stronger. With Thor pinned, Mjolnir flies past him into Steve's hand. Thor is thrilled: he knew it."),
@@ -294,13 +294,13 @@ SCENES = [
          "Steve fights well with Mjolnir and his shield, but Thanos splits the shield with his huge blade. Tony and Thor are down too.\n"
          "Thanos calls down his army from the ship. Battered, Steve straps on the broken shield and stands alone before the army."),
         ("「左から失礼」",
-         "スティーブの無線に「キャップ、聞こえるか？ 左から失礼」とサムの声が届く。後ろに光の輪が開き、ティ・チャラ、シュリ、オコエとワカンダの軍が現れる。\n"
+         "スティーブの無線に、左から来たと告げるサムの声が届く。後ろに光の輪が開き、ティ・チャラ、シュリ、オコエとワカンダの軍が現れる。\n"
          "ストレンジやウォンたち魔術師が、次々に光の輪を開く。指パッチンから戻ったヒーローたち、ガーディアンズ、ラヴェジャーズ、アスガルドの戦士、そしてペッパーもトニーのスーツで現れる。",
          "\"On your left\"",
          "Sam's voice comes over Steve's radio: \"Cap, can you hear me? On your left.\" A glowing portal opens behind him, and T'Challa, Shuri, Okoye and the armies of Wakanda step through.\n"
          "Strange, Wong and the other sorcerers open portal after portal. The heroes who came back from the snap, the Guardians, the Ravagers, Asgard's warriors, and Pepper in a suit of armor from Tony all arrive."),
         ("アベンジャーズ、アッセンブル",
-         "全員がそろったところで、スティーブはムジョルニアを手に「アベンジャーズ……アッセンブル」と声をかける。最後の大きな戦いが始まる。\n"
+         "全員がそろったところで、スティーブはムジョルニアを手に、アベンジャーズに集まれと号令をかける。最後の大きな戦いが始まる。\n"
          "石を過去に返せばサノスは手を出せない。こてをスコットのバン（量子トンネル）まで運ぼうと、クリントからティ・チャラ、ピーターへと、ヒーローたちが手から手へつないでいく。",
          "Avengers, assemble",
          "With everyone gathered, Steve raises Mjolnir and calls out: \"Avengers... assemble.\" The final battle begins.\n"
@@ -318,22 +318,22 @@ SCENES = [
          "Tony looks at Strange, who holds up one finger: of the 14,000,605 futures he saw in the last film, there's only one where they win, and this is it.\n"
          "Tony grapples with Thanos for the gauntlet but is thrown aside."),
         ("「私はアイアンマンだ」",
-         "サノスは「私は絶対なのだ」と言って指を鳴らすが、何も起きない。こてから石がなくなっていた。\n"
-         "6つの石は、組みついたときにトニーが自分のスーツの手に移していたのだ。トニーは「そして、私は……アイアンマンだ」と言って指を鳴らす。サノスの軍がちりになって消え、最後にサノスも静かに座りこんで消えていく。",
+         "サノスは、自分は避けられない運命なのだと言って指を鳴らすが、何も起きない。こてから石がなくなっていた。\n"
+         "6つの石は、組みついたときにトニーが自分のスーツの手に移していたのだ。トニーは、自分はアイアンマンだと言って指を鳴らす。サノスの軍がちりになって消え、最後にサノスも静かに座りこんで消えていく。",
          "\"I am Iron Man\"",
          "Thanos says \"I am inevitable\" and snaps, but nothing happens. The stones are gone from the gauntlet.\n"
          "While grappling, Tony moved all six stones onto his own suit's hand. \"And I... am... Iron Man,\" he says, and snaps. Thanos's army turns to dust, and finally Thanos sits down quietly and fades away too."),
     ]),
     ("第8章 それぞれの道", "Part 8: New paths", [
         ("トニーの最期",
-         "石の力で、トニーの体の右側は焼けただれていた。がれきにもたれるトニーに、ローディ、ピーター、ペッパーが寄りそう。ピーターは「勝ったんです」と泣く。\n"
-         "ペッパーは「私たちは大丈夫。もう休んでいいのよ」と声をかける。トニーは静かに息を引き取る。",
+         "石の力で、トニーの体の右側は焼けただれていた。がれきにもたれるトニーに、ローディ、ピーター、ペッパーが寄りそう。ピーターは、勝ったんだと泣きながら伝える。\n"
+         "ペッパーは、自分たちは大丈夫だから、もう休んでいいと声をかける。トニーは静かに息を引き取る。",
          "Tony's end",
          "The stones' power has burned the right side of Tony's body. As he slumps against the rubble, Rhodey, Peter and Pepper come to his side. Peter cries that they won.\n"
          "Pepper tells him they'll be okay and he can rest now. Tony quietly dies."),
         ("残されたメッセージ",
          "トニーは、作戦の前にメッセージを録画していた。ペッパーと仲間たちがそれを見る。\n"
-         "トニーは、うまくいかなかったときのことも考えていたと話し、「旅には終わりもある」と語る。最後に、娘のモーガンに「3000回愛してる」と伝える。",
+         "トニーは、うまくいかなかったときのことも考えていたと話し、旅には終わりもあると語る。最後に、娘のモーガンに「3000回愛してる」と伝える。",
          "The message he left",
          "Before the heist, Tony recorded a message. Pepper and the others watch it.\n"
          "He says he had planned for things not working out, and that part of the journey is the end. Finally, he tells Morgan he loves her 3000."),
@@ -359,7 +359,7 @@ SCENES = [
          "He's supposed to be back in five seconds, but he doesn't return."),
         ("ベンチの老人と盾",
          "バッキーが、近くのベンチに座る老人に気づく。年をとったスティーブだった。石を返したあと、過去に残って人生を送ってきたのだ。\n"
-         "スティーブはサムを呼び、盾を手渡す。サムは「ほかの人の物のように感じる」と言うが、スティーブは「だから君のものなんだ」と答える。サムに過去での暮らしを聞かれても、スティーブは話さない。",
+         "スティーブはサムを呼び、盾を手渡す。サムは、ほかの人の物のように感じると言うが、スティーブは、だからこそサムのものなのだと答える。サムに過去での暮らしを聞かれても、スティーブは話さない。",
          "The old man on the bench, and the shield",
          "Bucky notices an old man on a nearby bench. It's Steve, grown old. After returning the stones, he stayed in the past and lived his life.\n"
          "Steve calls Sam over and hands him the shield. Sam says it feels like it belongs to someone else, and Steve says that's why it's his. When Sam asks about his life in the past, Steve won't say."),
@@ -374,7 +374,7 @@ SCENES = [
     ]),
     ("まとめ（最後までのネタバレ）", "Summary (spoilers through the end)", [
         ("6つの石を、誰が・どこで手に入れたか",
-         "・タイム・ストーン：ブルースが2012年のニューヨークで、エンシェント・ワンに「必ず返す」と約束して預かった（第4章）。\n"
+         "・タイム・ストーン：ブルースが2012年のニューヨークで、エンシェント・ワンに必ず返すと約束して預かった（第4章）。\n"
          "・マインド・ストーン：スティーブが2012年のスターク・タワーで、ヒドラの男たちから杖ごと受け取った（第4章）。\n"
          "・スペース・ストーン：2012年は失敗し、ロキがテッセラクトを持って消えた。トニーが1970年のキャンプ・リーハイで手に入れた（第4章）。\n"
          "・リアリティ・ストーン：ロケットが2013年のアスガルドで、ジェーンの体から吸い出した（第5章）。\n"

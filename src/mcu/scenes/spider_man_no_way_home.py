@@ -8,7 +8,7 @@ SCENES = [
     ("第1部 正体がばれた日", "Part 1: The Day He Was Exposed", [
         ("ミステリオの映像",
          "前作『ファー・フロム・ホーム』の最後の続きから始まる。ピーターとMJがニューヨークの街にいると、大きな画面に、ネットのニュース番組「デイリー・ビューグル」のJ・ジョナ・ジェイムソンの放送が流れる。\n"
-         "放送されたのは、ミステリオ（クエンティン・ベック）が死ぬ前に残した、作り直された映像だった。ロンドンの事件はスパイダーマンのしわざで、ベックを殺したのもスパイダーマンだという内容で、最後にベックが「スパイダーマンの正体はピーター・パーカーだ」と明かす。\n"
+         "放送されたのは、ミステリオ（クエンティン・ベック）が死ぬ前に残した、作り直された映像だった。ロンドンの事件はスパイダーマンのしわざで、ベックを殺したのもスパイダーマンだという内容で、最後にベックが、スパイダーマンの正体はピーター・パーカーだと明かす。\n"
          "まわりの人がいっせいにピーターを見る。ピーターはMJを抱えて、糸でビルの間を飛んで逃げる。",
          "Mysterio's video",
          "It picks up right where Far From Home ended. Peter and MJ are in the city when a giant screen shows J. Jonah Jameson's online news show, The Daily Bugle.\n"
@@ -49,7 +49,7 @@ SCENES = [
          "Peter visits Doctor Strange at the New York Sanctum. Wong is there too; he is now the Sorcerer Supreme, the highest rank among the sorcerers.\n"
          "Peter asks if there's any way to make the world forget he's Spider-Man. Strange offers a spell that will erase the knowledge of Spider-Man's identity from everyone's minds. Wong warns that it's dangerous, but Strange agrees to do it."),
         ("何度も変わる注文",
-         "ストレンジが呪文を唱え始める。ところがピーターは、途中で「MJには覚えていてほしい」と言い出す。続けて「ネッドも」「メイおばさんも」と、何度も注文を変える。\n"
+         "ストレンジが呪文を唱え始める。ところがピーターは、途中で、MJには覚えていてほしいと言い出す。続けてネッドも、メイおばさんもと、何度も注文を変える。\n"
          "そのたびに魔法は乱れ、やがて手がつけられなくなる。ストレンジは急いで魔法を止め、暴れ出した魔法を小さな箱「マキナ・ディ・カダヴス」の中に閉じこめる。\n"
          "ストレンジは、魔法に頼る前に、まず大学の人と直接話してみるようピーターに言う。",
          "Changing the terms",
@@ -63,7 +63,7 @@ SCENES = [
          "Peter tracks down an MIT administrator, caught in traffic on a highway bridge, the Alexander Hamilton Bridge, to beg her to reconsider MJ and Ned.\n"
          "A man with four mechanical arms on his back appears and starts hurling cars: Otto Octavius, Doctor Octopus. Peter suits up and saves the people caught in the chaos."),
         ("オクタビアスの機械の腕",
-         "オクタビアスは、ピーターを自分の知っているスパイダーマンだと思って襲いかかる。しかしマスクの下の顔を見て、「お前はピーター・パーカーではない」と言う。\n"
+         "オクタビアスは、ピーターを自分の知っているスパイダーマンだと思って襲いかかる。しかしマスクの下の顔を見て、ピーター・パーカーではないと気づく。\n"
          "戦いの中で、オクタビアスの機械の腕は、ピーターのスーツ（アイアン・スパイダー）の小さな機械の部品「ナノテク」をはぎ取る。ところがナノテクが機械の腕にくっついたことで、ピーターは逆に、その腕を自分の思いどおりに動かせるようになる。ピーターはオクタビアスの動きを止める。",
          "Octavius's arms",
          "Octavius attacks Peter, thinking he's the Spider-Man he knows. But seeing his face, he says this isn't Peter Parker.\n"
@@ -108,7 +108,7 @@ SCENES = [
          "Talking it over, Norman, Octavius, and Electro realize they were pulled here just before they died fighting Spider-Man. Octavius angrily refuses to believe it at first, until he recalls that his last memory is that fight."),
         ("元の世界に帰すということ",
          "ストレンジは、箱に閉じこめた魔法を逆に使い、来訪者たちを元の世界に帰す準備を始める。\n"
-         "しかしピーターは、帰せば彼らは死んでしまうと反対する。そして、彼らの体や心を治してから帰せば、運命を変えられるかもしれないと言う。ストレンジは「彼らの運命は、それぞれの世界で決まっていることだ」と受け入れない。",
+         "しかしピーターは、帰せば彼らは死んでしまうと反対する。そして、彼らの体や心を治してから帰せば、運命を変えられるかもしれないと言う。ストレンジは、彼らの運命はそれぞれの世界で決まっていることだと言って受け入れない。",
          "Sending them home",
          "Strange prepares to reverse the spell sealed in the box and send the visitors back to their universes.\n"
          "Peter objects that sending them back means sending them to their deaths. If they could be cured first, he argues, their fates might change. Strange refuses: their fates belong to their own worlds."),
@@ -150,7 +150,7 @@ SCENES = [
          "In the chaos, Octavius flees. Electro, Sandman, and the Lizard escape as well."),
         ("メイの最期",
          "メイは、ゴブリンの乗り物（グライダー）に襲われ、深い傷を負う。ゴブリンは逃げ去る。\n"
-         "建物の外で、ピーターはけがをしたメイを抱きかかえる。メイはピーターに「大いなる力には、大いなる責任がともなう」と伝え、ピーターの腕の中で息を引き取る。直後にハッピーがかけつける。",
+         "建物の外で、ピーターはけがをしたメイを抱きかかえる。メイはピーターに「大いなる力には大いなる責任が伴う」と伝え、ピーターの腕の中で息を引き取る。直後にハッピーがかけつける。",
          "May's last words",
          "May is badly wounded when the Goblin attacks her with his glider, and the Goblin escapes.\n"
          "Outside, Peter holds his wounded aunt. May tells him, \"With great power, there must also come great responsibility,\" and dies in his arms. Happy arrives moments later."),
@@ -179,7 +179,7 @@ SCENES = [
         ("2人の先輩の話",
          "ピーター2は、自分も大切な人、ベンおじさんを亡くしたこと、その悲しみを抱えながらもスパイダーマンを続けてきたことを話す。\n"
          "ピーター3は、恋人のグウェン・ステイシーを助けられなかったこと、その後は怒りにまかせて戦い、心がすさんでしまったことを打ち明ける。そして、自分のようにはならないでほしいと伝える。\n"
-         "ピーター1は、メイが言った「大いなる力には、大いなる責任がともなう」という言葉を2人に話す。2人はその言葉をよく知っていた。ピーター1は、メイのために、敵たちを救う道をもう一度選ぶ。",
+         "ピーター1は、メイが言った「大いなる力には大いなる責任が伴う」という言葉を2人に話す。2人はその言葉をよく知っていた。ピーター1は、メイのために、敵たちを救う道をもう一度選ぶ。",
          "What the two other Peters went through",
          "Peter-Two talks about losing his Uncle Ben, and about carrying that grief while staying Spider-Man.\n"
          "Peter-Three admits he couldn't save his girlfriend, Gwen Stacy, and that afterward he fought out of anger and grew bitter. He doesn't want Peter-One to end up like him.\n"
@@ -301,7 +301,7 @@ SCENES = [
          "- Peter-Two (Tobey Maguire) and Peter-Three (Andrew Garfield): help Peter-One and return home at the end.\n"
          "- Eddie Brock: brought over by the first spell, sent home by the last. Only a bit of Venom is left behind (mid-credits)."),
         ("死んだ人",
-         "・メイ・パーカー（第4部）：ピーター1のおばさん。来訪者たちを治そうとするピーターを手伝っていたが、ハッピーのマンションでの戦いで、体を乗っ取ったゴブリンにグライダーで襲われ、深い傷を負う。外でピーターに「大いなる力には、大いなる責任がともなう」と言い残して亡くなる。",
+         "・メイ・パーカー（第4部）：ピーター1のおばさん。来訪者たちを治そうとするピーターを手伝っていたが、ハッピーのマンションでの戦いで、体を乗っ取ったゴブリンにグライダーで襲われ、深い傷を負う。外でピーターに「大いなる力には大いなる責任が伴う」と言い残して亡くなる。",
          "Who died",
          "- May Parker (Part 4): Peter-One's aunt. She was helping Peter cure the visitors when, in the fight at Happy's apartment, the Goblin wounded her with his glider. Outside, she tells Peter that with great power comes great responsibility, and dies."),
         ("ピーター1が失ったもの",
