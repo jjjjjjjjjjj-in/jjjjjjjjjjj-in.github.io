@@ -118,7 +118,7 @@
 - [x] captain-marvel（キャプテン・マーベル）
 - [x] iron-man-2（アイアンマン2）
 - [x] thor-dark-world（マイティ・ソー／ダーク・ワールド）
-- [ ] iron-man-3（アイアンマン3）
+- [~] iron-man-3（アイアンマン3）
 - [ ] guardians-vol2（ガーディアンズ・オブ・ギャラクシー：リミックス）
 - [ ] ant-man（アントマン）
 - [ ] spider-man-homecoming（スパイダーマン：ホームカミング）
