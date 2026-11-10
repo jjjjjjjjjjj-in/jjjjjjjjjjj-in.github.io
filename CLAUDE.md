@@ -127,7 +127,7 @@
 - [~] quantumania（アントマン＆ワスプ：クアントマニア）
 - [~] guardians-vol3（ガーディアンズ・オブ・ギャラクシー：VOLUME 3）
 - [x] incredible-hulk（インクレディブル・ハルク）
-- [~] black-widow（ブラック・ウィドウ）
+- [x] black-widow（ブラック・ウィドウ）
 - [~] hawkeye（ホークアイ）
 - [ ] guardians-holiday-special（ガーディアンズ・オブ・ギャラクシー：ホリデー・スペシャル）
 - [ ] the-marvels（マーベルズ）
