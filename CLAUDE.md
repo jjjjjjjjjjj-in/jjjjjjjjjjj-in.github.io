@@ -133,7 +133,7 @@
 - [~] the-marvels（マーベルズ）
 - [x] logan（LOGAN／ローガン）
 - [x] eternals（エターナルズ）
-- [~] moon-knight（ムーンナイト）
+- [x] moon-knight（ムーンナイト）
 - [x] echo（エコー）
 - [~] she-hulk（シー・ハルク：ザ・アトーニー）
 - [~] ms-marvel（ミズ・マーベル）
