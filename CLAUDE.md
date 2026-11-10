@@ -93,7 +93,7 @@
 - [~] deadpool-and-wolverine（デッドプール＆ウルヴァリン）
 - [~] fantastic-four-first-steps（ファンタスティック4：ファースト・ステップ）
 - [~] thunderbolts（サンダーボルツ*）
-- [~] iron-man（アイアンマン）
+- [x] iron-man（アイアンマン）
 - [~] age-of-ultron（アベンジャーズ／エイジ・オブ・ウルトロン）
 - [x] civil-war（シビル・ウォー／キャプテン・アメリカ）
 - [x] x2（X-MEN2）
