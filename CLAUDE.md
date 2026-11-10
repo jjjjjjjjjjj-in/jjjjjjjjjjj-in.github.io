@@ -142,7 +142,7 @@
 - [~] ironheart（アイアンハート）
 - [x] werewolf-by-night（ウェアウルフ・バイ・ナイト）
 - [~] venom（ヴェノム）
-- [~] venom-carnage（ヴェノム：レット・ゼア・ビー・カーネイジ）
+- [x] venom-carnage（ヴェノム：レット・ゼア・ビー・カーネイジ）
 - [x] venom-last-dance（ヴェノム：ザ・ラストダンス）
 - [~] spider-man-2002（スパイダーマン（トビー・マグワイア版））
 - [~] spider-man-2-2004（スパイダーマン2（トビー・マグワイア版））
