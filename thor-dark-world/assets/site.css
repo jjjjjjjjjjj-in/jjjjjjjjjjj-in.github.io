@@ -458,3 +458,5 @@ details.sc-fold > summary h2 { margin: 0; font-size: 18px; font-weight: 900; bac
 details.sc-fold { margin: 12px 0; }
 
 .fg-take p { font-size: 15px; line-height: 1.9; }
+.fg-a8 { margin: 10px 0 0; font-size: 14px; }
+.fg-a8 a { font-weight: 700; }

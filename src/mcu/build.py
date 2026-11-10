@@ -31,6 +31,9 @@ PRIVACY_URL = BASE_URL + "privacy.html"
 AMAZON_TAG = "doomsdayguide-22"
 AMAZON_TAG_US = "doomsdaygui08-20"
 RAKUTEN_TOP = "https://af.moshimo.com/af/c/click?a_id=5875908&p_id=54&pc_id=54&pl_id=616"
+# A8.net の DMM ブックス（2026-11-09 承認、2026-11-11 設置）。A8 の決まりで、コードは変えずにそのまま使う。日本語版だけ
+A8_DMM_BOOKS = ('<a href="https://px.a8.net/svt/ejp?a8mat=4BGFJF+8CNYTE+6HW+3SY4KI" rel="nofollow">【DMMブックス】</a>'
+                '<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4BGFJF+8CNYTE+6HW+3SY4KI" alt="">')
 
 e = html.escape
 
@@ -181,7 +184,8 @@ def common_panel(lang):
         btns.append(f'<a class="btn ad" href="{e(amazon_url(kw_en if lang == "en" else kw, lang))}" target="_blank" rel="sponsored noopener">{e(en if lang == "en" else ja)}</a>')
     if lang == "ja" and RAKUTEN_TOP:
         btns.append(f'<a class="btn ad" href="{e(rakuten_url("マーベル グッズ"))}" target="_blank" rel="sponsored noopener">楽天でマーベルのグッズを探す</a>')
-    return f'<aside class="panel"><h2>{e(t["common_shop"])} <span class="pr">PR</span></h2><div class="btns">{"".join(btns)}</div></aside>'
+    books = f'<p class="fg-a8">コミックや本を電子書籍で読むなら {A8_DMM_BOOKS}</p>' if lang == "ja" else ""
+    return f'<aside class="panel"><h2>{e(t["common_shop"])} <span class="pr">PR</span></h2><div class="btns">{"".join(btns)}</div>{books}</aside>'
 
 
 def shop_panel(g, lang):
