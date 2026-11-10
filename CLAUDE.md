@@ -116,7 +116,7 @@
 - [~] x-men-dark-phoenix（X-MEN：ダーク・フェニックス）
 - [~] agatha-all-along（アガサ・オール・アロング）
 - [~] captain-marvel（キャプテン・マーベル）
-- [~] iron-man-2（アイアンマン2）
+- [x] iron-man-2（アイアンマン2）
 - [~] thor-dark-world（マイティ・ソー／ダーク・ワールド）
 - [ ] iron-man-3（アイアンマン3）
 - [ ] guardians-vol2（ガーディアンズ・オブ・ギャラクシー：リミックス）
