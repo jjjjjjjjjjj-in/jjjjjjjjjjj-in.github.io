@@ -101,7 +101,7 @@
 - [x] captain-america-first-avenger（キャプテン・アメリカ／ザ・ファースト・アベンジャー）
 - [x] winter-soldier（キャプテン・アメリカ／ウィンター・ソルジャー）
 - [~] doctor-strange（ドクター・ストレンジ）
-- [~] wandavision（ワンダヴィジョン）
+- [x] wandavision（ワンダヴィジョン）
 - [x] shang-chi（シャン・チー／テン・リングスの伝説）
 - [~] wakanda-forever（ブラックパンサー／ワカンダ・フォーエバー）
 - [~] x-men（X-メン）
