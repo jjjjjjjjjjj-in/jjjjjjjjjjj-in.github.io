@@ -91,7 +91,7 @@
 - [x] spider-man-no-way-home（スパイダーマン：ノー・ウェイ・ホーム）
 - [x] multiverse-of-madness（ドクター・ストレンジ／マルチバース・オブ・マッドネス）
 - [x] deadpool-and-wolverine（デッドプール＆ウルヴァリン）
-- [~] fantastic-four-first-steps（ファンタスティック4：ファースト・ステップ）
+- [x] fantastic-four-first-steps（ファンタスティック4：ファースト・ステップ）
 - [~] thunderbolts（サンダーボルツ*）
 - [x] iron-man（アイアンマン）
 - [x] age-of-ultron（アベンジャーズ／エイジ・オブ・ウルトロン）
