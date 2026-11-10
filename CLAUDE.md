@@ -100,7 +100,7 @@
 - [x] brave-new-world（キャプテン・アメリカ：ブレイブ・ニュー・ワールド）
 - [x] captain-america-first-avenger（キャプテン・アメリカ／ザ・ファースト・アベンジャー）
 - [x] winter-soldier（キャプテン・アメリカ／ウィンター・ソルジャー）
-- [~] doctor-strange（ドクター・ストレンジ）
+- [x] doctor-strange（ドクター・ストレンジ）
 - [x] wandavision（ワンダヴィジョン）
 - [x] shang-chi（シャン・チー／テン・リングスの伝説）
 - [x] wakanda-forever（ブラックパンサー／ワカンダ・フォーエバー）
