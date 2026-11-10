@@ -112,7 +112,7 @@
 - [~] ant-man-and-the-wasp（アントマン＆ワスプ）
 - [~] x-men-last-stand（X-MEN：ファイナル ディシジョン）
 - [~] x-men-days-of-future-past（X-MEN：フューチャー&パスト）
-- [~] x-men-apocalypse（X-MEN：アポカリプス）
+- [x] x-men-apocalypse（X-MEN：アポカリプス）
 - [ ] x-men-dark-phoenix（X-MEN：ダーク・フェニックス）
 - [ ] agatha-all-along（アガサ・オール・アロング）
 - [ ] captain-marvel（キャプテン・マーベル）
