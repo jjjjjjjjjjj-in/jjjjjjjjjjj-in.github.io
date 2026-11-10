@@ -103,7 +103,7 @@
 - [~] doctor-strange（ドクター・ストレンジ）
 - [x] wandavision（ワンダヴィジョン）
 - [x] shang-chi（シャン・チー／テン・リングスの伝説）
-- [~] wakanda-forever（ブラックパンサー／ワカンダ・フォーエバー）
+- [x] wakanda-forever（ブラックパンサー／ワカンダ・フォーエバー）
 - [~] x-men（X-メン）
 - [ ] thor-ragnarok（マイティ・ソー バトルロイヤル）
 - [ ] thor（マイティ・ソー）
