@@ -131,7 +131,7 @@
 - [x] hawkeye（ホークアイ）
 - [x] guardians-holiday-special（ガーディアンズ・オブ・ギャラクシー：ホリデー・スペシャル）
 - [~] the-marvels（マーベルズ）
-- [~] logan（LOGAN／ローガン）
+- [x] logan（LOGAN／ローガン）
 - [~] eternals（エターナルズ）
 - [~] moon-knight（ムーンナイト）
 - [x] echo（エコー）
