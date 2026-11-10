@@ -132,7 +132,7 @@
 - [x] guardians-holiday-special（ガーディアンズ・オブ・ギャラクシー：ホリデー・スペシャル）
 - [~] the-marvels（マーベルズ）
 - [x] logan（LOGAN／ローガン）
-- [~] eternals（エターナルズ）
+- [x] eternals（エターナルズ）
 - [~] moon-knight（ムーンナイト）
 - [x] echo（エコー）
 - [~] she-hulk（シー・ハルク：ザ・アトーニー）
