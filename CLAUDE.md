@@ -94,7 +94,7 @@
 - [~] fantastic-four-first-steps（ファンタスティック4：ファースト・ステップ）
 - [~] thunderbolts（サンダーボルツ*）
 - [x] iron-man（アイアンマン）
-- [~] age-of-ultron（アベンジャーズ／エイジ・オブ・ウルトロン）
+- [x] age-of-ultron（アベンジャーズ／エイジ・オブ・ウルトロン）
 - [x] civil-war（シビル・ウォー／キャプテン・アメリカ）
 - [x] x2（X-MEN2）
 - [ ] brave-new-world（キャプテン・アメリカ：ブレイブ・ニュー・ワールド）
