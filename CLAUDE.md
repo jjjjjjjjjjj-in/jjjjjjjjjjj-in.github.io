@@ -86,7 +86,7 @@
 - [~] infinity-war（アベンジャーズ／インフィニティ・ウォー）
 - [~] endgame（アベンジャーズ／エンドゲーム）
 - [~] loki-s1（ロキ シーズン1）
-- [~] loki-s2（ロキ シーズン2）
+- [x] loki-s2（ロキ シーズン2）
 - [~] spider-man-no-way-home（スパイダーマン：ノー・ウェイ・ホーム）
 - [ ] multiverse-of-madness（ドクター・ストレンジ／マルチバース・オブ・マッドネス）
 - [ ] deadpool-and-wolverine（デッドプール＆ウルヴァリン）
