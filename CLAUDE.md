@@ -135,7 +135,7 @@
 - [x] eternals（エターナルズ）
 - [x] moon-knight（ムーンナイト）
 - [x] echo（エコー）
-- [~] she-hulk（シー・ハルク：ザ・アトーニー）
+- [x] she-hulk（シー・ハルク：ザ・アトーニー）
 - [~] ms-marvel（ミズ・マーベル）
 - [ ] secret-invasion（シークレット・インベージョン）
 - [ ] daredevil-born-again-s1（デアデビル：ボーン・アゲイン シーズン1）
