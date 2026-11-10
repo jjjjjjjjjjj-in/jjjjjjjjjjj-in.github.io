@@ -115,7 +115,7 @@
 - [x] x-men-apocalypse（X-MEN：アポカリプス）
 - [x] x-men-dark-phoenix（X-MEN：ダーク・フェニックス）
 - [~] agatha-all-along（アガサ・オール・アロング）
-- [~] captain-marvel（キャプテン・マーベル）
+- [x] captain-marvel（キャプテン・マーベル）
 - [x] iron-man-2（アイアンマン2）
 - [~] thor-dark-world（マイティ・ソー／ダーク・ワールド）
 - [ ] iron-man-3（アイアンマン3）
