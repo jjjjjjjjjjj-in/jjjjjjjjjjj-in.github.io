@@ -97,7 +97,7 @@
 - [x] age-of-ultron（アベンジャーズ／エイジ・オブ・ウルトロン）
 - [x] civil-war（シビル・ウォー／キャプテン・アメリカ）
 - [x] x2（X-MEN2）
-- [~] brave-new-world（キャプテン・アメリカ：ブレイブ・ニュー・ワールド）
+- [x] brave-new-world（キャプテン・アメリカ：ブレイブ・ニュー・ワールド）
 - [~] captain-america-first-avenger（キャプテン・アメリカ／ザ・ファースト・アベンジャー）
 - [~] winter-soldier（キャプテン・アメリカ／ウィンター・ソルジャー）
 - [~] doctor-strange（ドクター・ストレンジ）
