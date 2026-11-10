@@ -106,7 +106,7 @@
 - [x] wakanda-forever（ブラックパンサー／ワカンダ・フォーエバー）
 - [x] x-men（X-メン）
 - [x] thor-ragnarok（マイティ・ソー バトルロイヤル）
-- [~] thor（マイティ・ソー）
+- [x] thor（マイティ・ソー）
 - [~] guardians-of-the-galaxy（ガーディアンズ・オブ・ギャラクシー）
 - [x] black-panther（ブラックパンサー）
 - [~] ant-man-and-the-wasp（アントマン＆ワスプ）
