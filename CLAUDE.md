@@ -98,7 +98,7 @@
 - [x] civil-war（シビル・ウォー／キャプテン・アメリカ）
 - [x] x2（X-MEN2）
 - [x] brave-new-world（キャプテン・アメリカ：ブレイブ・ニュー・ワールド）
-- [~] captain-america-first-avenger（キャプテン・アメリカ／ザ・ファースト・アベンジャー）
+- [x] captain-america-first-avenger（キャプテン・アメリカ／ザ・ファースト・アベンジャー）
 - [x] winter-soldier（キャプテン・アメリカ／ウィンター・ソルジャー）
 - [~] doctor-strange（ドクター・ストレンジ）
 - [~] wandavision（ワンダヴィジョン）
