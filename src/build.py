@@ -65,6 +65,13 @@ a { color: var(--ink); font-weight: 700; }
 .policy h2 { background: var(--ink); color: var(--on-ink); border-radius: 6px; padding: 8px 14px; font-size: 18px; margin: 28px 0 8px; }
 .policy h3 { font-size: 16px; margin: 16px 0 4px; }
 .policy p, .policy li { margin: 6px 0; }
+.about h2 { font-size: 20px; font-weight: 900; margin: 0 0 8px; border-left: 6px solid var(--ink); padding-left: 10px; }
+.about p { margin: 6px 0; }
+.picks, .rules { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.picks li { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; display: grid; gap: 2px; }
+.picks li span { color: var(--muted); font-size: 14px; }
+.rules li { padding-left: 1.2em; position: relative; }
+.rules li::before { content: "・"; position: absolute; left: 0; }
 footer { font-size: 12.5px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 14px; }
 </style>"""
 
@@ -95,9 +102,7 @@ def card(href, name, desc, label, lang):
 
 def page(title, desc, path, lang, header, body, back=""):
     verify = f'\n<meta name="google-site-verification" content="{e(GOOGLE_SITE_VERIFICATION)}">' if GOOGLE_SITE_VERIFICATION and not path else ""
-    # もっちぃま（トップ）は運営者の管理用。検索結果に出さない（GitHub Pages では完全な非公開にはできない。2026-11-02）
-    if not path:
-        verify += '\n<meta name="robots" content="noindex">'
+    # トップは 2026-11-11 から検索に出す（アドセンスの審査で「有用性の低いコンテンツ」とされたため、サイトの入口として作り直した。前は noindex の管理用だった）
     prefix = "../" * path.count("/")
     note = ("Unofficial fan sites run by an individual. Some pages contain affiliate links (ads)."
             if lang == "en" else "個人が運営する非公式のファンサイトです。各サイトにはアフィリエイト広告（PR）を含むページがあります。")
@@ -150,9 +155,42 @@ def index_html():
         cards += card(href, f["name"], f["desc"], label, f["lang"])
     header = f"""
     <h1>{SITE_NAME}</h1>
-    <p>映画、旅行、本などのテーマごとに、知っておくと役立つ情報や楽しみ方をまとめています。</p>
+    <p>マーベル映画の観る順番・相関図・年表と、旅行のガイド。これから楽しむ人が、迷わず準備できるようにまとめています。</p>
   """
-    return page(SITE_NAME, "映画、旅行、本などのテーマごとに、知っておくと役立つ情報や楽しみ方をまとめたガイドサイトです。", "", "ja", header, cards)
+    link = lambda href, name, desc: f'<li><a href="{e(href)}">{e(name)}</a><span>{e(desc)}</span></li>'
+    picks = "".join([
+        link("doomsday-guide/", "ドゥームズデイ予習ガイド", "『アベンジャーズ／ドゥームズデイ』（2026年12月18日公開）の前に観ておきたい作品を、観る順番と理由つきで並べたチェックリスト"),
+        link("marvel/timeline/", "MCU完全年表", "宇宙の始まりから最新作まで、作品の中の出来事を時系列で1本にまとめた年表"),
+        link("marvel/box-office/", "マーベル映画の興行収入", "世界興行収入のランキング。数字には出典と確認日を付けています"),
+        link("marvel/rerelease/", "再上映の情報", "公式に決まったものと、報道の段階のものを分けて載せています"),
+        link("marvel/", "作品ガイド（全71作品）", "1作品ずつ、観る前に知っておくこと・キャラクター相関図・あらすじ・用語集・分かりにくい所のQ&A・次に観る作品をまとめたガイド"),
+        link("paradise-city/", "パラダイスシティ カジノガイド", "韓国・仁川のリゾートを、運営者が2026年に8回行った体験をもとに、初めての人向けに解説"),
+    ])
+    extra = f"""
+  </ul>
+  <section class="about"><h2>このサイトについて</h2>
+    <p>「もっちぃま」は、個人が運営するガイドサイトです。映画や旅行を「これから楽しむ人」が、迷わず準備できることを目指しています。</p>
+    <p>いちばん力を入れているのはマーベル映画です。作品数が多くて「どれから観ればいいか分からない」という声にこたえるために、観る順番、作品どうしのつながり、登場人物の関係を、図と表で整理しています。</p>
+  </section>
+  <section class="about"><h2>主なページ</h2>
+    <ul class="picks">{picks}</ul>
+  </section>
+  <section class="about"><h2>情報の扱い方</h2>
+    <ul class="rules">
+      <li>公式に発表された情報と、うわさ・報道の段階の情報を分けて書きます。</li>
+      <li>確かめられなかったことは書きません。数字や日付には、出典と確認した日を付けます。</li>
+      <li>キャラクター相関図・年表・観る順番の表は、このサイトで作ったものです。</li>
+      <li>作品ガイドの最後に、運営者の感想・見解を「運営者のひとこと」として、事実の説明と分けて載せています。</li>
+      <li>広告（PR）を含むページには、その場所に「PR」と表示しています。</li>
+    </ul>
+  </section>
+  <section class="about"><h2>更新について</h2>
+    <p>新しい作品の公開や配信、公式の発表に合わせて、ページを足したり直したりしています。まちがいを見つけたときは、<a href="about.html">運営者情報・お問い合わせ</a>のページからお知らせください。</p>
+  </section>
+  <ul class="cards" hidden>"""
+    return page("もっちぃま｜マーベル映画の観る順番・相関図・年表と、旅行のガイド",
+                "マーベル映画の観る順番、作品どうしのつながり、キャラクター相関図、年表を、これから観る人向けにまとめた個人運営のガイドサイトです。韓国・仁川のパラダイスシティの旅行ガイドもあります。",
+                "", "ja", header, cards + extra)
 
 
 def sites_in(key, group):
@@ -372,6 +410,7 @@ def main():
     write("about.html", about_html())
     write("sitemap.xml", sitemap_index())
     write("sitemap-top.xml", '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+          f"  <url><loc>{BASE_URL}</loc><lastmod>{latest}</lastmod></url>\n"
           f"  <url><loc>{BASE_URL}privacy.html</loc><lastmod>{POLICY_UPDATED}</lastmod></url>\n"
           f"  <url><loc>{BASE_URL}about.html</loc><lastmod>{ABOUT_UPDATED}</lastmod></url>\n"
           + "".join(f"  <url><loc>{BASE_URL}{p}</loc><lastmod>{latest}</lastmod></url>\n" for p in folder_pages) + "</urlset>\n")
