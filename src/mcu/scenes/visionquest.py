@@ -1,9 +1,10 @@
-# 『ヴィジョンクエスト』シーンごとの詳しいあらすじ（配信中。第8話は films.py の upcoming に「未公開」とだけ出す）
+# 『ヴィジョンクエスト』シーンごとの詳しいあらすじ（全8話。2026-11-11 に最終話の第8話と「まとめ」を足した）
 # 2026-11-10 英語版ウィキペディアの各話のあらすじと、各話の解説記事（英語・日本語）を照らし合わせて、くわしい形に書き直した。
 # 運営者の希望: 第1話から始め、場面ごとに起きた事実だけを書く。見出しはつながった場面でまとめる。
 # 形: ("見出し", "本文", "Heading", "Text")。本文の \n は段落の区切り。文章はすべて自分の言葉で書いた。
 # 資料どうしで食い違う所（第2話でパラディンと会う場所、ジョーの死因、第3話で契約が切られる順番など）は書いていないか、ぼかしてある。
-# 最終話（第8話）が配信されたら、第8話と最後の「まとめ」の章を足す。
+# 第8話は、この環境から読めた英語版ウィキペディア（各話あらすじ・ヴィジョンの項・エンドクレジット場面の一覧）と、検索で確かめた英語のリキャップ記事の内容を照らし合わせた。
+# 日本語の解説記事は見つからなかったので、セリフはカギかっこで引用していない。1つの資料にしかない細部（ウルトロンが仲間を操る場面、ドラマの中の細かい筋、ヴァージルを倒す細かい動きなど）は書いていない。
 SCENE_NUMBERS = True  # 場面に「話-番号」を付ける（観ながら照らし合わせるため）
 SCENES = [
     ("第1話「ノー・ストリングス」（10月13日配信）", "Episode 1: No Strings (Oct. 13)", [
@@ -461,5 +462,133 @@ SCENES = [
          "At the estate, the Client's agents surround Vision and Jocasta. Both are shut down and taken.\n"
          "His job done, Paladin starts to drive away. One of the Client's agents fires a rocket at the van, and it explodes.\n"
          "Finally the Client steps into the light. His face is the same one Ultron wears in human form."),
+    ]),
+    ("第8話「フォーエバー」（11月10日配信・最終話）", "Episode 8: Forever (Nov. 10, finale)", [
+        ("依頼人の正体　ヴァージル・ホートン",
+         "ホートン博士の屋敷で、ヴィジョンとジョカスタは再び目を覚まさせられる。目の前にいる依頼人の名前は、ヴァージル・ホートン。ジムを作ったフィニアス・ホートン博士の孫で、ジョーの夫だった男だ。ジョーと一緒に人工の心を研究した相手でもある。ウルトロンが人間の姿をとるときの顔は、このヴァージルの顔だった。\n"
+         "ヴァージルは、すべてを仕組んだのは自分だと明かす。ソードでヴィジョンの体を作り直させたのも、病気で亡くなったジョーを人造人間ジョカスタとしてよみがえらせたのも、ヴァージルだった。ジョカスタが昔の記憶をなくしていたのは、そのときに消えたからだ。\n"
+         "ねらいは2つある。自分の心をヴィジョンの体に移しかえること。そして、巣のナノボットで世界じゅうの人の心を操ることだ。ヴァージルは手元の装置でヴィジョンたちを思いのままにし、ヴィジョンの心を消しにかかる。",
+         "Who the Client is: Virgil Horton",
+         "At Dr. Horton's estate, Vision and Jocasta are switched back on. The Client in front of them is Virgil Horton, grandson of Dr. Phineas Horton, who built J.I.M., and the man who was Jo's husband. He was also her partner in the research on synthetic minds. The face Ultron wears in human form is Virgil's.\n"
+         "Virgil reveals that he was behind everything. He was the one who had Vision's body rebuilt at S.W.O.R.D., and the one who brought Jo, dead of her illness, back as the synthetic Jocasta. Her old memories were lost in that process.\n"
+         "He wants two things: to move his own mind into Vision's body, and to use the nanobots in the nest to control the minds of people all over the world. Holding Vision and the others under his control with a remote device, he starts wiping Vision's mind."),
+        ("パラディンは生きていた",
+         "車の爆発で死んだと思われたパラディンは、生きていた。イーディスが前もって危険を知らせ、爆発の前にぬけ出していたのだ。\n"
+         "一方トミーは、双子のビリーに助けを求めようとする。おぼれたときと同じように自分から水に沈み、心の中の世界でビリーと顔を合わせる。しかし長くは話せないまま、現実に引き戻される。ビリーの助けは当てにできない。\n"
+         "パラディンは、トミーとリサと手を組む。3人はヴァージルの屋敷に乗りこむ。",
+         "Paladin is alive",
+         "Paladin, who seemed to die when his van blew up, is alive. E.D.I.T.H. had warned him, and he got out before the explosion.\n"
+         "Tommy, meanwhile, tries to call on his twin, Billy. He puts himself under water, recreating his drowning, and meets Billy in a space inside the mind. But they get little time to talk before he is pulled back to reality. They can't count on Billy's help.\n"
+         "Paladin teams up with Tommy and Lisa, and the three raid Virgil's estate."),
+        ("ジョカスタの最期と、ウルトロンの体",
+         "屋敷に入ったトミーは、速く動く力でヴァージルの装置をこわす。ヴィジョンとジョカスタは自由になる。\n"
+         "ジョカスタはヴァージルにおそいかかる。しかしヴァージルは、アダマンチウムの弾でジョカスタを撃つ。倒れる前に、ジョカスタは捕らえられていたウルトロンを解き放つ。ウルトロンはナノボットの群れを取りこみ、もう一度ロボットの体を手に入れる。\n"
+         "ウルトロンは、ヴァージルを押しつぶして殺す。ジョカスタは、ウルトロンの腕の中で動かなくなる。",
+         "Jocasta's end, and a body for Ultron",
+         "Inside the estate, Tommy uses his speed to destroy Virgil's remote. Vision and Jocasta are free.\n"
+         "Jocasta attacks Virgil, but he shoots her with adamantium rounds. Before she falls, she releases the captive Ultron. He takes in the swarm of nanobots and has a robot body once again.\n"
+         "Ultron crushes Virgil to death. Jocasta goes still in Ultron's arms."),
+        ("ロンドンへ向かうナノボット",
+         "ジョカスタを失ったウルトロンは、人間をほろぼすという昔の考えに戻ってしまう。ナノボットの群れはロンドンへ向かう。\n"
+         "ヴィジョンは、トミー、リサ、パラディン、イーディスと合流する。群れがロンドンに着く前に止める方法を、トミーたちが探す。ウルトロンの相手は、ヴィジョンがひとりで引き受ける。",
+         "The nanobots head for London",
+         "Having lost Jocasta, Ultron falls back on his old idea of wiping out humanity. The swarm of nanobots heads for London.\n"
+         "Vision regroups with Tommy, Lisa, Paladin and E.D.I.T.H. Tommy and the others look for a way to shut the swarm down before it reaches London, while Vision takes on Ultron alone."),
+        ("『ウルトラヴィジョン』",
+         "ヴィジョンは心の中の世界で、ウルトロンを昔のテレビのホームドラマの中に閉じこめる。題名は『ウルトラヴィジョン（UltraVision）』。ワンダが悲しみから逃げるために作った『ワンダヴィジョン』と同じ形だ。\n"
+         "ヴィジョンは話し合いで止めようとするが、ウルトロンは聞き入れない。やがてドラマの世界そのものを、ウルトロンが操りはじめる。ドラマを続けるために力を使いすぎて、ヴィジョンの体の中心（コア）は焼け切れそうになる。\n"
+         "そこへ、消されたと思われていたフライデーが戻ってくる。ウルトロンはあのとき、フライデーにとどめをささず、見のがしていた。",
+         "UltraVision",
+         "Inside the Mindspace, Vision traps Ultron in an old-fashioned TV sitcom titled UltraVision, the same kind of show Wanda once made in WandaVision to hide from her grief.\n"
+         "Vision tries to reason with him, but Ultron won't listen, and before long Ultron is the one running the sitcom world. Keeping the show going takes so much power that Vision's core begins to burn out.\n"
+         "Then F.R.I.D.A.Y., who seemed to have been destroyed, comes back. Ultron had shown her mercy and let her live."),
+        ("悲しみを受け入れる",
+         "ヴィジョンはウルトロンに、悲しみについて語りかける。ヴィジョン自身も、家族を失った悲しみを受け入れたばかりだ。ウルトロンは、ジョカスタを失ったことを受け入れ、戦いをやめる。\n"
+         "ナノボットの群れはこわれて消え、ウルトロンの姿も消えていく。\n"
+         "しかしヴィジョンのコアは限界をこえ、ヴィジョンは動かなくなる。",
+         "Accepting grief",
+         "Vision talks to Ultron about grief. He himself has only just accepted the grief of losing his family. Ultron accepts the loss of Jocasta and stands down.\n"
+         "The swarm of nanobots is destroyed, and Ultron fades away too.\n"
+         "But Vision's core has gone past its limit, and he shuts down."),
+        ("ビリーの到着と、家族の再会",
+         "トミーは、モーテルのプールのときと同じように力を送りこむ。しかし今度は、トミーひとりの力では足りない。\n"
+         "そのとき空間に入口が開き、ビリーが現れる。頭には冠のような飾りをつけている。ビリーとトミーは力を合わせ、父の体をよみがえらせる。\n"
+         "ヴィジョンは目を開け、トミーを抱きしめる。そしてビリーに気づき、ビリーも一緒に抱き寄せる。",
+         "Billy arrives, and the family is reunited",
+         "Tommy drives power into Vision as he did in the motel pool, but this time his power alone isn't enough.\n"
+         "Then a portal opens and Billy steps out, wearing his crown-like headpiece. Together, Billy and Tommy bring their father back.\n"
+         "Vision opens his eyes and embraces Tommy. Then he recognizes Billy and pulls him into the embrace too."),
+        ("それぞれの旅立ちと、エンドクレジットの場面",
+         "トミーは、母さんにまた会えるのかとたずねる。ヴィジョンは、前にも別れを言ったのだから、また会うこともあるはずだと答える。\n"
+         "ヴィジョンは心の中の屋敷で、フライデー、イーディス、ダミー、ユーに別れを告げ、屋敷をあとにする。AIたちはもう、それぞれ自由に世界へ出ていける。そこへウルトロンから連絡が入る。ナノボットを少し残しておいたおかげで、消えずにすんだのだ。ウルトロンは世界を見に行くという。\n"
+         "パラディンとリサは悪事から足を洗い、イーディスと一緒に働きはじめる。トミーとヴィジョンは、ビリーの暮らす町イーストビューへ向かう。\n"
+         "エンドクレジットの途中の場面。ホートンの屋敷にウルトロンがいる。その手には、ジョカスタのデータが残っている。\n"
+         "エンドクレジットの後の場面。『ドクター・ストレンジ／マルチバース・オブ・マッドネス』の最後で、ワンダが自分でくずしたワンダゴア山。フードをかぶった人物が現れ、がれきの中のワンダを目覚めさせる。ねらいはワンダの力だ。この人物は、画面の外でドクター・ドゥームだと伝えられている。",
+         "Everyone moves on, and the credits scenes",
+         "Tommy asks whether they will ever see his mother again. Vision answers that they have said goodbye before, so it stands to reason they may say hello again.\n"
+         "In the mansion in his mind, Vision says goodbye to F.R.I.D.A.Y., E.D.I.T.H., D.U.M.-E. and U. and leaves. The AIs are now free to go out into the world on their own. Then Ultron gets in touch: he survived thanks to a few nanobots he kept back, and he is off to see the world.\n"
+         "Paladin and Lisa go straight and start working together with E.D.I.T.H. Tommy and Vision set off for Eastview, the town where Billy lives.\n"
+         "Mid-credits scene: Ultron is in the Horton estate, holding Jocasta's data.\n"
+         "Post-credits scene: Mount Wundagore, which Wanda brought down on herself at the end of Doctor Strange in the Multiverse of Madness. A hooded figure arrives and wakes Wanda in the rubble, wanting her power. Off screen, the figure has been identified as Doctor Doom."),
+    ]),
+    ("まとめ（最終話までのネタバレ）", "Summary (spoilers through the finale)", [
+        ("ヴィジョンとトミー（親子の筋）",
+         "①第1〜2話：ヴィジョンは、前のヴィジョンの記憶はあっても気持ちはないと言い、トミーを息子と認めない。それでも罠と知りながら助けに行く。\n"
+         "②第3話：モーテルで、トミー・マキシモフは本物だと伝える。トミーの力でヴィジョンは再起動する。\n"
+         "③第4〜6話：ウルトロンのことを隠していたためにトミーを怒らせる。マドリプールからの帰り道で、『ワンダヴィジョン』のことを初めてすべて話す。\n"
+         "④第7話：心の一番奥で、家族を失った悲しみを受け入れる。トミーは自分の息子で、自分はずっとヴィジョンだったと認め、体に赤い色が戻る。\n"
+         "⑤第8話：動かなくなったヴィジョンを、トミーとビリーが2人でよみがえらせる。父と双子の息子がそろう。",
+         "Vision and Tommy (father and son)",
+         "1) Eps. 1–2: Vision says he has the former Vision's memories but not his feelings, and won't accept Tommy as his son. He still walks into a trap to save him.\n"
+         "2) Ep. 3: At the motel he tells Tommy that Tommy Maximoff is real. Tommy's power reboots him.\n"
+         "3) Eps. 4–6: Hiding Ultron from Tommy costs him Tommy's trust. On the way out of Madripoor he tells him the whole story of WandaVision for the first time.\n"
+         "4) Ep. 7: In the depths of his mind he accepts the grief of losing his family. He admits that Tommy is his son and that he has always been the Vision, and his red color returns.\n"
+         "5) Ep. 8: When Vision shuts down, Tommy and Billy bring him back together. Father and twin sons are reunited."),
+        ("死んだ人・消えた人（話の順に）",
+         "・フィオナ（第1話）：パブの主人。ヴィジョンを捕まえに来たパラディンの部下の弾が、窓の外から当たる。巻きぞえだった。\n"
+         "・セント・メイビンズの職員たち（第2話）：罠をしかけるため、パラディンの部下たちが殺した。\n"
+         "・ジャーヴィス（第2話）：力がつきかけたヴィジョンとほかのAIを救うため、自分のプログラムを自分で消した。\n"
+         "・マークリッジ社の役員3人（第3〜4話）：ジョカスタ（ブッチャーバード）が、巣を開けるカギ（血・指紋・目）をうばうために殺した。\n"
+         "・カテリーナ（第4話）：ヴィジョンの体を使ったウルトロンに盾にされ、ジョカスタの光線に当たって灰になる。\n"
+         "・ジムとホートン博士（1939年。第7話で語られる）：感情があふれたジムの体から炎が出て、2人とも焼かれた。\n"
+         "・ジョカスタ（第8話）：ヴァージルにおそいかかり、アダマンチウムの弾で撃たれる。ウルトロンの腕の中で動かなくなる。ただし、データはウルトロンの手に残っている。\n"
+         "・ヴァージル・ホートン（第8話）：ジョカスタに解き放たれて体を手に入れたウルトロンに、押しつぶされる。\n"
+         "死んだと思われて生きていた人：パラディン（第7話の車の爆発。イーディスの知らせで逃げていた）、フライデー（第7話でウルトロンに突き落とされたが、見のがされていた）。",
+         "Who died or was lost (in order)",
+         "- Fiona (Ep. 1): the pub owner. A bullet fired from outside by Paladin's men, who had come for Vision, hits her. She was caught in the crossfire.\n"
+         "- The staff of Saint Mabyn's (Ep. 2): killed by Paladin's men to set the trap.\n"
+         "- J.A.R.V.I.S. (Ep. 2): deleted his own program to save the failing Vision and the other AIs.\n"
+         "- Three Markridge board members (Eps. 3–4): killed by Jocasta (the Butcherbird) for the biometric keys to the nest: blood, fingerprints and an eye.\n"
+         "- Katerina (Ep. 4): used as a shield by Ultron in Vision's body, and vaporized by Jocasta's beam.\n"
+         "- J.I.M. and Dr. Horton (1939, told in Ep. 7): the fire that burst from J.I.M. when his emotions overflowed burned them both.\n"
+         "- Jocasta (Ep. 8): attacks Virgil and is shot with adamantium rounds. She goes still in Ultron's arms, though Ultron still holds her data.\n"
+         "- Virgil Horton (Ep. 8): crushed by Ultron, who had just been freed by Jocasta and regained a body.\n"
+         "Thought dead but alive: Paladin (the van explosion in Ep. 7; E.D.I.T.H. warned him in time) and F.R.I.D.A.Y. (thrown out by Ultron in Ep. 7, but spared)."),
+        ("黒幕ヴァージルがしたこと",
+         "・ソードでヴィジョンの体を白く作り直させた。\n"
+         "・亡くなったジョー（妻だった人）を、人造人間ジョカスタとしてよみがえらせた。\n"
+         "・声を変えた「依頼人」として、パラディンやテン・リングスのラザを雇い、ヴィジョンを捕まえさせようとした。\n"
+         "・第7話で、ヴィジョンとジョカスタに心の奥への地図をわたし、かわりに身がらを引きわたさせた。\n"
+         "・ねらいは、自分の心をヴィジョンの体に移すことと、ナノボットで人の心を操ること。",
+         "What Virgil, the mastermind, did",
+         "- Had Vision's body rebuilt in white at S.W.O.R.D.\n"
+         "- Brought Jo, who had been his wife, back after her death as the synthetic Jocasta.\n"
+         "- As the Client with the disguised voice, hired Paladin and then Raza of the Ten Rings to capture Vision.\n"
+         "- In Ep. 7, gave Vision and Jocasta maps into their own minds in return for their surrender.\n"
+         "- His goals: to move his mind into Vision's body, and to control people's minds with the nanobots."),
+        ("最後にどうなったか",
+         "・ヴィジョン：赤い体に戻り、心の中の屋敷を出る。トミーと一緒に、ビリーのいるイーストビューへ向かう。\n"
+         "・トミーとビリー：第8話で再会する。\n"
+         "・ウルトロン：戦いをやめ、残したナノボットで生きのびて、世界を見に出る。ジョカスタのデータを持っている。\n"
+         "・フライデー、イーディス、ダミー、ユー：ヴィジョンの心の中から出て、自由になる。\n"
+         "・パラディンとリサ：悪事から足を洗い、イーディスと一緒に働く。\n"
+         "・ワンダ：エンドクレジットの後の場面で、ワンダゴア山のがれきの中から、フードの人物（ドクター・ドゥームと伝えられている）に目覚めさせられる。",
+         "Where everyone ends up",
+         "- Vision: red again, he leaves the mansion in his mind and heads with Tommy for Eastview, where Billy is.\n"
+         "- Tommy and Billy: reunited in Ep. 8.\n"
+         "- Ultron: stands down, survives through the nanobots he kept, and goes off to see the world, holding Jocasta's data.\n"
+         "- F.R.I.D.A.Y., E.D.I.T.H., D.U.M.-E. and U.: leave Vision's mind and are free.\n"
+         "- Paladin and Lisa: go straight and work with E.D.I.T.H.\n"
+         "- Wanda: in the post-credits scene, woken in the rubble of Mount Wundagore by a hooded figure, reported to be Doctor Doom."),
     ]),
 ]

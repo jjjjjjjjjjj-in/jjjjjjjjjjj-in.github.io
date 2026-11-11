@@ -4477,8 +4477,8 @@ RELATION_MAPS = {
     ),
     "visionquest": dict(
         updated="2026-11-02",
-        lead="ヴィジョンを中心に、『ビジョンクエスト』（2026年・配信中）に登場する人物の関係をまとめました。第6話までの内容です。",
-        lead_en="Who's who in VisionQuest (2026, now airing), with Vision at the center. Covers Episodes 1–6.",
+        lead="ヴィジョンを中心に、『ビジョンクエスト』（2026年・全8話）に登場する人物の関係をまとめました。相関図は第6話までの内容です。",
+        lead_en="Who's who in VisionQuest (2026, 8 episodes), with Vision at the center. The map covers Episodes 1–6.",
         groups=[dict(x=-640, y=-760, label="ヴィジョンの心の中", label_en="Inside Vision's mind")],
         people=[
             dict(id="vision", role="lead", side="hero", x=0, y=0, tone="red", badge='主人公', badge_en='HERO',

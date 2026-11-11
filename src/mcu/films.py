@@ -6206,35 +6206,30 @@ FILM_GUIDES = {
               ("ブラックパンサー／ワカンダ・フォーエバー Blu-ray", "ワカンダ フォーエバー ブルーレイ", "Wakanda Forever Blu-ray")],
     ),
     "visionquest": dict(
-        updated="2026-11-10",
+        updated="2026-11-11",
         # ページの色（ヴィジョンの赤と緑に、マインド・ストーンの金）
         theme=dict(main="#8a1f3a", deep="#0d1210", accent="#e2b84a", soft="#f3e3e8"),
-        runtime="全8話（配信中）", runtime_en="8 episodes (airing)",
-        # 話ごとに押して開く形。まだ配信されていない話は「未公開」と配信予定日だけを出す（運営者の希望、2026-11-02）
+        runtime="全8話", runtime_en="8 episodes",
+        # 話ごとに押して開く形（運営者の希望、2026-11-02）。2026-11-11 に最終話まで入れたので upcoming は空
         episodes_fold=True,
-        upcoming=[
-            ("第8話（最終話）「フォーエバー」", "Episode 8 (finale): Forever",
-             "Disney+で11月10日（アメリカ時間）に配信予定です。配信されたら、あらすじを追加します。",
-             "Scheduled for November 10 (US time) on Disney+. We'll add the recap once it's out."),
-        ],
         summary=[
             "ヴィジョンは、人間のふりをしてパブで働きながら、静かに暮らしている。",
             "ワンダとの間の息子トミーが生きていると知り、ヴィジョンは彼を救い出す。",
-            "ヴィジョンの心の中には、昔の敵ウルトロンも閉じこめられていた。",
+            "心の中に閉じこめていた昔の敵ウルトロンと向き合い、最後に家族と再会する。",
         ],
         summary_en=[
             "Vision is living quietly as a human, working at a pub.",
             "Learning that Tommy, his son with Wanda, is alive, he rescues him.",
-            "But his old enemy Ultron is locked away inside his mind.",
+            "He faces Ultron, the old enemy locked inside his mind, and is reunited with his family at the end.",
         ],
         before=[
-            ("配信中のドラマです", "全8話のうち、第7話まで配信されています（2026年11月5日時点）。最終話は11月10日（アメリカ時間）の配信予定です。"),
+            ("全8話のドラマです", "Disney+で2026年10月13日から11月10日（アメリカ時間）まで配信され、最終話まで出そろいました。"),
             ("『ワンダヴィジョン』の続き", "『ワンダヴィジョン』の最後に、白いヴィジョンが記憶を取り戻して飛び去りました。その後の物語です。"),
             ("トミー", "ワンダが魔法で生み出した双子の1人、トミーが登場します。もう1人のビリーは『アガサ・オール・アロング』に出てきました。"),
             ("トニーのAIたち", "トニー・スタークが作った人工知能、フライデーやイーディスなどが、人の姿で登場します。"),
         ],
         before_en=[
-            ("Still airing", "Seven of eight episodes are out as of November 5, 2026. The finale arrives November 10 (US time)."),
+            ("An eight-episode series", "It ran on Disney+ from October 13 to November 10, 2026 (US time), and all episodes are now out."),
             ("After WandaVision", "At the end of WandaVision, White Vision regained his memories and flew away. This picks up from there."),
             ("Tommy", "Tommy, one of the twins Wanda created, appears. His brother Billy was in Agatha All Along."),
             ("Tony's AIs", "Tony Stark's AIs, like F.R.I.D.A.Y. and E.D.I.T.H., appear in human form."),
@@ -6258,8 +6253,8 @@ FILM_GUIDES = {
              "3. The Butcherbird", "The killer picking off tech figures turns out to be a synthetic being based on the late Dr. Carrington.\nUnable to stop her at the gala, Vision hands his body to Ultron, who gets the last target, Katerina, killed and leaves with Tommy."),
             ("4. ウルトロンの自由とマドリプール", "ヴィジョンはトミーを助けるため、ウルトロンを外の世界へ放す。\nマドリプールでトミーを取り戻すが、ジョカスタと呼ばれるようになった人造人間が、人の心を操る小さな機械をリサに入れる。",
              "4. Ultron goes free, and Madripoor", "To save Tommy, Vision lets Ultron out into the world.\nHe gets Tommy back in Madripoor, but the synthetic being now called Jocasta puts a mind-controlling nanobot into Lisa."),
-            ("5. 第7話と最終話", "ヴィジョンは依頼人との取引で自分の心の奥へおり、家族を失った悲しみを受け入れて、トミーを息子と認める。\nリサを救ったあと、約束どおり依頼人のもとへ向かう。依頼人の顔は、ウルトロンの人間の姿と同じだった（最終話は配信待ち）。",
-             "5. Episode 7 and the finale", "In a deal with the Client, Vision descends into the depths of his own mind, accepts the grief of losing his family and acknowledges Tommy as his son.\nAfter saving Lisa he hands himself over as promised. The Client has the same face as Ultron's human form (the finale is still to come)."),
+            ("5. 第7話と最終話", "ヴィジョンは依頼人との取引で自分の心の奥へおり、家族を失った悲しみを受け入れて、トミーを息子と認める。リサを救ったあと、約束どおり依頼人のもとへ向かう。\n依頼人の正体は、ホートン博士の孫でジョーの夫だったヴァージル。自分の心をヴィジョンの体に移し、ナノボットで人の心を操ろうとしていた。トミーたちが助けに入るが、ジョカスタは撃たれ、体を手に入れたウルトロンがヴァージルを殺して人間をほろぼそうとする。\nヴィジョンは心の中のホームドラマにウルトロンを閉じこめ、悲しみについて語りかけて戦いをやめさせる。力を使いはたして動かなくなったヴィジョンを、かけつけたビリーとトミーがよみがえらせ、家族は再会する。",
+             "5. Episode 7 and the finale", "In a deal with the Client, Vision descends into the depths of his own mind, accepts the grief of losing his family and acknowledges Tommy as his son. After saving Lisa he hands himself over as promised.\nThe Client is Virgil, Dr. Horton's grandson and the man who was Jo's husband. He meant to move his mind into Vision's body and control people's minds with the nanobots. Tommy and the others break in, but Jocasta is shot, and Ultron, with a body again, kills Virgil and sets out to wipe out humanity.\nVision traps Ultron in a sitcom inside his mind and talks him down by speaking about grief. Vision burns out and shuts down, but Billy arrives and, with Tommy, brings him back, and the family is reunited."),
         ],
         confusing=[
             ("このヴィジョンは誰？",
