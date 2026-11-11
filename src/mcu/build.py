@@ -30,7 +30,18 @@ PRIVACY_URL = BASE_URL + "privacy.html"
 # 広告（運営者の登録済みID。CLAUDE.md 参照）
 AMAZON_TAG = "doomsdayguide-22"
 AMAZON_TAG_US = "doomsdaygui08-20"
-RAKUTEN_TOP = "https://af.moshimo.com/af/c/click?a_id=5875908&p_id=54&pc_id=54&pl_id=616"
+RAKUTEN_TOP = True  # 楽天ボタンを出すかどうか
+# 楽天は A8.net 経由（2026-11-11 に、もしも経由から替えた。もしもの登録が削除されたため）。A8 の「任意ページリンク生成」と同じ形
+A8_RAKUTEN_MAT = "4BESUC+2A5VSY+2HOM+BW8O1"
+A8_RAKUTEN_PIXEL = f'<img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat={A8_RAKUTEN_MAT}" alt="">'
+
+
+def a8_rakuten(url):
+    """楽天のページ（url）へ行く、A8.net 経由のリンクを作る"""
+    from urllib.parse import quote as _q
+    hb = ("http://hb.afl.rakuten.co.jp/hgc/0ea62065.34400275.0ea62066.204f04c0/a26103176848_" + A8_RAKUTEN_MAT.replace("+", "_")
+          + "?pc=" + _q(url, safe="") + "&m=" + _q(url, safe=""))
+    return f"https://rpx.a8.net/svt/ejp?a8mat={A8_RAKUTEN_MAT}&rakuten=y&a8ejpredirect=" + _q(hb, safe="")
 # A8.net の DMM ブックス（2026-11-09 承認、2026-11-11 設置）。A8 の決まりで、コードは変えずにそのまま使う。日本語版だけ
 A8_DMM_BOOKS = ('<a href="https://px.a8.net/svt/ejp?a8mat=4BGFJF+8CNYTE+6HW+3SY4KI" rel="nofollow">【DMMブックス】</a>'
                 '<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4BGFJF+8CNYTE+6HW+3SY4KI" alt="">')
@@ -104,8 +115,7 @@ def amazon_url(key, lang):
 
 
 def rakuten_url(keyword):
-    inner = f"https://search.rakuten.co.jp/search/mall/{quote(keyword)}/"
-    return f"{RAKUTEN_TOP}&url={quote(inner, safe='')}"
+    return a8_rakuten(f"https://search.rakuten.co.jp/search/mall/{quote(keyword)}/")
 
 
 # 全作品ガイドで共通に出すおすすめ商品（運営者の希望で広告を増やした、2026-11-02）
@@ -185,7 +195,7 @@ def common_panel(lang):
     if lang == "ja" and RAKUTEN_TOP:
         btns.append(f'<a class="btn ad" href="{e(rakuten_url("マーベル グッズ"))}" target="_blank" rel="sponsored noopener">楽天でマーベルのグッズを探す</a>')
     books = f'<p class="fg-a8">コミックや本を電子書籍で読むなら {A8_DMM_BOOKS}</p>' if lang == "ja" else ""
-    return f'<aside class="panel"><h2>{e(t["common_shop"])} <span class="pr">PR</span></h2><div class="btns">{"".join(btns)}</div>{books}</aside>'
+    return f'<aside class="panel"><h2>{e(t["common_shop"])} <span class="pr">PR</span></h2><div class="btns">{"".join(btns)}</div>{books}{A8_RAKUTEN_PIXEL if lang == "ja" and RAKUTEN_TOP else ""}</aside>'
 
 
 def shop_panel(g, lang):
@@ -198,7 +208,8 @@ def shop_panel(g, lang):
             btns.append(f'<a class="btn ad" href="{e(rakuten_url(kw))}" target="_blank" rel="sponsored noopener">{e(label)}（楽天）</a>')
     if not btns:
         return ""
-    return f'<aside class="panel"><h2>{e(t["shop"])} <span class="pr">PR</span></h2><div class="btns">{"".join(btns)}</div></aside>'
+    books = f'<p class="fg-a8">コミックや本を電子書籍で読むなら {A8_DMM_BOOKS}</p>' if lang == "ja" else ""  # ページの途中にも出す（運営者の希望、2026-11-11）
+    return f'<aside class="panel"><h2>{e(t["shop"])} <span class="pr">PR</span></h2><div class="btns">{"".join(btns)}</div>{books}</aside>'
 
 
 def head(slug, title, desc, lang, prefix, schema, site_name):

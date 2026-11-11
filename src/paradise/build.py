@@ -79,18 +79,30 @@ def icon(name):
             f'stroke-linecap="round" stroke-linejoin="round">{ICONS[name]}</svg>')
 
 
+# 楽天は A8.net 経由（2026-11-11 に、もしも経由から替えた。もしもの登録が削除されたため）。A8 の「任意ページリンク生成」と同じ形
+A8_RAKUTEN_MAT = "4BESUC+2A5VSY+2HOM+BW8O1"
+A8_RAKUTEN_PIXEL = f'<img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat={A8_RAKUTEN_MAT}" alt="">'
+
+
+def a8_rakuten(url):
+    """楽天のページ（url）へ行く、A8.net 経由のリンクを作る"""
+    from urllib.parse import quote as _q
+    hb = ("http://hb.afl.rakuten.co.jp/hgc/0ea62065.34400275.0ea62066.204f04c0/a26103176848_" + A8_RAKUTEN_MAT.replace("+", "_")
+          + "?pc=" + _q(url, safe="") + "&m=" + _q(url, safe=""))
+    return f"https://rpx.a8.net/svt/ejp?a8mat={A8_RAKUTEN_MAT}&rakuten=y&a8ejpredirect=" + _q(hb, safe="")
+
+
 def travel_ads(keys):
     from urllib.parse import quote
     rows = []
     for name, kw in (D.TRAVEL_GOODS[k] for k in keys):
         amz = f"https://www.amazon.co.jp/s?k={quote(kw)}&tag={D.AMAZON_TAG}"
-        rak = (f"https://af.moshimo.com/af/c/click?a_id={D.MOSHIMO_A_ID}&p_id=54&pc_id=54&pl_id=616&url="
-               + quote(f"https://search.rakuten.co.jp/search/mall/{quote(kw)}/", safe=""))
+        rak = a8_rakuten(f"https://search.rakuten.co.jp/search/mall/{quote(kw)}/")
         rows.append(f'<li><span>{e(name)}</span><span class="ad-links"><a href="{e(amz)}" target="_blank" rel="sponsored noopener">Amazon</a>'
                     f'<a href="{e(rak)}" target="_blank" rel="sponsored noopener">楽天市場</a></span></li>')
     return f"""<aside class="ads" aria-labelledby="h-ads"><h2 id="h-ads"><span class="pr">PR</span>韓国旅行の持ち物</h2>
   <p class="muted">旅行の準備に役立つ物です。リンク先はAmazonと楽天市場の検索結果です。</p>
-  <ul class="ad-list">{''.join(rows)}</ul>
+  <ul class="ad-list">{''.join(rows)}</ul>{A8_RAKUTEN_PIXEL}
   <p class="muted">このコーナーは広告（アフィリエイト）です。Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。</p>
 </aside>"""
 

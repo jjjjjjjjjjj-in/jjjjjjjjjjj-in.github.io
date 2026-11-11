@@ -26,7 +26,17 @@ PICKS = [
     ("マーベルのTシャツ", "マーベル Tシャツ", "Marvel T-shirts", "Marvel t-shirt"),
 ]
 AMAZON_TAG, AMAZON_TAG_US = "doomsdayguide-22", "doomsdaygui08-20"
-RAKUTEN_TOP = "https://af.moshimo.com/af/c/click?a_id=5875908&p_id=54&pc_id=54&pl_id=616"
+# 楽天は A8.net 経由（2026-11-11 に、もしも経由から替えた。もしもの登録が削除されたため）。A8 の「任意ページリンク生成」と同じ形
+A8_RAKUTEN_MAT = "4BESUC+2A5VSY+2HOM+BW8O1"
+A8_RAKUTEN_PIXEL = f'<img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat={A8_RAKUTEN_MAT}" alt="">'
+
+
+def a8_rakuten(url):
+    """楽天のページ（url）へ行く、A8.net 経由のリンクを作る"""
+    from urllib.parse import quote as _q
+    hb = ("http://hb.afl.rakuten.co.jp/hgc/0ea62065.34400275.0ea62066.204f04c0/a26103176848_" + A8_RAKUTEN_MAT.replace("+", "_")
+          + "?pc=" + _q(url, safe="") + "&m=" + _q(url, safe=""))
+    return f"https://rpx.a8.net/svt/ejp?a8mat={A8_RAKUTEN_MAT}&rakuten=y&a8ejpredirect=" + _q(hb, safe="")
 
 
 def shop_html(lang):
@@ -35,10 +45,10 @@ def shop_html(lang):
         links = [(en, f"https://www.amazon.com/s?k={quote(kw_en)}&tag={AMAZON_TAG_US}") for _, _, en, kw_en in PICKS]
     else:
         links = [(ja, f"https://www.amazon.co.jp/s?k={quote(kw)}&tag={AMAZON_TAG}") for ja, kw, _, _ in PICKS]
-        links.append(("楽天でマーベルのグッズを探す", f"{RAKUTEN_TOP}&url={quote('https://search.rakuten.co.jp/search/mall/' + quote('マーベル グッズ') + '/', safe='')}"))
+        links.append(("楽天でマーベルのグッズを探す", a8_rakuten('https://search.rakuten.co.jp/search/mall/' + quote('マーベル グッズ') + '/')))
     btns = "".join(f'<a href="{e(u)}" target="_blank" rel="sponsored noopener">{e(l)}</a>' for l, u in links)
     return (f'<section class="mshop"><h2>{e(t["shop"])} <span class="mpr">{e(t["pr"])}</span></h2>'
-            f'<div class="mshop-btns">{btns}</div><p class="mshop-note">{e(t["amazon_note"])}</p></section>')
+            f'<div class="mshop-btns">{btns}</div>{A8_RAKUTEN_PIXEL if lang != "en" else ""}<p class="mshop-note">{e(t["amazon_note"])}</p></section>')
 
 e = html.escape
 
