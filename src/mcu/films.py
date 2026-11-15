@@ -3436,7 +3436,7 @@ FILM_GUIDES = {
               ("ガーディアンズのサウンドトラック", "ガーディアンズ サウンドトラック", "Guardians of the Galaxy soundtrack")],
     ),
     "x-men": dict(
-        updated="2026-11-10",
+        updated="2026-11-15",
         # ページの色（X-MENの黒い制服と、黄色のXのマーク）
         theme=dict(main="#1f2a44", deep="#0c0f18", accent="#f2c02e", soft="#e8eaf0"),
         runtime="104分", runtime_en="104 min",
@@ -3479,10 +3479,10 @@ FILM_GUIDES = {
              "Part 1: Two beginnings", "In a Polish concentration camp in 1944, a boy named Erik, torn from his parents, bends an iron gate with magnetism.\nIn the near future, Marie's kiss puts her boyfriend in a coma, and she runs away, calling herself Rogue.\nIn Congress, a hearing on the Mutant Registration Act is watched by Professor X and Erik, now called Magneto."),
             ("第2部 カナダでの出会い", "カナダの酒場で、ローグは金属の爪を持ち、けががすぐ治る男ローガンと出会う。\nローガンには昔の記憶がない。2人の乗ったトレーラーは雪道でセイバートゥースに襲われるが、サイクロップスとストームが助ける。",
              "Part 2: A meeting in Canada", "In a Canadian bar, Rogue meets Logan, a man with metal claws who heals almost instantly.\nHe has no memory of his past. On a snowy road Sabretooth attacks them, but Cyclops and Storm come to the rescue."),
-            ("第3部 恵まれし子らの学園", "2人が運ばれたのは、プロフェッサーXのミュータントのための学校だった。ローガンは過去を探す手伝いを条件に、しばらくとどまる。\nそのころマグニートーの仲間がケリー議員をさらい、マグニートーは人間をミュータントに変える機械を議員で試す。\n機械を動かしたマグニートーはひどく弱り、変えられた議員は牢屋から逃げ出す。",
-             "Part 3: The school for gifted youngsters", "They have been brought to Professor X's school for young mutants. Logan agrees to stay if Xavier helps him find his past.\nMeanwhile, Magneto's followers kidnap Senator Kelly, and Magneto tests a machine that turns humans into mutants on him.\nRunning it leaves Magneto badly weakened, and the transformed senator escapes his cell."),
-            ("第4部 ローグの家出", "悪夢にうなされたローガンが、起こしに来たローグを爪で刺してしまう。ローグはローガンの治る力を吸って助かる。\nボビーに化けたミスティークにだまされ、ローグは学園を出る。ローガンは列車でローグを見つけるが、マグニートーが現れてローグをさらう。\nマグニートーがねらっていたのは、ローガンではなくローグだった。",
-             "Part 4: Rogue runs away", "Caught in a nightmare, Logan stabs Rogue when she tries to wake him. She survives by absorbing his healing power.\nTricked by Mystique posing as Bobby, Rogue leaves the school. Logan finds her on a train, but Magneto arrives and takes her.\nIt was Rogue, not Logan, that Magneto wanted."),
+            ("第3部 恵まれし子らの学園", "2人が運ばれたのは、プロフェッサーXのミュータントのための学校だった。ローガンは過去を探す手伝いを条件に、しばらくとどまる。\nジーンが調べると、ローガンの骨には全身にわたって固い金属が付けられていた。\nそのころマグニートーの仲間がケリー議員をさらい、マグニートーは人間をミュータントに変える機械を議員で試す。機械を動かしたマグニートーは、ひどく弱る。",
+             "Part 3: The school for gifted youngsters", "They have been brought to Professor X's school for young mutants. Logan agrees to stay if Xavier helps him find his past.\nJean's tests show that a hard metal has been bonded to Logan's entire skeleton.\nMeanwhile, Magneto's followers kidnap Senator Kelly, and Magneto tests a machine that turns humans into mutants on him. Running it leaves Magneto badly weakened."),
+            ("第4部 ローグの家出", "悪夢にうなされたローガンが、起こしに来たローグを爪で刺してしまう。ローグはローガンの治る力を吸って助かる。ミュータントに変えられたケリー議員は、伸び縮みする体で牢屋から逃げ出す。\nボビーに化けたミスティークにだまされ、ローグは学園を出る。ローガンは列車でローグを見つけるが、マグニートーが現れてローグをさらう。\nマグニートーがねらっていたのは、ローガンではなくローグだった。",
+             "Part 4: Rogue runs away", "Caught in a nightmare, Logan stabs Rogue when she tries to wake him. She survives by absorbing his healing power. Senator Kelly, now a mutant with a body that stretches, escapes his cell.\nTricked by Mystique posing as Bobby, Rogue leaves the school. Logan finds her on a train, but Magneto arrives and takes her.\nIt was Rogue, not Logan, that Magneto wanted."),
             ("第5部 ケリーの最期と決戦の準備", "学園にたどり着いたケリー議員の心から、X-MENはマグニートーの計画を知る。ローグに力を吸わせ、命と引きかえに機械を動かさせるつもりだった。\n議員の体は水になって消える。ミスティークの細工でプロフェッサーXが倒れ、ジーンがセレブロで、ねらいが自由の女神像だと突き止める。",
              "Part 5: Kelly's end and getting ready", "From Kelly's mind, the X-Men learn Magneto's plan: to make Rogue absorb his power and run the machine at the cost of her life.\nKelly's body dissolves into water. Mystique's sabotage puts Professor X in a coma, and Jean uses Cerebro to find the target: the Statue of Liberty."),
             ("第6部 自由の女神像の戦い", "X-MENは像の中でミスティークとトードを倒すが、マグニートーにつかまる。マグニートーはローグに力を吸わせ、首脳会議のリーダーたちをねらって機械を動かさせる。\nサイクロップスがセイバートゥースとマグニートーを打ち倒し、ローガンが機械をこわす。\nローガンは死にかけたローグに治る力を分け与えて救い、自分は倒れる。",
