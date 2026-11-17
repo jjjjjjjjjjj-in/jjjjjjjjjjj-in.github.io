@@ -75,6 +75,10 @@ p { margin: 0; }
 .hot-note { margin-top: 14px; }
 .free-stay { border: 2px solid var(--gold); border-radius: 12px; padding: 16px; background: #fffdf7; }
 .free-stay h3 { margin: 18px 0 8px; }
+.free-table { width: 100%; border-collapse: collapse; font-size: 14.5px; background: var(--paper); }
+.free-table th, .free-table td { border: 1px solid var(--line); padding: 8px 10px; text-align: center; }
+.free-table th { background: #fff7e8; font-size: 13px; }
+.table-wrap { overflow-x: auto; }
 .tile span { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
 .tile:hover, .tile:focus-visible { border-color: var(--gold); }
 
