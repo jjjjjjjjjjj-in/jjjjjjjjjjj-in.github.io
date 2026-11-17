@@ -322,6 +322,12 @@ def free_stay_section():
   <div class="table-wrap"><table class="free-table"><thead><tr><th>泊数</th><th>平日（日〜金）のチップ購入額</th><th>土曜日を含む場合</th><th>ゲーム時間</th></tr></thead><tbody>{rows}</tbody></table></div>
   <p class="muted">土曜日を含む場合は、平日の金額＋20万円です。朝食券は1泊につき1枚つきます。</p>
   {source(*f["table_src"])}''' if rows else "")
+    notes = "".join(f"<li>{e(c)}</li>" for c in f.get("apply_notes", []))
+    apply = (f'''<h3 id="h-free-apply">申し込み方</h3>
+  <ul class="checklist">{notes}</ul>
+  <p><a class="btn primary" href="{e(f["apply_url"])}" target="_blank" rel="noopener">公式の予約フォームを開く</a></p>
+  {source(*f["apply_src"])}''' if f.get("apply_url") else "")
+    index_search("無料宿泊", "stay.html#h-free-apply", "無料宿泊の申し込み方", " ".join(f.get("apply_notes", [])))
     for d in f["points"]:
         index_search("無料宿泊", "stay.html#h-free", d["title"], d["text"])
     index_search("無料宿泊", "stay.html#h-free", "無料宿泊キャンペーン", f["lead"] + " " + " ".join(f["cautions"]))
@@ -329,6 +335,7 @@ def free_stay_section():
   <p>{e(f['lead'])}</p>
   {current}
   {table}
+  {apply}
   <h3>条件について分かっていること</h3>
   {item_cards(f['points'])}
   <h3>気をつけること</h3>
