@@ -70,6 +70,11 @@ p { margin: 0; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
 .tile { display: grid; gap: 4px; align-content: start; background: var(--paper); border: 1px solid var(--line); border-top: 3px solid var(--gold); border-radius: 8px; padding: 14px; text-decoration: none; color: var(--text); min-height: 108px; }
 .tile strong { font-size: 15px; }
+.tile.hot { background: #fff7e8; border-color: var(--gold); border-top-width: 5px; }
+.tile.hot strong::after { content: "注目"; margin-left: 6px; font-size: 11px; background: var(--gold); color: #fff; border-radius: 4px; padding: 1px 6px; vertical-align: middle; }
+.hot-note { margin-top: 14px; }
+.free-stay { border: 2px solid var(--gold); border-radius: 12px; padding: 16px; background: #fffdf7; }
+.free-stay h3 { margin: 18px 0 8px; }
 .tile span { font-size: 12.5px; color: var(--muted); line-height: 1.6; }
 .tile:hover, .tile:focus-visible { border-color: var(--gold); }
 

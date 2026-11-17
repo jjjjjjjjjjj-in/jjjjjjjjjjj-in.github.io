@@ -32,7 +32,8 @@ NAV = [
 ]
 # トップのタイル（運営者の希望の順）
 TILES = [
-    ("start.html", "最初にやること", "到着から帰るまでの流れ"), ("perks.html", "お得情報", "会員特典・クーポン・ポイント"),
+    ("start.html", "最初にやること", "到着から帰るまでの流れ"), ("stay.html#h-free", "無料宿泊", "遊ぶと宿泊が無料になるキャンペーン"),
+    ("perks.html", "お得情報", "会員特典・クーポン・ポイント"),
     ("articles.html", "体験談ブログ", "8回以上通った運営者の記録"), ("cafe9.html", "Cafe 9", "食事券の使い方とご飯"),
     ("stay.html", "宿泊プラン", "ホテルと無料宿泊"), ("guide.html", "初心者ガイド", "ルール・ゲーム・予算"),
     ("faq.html", "よくある質問", "パスポート・日本円など"), ("campaigns.html", "キャンペーン", "今月の情報と過去の事例"),
@@ -293,9 +294,45 @@ def deal_cards(items):
 
 # ---------- pages ----------
 
+def free_stay_now():
+    """今月の無料宿泊キャンペーン（公式LINEの案内）だけを拾う"""
+    return [c for c in D.CAMPAIGNS["current"] if c["name"].startswith("無料宿泊キャンペーン")]
+
+
+def free_stay_banner():
+    now = free_stay_now()
+    if now:
+        ends = sorted(c["book_to"] for c in now if c["book_to"])
+        until = f"予約は {ends[0]} まで。" if ends else ""
+        text = f"<strong>無料宿泊キャンペーン：今月は{len(now)}つのプランが案内されています。</strong>{until}条件と注意点をまとめました。"
+    else:
+        text = "<strong>無料宿泊キャンペーン：</strong>カジノで遊ぶと宿泊が無料になるキャンペーンのしくみと注意点をまとめました。"
+    return f'<p class="notice hot-note">{text} <a href="stay.html#h-free">無料宿泊のまとめを見る</a></p>'
+
+
+def free_stay_section():
+    f = D.FREE_STAY
+    now = free_stay_now()
+    cards = "".join(campaign_card(c) for c in now)
+    current = (f'<h3>今月のプラン</h3><div class="cards">{cards}</div>' if now else
+               '<p class="notice">今月の無料宿泊キャンペーンの案内は、まだ確認できていません。公式LINEで確認してください。</p>')
+    cautions = "".join(f"<li>{e(c)}</li>" for c in f["cautions"])
+    for d in f["points"]:
+        index_search("無料宿泊", "stay.html#h-free", d["title"], d["text"])
+    index_search("無料宿泊", "stay.html#h-free", "無料宿泊キャンペーン", f["lead"] + " " + " ".join(f["cautions"]))
+    return f"""<section class="free-stay" aria-labelledby="h-free"><h2 id="h-free">無料宿泊キャンペーン</h2>
+  <p>{e(f['lead'])}</p>
+  {current}
+  <h3>条件について分かっていること</h3>
+  {item_cards(f['points'])}
+  <h3>気をつけること</h3>
+  <ul class="checklist">{cautions}</ul>
+</section>"""
+
+
 def page_index():
     tile_html = '<nav class="tiles" aria-label="主なページ">' + "".join(
-        f'<a class="tile" href="{u}"><strong>{e(t)}</strong><span>{e(sub)}</span></a>' for u, t, sub in TILES) + "</nav>"
+        f'<a class="tile{" hot" if "#h-free" in u else ""}" href="{u}"><strong>{e(t)}</strong><span>{e(sub)}</span></a>' for u, t, sub in TILES) + "</nav>"
     head = f"""<header class="hero gutter">
   <img src="img/pegasus.jpg" alt="" width="1050" height="1400">
   <div class="inner">
@@ -312,6 +349,7 @@ def page_index():
     posts = "".join(f'<li><time datetime="{a["date"]}">{a["date"]}</time><a href="article-{a["slug"]}.html">{e(a["title"])}</a></li>' for a in blog_articles()[:5])
     body = f"""
 {tile_html}
+{free_stay_banner()}
 <section aria-labelledby="h-start"><h2 id="h-start">初めての人は「最初にやること」から</h2>
   <ol class="steps-mini">{steps}</ol>
   <p><a class="btn primary" href="start.html">最初にやることを見る</a></p>
@@ -449,6 +487,7 @@ def page_stay():
     checks = "".join(f"<li>{e(c)}</li>" for c in D.BOOKING_CHECKS)
     body = f"""
 {LEGEND}
+{free_stay_section()}
 <section aria-labelledby="h-hotel"><h2 id="h-hotel">{D.HOTEL['name']}</h2>
   <p>パラダイスシティのカジノに行くときに、運営者が泊まったホテルです。写真はすべて運営者が撮影しました。</p>
   {photos()}
@@ -483,7 +522,7 @@ def page_stay():
     for f in D.FACILITIES:
         index_search("宿泊プラン", "stay.html#h-fac", f["title"], f["text"])
     index_search("宿泊プラン", "stay.html#h-notes", "予約するときの注意点", " ".join(D.BOOKING_CHECKS))
-    return layout("stay.html", "パラダイスシティ 宿泊プラン｜ハイアットの特典と無料宿泊キャンペーンの過去事例",
+    return layout("stay.html", "パラダイスシティ 宿泊プラン｜無料宿泊キャンペーンの条件と、ハイアットの特典",
                   "パラダイスシティのカジノに行くときの宿泊プランを比較。ハイアット リージェンシー 仁川の写真、朝食券・ドリンク券つきプラン、ゲーム条件付き宿泊キャンペーンの過去事例をまとめました。",
                   body, page_head("宿泊プラン・ホテル情報", "ハイアット リージェンシー 仁川の様子と、過去・現在の宿泊プランを比較できます。"))
 
