@@ -82,9 +82,10 @@ def episode_page(ep):
     check_sec = f'<section><h2>{e(ep.get("checklist_title", "出す前のチェックリスト"))}</h2><ul class="check">{check}</ul></section>' if check else ""
     faq_sec = f'<section><h2>よくある質問</h2><dl class="faq">{faq}</dl></section>' if faq else ""
     src_note = ep.get("sources_note", "国税庁のページ")
+    video = (f'<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{e(ep["youtube_id"])}" title="第{ep["no"]}話の動画" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>' if ep.get("youtube_id") else "")
     body = f"""<header class="top"><div class="ch">{e(CHANNEL['name'])}｜第{ep['no']}話の解説</div>
 <h1>{e(ep['title'])}</h1><p>{e(ep['short'])}</p></header>
-<div class="video"><iframe src="https://www.youtube-nocookie.com/embed/{e(ep['youtube_id'])}" title="第{ep['no']}話の動画" loading="lazy" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+{video}
 <section class="sum"><h2>まとめると</h2><ol>{summary}</ol></section>
 {secs}
 {check_sec}
