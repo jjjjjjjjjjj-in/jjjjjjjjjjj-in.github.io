@@ -8,7 +8,9 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 sys.path.insert(0, HERE)
 sys.path.insert(0, os.path.dirname(HERE))
-from episodes import CHANNEL, EPISODES  # noqa: E402
+from episodes import CHANNEL, EPISODES as ALL_EPISODES  # noqa: E402
+# draft=True の話は、動画の公開前なのでページも一覧も作らない
+EPISODES = [ep for ep in ALL_EPISODES if not ep.get("draft")]
 from build import analytics_tag, BASE_URL  # noqa: E402  (src/build.py。__main__ で守られている)
 
 OUT = os.path.join(ROOT, "money")
