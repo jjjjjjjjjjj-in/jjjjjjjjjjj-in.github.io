@@ -71,7 +71,7 @@ const SHOPS = [
     visited: false, comment: "" },
   { name: "RAMEN .R 難波店", pref: "大阪", area: "大阪市・難波", type: "インスパイア",
     note: "2025年オープンの新しめの店。自家製麺と店炊きスープがウリ。",
-    insta: "ramen_r_namba", visited: true, score: null, order: "400g 野菜マシ・アブラマシマシ",
+    insta: "ramen_r_namba", visited: true, score: 55, order: "400g 野菜マシ・アブラマシマシ",
     comment: "麺は歴史に近い。アブラは細切れではなく別皿のかたまりで出てくる。カッコつけて400gの野菜マシにしたら歴史のマシマシより多くて、食べ切るのに必死だった。味はうまい。" },
   { name: "BUTAKIN 西中島南方店", pref: "大阪", area: "大阪市淀川区・西中島南方駅すぐ", type: "インスパイア",
     note: "南方エリアにできた新顔の二郎系。",
