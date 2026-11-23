@@ -6,7 +6,7 @@
 <title>関西二郎系マップ｜大阪・京都・兵庫のガッツリラーメン案内</title>
 <meta name="description" content="関西（大阪・京都・兵庫・滋賀・和歌山）の二郎系ラーメンを、管理人が実際に行った店を中心にまとめた個人サイト。直系・ラーメン荘系・インスパイアで絞り込めます。">
 <link rel="canonical" href="https://mocchima.com/jiro/">
-<meta property="og:title" content="関西二郎系マップ｜大阪・京都・兵庫のガッツリラーメン案内"><meta property="og:description" content="関西の二郎系ラーメンを、管理人が実際に食べた店の点数と感想つきでまとめた個人サイト。"><meta property="og:url" content="https://mocchima.com/jiro/"><meta property="og:type" content="website">
+<meta property="og:title" content="関西二郎系マップ｜大阪・京都・兵庫のガッツリラーメン案内"><meta property="og:description" content="関西の二郎系ラーメンを、管理人が実際に食べた店の偏差値と感想つきでまとめた個人サイト。"><meta property="og:url" content="https://mocchima.com/jiro/"><meta property="og:type" content="website">
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-KDFL8GPPRZ"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-KDFL8GPPRZ');</script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8047459455202561" crossorigin="anonymous"></script>
@@ -187,8 +187,8 @@
   </div>
 
   <div class="box" id="rankbox">
-    <h2>管理人の点数ランキング</h2>
-    <div class="in"><ol id="rank"></ol><p class="rank-note">100点満点。管理人ひとりの好みです。</p></div>
+    <h2>管理人の偏差値ランキング</h2>
+    <div class="in"><ol id="rank"></ol><p class="rank-note">数字は偏差値です。50がふつう、期待を超えてきた店が80以上。管理人ひとりの好みです。</p></div>
   </div>
 
   <div class="box">
@@ -298,7 +298,7 @@
       }
       const map = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(s.name + " " + s.pref);
       html += `<div class="shop">
-        <h4>${esc(s.name)}${s.visited ? '<span class="stamp">実食済' + (s.score ? " " + s.score + "点" : "") + '</span>' : ""}</h4>
+        <h4>${esc(s.name)}${s.visited ? '<span class="stamp">実食済' + (s.score ? " 偏差値" + s.score : "") + '</span>' : ""}</h4>
         ${photoHtml(s)}
         <table class="spec">
           <tr><th>エリア</th><td>${esc(s.area)}</td></tr>
@@ -332,7 +332,7 @@
   document.getElementById("year").textContent = new Date().getFullYear();
   const ranked = LIST.filter(s => s.visited && s.score).sort((x, y) => y.score - x.score);
   if (ranked.length) document.getElementById("rank").innerHTML =
-    ranked.map(s => `<li>${esc(s.name)}<b>${s.score}点</b></li>`).join("");
+    ranked.map(s => `<li>${esc(s.name)}<b>${s.score}</b></li>`).join("");
   else document.getElementById("rankbox").style.display = "none";
   renderFilters(); renderList();
 })();
