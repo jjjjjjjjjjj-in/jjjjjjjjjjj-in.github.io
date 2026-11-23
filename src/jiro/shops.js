@@ -46,9 +46,6 @@ const SHOPS = [
   { name: "ラーメン荘 歴史を刻め 日本橋店", pref: "大阪", area: "大阪市浪速区・恵美須町", type: "ラーメン荘系",
     note: "2024年にオープンしたミナミの店舗。でんでんタウンの買い物ついでに寄れる立地。",
     visited: false, comment: "" },
-  { name: "ラーメン荘 歴史を刻め 寺田町店", pref: "大阪", area: "大阪市天王寺区・寺田町", type: "ラーメン荘系",
-    note: "環状線・寺田町エリアの「歴史」。",
-    visited: false, comment: "" },
   { name: "ラーメン荘 歴史を刻め なかもず店", pref: "大阪", area: "堺市北区・なかもず", type: "ラーメン荘系",
     note: "南大阪で「歴史」を食べるならここ。",
     visited: true, score: 80, order: "汁なし 500g",
@@ -66,7 +63,7 @@ const SHOPS = [
     note: "ウラなんばの行列店。ミナミで二郎系が食べたくなったらまず名前が挙がる一軒。",
     visited: true, score: 50, order: "ラーメン",
     comment: "うまいけど二郎感は控えめ。背脂をもっと増やせたら嬉しい。" },
-  { name: "ドカ盛りマッチョ 日本橋", pref: "大阪", area: "大阪市・日本橋", type: "インスパイア",
+  { name: "自家製太麺 ドカ盛 マッチョ 難波千日前店", pref: "大阪", area: "大阪市・日本橋", type: "インスパイア",
     note: "自家製太麺とドカ盛りが看板。とにかく量を食べたい日に。",
     visited: false, comment: "" },
   { name: "RAMEN .R 難波店", pref: "大阪", area: "大阪市・難波", type: "インスパイア",
@@ -122,11 +119,6 @@ const SHOPS = [
   { name: "らぁ麺しん", pref: "兵庫", area: "明石市・西新町駅から徒歩3分ほど（西宮にも店舗あり）", type: "インスパイア",
     note: "明石の人気店。2026年には西宮にも出店。",
     insta: "ramen_shin2018", visited: false, comment: "" },
-
-  // ---------- 滋賀 ----------
-  { name: "ラーメン荘 歴史を刻め 滋賀瀬田店", pref: "滋賀", area: "大津市・瀬田", type: "ラーメン荘系",
-    note: "滋賀で貴重なラーメン荘グループの店舗。",
-    visited: false, comment: "" },
 
   // ---------- 和歌山 ----------
   { name: "暴豚製麺所", pref: "和歌山", area: "和歌山市", type: "インスパイア",
