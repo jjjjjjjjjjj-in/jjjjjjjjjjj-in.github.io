@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>関西二郎系マップ｜大阪・京都・兵庫のガッツリラーメン案内</title>
+<meta name="description" content="関西（大阪・京都・兵庫・滋賀・和歌山）の二郎系ラーメンを、管理人が実際に行った店を中心にまとめた個人サイト。直系・ラーメン荘系・インスパイアで絞り込めます。">
+<link rel="canonical" href="https://mocchima.com/jiro/">
+<meta property="og:title" content="関西二郎系マップ｜大阪・京都・兵庫のガッツリラーメン案内"><meta property="og:description" content="関西の二郎系ラーメンを、管理人が実際に食べた店の点数と感想つきでまとめた個人サイト。"><meta property="og:url" content="https://mocchima.com/jiro/"><meta property="og:type" content="website">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-KDFL8GPPRZ"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-KDFL8GPPRZ');</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8047459455202561" crossorigin="anonymous"></script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #fff; color: #222; font-size: 15px; line-height: 1.75;
+    font-family: "Hiragino Kaku Gothic ProN", "Meiryo", "Yu Gothic", sans-serif; }
+  a { color: #0b4fa8; }
+  a:visited { color: #5a3a9a; }
+  a:hover { color: #c00; }
+  .wrap { max-width: 1020px; margin: 0 auto; padding: 0 14px; }
+
+  /* 看板 */
+  header { background: #ffe100; border-bottom: 5px solid #111; }
+  header .wrap { padding-top: 18px; padding-bottom: 14px; }
+  .site-title { margin: 0; font-size: clamp(30px, 7vw, 54px); font-weight: 900; line-height: 1.15; letter-spacing: .04em; color: #111; }
+  .site-title a { color: inherit; text-decoration: none; }
+  .site-sub { margin: 4px 0 0; font-size: 13px; font-weight: 700; color: #111; }
+  nav { background: #111; }
+  nav .wrap { display: flex; flex-wrap: wrap; }
+  nav a { color: #fff; text-decoration: none; font-size: 13px; padding: 7px 14px; border-right: 1px solid #444; }
+  nav a:first-child { border-left: 1px solid #444; }
+  nav a:hover { background: #c00; color: #fff; }
+
+  .layout { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 28px; margin-top: 18px; }
+  @media (max-width: 820px) { .layout { grid-template-columns: 1fr; } }
+
+  .updated { font-size: 12px; color: #666; margin: 0 0 10px; }
+  .intro { margin: 0 0 14px; }
+
+  h2 { font-size: 18px; margin: 30px 0 12px; padding: 6px 12px; background: #111; color: #fff; border-left: 12px solid #ffe100; }
+  h3.pref { font-size: 17px; margin: 26px 0 0; padding: 2px 0 2px 2px; border-bottom: 3px solid #111; }
+  h3.pref small { font-weight: 400; font-size: 13px; color: #555; }
+
+  /* 絞り込み */
+  .filters { border: 1px solid #bbb; background: #f6f6f6; padding: 8px 12px; font-size: 14px; }
+  .filters div { display: flex; flex-wrap: wrap; gap: 2px 0; }
+  .filters b { width: 4.5em; }
+  .filters button { font: inherit; background: none; border: 0; padding: 0 10px 0 0; margin-right: 10px;
+    border-right: 1px solid #bbb; color: #0b4fa8; text-decoration: underline; cursor: pointer; }
+  .filters button:last-child { border-right: 0; }
+  .filters button[aria-pressed="true"] { color: #111; font-weight: 700; text-decoration: none; background: #ffe100; padding: 0 6px; margin-right: 10px; border-right: 0; }
+  #count { font-size: 13px; color: #555; margin: 8px 0 0; }
+
+  /* 店舗 */
+  .shop { padding: 14px 0 16px; border-bottom: 1px dotted #888; }
+  .shop h4 { margin: 0 0 6px; font-size: 18px; line-height: 1.4; }
+  .stamp { display: inline-block; margin-left: 8px; font-size: 12px; color: #c00; border: 2px solid #c00;
+    padding: 0 6px; line-height: 1.5; vertical-align: 3px; transform: rotate(-3deg); font-weight: 700; }
+  /* 写真コラージュ：大きい1枚＋右に2枚、4枚目以降は下に3列 */
+  .photos { display: grid; gap: 3px; margin: 0 0 3px; grid-template-columns: 2fr 1fr; grid-template-rows: repeat(2, 130px); }
+  .photos.n1 { grid-template-columns: 1fr; grid-template-rows: 280px; }
+  .photos.n2 { grid-template-columns: 1fr 1fr; grid-template-rows: 220px; }
+  .photos.n3 > :first-child { grid-row: span 2; }
+  .photos.sub { grid-template-columns: repeat(3, 1fr); grid-template-rows: 130px; }
+  .photos + .spec, .photos.sub + .spec { margin-top: 8px; }
+  .photos a, .photos .ph { display: block; overflow: hidden; background: #e6e6e6; min-height: 0; }
+  .photos img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .photos .ph { display: grid; place-items: center; color: #999; font-size: 12px; }
+  @media (max-width: 520px) { .photos { grid-template-rows: repeat(2, 95px); } .photos.sub { grid-template-rows: 95px; } }
+  /* 埋め込み：お店の公式インスタと Googleマップ */
+  .embeds { display: grid; gap: 4px; grid-template-columns: 1fr; margin: 0 0 2px; }
+  .embeds.two { grid-template-columns: 1fr 1fr; }
+  .embeds iframe { width: 100%; border: 1px solid #ccc; display: block; background: #f1f1f1; }
+  .embeds .gmap { height: 240px; }
+  .embeds.two .gmap, .embeds .ig { height: 450px; }
+  .embed-note { font-size: 11px; color: #777; margin: 0 0 8px !important; }
+  @media (max-width: 600px) { .embeds.two { grid-template-columns: 1fr; } .embeds.two .gmap { height: 220px; } }
+  .spec { border-collapse: collapse; width: 100%; font-size: 13px; margin: 0 0 8px; }
+  .spec th, .spec td { border: 1px solid #ccc; padding: 3px 8px; text-align: left; }
+  .spec th { background: #f1f1f1; width: 5.5em; font-weight: 400; white-space: nowrap; }
+  .shop p { margin: 0 0 6px; }
+  .memo { background: #fffbe0; border: 1px solid #e3d77a; padding: 6px 10px; }
+  .memo b { color: #c00; }
+  .shop-foot { font-size: 13px; display: flex; flex-wrap: wrap; gap: 4px 18px; align-items: center; }
+  .shop-foot label { cursor: pointer; }
+  .shop-foot input { vertical-align: -2px; margin-right: 3px; }
+
+  /* 広告 */
+  .ad { margin: 20px 0; text-align: center; }
+  .ad-label { display: block; font-size: 11px; color: #777; margin-bottom: 2px; }
+  .ad:empty { display: none; }
+  .pr-box { border: 1px solid #bbb; background: #fafafa; padding: 10px 14px; text-align: left; font-size: 14px; }
+  .pr-box b.pr { font-size: 11px; border: 1px solid #777; color: #555; padding: 0 5px; margin-right: 8px; font-weight: 400; }
+  .pr-box p { margin: 4px 0 0; font-size: 12px; color: #666; }
+  .ad-box { border: 1px dashed #aaa; background: #f3f3f3; color: #888; min-height: 100px; display: grid; place-items: center; font-size: 13px; }
+  aside .ad-box { min-height: 250px; }
+
+  /* コラム */
+  .col h3 { font-size: 16px; margin: 20px 0 4px; padding-left: 8px; border-left: 5px solid #c00; }
+  .col p { margin: 0 0 8px; }
+  .col ul, .col ol { margin: 0 0 8px; padding-left: 1.6em; }
+  .call { background: #ffe100; font-weight: 700; padding: 0 4px; }
+
+  /* サイドバー */
+  aside .box { border: 1px solid #bbb; margin-bottom: 18px; }
+  aside .box h2 { margin: 0; font-size: 14px; padding: 4px 10px; border-left-width: 8px; }
+  aside .box .in { padding: 10px 12px; font-size: 13px; }
+  aside .box p { margin: 0 0 6px; }
+  aside ul { margin: 0; padding: 0; list-style: none; }
+  aside li { border-bottom: 1px dotted #999; padding: 4px 0; }
+  aside li:last-child { border-bottom: 0; }
+  aside li button { font: inherit; background: none; border: 0; padding: 0; color: #0b4fa8; text-decoration: underline; cursor: pointer; }
+  aside ol { margin: 0; padding-left: 1.6em; }
+  aside ol li { border-bottom: 1px dotted #999; padding: 4px 0; }
+  aside ol li b { float: right; color: #c00; margin-left: 8px; }
+  .rank-note { font-size: 11px; color: #777; margin: 6px 0 0 !important; }
+  aside .ad { margin-top: 0; }
+
+  footer { margin-top: 40px; border-top: 5px solid #111; background: #f1f1f1; font-size: 12px; color: #444; padding: 16px 0 30px; }
+  footer p { margin: 0 0 6px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <p class="site-title"><a href="./">関西二郎系マップ</a></p>
+    <p class="site-sub">大阪・京都・兵庫の二郎系ラーメンを食べ歩く個人サイト　ニンニク入れますか？</p>
+  </div>
+</header>
+<nav><div class="wrap">
+  <a href="#shops">店舗一覧</a>
+  <a href="#guide">はじめての二郎系</a>
+  <a href="#about">このサイトについて</a>
+</div></nav>
+
+<div class="wrap layout">
+<main>
+  <p class="updated">最終更新：2026年11月23日</p>
+  <p class="intro">関西で食べられる二郎系のお店を、府県ごとにまとめています。<span style="color:#c00;font-weight:700">実食済</span>の印がある店は管理人が実際に食べに行った店です。まだ行けていない店も、宿題リストとして載せています。</p>
+
+  <div class="ad" data-ad="top"></div>
+
+  <h2 id="shops">店舗一覧</h2>
+  <div class="filters" id="filters"></div>
+  <p id="count"></p>
+  <div id="list"></div>
+
+  <div class="ad" data-ad="middle"></div>
+
+  <h2 id="guide">はじめての二郎系</h2>
+  <div class="col">
+    <h3>二郎系ってなに？</h3>
+    <p>東京・三田の「ラーメン二郎」をルーツにした、極太麺・山盛りの野菜・分厚い豚・ニンニクと背脂が特徴のラーメンです。のれん分けの「直系」と、影響を受けた「インスパイア」があります。関西では京都・一乗寺発の「ラーメン荘」グループの店が多いです。</p>
+
+    <h3>無料トッピングの「コール」</h3>
+    <p>提供直前に <span class="call">ニンニク入れますか？</span> と聞かれたら、好みを伝えます。</p>
+    <ul>
+      <li>ヤサイ … もやし・キャベツ増し</li>
+      <li>ニンニク … 刻みニンニク</li>
+      <li>アブラ … 背脂増し</li>
+      <li>カラメ … 醤油ダレ追加</li>
+    </ul>
+    <p>例：「ニンニク、ヤサイで」。何も足さないなら「そのままで」。聞き方や呼び名は店ごとに違うので、店内の貼り紙を見るのが確実です。</p>
+
+    <h3>初めて行くときのコツ</h3>
+    <ol>
+      <li>最初は一番小さいサイズで。小でも普通の店の大盛り以上あります。</li>
+      <li>麺の量は食券を渡すときに減らしてもらえる店が多いです。</li>
+      <li>食券制・現金のみの店が多いので、千円札を用意しておくと安心です。</li>
+      <li>食べ終わったら丼をカウンターに上げて、さっと席を立ちましょう。</li>
+    </ol>
+  </div>
+
+  <div class="ad" data-ad="bottom"></div>
+</main>
+
+<aside>
+  <div class="ad" data-ad="side"></div>
+
+  <div class="box">
+    <h2>管理人</h2>
+    <div class="in">
+      <p>関西在住の二郎系好き。休みの日にもやしの山を登っています。</p>
+      <p id="mycount"></p>
+    </div>
+  </div>
+
+  <div class="box" id="rankbox">
+    <h2>管理人の点数ランキング</h2>
+    <div class="in"><ol id="rank"></ol><p class="rank-note">100点満点。管理人ひとりの好みです。</p></div>
+  </div>
+
+  <div class="box">
+    <h2>エリアから探す</h2>
+    <div class="in"><ul id="sidepref"></ul></div>
+  </div>
+
+  <div class="ad" data-ad="side"></div>
+</aside>
+</div>
+
+<footer id="about">
+  <div class="wrap">
+    <p><b>このサイトについて</b>　関西の二郎系が好きな個人が運営しているファンサイトです。各店舗とは関係ありません。</p>
+    <p>営業時間・定休日・価格・メニューは変わることがあり、閉店・移転している場合もあります。お出かけ前に各店の公式SNSや地図アプリで最新情報をご確認ください。</p>
+    <p><b>広告について</b>　当サイトは第三者配信の広告サービス（Google AdSense）やアフィリエイトプログラムを利用する場合があります。広告配信事業者は、ユーザーの興味に応じた広告を表示するために Cookie を使用することがあります。Cookie を無効にする方法は Google の「広告設定」をご覧ください。</p>
+    <p>Amazonのアソシエイトとして、当サイトは適格販売により収入を得ています。「PR」と書いたリンクは広告です。</p>
+    <p><a href="https://mocchima.com/privacy.html">プライバシーポリシー</a></p>
+    <p>© <span id="year"></span> 関西二郎系マップ</p>
+  </div>
+</footer>
+
+<script src="shops.js"></script>
+<script src="ads.js"></script>
+<script>
+(function () {
+  const LIST = SHOPS.filter(s => !s.draft);
+  const AD_EVERY = 5;                       // 何店舗ごとに広告を挟むか
+  const state = { pref: "すべて", type: "すべて", only: false };
+  const KEY = "jiro-went";
+  let went = {};
+  try { went = JSON.parse(localStorage.getItem(KEY) || "{}"); } catch (e) {}
+
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+  const prefOrder = [...new Set(LIST.map(s => s.pref))];
+  const prefs = ["すべて", ...prefOrder];
+  const types = ["すべて", ...new Set(LIST.map(s => s.type))];
+  const hasVisited = LIST.some(s => s.visited);
+
+  function renderFilters() {
+    const btn = (g, v, label) =>
+      `<button data-g="${g}" data-v="${esc(v)}" aria-pressed="${String(state[g]) === String(v)}">${esc(label || v)}</button>`;
+    document.getElementById("filters").innerHTML =
+      `<div><b>エリア</b>${prefs.map(p => btn("pref", p)).join("")}</div>` +
+      `<div><b>系統</b>${types.map(t => btn("type", t)).join("")}</div>` +
+      (hasVisited ? `<div><b>絞り込み</b>${btn("only", !state.only, "管理人が行った店だけ").replace('aria-pressed="false"', `aria-pressed="${state.only}"`)}</div>` : "");
+    document.getElementById("sidepref").innerHTML = prefOrder.map(p =>
+      `<li><button data-g="pref" data-v="${esc(p)}">${esc(p)}の二郎系</button>（${LIST.filter(s => s.pref === p).length}）</li>`).join("");
+  }
+
+  // 写真コラージュ（最大6枚）。写真がない店は、PHOTO_PLACEHOLDER が true の間だけ仮の枠を出す
+  function photoHtml(s) {
+    let ps = (s.photos || []).slice(0, 6);
+    if (!ps.length && (typeof USE_EMBEDS === "undefined" || USE_EMBEDS)) {
+      // 自分の写真がない店は、公式インスタ（あれば）と地図を埋め込む
+      const q = encodeURIComponent(s.name + " " + s.pref);
+      const ig = s.instaPost ? s.instaPost.replace(/\/?$/, "/embed")
+               : s.insta ? "https://www.instagram.com/" + encodeURIComponent(s.insta) + "/embed" : "";
+      return `<div class="embeds${ig ? " two" : ""}">` +
+        (ig ? `<iframe class="ig" src="${esc(ig)}" loading="lazy" scrolling="no" title="${esc(s.name)}の公式Instagram"></iframe>` : "") +
+        `<iframe class="gmap" src="https://www.google.com/maps?q=${q}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="${esc(s.name)}の地図"></iframe></div>` +
+        `<p class="embed-note">${ig ? "写真はお店の公式Instagramの埋め込み表示です。" : ""}地図は Googleマップの埋め込み表示です。</p>`;
+    }
+    if (!ps.length) {
+      if (typeof PHOTO_PLACEHOLDER === "undefined" || !PHOTO_PLACEHOLDER) return "";
+      ps = [null, null, null];
+    }
+    const tile = p => p
+      ? `<a href="${esc(p)}" target="_blank" rel="noopener"><img src="${esc(p)}" alt="${esc(s.name)}の写真" loading="lazy"></a>`
+      : `<div class="ph">写真</div>`;
+    const top = ps.slice(0, 3), sub = ps.slice(3);
+    let h = `<div class="photos n${top.length}">${top.map(tile).join("")}</div>`;
+    if (sub.length) h += `<div class="photos sub">${sub.map(tile).join("")}</div>`;
+    return h;
+  }
+
+  function renderList() {
+    const list = LIST.filter(s =>
+      (state.pref === "すべて" || s.pref === state.pref) &&
+      (state.type === "すべて" || s.type === state.type) &&
+      (!state.only || s.visited))
+      .sort((a, b) => prefOrder.indexOf(a.pref) - prefOrder.indexOf(b.pref) || (b.visited ? 1 : 0) - (a.visited ? 1 : 0) || (b.score || 0) - (a.score || 0));
+
+    const done = LIST.filter(s => went[s.name]).length;
+    document.getElementById("count").textContent =
+      `${list.length}件を表示　／　あなたの制覇数 ${done} / ${LIST.length}店（「行った」にチェックで記録できます）`;
+    document.getElementById("mycount").textContent =
+      `掲載 ${LIST.length}店のうち、実食済は ${LIST.filter(s => s.visited).length}店。`;
+
+    let html = "", lastPref = "";
+    list.forEach((s, i) => {
+      if (i > 0 && i % AD_EVERY === 0) html += '<div class="ad" data-ad="infeed"></div>';
+      if (s.pref !== lastPref) {
+        lastPref = s.pref;
+        html += `<h3 class="pref">${esc(s.pref)}の二郎系 <small>（${list.filter(x => x.pref === s.pref).length}店）</small></h3>`;
+      }
+      const map = "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(s.name + " " + s.pref);
+      html += `<div class="shop">
+        <h4>${esc(s.name)}${s.visited ? '<span class="stamp">実食済' + (s.score ? " " + s.score + "点" : "") + '</span>' : ""}</h4>
+        ${photoHtml(s)}
+        <table class="spec">
+          <tr><th>エリア</th><td>${esc(s.area)}</td></tr>
+          <tr><th>系統</th><td>${esc(s.type)}</td></tr>
+        </table>
+        <p>${esc(s.note)}</p>
+        ${s.visited && s.comment ? `<p class="memo"><b>管理人メモ</b>　${s.order ? "【" + esc(s.order) + "】" : ""}${esc(s.comment)}</p>` : ""}
+        <div class="shop-foot">
+          <a href="${map}" target="_blank" rel="noopener">Googleマップで場所を見る</a>
+          <label><input type="checkbox" data-name="${esc(s.name)}"${went[s.name] ? " checked" : ""}>行った</label>
+        </div>
+      </div>`;
+    });
+    document.getElementById("list").innerHTML = html || "<p>条件に合う店がありません。</p>";
+    fillAds();
+  }
+
+  document.addEventListener("click", e => {
+    const b = e.target.closest("button[data-g]"); if (!b) return;
+    state[b.dataset.g] = b.dataset.g === "only" ? b.dataset.v === "true" : b.dataset.v;
+    renderFilters(); renderList();
+    if (b.closest("aside")) document.getElementById("shops").scrollIntoView();
+  });
+  document.getElementById("list").addEventListener("change", e => {
+    if (!e.target.dataset.name) return;
+    went[e.target.dataset.name] = e.target.checked;
+    try { localStorage.setItem(KEY, JSON.stringify(went)); } catch (err) {}
+    renderList();
+  });
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+  const ranked = LIST.filter(s => s.visited && s.score).sort((x, y) => y.score - x.score);
+  if (ranked.length) document.getElementById("rank").innerHTML =
+    ranked.map(s => `<li>${esc(s.name)}<b>${s.score}点</b></li>`).join("");
+  else document.getElementById("rankbox").style.display = "none";
+  renderFilters(); renderList();
+})();
+</script>
+</body>
+</html>
