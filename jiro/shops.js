@@ -108,7 +108,7 @@ const SHOPS = [
     comment: "麺はわしわし。フライドオニオンがとてもうまく、豚は脂身が少ないのに柔らかい。次は野菜マシマシにしてもいいと思えるくらいおいしかった。" },
   { name: "麺処 藤山二郎 あべのHoop店", pref: "大阪", area: "大阪市阿倍野区・天王寺（あべのHoop 地下フードコート）", type: "インスパイア",
     note: "塩味の「塩二郎」がある二郎系。フライドオニオンと鰹節がたっぷり乗る。",
-    photos: [], insta: "fujiyamajiro_abenohoop", visited: true, score: 35, order: "塩二郎",
+    photos: ["photos/fujiyamajiro-1.jpg", "photos/fujiyamajiro-2.jpg"], insta: "fujiyamajiro_abenohoop", visited: true, score: 35, order: "塩二郎",
     comment: "見た目は豪華で豚も柔らかい（豚だけなら70点）。ただ塩味のスープが自分には合わず、箸が進まなかった。次に行くなら醤油の汁なしにする。" },
 
   // ---------- 兵庫 ----------

@@ -242,7 +242,14 @@
   // 写真コラージュ（最大6枚）。写真がない店は、PHOTO_PLACEHOLDER が true の間だけ仮の枠を出す
   function photoHtml(s) {
     let ps = (s.photos || []).slice(0, 6);
-    if (!ps.length && (typeof USE_EMBEDS === "undefined" || USE_EMBEDS)) {
+    const useEmbeds = typeof USE_EMBEDS === "undefined" || USE_EMBEDS;
+    if (ps.length && useEmbeds) {
+      // 自分の写真がある店は、写真の下に地図だけ出す
+      const q = encodeURIComponent(s.name + " " + s.pref);
+      return collage(s, ps) + `<div class="embeds"><iframe class="gmap" src="https://www.google.com/maps?q=${q}&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="${esc(s.name)}の地図"></iframe></div>` +
+        `<p class="embed-note">写真は管理人が撮影したものです。地図は Googleマップの埋め込み表示です。</p>`;
+    }
+    if (!ps.length && useEmbeds) {
       // 自分の写真がない店は、公式インスタ（あれば）と地図を埋め込む
       const q = encodeURIComponent(s.name + " " + s.pref);
       const ig = s.instaPost ? s.instaPost.replace(/\/?$/, "/embed")
@@ -256,6 +263,10 @@
       if (typeof PHOTO_PLACEHOLDER === "undefined" || !PHOTO_PLACEHOLDER) return "";
       ps = [null, null, null];
     }
+    return collage(s, ps);
+  }
+
+  function collage(s, ps) {
     const tile = p => p
       ? `<a href="${esc(p)}" target="_blank" rel="noopener"><img src="${esc(p)}" alt="${esc(s.name)}の写真" loading="lazy"></a>`
       : `<div class="ph">写真</div>`;
