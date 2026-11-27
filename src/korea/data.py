@@ -41,6 +41,7 @@ S = {
     "seoul_gwangjang": ("ソウル市 公式：広蔵市場", "https://english.seoul.go.kr/gwangjang-market/"),
     "seoul_parks": ("ソウル市 公式：ソウルの公園（漢江公園）", "https://english.seoul.go.kr/service/amusement/parks/"),
     "operator": ("運営者の体験（パラダイスシティに2026年に8回訪問）", ""),
+    "operator_food": ("運営者の体験（韓国で食べた店）", None),
     "pc_free_stay": ("パラダイスシティ公式：無料宿泊キャンペーン（申し込みページ）", "https://www.p-city.com/front/event/eventView?P_SEQ=13762&P_CTNT_TY=imageTy"),
 }
 
@@ -53,9 +54,9 @@ TRIP_LINKS = {
 }
 
 
-def B(h, kind, items, src, checked=CHECKED, table=None, pr=None, link=None):
+def B(h, kind, items, src, checked=CHECKED, table=None, pr=None, link=None, photos=None):
     """ブロック1つ。items は文の list。table は [見出し行, 行, ...]。pr は直前に出す Trip.com のキーの list"""
-    return dict(h=h, kind=kind, items=items, src=src, checked=checked, table=table, pr=pr or [], link=link)
+    return dict(h=h, kind=kind, items=items, src=src, checked=checked, table=table, pr=pr or [], link=link, photos=photos or [])
 
 
 # index の区分（運営者の希望の順: A 初めて行くなら → B カジノ旅 → C 人気のプラン）
@@ -63,6 +64,7 @@ SECTIONS = [
     ("初めて行くなら知っておきたい事", "出発前の準備から、空港からの移動、お金まで。", ["prep", "sim", "airport", "money"]),
     ("カジノ旅", "日本人も入れる外国人専用カジノの選び方と、2泊3日の流れ。", ["casino", "paradise"]),
     ("人気のプラン", "ソウルの定番スポットで組んだ、2泊3日の一般的なプラン。", ["otoko", "couple"]),
+    ("韓国ごはん", "運営者が食べておいしかったもの。日本では食べづらいものも。", ["food"]),
 ]
 
 # パラダイスシティは別サイトへのタイルだけ
@@ -307,7 +309,34 @@ PAGES["couple"] = dict(
 )
 
 # 公開するページ（2026-11-27 運営者の指示で分けて作る。まずカジノ旅だけ。ほかは別に頼まれたら足す）
-PUBLISH = ["casino"]
+PAGES["food"] = dict(
+    title="韓国で食べたい生ユッケ・生レバー", tile="日本では食べづらい生ものが食べれる",
+    lead="韓国はユッケ・レバーの生ものが人気で、日本では食べづらいものが食べれます。運営者が行った店の写真で紹介します。",
+    adsense=True,
+    blocks=[
+        B("韓国はユッケ・レバーの生ものが人気", "exp", [
+            "韓国はユッケ・レバーの生物が人気で、日本では食べづらいものが食べれます！",
+            "※生の肉やレバーなので、お腹が弱い人や体調がよくない日は気をつけてください。",
+        ], ["operator_food"], photos=[
+            ("food-gwangjang-table.jpg", "ユッケ（左）と、生レバー・センマイ（右）。広蔵市場の店"),
+        ]),
+        B("江南（カンナム）で食べたユッケビビンバ", "exp", [
+            "カンナムの店。ユッケがのったビビンバに、キムチなどのおかずとスープが付いてくる。",
+        ], ["operator_food"], photos=[
+            ("food-gangnam-yukhoe-bibimbap.jpg", "江南の店のユッケビビンバ"),
+        ]),
+        B("広蔵市場（クァンジャンシジャン）のユッケの店", "exp", [
+            "ここからの写真は広蔵市場の店。",
+            "プチョンユッケが人気だが、正直味は同じ、SNSで有名なだけ。",
+        ], ["operator_food"], photos=[
+            ("food-gwangjang-shop.jpg", "広蔵市場の「兄弟ユッケ本店（형제육회본점）」"),
+            ("food-gwangjang-case.jpg", "店の前のケース。ユッケ・レバー・センマイが並ぶ"),
+            ("food-gwangjang-liver.jpg", "生レバーとセンマイ、奥がユッケ"),
+        ]),
+    ],
+)
+
+PUBLISH =["casino", "food"]
 
 FAQ = [
     ("K-ETA は必要？", "日本国籍の人は、2026年12月31日まで K-ETA なしで入国できます（観光など）。2027年からのことは、2026年11月の時点で公式の発表を確認できていません。", "prep"),

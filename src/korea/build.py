@@ -53,6 +53,7 @@ a{color:var(--blue)}
 .icons{list-style:none;margin:0;padding:0;display:grid;gap:16px 8px;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));text-align:center}
 .icons a{color:var(--ink);text-decoration:none;font-size:13px;font-weight:600;line-height:1.45;display:grid;justify-items:center;gap:8px}
 .icons i{font-style:normal;width:76px;height:76px;border-radius:50%;background:#fff;display:grid;place-items:center;font-size:30px;box-shadow:0 2px 10px rgba(0,0,0,.06)}
+.photos{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin:14px 0}.photos figure{margin:0}.photos img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}.photos figcaption{font-size:12px;color:var(--muted);margin-top:6px}
 .icons a:hover i{box-shadow:0 0 0 2px var(--accent)}
 .blk{background:#fff;border-radius:16px;padding:26px 22px;margin:0 0 18px;box-shadow:0 0 0 1px var(--line),0 4px 18px rgba(0,0,0,.04)}
 .blk h2{font-size:21px;margin:6px 0 12px;line-height:1.45;color:var(--ink);font-weight:800}
@@ -84,8 +85,10 @@ table{border-collapse:collapse;width:100%;font-size:14px}th,td{border-bottom:1px
 """
 
 IMG = "/paradise-city/img/"
-CARD_IMG = {"casino": IMG + "pegasus.jpg", "paradise": IMG + "hyatt-lobby.jpg"}
-HERO_IMG = {"casino": IMG + "trip-2611-pegasus.jpg"}
+KIMG = "/korea/img/"
+CARD_IMG = {"casino": IMG + "pegasus.jpg", "paradise": IMG + "hyatt-lobby.jpg", "food": KIMG + "food-gwangjang-liver.jpg"}
+HERO_IMG = {"casino": IMG + "trip-2611-pegasus.jpg", "food": KIMG + "food-gwangjang-table.jpg"}
+OG_IMG = {"food": "korea/og-food.jpg"}
 # 手描き風のイラストアイコン（SVG）。色は塗り＋黒い線
 _S = 'fill="none" stroke="#2b2b2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"'
 SVG = {
@@ -98,20 +101,21 @@ SVG = {
     "wave": f'<circle cx="34" cy="14" r="6" fill="#ffe08a" stroke="#2b2b2b" stroke-width="2"/><path fill="#bcd7f5" d="M5 30c5-6 9-6 13 0s9 6 13 0 9-6 12 0v12H5z"/><path {_S} d="M5 30c5-6 9-6 13 0s9 6 13 0 9-6 12 0M5 38c5-5 9-5 13 0s9 5 13 0 9-5 12 0"/>',
     "compass": f'<circle cx="24" cy="24" r="17" fill="#bfe6dc"/><circle {_S} fill="#fff" cx="24" cy="24" r="12"/><path fill="#e8384f" stroke="#2b2b2b" stroke-width="2" stroke-linejoin="round" d="M30 18l-4 8-8 4 4-8z"/><path {_S} d="M24 7v4M24 37v4M7 24h4M37 24h4"/>',
     "buoy": f'<circle cx="24" cy="24" r="16" fill="#fff"/><path fill="#e8384f" d="M13 13l6 6a7 7 0 0 0 0 10l-6 6a16 16 0 0 1 0-22zM35 13a16 16 0 0 1 0 22l-6-6a7 7 0 0 0 0-10z"/><circle {_S} cx="24" cy="24" r="16"/><circle {_S} cx="24" cy="24" r="7"/><path {_S} d="M13 13l6 6M35 13l-6 6M13 35l6-6M35 35l-6-6"/>',
+    "bowl": f'<circle cx="24" cy="24" r="17" fill="#ffd2d7"/><path {_S} fill="#fff" d="M8 24h32a16 14 0 0 1-32 0z"/><path fill="#e8384f" d="M15 24c2-6 16-6 18 0z"/><circle cx="24" cy="21" r="3" fill="#ffe08a" stroke="#2b2b2b" stroke-width="2"/><path {_S} d="M30 6l-6 12M36 8l-8 11"/>',
     "info": f'<circle cx="24" cy="24" r="17" fill="#bcd7f5"/><circle {_S} cx="24" cy="24" r="12" fill="#fff"/><path {_S} d="M24 22v8M24 17v.5"/>',
     "person": f'<circle cx="24" cy="24" r="17" fill="#ffd2d7"/><circle {_S} fill="#fff" cx="24" cy="18" r="6"/><path {_S} fill="#fff" d="M13 38c1-7 5-10 11-10s10 3 11 10"/>',
     "bulb": f'<circle cx="24" cy="24" r="17" fill="#ffe08a"/><path {_S} fill="#fff" d="M18 26a8 8 0 1 1 12 0c-2 2-2 4-2 5h-8c0-1 0-3-2-5zM20 35h8M22 39h4"/>',
 }
 ICON = {"official": "info", "exp": "person", "plan": "calendar", "tip": "bulb"}
 # 見出しの言葉で決めるアイコン（無ければ ICON）
-ICON_BY_H = [("ハイアット", "hotel"), ("パラダイス", "star"), ("知っておく", "book"), ("プラン", "calendar"), ("仁川", "plane"),
+ICON_BY_H = [("ユッケ", "bowl"), ("生もの", "bowl"), ("ハイアット", "hotel"), ("パラダイス", "star"), ("知っておく", "book"), ("プラン", "calendar"), ("仁川", "plane"),
              ("ソウル", "city"), ("釜山", "wave"), ("選ぶ", "compass"), ("のめり込", "buoy")]
 
 
 def icon_for(b):
     k = next((ic for w, ic in ICON_BY_H if w in b["h"]), ICON[b["kind"]])
     return f'<svg viewBox="0 0 48 48" width="46" height="46" aria-hidden="true">{SVG[k]}</svg>'
-SEC_ID = {"初めて行くなら知っておきたい事": "first", "カジノ旅": "casino", "人気のプラン": "plan"}
+SEC_ID = {"初めて行くなら知っておきたい事": "first", "カジノ旅": "casino", "人気のプラン": "plan", "韓国ごはん": "food"}
 
 
 def header(cur):
@@ -127,7 +131,7 @@ def header(cur):
     return f'<header class="hd"><div class="hd-in"><a class="logo" href="./"><small>mocchima</small>KOREA</a><nav class="nav">{"".join(links)}</nav></div></header>'
 
 
-def page(path, title, desc, body, adsense=True, cur="index"):
+def page(path, title, desc, body, adsense=True, cur="index", og="korea/og-casino.jpg"):
     canonical = BASE_URL + "korea/" + path
     return f"""<!doctype html>
 <html lang="ja"><head><meta charset="utf-8">
@@ -137,7 +141,7 @@ def page(path, title, desc, body, adsense=True, cur="index"):
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" href="/apple-touch-icon.png">
 <meta property="og:type" content="website"><meta property="og:site_name" content="{SITE}">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{BASE_URL}korea/og-casino.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta property="og:locale" content="ja_JP">{analytics_tag(adsense=adsense)}
+<meta property="og:image" content="{BASE_URL}{og}"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta property="og:locale" content="ja_JP">{analytics_tag(adsense=adsense)}
 <style>{CSS}</style></head>
 <body>
 {header(cur)}
@@ -173,6 +177,13 @@ LEGEND = ('<div class="legend"><span>情報の見分け方：</span>'
           + "".join(f'<span class="kind k-{k}">{e(v)}</span>' for k, v in D.KIND_LABEL.items()) + '</div>')
 
 
+def photos_html(ph):
+    if not ph:
+        return ""
+    figs = "".join(f'<figure><img src="{KIMG}{e(f)}" alt="{e(c)}" loading="lazy"><figcaption>{e(c)}</figcaption></figure>' for f, c in ph)
+    return f'<div class="photos">{figs}</div>'
+
+
 def detail_page(key):
     p = D.PAGES[key]
     parts, icons = [], []
@@ -182,7 +193,7 @@ def detail_page(key):
         pr = "".join(trip_line(k) for k in b["pr"])
         items = "".join(f"<li>{e(t)}</li>" for t in b["items"])
         parts.append(f'<section class="blk" id="{bid}"><span class="kind k-{b["kind"]}">{e(D.KIND_LABEL[b["kind"]])}</span>'
-                     f'<h2>{e(b["h"])}</h2>{pr}<ul class="items">{items}</ul>{src_links(b["src"], b["checked"])}</section>')
+                     f'<h2>{e(b["h"])}</h2>{pr}<ul class="items">{items}</ul>{photos_html(b.get("photos"))}{src_links(b["src"], b["checked"])}</section>')
         if b.get("link"):
             url, head, sub = b["link"]
             parts.append(f'<a class="big-link" href="{e(url)}"><div>{e(head)}<span>{e(sub)}</span></div><em>→</em></a>')
@@ -196,7 +207,7 @@ def detail_page(key):
 <section class="band gray"><div class="in"><h2 class="ttl">このページの内容</h2><p class="sub">知りたいところから読めます</p><ul class="icons">{''.join(icons)}</ul></div></section>
 {check}
 <section class="band"><div class="narrow">{LEGEND}{table}{''.join(parts)}</div></section>"""
-    return page(key + ".html", f"{p['title']}｜{SITE}", p["lead"], body, adsense=p["adsense"], cur=key)
+    return page(key + ".html", f"{p['title']}｜{SITE}", p["lead"], body, adsense=p["adsense"], cur=key, og=OG_IMG.get(key, "korea/og-casino.jpg"))
 
 
 def index_page():
