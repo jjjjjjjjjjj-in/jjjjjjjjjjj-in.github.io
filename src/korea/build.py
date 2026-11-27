@@ -86,14 +86,31 @@ table{border-collapse:collapse;width:100%;font-size:14px}th,td{border-bottom:1px
 IMG = "/paradise-city/img/"
 CARD_IMG = {"casino": IMG + "pegasus.jpg", "paradise": IMG + "hyatt-lobby.jpg"}
 HERO_IMG = {"casino": IMG + "trip-2611-pegasus.jpg"}
-ICON = {"official": "ℹ️", "exp": "🙋", "plan": "🗓️", "tip": "💡"}
+# 手描き風のイラストアイコン（SVG）。色は塗り＋黒い線
+_S = 'fill="none" stroke="#2b2b2b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"'
+SVG = {
+    "hotel": f'<rect x="10" y="12" width="28" height="28" rx="2" fill="#bcd7f5"/><path {_S} d="M10 40V12h28v28M6 40h36M16 18h4M28 18h4M16 25h4M28 25h4M21 40v-8h6v8"/><path fill="#e8384f" d="M18 6h12l-2 6H20z"/>',
+    "star": f'<circle cx="24" cy="24" r="17" fill="#ffe08a"/><path {_S} d="M24 11l4 8.5 9.3 1.2-6.8 6.4 1.7 9.2L24 31.8l-8.2 4.5 1.7-9.2-6.8-6.4 9.3-1.2z"/><circle cx="24" cy="24" r="2.5" fill="#e8384f"/>',
+    "book": f'<path fill="#bfe6dc" d="M24 13c-4-3-10-3-15-2v26c5-1 11-1 15 2z"/><path fill="#fff" d="M24 13c4-3 10-3 15-2v26c-5-1-11-1-15 2z"/><path {_S} d="M24 13c-4-3-10-3-15-2v26c5-1 11-1 15 2 4-3 10-3 15-2V11c-5-1-11-1-15 2zM24 13v26M29 18h6M29 23h6"/>',
+    "calendar": f'<rect x="8" y="11" width="32" height="29" rx="3" fill="#fff"/><path fill="#e8384f" d="M8 14a3 3 0 0 1 3-3h26a3 3 0 0 1 3 3v6H8z"/><path {_S} d="M8 14a3 3 0 0 1 3-3h26a3 3 0 0 1 3 3v23a3 3 0 0 1-3 3H11a3 3 0 0 1-3-3zM8 20h32M16 7v7M32 7v7"/><path fill="#ffe08a" stroke="#2b2b2b" stroke-width="2" d="M15 26h6v6h-6z"/>',
+    "plane": f'<circle cx="24" cy="24" r="17" fill="#bcd7f5"/><path {_S} fill="#fff" d="M40 12c-2-2-5-1-7 1l-5 5-14-4-3 3 11 7-5 5-5-1-2 2 6 3 3 6 2-2-1-5 5-5 7 11 3-3-4-14 5-5c2-2 3-5 1-7z"/>',
+    "city": f'<rect x="6" y="38" width="36" height="2" fill="#2b2b2b"/><path fill="#ffd2d7" d="M9 22h10v18H9z"/><path fill="#bcd7f5" d="M19 10h10v30H19z"/><path fill="#bfe6dc" d="M29 18h10v22H29z"/><path {_S} d="M9 40V22h10M19 40V10h10v30M29 40V18h10v22M23 15h2M23 21h2M23 27h2M13 27h2M13 33h2M33 24h2M33 30h2M24 10V5"/>',
+    "wave": f'<circle cx="34" cy="14" r="6" fill="#ffe08a" stroke="#2b2b2b" stroke-width="2"/><path fill="#bcd7f5" d="M5 30c5-6 9-6 13 0s9 6 13 0 9-6 12 0v12H5z"/><path {_S} d="M5 30c5-6 9-6 13 0s9 6 13 0 9-6 12 0M5 38c5-5 9-5 13 0s9 5 13 0 9-5 12 0"/>',
+    "compass": f'<circle cx="24" cy="24" r="17" fill="#bfe6dc"/><circle {_S} fill="#fff" cx="24" cy="24" r="12"/><path fill="#e8384f" stroke="#2b2b2b" stroke-width="2" stroke-linejoin="round" d="M30 18l-4 8-8 4 4-8z"/><path {_S} d="M24 7v4M24 37v4M7 24h4M37 24h4"/>',
+    "buoy": f'<circle cx="24" cy="24" r="16" fill="#fff"/><path fill="#e8384f" d="M13 13l6 6a7 7 0 0 0 0 10l-6 6a16 16 0 0 1 0-22zM35 13a16 16 0 0 1 0 22l-6-6a7 7 0 0 0 0-10z"/><circle {_S} cx="24" cy="24" r="16"/><circle {_S} cx="24" cy="24" r="7"/><path {_S} d="M13 13l6 6M35 13l-6 6M13 35l6-6M35 35l-6-6"/>',
+    "info": f'<circle cx="24" cy="24" r="17" fill="#bcd7f5"/><circle {_S} cx="24" cy="24" r="12" fill="#fff"/><path {_S} d="M24 22v8M24 17v.5"/>',
+    "person": f'<circle cx="24" cy="24" r="17" fill="#ffd2d7"/><circle {_S} fill="#fff" cx="24" cy="18" r="6"/><path {_S} fill="#fff" d="M13 38c1-7 5-10 11-10s10 3 11 10"/>',
+    "bulb": f'<circle cx="24" cy="24" r="17" fill="#ffe08a"/><path {_S} fill="#fff" d="M18 26a8 8 0 1 1 12 0c-2 2-2 4-2 5h-8c0-1 0-3-2-5zM20 35h8M22 39h4"/>',
+}
+ICON = {"official": "info", "exp": "person", "plan": "calendar", "tip": "bulb"}
 # 見出しの言葉で決めるアイコン（無ければ ICON）
-ICON_BY_H = [("ハイアット", "🏨"), ("パラダイス", "⭐"), ("知っておく", "📘"), ("プラン", "🗓️"), ("仁川", "✈️"), ("ソウル", "🏙️"), ("釜山", "🌊"),
-             ("選ぶ", "🧭"), ("プラン", "🗓️"), ("のめり込", "🛟")]
+ICON_BY_H = [("ハイアット", "hotel"), ("パラダイス", "star"), ("知っておく", "book"), ("プラン", "calendar"), ("仁川", "plane"),
+             ("ソウル", "city"), ("釜山", "wave"), ("選ぶ", "compass"), ("のめり込", "buoy")]
 
 
 def icon_for(b):
-    return next((ic for w, ic in ICON_BY_H if w in b["h"]), ICON[b["kind"]])
+    k = next((ic for w, ic in ICON_BY_H if w in b["h"]), ICON[b["kind"]])
+    return f'<svg viewBox="0 0 48 48" width="46" height="46" aria-hidden="true">{SVG[k]}</svg>'
 SEC_ID = {"初めて行くなら知っておきたい事": "first", "カジノ旅": "casino", "人気のプラン": "plan"}
 
 
