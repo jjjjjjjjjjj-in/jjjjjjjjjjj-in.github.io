@@ -115,10 +115,10 @@ def detail_page(key):
         items = "".join(f"<li>{e(t)}</li>" for t in b["items"])
         parts.append(f'<section><span class="kind k-{b["kind"]}">{e(D.KIND_LABEL[b["kind"]])}</span>'
                      f'<h2>{e(b["h"])}</h2><ul class="items">{items}</ul>{src_links(b["src"], b["checked"])}</section>')
-    if key == "casino":
-        # パラダイスシティのくわしいガイドへの目立つリンク（2つ目のブロックの後）
-        parts.insert(3, '<a class="big-link" href="/paradise-city/">パラダイスシティ カジノガイドを見る →'
-                        '<span>仁川のパラダイスシティに2026年に8回通った運営者の、到着から帰るまでのくわしいガイド</span></a>')
+        if b.get("link"):
+            # ブロックの後の目立つリンク（url, 見出し, 説明）
+            url, head, sub = b["link"]
+            parts.append(f'<a class="big-link" href="{e(url)}">{e(head)} →<span>{e(sub)}</span></a>')
     table = table_html(p["table"]) if p.get("table") else ""
     check = ("<section><h2>チェック表</h2><ul class=\"check\">" + "".join(f"<li>{e(c)}</li>" for c in p["check"]) + "</ul></section>") if p.get("check") else ""
     body = f"""<p class="crumb"><a href="./">{SITE}</a> ＞ {e(p['title'])}</p>
