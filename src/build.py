@@ -165,6 +165,7 @@ def index_html():
         link("marvel/rerelease/", "再上映の情報", "公式に決まったものと、報道の段階のものを分けて載せています"),
         link("marvel/", "作品ガイド（全71作品）", "1作品ずつ、観る前に知っておくこと・キャラクター相関図・あらすじ・用語集・分かりにくい所のQ&A・次に観る作品をまとめたガイド"),
         link("paradise-city/", "パラダイスシティ カジノガイド", "韓国・仁川のリゾートを、運営者が2026年に8回行った体験をもとに、初めての人向けに解説"),
+        link("korea/", "韓国旅行ガイド", "韓国のカジノ旅（日本人も入れる外国人専用カジノと2泊3日の流れ）などを、公式の情報で確かめて出典つきでまとめたガイド"),
         link("money/", "お金のカラクリ研究所", "YouTube・TikTok のお金アニメで話したお金のしくみを、1話ずつ、数字と公式の出典つきで解説"),
         link("jiro/", "関西二郎系マップ", "大阪・京都・兵庫の二郎系ラーメンを、運営者が実際に食べた店の偏差値と感想つきでまとめた案内"),
     ])
@@ -389,6 +390,7 @@ def sitemap_index():
                       for s in SITES if s.get("sitemap"))
     # SITES に入れていないサイト（トップの「主なページ」から直接つなぐもの）のサイトマップ
     entries += f"  <sitemap><loc>{BASE_URL}jiro/sitemap.xml</loc><lastmod>2026-11-23</lastmod></sitemap>\n"
+    entries += f"  <sitemap><loc>{BASE_URL}korea/sitemap.xml</loc><lastmod>2026-11-27</lastmod></sitemap>\n"
     latest = max(s["updated"] for s in SITES)
     return ('<?xml version="1.0" encoding="UTF-8"?>\n<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
             f"  <sitemap><loc>{BASE_URL}sitemap-top.xml</loc><lastmod>{latest}</lastmod></sitemap>\n"
