@@ -137,7 +137,7 @@ def page(path, title, desc, body, adsense=True, cur="index"):
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="icon" type="image/png" href="/apple-touch-icon.png">
 <meta property="og:type" content="website"><meta property="og:site_name" content="{SITE}">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{canonical}">
-<meta property="og:image" content="{BASE_URL}og.png"><meta property="og:locale" content="ja_JP">{analytics_tag(adsense=adsense)}
+<meta property="og:image" content="{BASE_URL}korea/og-casino.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta property="og:locale" content="ja_JP">{analytics_tag(adsense=adsense)}
 <style>{CSS}</style></head>
 <body>
 {header(cur)}
